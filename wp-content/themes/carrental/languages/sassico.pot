@@ -1,0 +1,2408 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: sassico\n"
+"POT-Creation-Date: 2019-11-21 18:16+0600\n"
+"PO-Revision-Date: 2019-11-21 18:16+0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: 404.php:16
+msgid "404"
+msgstr ""
+
+#: 404.php:19
+msgid "Oops... Page Not Found!"
+msgstr ""
+
+#: 404.php:22
+msgid "Try using the button below to go to main page of the site"
+msgstr ""
+
+#: 404.php:23
+msgid "Back to Home Page"
+msgstr ""
+
+#: comments.php:25
+msgid "Comments "
+msgstr ""
+
+#: comments.php:27
+msgid "Comment "
+msgstr ""
+
+#: comments.php:38 comments.php:68
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:41 comments.php:71
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:44 comments.php:74
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:81
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:102
+msgid "Enter Name"
+msgstr ""
+
+#: comments.php:103
+msgid "Enter Email"
+msgstr ""
+
+#: comments.php:104
+msgid "Enter Website"
+msgstr ""
+
+#: comments.php:119
+msgid "Enter Comments"
+msgstr ""
+
+#: comments.php:132
+msgid "You must be"
+msgstr ""
+
+#: comments.php:132
+msgid "logged in"
+msgstr ""
+
+#: comments.php:132
+msgid "to post a comment."
+msgstr ""
+
+#: comments.php:137
+msgid "Logged in as"
+msgstr ""
+
+#: comments.php:137
+msgid "Log out of this account"
+msgstr ""
+
+#: comments.php:137
+msgid "Log out?"
+msgstr ""
+
+#: comments.php:142
+msgid "Leave a Reply"
+msgstr ""
+
+#: comments.php:143
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: comments.php:144
+msgid "Cancel reply"
+msgstr ""
+
+#: comments.php:145
+msgid "Post Comment"
+msgstr ""
+
+#: components/editor/elementor/controls/icon.php:1209
+#: components/editor/elementor/controls/icon.php:1211
+msgid "Select Icon"
+msgstr ""
+
+#: components/editor/elementor/elementor.php:85
+msgid "Sassico"
+msgstr ""
+
+#: components/editor/elementor/widgets/back-to-top/back-to-top.php:14
+msgid "SASSICO Back To Top"
+msgstr ""
+
+#: components/editor/elementor/widgets/back-to-top/back-to-top.php:29
+#: components/editor/elementor/widgets/blog/blog.php:30
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:29
+#: components/editor/elementor/widgets/gallery-slider/gallery-slider.php:30
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:29
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:30
+#: components/editor/elementor/widgets/service/sassico-service.php:155
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:31
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:30
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:30
+#: components/editor/elementor/widgets/working-process/working-process.php:30
+msgid "Content"
+msgstr ""
+
+#: components/editor/elementor/widgets/back-to-top/back-to-top.php:37
+msgid "Border Style"
+msgstr ""
+
+#: components/editor/elementor/widgets/back-to-top/back-to-top.php:41
+msgid "Arrow Only"
+msgstr ""
+
+#: components/editor/elementor/widgets/back-to-top/back-to-top.php:42
+msgid "Arrow With Text"
+msgstr ""
+
+#: components/editor/elementor/widgets/back-to-top/back-to-top.php:50
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:81
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:99
+msgid "Icon"
+msgstr ""
+
+#: components/editor/elementor/widgets/back-to-top/back-to-top.php:62
+#: components/editor/elementor/widgets/blog/blog.php:42
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:48
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:86
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:93
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:86
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:260
+#: components/editor/elementor/widgets/service/sassico-service.php:125
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:61
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:64
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:171
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:61
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:64
+#: components/editor/elementor/widgets/working-process/working-process.php:73
+#: components/option-types/fw-multi-inline/class-fw-option-type-fw-multi-inline.php:69
+#: components/theme/options/customizer/options-footer.php:109
+#: components/theme/options/customizer/options-general.php:28
+msgid "Title"
+msgstr ""
+
+#: components/editor/elementor/widgets/back-to-top/back-to-top.php:64
+msgid "GO TOP"
+msgstr ""
+
+#: components/editor/elementor/widgets/back-to-top/back-to-top.php:65
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:51
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:61
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:120
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:87
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:87
+msgid "Type your title here"
+msgstr ""
+
+#: components/editor/elementor/widgets/back-to-top/back-to-top.php:77
+#: components/editor/elementor/widgets/gallery-slider/gallery-slider.php:60
+msgid "Style"
+msgstr ""
+
+#: components/editor/elementor/widgets/back-to-top/back-to-top.php:85
+msgid "Font Size"
+msgstr ""
+
+#: components/editor/elementor/widgets/back-to-top/back-to-top.php:110
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:126
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:178
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:268
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:301
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:355
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:387
+#: components/editor/elementor/widgets/service/sassico-service.php:163
+#: components/editor/elementor/widgets/service/sassico-service.php:208
+#: components/editor/elementor/widgets/service/sassico-service.php:279
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:235
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:266
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:298
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:329
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:363
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:394
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:425
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:147
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:179
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:211
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:243
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:319
+#: components/editor/elementor/widgets/working-process/working-process.php:83
+#: components/theme/options/posts/sassico-service.php:83
+msgid "Color"
+msgstr ""
+
+#: components/editor/elementor/widgets/back-to-top/back-to-top.php:122
+msgid "Stroke Color"
+msgstr ""
+
+#: components/editor/elementor/widgets/blog/blog.php:15
+msgid "SASSICO Blog"
+msgstr ""
+
+#: components/editor/elementor/widgets/blog/blog.php:38
+#: components/editor/elementor/widgets/service/sassico-service.php:121
+msgid "Order by"
+msgstr ""
+
+#: components/editor/elementor/widgets/blog/blog.php:41
+#: components/editor/elementor/widgets/service/sassico-service.php:124
+#: components/theme/options/posts/sassico-service.php:139
+msgid "Date"
+msgstr ""
+
+#: components/editor/elementor/widgets/blog/blog.php:43
+#: components/editor/elementor/widgets/service/sassico-service.php:126
+msgid "Author"
+msgstr ""
+
+#: components/editor/elementor/widgets/blog/blog.php:44
+#: components/editor/elementor/widgets/service/sassico-service.php:127
+msgid "Modified"
+msgstr ""
+
+#: components/editor/elementor/widgets/blog/blog.php:45
+#: components/editor/elementor/widgets/service/sassico-service.php:128
+msgid "Comments"
+msgstr ""
+
+#: components/editor/elementor/widgets/blog/blog.php:54
+#: components/editor/elementor/widgets/blog/blog.php:67
+#: components/editor/elementor/widgets/service/sassico-service.php:138
+msgid "Order"
+msgstr ""
+
+#: components/editor/elementor/widgets/blog/blog.php:57
+#: components/editor/elementor/widgets/service/sassico-service.php:141
+msgid "ASC"
+msgstr ""
+
+#: components/editor/elementor/widgets/blog/blog.php:58
+#: components/editor/elementor/widgets/service/sassico-service.php:142
+msgid "DESC"
+msgstr ""
+
+#: components/editor/elementor/widgets/blog/blog.php:70
+msgid "3 Column"
+msgstr ""
+
+#: components/editor/elementor/widgets/blog/blog.php:71
+msgid "2 Column"
+msgstr ""
+
+#: components/editor/elementor/widgets/blog/blog.php:80
+#: components/editor/elementor/widgets/service/sassico-service.php:88
+msgid "Posts Count"
+msgstr ""
+
+#: components/editor/elementor/widgets/blog/blog.php:91
+#: components/editor/elementor/widgets/service/sassico-service.php:110
+msgid "Offset"
+msgstr ""
+
+#: components/editor/elementor/widgets/blog/blog.php:101
+#: components/editor/elementor/widgets/service/sassico-service.php:98
+msgid "Category"
+msgstr ""
+
+#: components/editor/elementor/widgets/blog/blog.php:114
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:145
+#: components/editor/elementor/widgets/service/sassico-service.php:348
+#: components/editor/elementor/widgets/service/sassico-service.php:383
+msgid "Container"
+msgstr ""
+
+#: components/editor/elementor/widgets/blog/blog.php:122
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:137
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:189
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:153
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:196
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:225
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:254
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:341
+msgid "Background Color"
+msgstr ""
+
+#: components/editor/elementor/widgets/blog/blog.php:135
+msgid "Meta"
+msgstr ""
+
+#: components/editor/elementor/widgets/blog/blog.php:143
+msgid "Category Color"
+msgstr ""
+
+#: components/editor/elementor/widgets/blog/blog.php:155
+#: components/editor/elementor/widgets/blog/blog.php:177
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:106
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:160
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:206
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:280
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:324
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:367
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:410
+#: components/editor/elementor/widgets/service/sassico-service.php:190
+#: components/editor/elementor/widgets/service/sassico-service.php:238
+#: components/editor/elementor/widgets/service/sassico-service.php:257
+#: components/editor/elementor/widgets/service/sassico-service.php:313
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:247
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:279
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:310
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:341
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:375
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:159
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:191
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:223
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:301
+#: components/editor/elementor/widgets/working-process/working-process.php:130
+#: components/editor/elementor/widgets/working-process/working-process.php:160
+msgid "Typography"
+msgstr ""
+
+#: components/editor/elementor/widgets/blog/blog.php:165
+msgid "Author Color"
+msgstr ""
+
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:14
+msgid "SASSICO Call To Action"
+msgstr ""
+
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:37
+msgid "Background Image"
+msgstr ""
+
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:50
+msgid "Already interested! Do you have any project to working with?"
+msgstr ""
+
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:58
+#: components/theme/options/posts/sassico-service.php:96
+msgid "Button title"
+msgstr ""
+
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:60
+msgid "GET STARTED"
+msgstr ""
+
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:67
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:127
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:94
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:94
+msgid "Link"
+msgstr ""
+
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:69
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:129
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:96
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:96
+msgid "https://your-link.com"
+msgstr ""
+
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:94
+msgid "Title Color"
+msgstr ""
+
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:118
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:379
+#: components/editor/elementor/widgets/service/sassico-service.php:247
+#: components/editor/elementor/widgets/service/sassico-service.php:268
+msgid "Button"
+msgstr ""
+
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:148
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:200
+#: components/editor/elementor/widgets/service/sassico-service.php:301
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:405
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:436
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:265
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:330
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:362
+msgid "Border Color"
+msgstr ""
+
+#: components/editor/elementor/widgets/call-to-action/call-to-action.php:169
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:216
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:416
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:310
+msgid "Hover"
+msgstr ""
+
+#: components/editor/elementor/widgets/gallery-slider/gallery-slider.php:14
+msgid "SASSICO Gallery Slider"
+msgstr ""
+
+#: components/editor/elementor/widgets/gallery-slider/gallery-slider.php:38
+msgid "Add Images"
+msgstr ""
+
+#: components/editor/elementor/widgets/gallery-slider/gallery-slider.php:46
+#: components/editor/elementor/widgets/service/sassico-service.php:73
+msgid "Loop"
+msgstr ""
+
+#: components/editor/elementor/widgets/gallery-slider/gallery-slider.php:48
+#: components/editor/elementor/widgets/service/sassico-service.php:75
+msgid "Show"
+msgstr ""
+
+#: components/editor/elementor/widgets/gallery-slider/gallery-slider.php:49
+#: components/editor/elementor/widgets/service/sassico-service.php:76
+msgid "Hide"
+msgstr ""
+
+#: components/editor/elementor/widgets/gallery-slider/gallery-slider.php:68
+msgid "Overlay Color"
+msgstr ""
+
+#: components/editor/elementor/widgets/gallery-slider/gallery-slider.php:79
+#: components/editor/elementor/widgets/service/sassico-service.php:290
+msgid "Icon Color"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:14
+msgid "SASSICO languages switch"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:37
+msgid "Language switch style"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:41
+msgid "Style 1"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:42
+msgid "Style 2"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:50
+msgid "Icons"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:62
+msgid "Alignment"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:66
+msgid "Left"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:70
+msgid "Center"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:74
+msgid "Right"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:101
+msgid "Icon size"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:124
+msgid "Top to bottom postion"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:147
+msgid "Icon  color"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:163
+msgid "Item color"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:177
+msgid "Current Item color"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:191
+msgid "Item separator color"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:248
+msgid "Switch The Language"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:253
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:254
+msgid "English"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:254
+msgid "Canada"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:255
+msgid "Vietnamese"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:256
+msgid "French"
+msgstr ""
+
+#: components/editor/elementor/widgets/languages-switch/languages-switch.php:257
+msgid "German"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:15
+msgid "SASSICO Pricing"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:38
+msgid "Pricing image"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:48
+msgid "Plan name"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:50
+msgid "Starter Pack"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:60
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:293
+msgid "Price"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:62
+msgid "29"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:72
+msgid "Currency"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:74
+msgid "$"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:88
+#: components/editor/elementor/widgets/working-process/working-process.php:75
+msgid "List Title"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:96
+msgid "Repeater List"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:101
+msgid "50+ Pro Widgets"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:104
+msgid "300+ Pro Templates"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:107
+msgid "Theme Builder"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:117
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:84
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:84
+msgid "Button Text"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:119
+msgid "Get Started Now"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:165
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:208
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:249
+#: components/editor/elementor/widgets/service/sassico-service.php:422
+msgid "Box Shadow"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:173
+msgid "Border Radius"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:187
+msgid "Filter"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:237
+msgid "Filter Background Color"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:312
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:398
+msgid "Color Hover"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:335
+msgid "Currency Typography"
+msgstr ""
+
+#: components/editor/elementor/widgets/pricing/sassico-pricing.php:347
+msgid "List"
+msgstr ""
+
+#: components/editor/elementor/widgets/service/sassico-service.php:16
+msgid "SASSICO Service"
+msgstr ""
+
+#: components/editor/elementor/widgets/service/sassico-service.php:31
+msgid "Query"
+msgstr ""
+
+#: components/editor/elementor/widgets/service/sassico-service.php:38
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:39
+#: components/editor/elementor/widgets/working-process/working-process.php:38
+msgid "Choose Style"
+msgstr ""
+
+#: components/editor/elementor/widgets/service/sassico-service.php:43
+msgid "Border Box"
+msgstr ""
+
+#: components/editor/elementor/widgets/service/sassico-service.php:49
+msgid "Shadow Icon Box"
+msgstr ""
+
+#: components/editor/elementor/widgets/service/sassico-service.php:55
+msgid "Fat Shadow Style"
+msgstr ""
+
+#: components/editor/elementor/widgets/service/sassico-service.php:61
+msgid "HR Services"
+msgstr ""
+
+#: components/editor/elementor/widgets/service/sassico-service.php:129
+msgid "menu_order"
+msgstr ""
+
+#: components/editor/elementor/widgets/service/sassico-service.php:174
+msgid "Color on hover"
+msgstr ""
+
+#: components/editor/elementor/widgets/service/sassico-service.php:199
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:258
+#: components/theme/options/customizer/options-blog.php:15
+msgid "Description"
+msgstr ""
+
+#: components/editor/elementor/widgets/service/sassico-service.php:221
+msgid "Featured / Hover Color"
+msgstr ""
+
+#: components/editor/elementor/widgets/service/sassico-service.php:322
+msgid "Color Hover / Featured"
+msgstr ""
+
+#: components/editor/elementor/widgets/service/sassico-service.php:334
+msgid "Border Color Hover / Featured"
+msgstr ""
+
+#: components/editor/elementor/widgets/service/sassico-service.php:359
+msgid "Border color"
+msgstr ""
+
+#: components/editor/elementor/widgets/service/sassico-service.php:370
+msgid "Overlay background color"
+msgstr ""
+
+#: components/editor/elementor/widgets/service/sassico-service.php:394
+#: components/theme/options/customizer/options-footer.php:65
+msgid "Background color"
+msgstr ""
+
+#: components/editor/elementor/widgets/service/sassico-service.php:406
+msgid "Featured background color"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:16
+msgid "SASSICO Testimonial"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:44
+msgid "Style One"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:50
+msgid "Style Two"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:56
+msgid "Sync Slider"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:62
+msgid "Slider With Client Logo"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:72
+msgid "Icon Type"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:77
+msgid "None"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:85
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:113
+#: components/theme/options/customizer/options-banner.php:114
+msgid "Image"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:133
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:40
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:40
+msgid "Client Image"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:144
+msgid "Client Logo"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:154
+msgid "Testimonial Rating"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:158
+msgid "5"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:159
+msgid "4"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:160
+msgid "3"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:161
+msgid "2"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:162
+msgid "1"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:170
+msgid "Testimonial Review"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:173
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:75
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:75
+msgid "Review Text"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:181
+msgid "Client Name"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:191
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:194
+msgid "Designation"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:203
+msgid "Testimonial"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:208
+msgid "Ethan J.Cooper"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:209
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:214
+msgid "Managing Partner, supercheapcar.com"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:210
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:215
+msgid ""
+"it’s easy for marketers to brag about how great their product or service is. "
+"Writing compelling copy, shooting enticing photos, or even producing "
+"glamorous videos are all tactics"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:213
+msgid "Jane Doe"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:227
+msgid "Rating"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:290
+msgid "Cleint Name"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:321
+msgid "Cleint Designation"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:352
+msgid "Quote Icon"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:386
+msgid "Navigation"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:449
+msgid "Dots Color"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:457
+msgid "Color One"
+msgstr ""
+
+#: components/editor/elementor/widgets/testimonial/sassico-testimonial.php:469
+msgid "Color Two"
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:15
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:15
+msgid "SASSICO Timeline"
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:50
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:139
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:50
+msgid "Subtitle"
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:52
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:52
+msgid "Timeline #1"
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:72
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:72
+msgid "Review"
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:86
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:86
+msgid "NEXT STEP"
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:109
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:109
+msgid "Timeline"
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:114
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:114
+msgid "Step 01"
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:115
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:115
+msgid "Gather the information"
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:116
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:121
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:126
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:116
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:121
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:126
+msgid ""
+"SaaS companies are clearly on the upswing, aided by the rapid were growth of "
+"the larger cloud computing market. Years ago, much of the Today, good luck "
+"launching its startup based on packaged software only. All the interest and "
+"energy not to mention this venture capital is going to on-demand software-as-"
+"a-service (SaaS), since it promises headache of client installs and updates."
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:119
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:119
+msgid "Step 02"
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:120
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:120
+msgid "Find Solution and Solve"
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:124
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:124
+msgid "Step 03"
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:125
+#: components/editor/elementor/widgets/timeline/sassio-timeline-backup.php:125
+msgid "Finally get the Result"
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:203
+#: components/theme/options/posts/sassico-service.php:120
+msgid "Exerpt"
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:235
+msgid "Btn"
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:276
+msgid "Padding"
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:288
+msgid "Border radius"
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:354
+msgid "Bar and pin"
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:373
+msgid "Pin"
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:382
+msgid "Background color one"
+msgstr ""
+
+#: components/editor/elementor/widgets/timeline/sassico-timeline.php:393
+msgid "Background color two"
+msgstr ""
+
+#: components/editor/elementor/widgets/working-process/working-process.php:15
+msgid "SASSICO Working Process"
+msgstr ""
+
+#: components/editor/elementor/widgets/working-process/working-process.php:43
+msgid "With Gradient"
+msgstr ""
+
+#: components/editor/elementor/widgets/working-process/working-process.php:49
+msgid "With Out Gradient"
+msgstr ""
+
+#: components/editor/elementor/widgets/working-process/working-process.php:63
+msgid "Choose Image"
+msgstr ""
+
+#: components/editor/elementor/widgets/working-process/working-process.php:95
+msgid "Working Process"
+msgstr ""
+
+#: components/editor/elementor/widgets/working-process/working-process.php:100
+msgid "Research Project"
+msgstr ""
+
+#: components/editor/elementor/widgets/working-process/working-process.php:103
+msgid "Find Ideas"
+msgstr ""
+
+#: components/editor/elementor/widgets/working-process/working-process.php:106
+msgid "Start Optimize"
+msgstr ""
+
+#: components/editor/elementor/widgets/working-process/working-process.php:109
+msgid "Reach Target"
+msgstr ""
+
+#: components/editor/elementor/widgets/working-process/working-process.php:121
+msgid "Step Number"
+msgstr ""
+
+#: components/editor/elementor/widgets/working-process/working-process.php:140
+msgid "Background"
+msgstr ""
+
+#: components/editor/elementor/widgets/working-process/working-process.php:151
+msgid "Step Title"
+msgstr ""
+
+#: components/option-types/fw-multi-inline/class-fw-option-type-fw-multi-inline.php:71
+msgid "select1"
+msgstr ""
+
+#: components/option-types/fw-multi-inline/class-fw-option-type-fw-multi-inline.php:72
+msgid "select2"
+msgstr ""
+
+#: components/option-types/fw-multi-inline/class-fw-option-type-fw-multi-inline.php:73
+msgid "select3"
+msgstr ""
+
+#: components/option-types/new-icon/class-fw-option-type-new-icon.php:143
+msgid "Unknown Set"
+msgstr ""
+
+#: components/option-types/new-icon/class-fw-option-type-new-icon.php:157
+msgid "Web Application Icons"
+msgstr ""
+
+#: components/option-types/new-icon/class-fw-option-type-new-icon.php:158
+msgid "Hand Icons"
+msgstr ""
+
+#: components/option-types/new-icon/class-fw-option-type-new-icon.php:159
+msgid "Transportation Icons"
+msgstr ""
+
+#: components/option-types/new-icon/class-fw-option-type-new-icon.php:160
+msgid "Gender Icons"
+msgstr ""
+
+#: components/option-types/new-icon/class-fw-option-type-new-icon.php:161
+msgid "File Type Icons"
+msgstr ""
+
+#: components/option-types/new-icon/class-fw-option-type-new-icon.php:162
+msgid "Payment Icons"
+msgstr ""
+
+#: components/option-types/new-icon/class-fw-option-type-new-icon.php:163
+msgid "Currency Icons"
+msgstr ""
+
+#: components/option-types/new-icon/class-fw-option-type-new-icon.php:164
+msgid "Text Editor Icons"
+msgstr ""
+
+#: components/option-types/new-icon/class-fw-option-type-new-icon.php:165
+msgid "Directional Icons"
+msgstr ""
+
+#: components/option-types/new-icon/class-fw-option-type-new-icon.php:166
+msgid "Video Player Icons"
+msgstr ""
+
+#: components/option-types/new-icon/class-fw-option-type-new-icon.php:167
+msgid "Brand Icons"
+msgstr ""
+
+#: components/option-types/new-icon/class-fw-option-type-new-icon.php:168
+msgid "Medical Icons"
+msgstr ""
+
+#: components/option-types/new-icon/class-fw-option-type-new-icon.php:169
+msgid "Sassico Icons"
+msgstr ""
+
+#: components/option-types/new-icon/view.php:39
+msgid "All Categories"
+msgstr ""
+
+#: components/option-types/new-icon/view.php:47
+msgid "icon search"
+msgstr ""
+
+#: components/theme/manifest.php:7
+msgid "Sassico WordPress Theme"
+msgstr ""
+
+#: components/theme/options/customizer.php:8
+msgid "Theme settings"
+msgstr ""
+
+#: components/theme/options/customizer/options-banner.php:9
+msgid "Banner settings"
+msgstr ""
+
+#: components/theme/options/customizer/options-banner.php:18
+msgid "Banner Overlay Color"
+msgstr ""
+
+#: components/theme/options/customizer/options-banner.php:22
+#: components/theme/options/customizer/options-banner.php:23
+msgid "Page banner settings"
+msgstr ""
+
+#: components/theme/options/customizer/options-banner.php:24
+msgid "Edit page Banner Button"
+msgstr ""
+
+#: components/theme/options/customizer/options-banner.php:29
+#: components/theme/options/customizer/options-banner.php:81
+msgid "Show banner?"
+msgstr ""
+
+#: components/theme/options/customizer/options-banner.php:30
+#: components/theme/options/customizer/options-banner.php:82
+msgid "Show or hide the banner"
+msgstr ""
+
+#: components/theme/options/customizer/options-banner.php:34
+#: components/theme/options/customizer/options-banner.php:48
+#: components/theme/options/customizer/options-banner.php:86
+#: components/theme/options/customizer/options-banner.php:100
+#: components/theme/options/customizer/options-blog.php:34
+#: components/theme/options/customizer/options-blog.php:48
+#: components/theme/options/customizer/options-footer.php:24
+#: components/theme/options/customizer/options-footer.php:149
+#: components/theme/options/customizer/options-header.php:25
+#: components/theme/options/customizer/options-header.php:72
+#: components/theme/options/customizer/options-header.php:89
+#: components/theme/options/customizer/options-header.php:125
+#: components/theme/options/customizer/options-header.php:145
+#: components/theme/options/customizer/options-preloader.php:20
+#: components/theme/options/posts/page.php:31
+#: components/theme/options/posts/sassico-service.php:31
+#: components/theme/options/posts/sassico-service.php:76
+#: components/theme/options/posts/sassico-service.php:157
+msgid "Yes"
+msgstr ""
+
+#: components/theme/options/customizer/options-banner.php:38
+#: components/theme/options/customizer/options-banner.php:52
+#: components/theme/options/customizer/options-banner.php:90
+#: components/theme/options/customizer/options-banner.php:104
+#: components/theme/options/customizer/options-blog.php:38
+#: components/theme/options/customizer/options-blog.php:52
+#: components/theme/options/customizer/options-footer.php:28
+#: components/theme/options/customizer/options-footer.php:153
+#: components/theme/options/customizer/options-header.php:29
+#: components/theme/options/customizer/options-header.php:76
+#: components/theme/options/customizer/options-header.php:94
+#: components/theme/options/customizer/options-header.php:129
+#: components/theme/options/customizer/options-header.php:149
+#: components/theme/options/posts/page.php:35
+#: components/theme/options/posts/sassico-service.php:35
+#: components/theme/options/posts/sassico-service.php:72
+#: components/theme/options/posts/sassico-service.php:153
+msgid "No"
+msgstr ""
+
+#: components/theme/options/customizer/options-banner.php:43
+#: components/theme/options/customizer/options-banner.php:95
+msgid "Show Breadcrumb?"
+msgstr ""
+
+#: components/theme/options/customizer/options-banner.php:44
+#: components/theme/options/customizer/options-banner.php:96
+msgid "Show or hide the Breadcrumb"
+msgstr ""
+
+#: components/theme/options/customizer/options-banner.php:57
+#: components/theme/options/customizer/options-banner.php:109
+#: components/theme/options/posts/page.php:14
+#: components/theme/options/posts/sassico-service.php:14
+msgid "Banner title"
+msgstr ""
+
+#: components/theme/options/customizer/options-banner.php:62
+#: components/theme/options/posts/page.php:18
+#: components/theme/options/posts/sassico-service.php:18
+msgid "Banner image"
+msgstr ""
+
+#: components/theme/options/customizer/options-banner.php:74
+#: components/theme/options/customizer/options-banner.php:75
+msgid "Blog banner settings"
+msgstr ""
+
+#: components/theme/options/customizer/options-banner.php:76
+msgid "Edit Blog Banner Button"
+msgstr ""
+
+#: components/theme/options/customizer/options-banner.php:115
+msgid "Banner blog image"
+msgstr ""
+
+#: components/theme/options/customizer/options-blog.php:8
+msgid "Blog settings"
+msgstr ""
+
+#: components/theme/options/customizer/options-blog.php:14
+msgid "Sidebar"
+msgstr ""
+
+#: components/theme/options/customizer/options-blog.php:16
+msgid "Help tip"
+msgstr ""
+
+#: components/theme/options/customizer/options-blog.php:18
+msgid "No sidebar"
+msgstr ""
+
+#: components/theme/options/customizer/options-blog.php:19
+msgid "Left Sidebar"
+msgstr ""
+
+#: components/theme/options/customizer/options-blog.php:20
+msgid "Right Sidebar"
+msgstr ""
+
+#: components/theme/options/customizer/options-blog.php:29
+msgid "Blog author"
+msgstr ""
+
+#: components/theme/options/customizer/options-blog.php:30
+msgid "Do you want to show blog author?"
+msgstr ""
+
+#: components/theme/options/customizer/options-blog.php:43
+msgid "Blog related post"
+msgstr ""
+
+#: components/theme/options/customizer/options-blog.php:44
+msgid "Do you want to show single blog related post?"
+msgstr ""
+
+#: components/theme/options/customizer/options-blog.php:57
+msgid "Related post count"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:14
+msgid "Footer settings"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:19
+msgid "Footer builder Enable"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:42
+msgid "Footer style"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:52
+#: components/theme/options/customizer/options-header.php:53
+msgid "edit"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:68
+msgid "You can change the  background color with rgba color or solid color"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:71
+msgid "Text color"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:74
+#: components/theme/options/customizer/options-footer.php:80
+#: components/theme/options/customizer/options-footer.php:86
+msgid "You can change the text color with rgba color or solid color"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:77
+msgid "Link color"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:83
+msgid "Widget Title color"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:89
+msgid "Copyright Background color"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:92
+msgid ""
+"You can change the copyright background color with rgba color or solid color"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:95
+msgid "Footer Copyright color"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:97
+msgid ""
+"You can change the footer's background color with rgba color or solid color"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:103
+#: components/theme/options/customizer/options-general.php:21
+msgid "Social links"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:104
+#: components/theme/options/customizer/options-general.php:22
+msgid ""
+"Add social links and it's icon class bellow. These are all fontaweseome-4.7 "
+"icons."
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:105
+#: components/theme/options/customizer/options-general.php:23
+msgid "Add new"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:113
+#: components/theme/options/customizer/options-general.php:32
+msgid "Social icon"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:117
+#: components/theme/options/customizer/options-general.php:36
+msgid "Social link"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:126
+msgid "&copy; 2019, Sassico. All rights reserved"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:127
+msgid "Copyright text"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:128
+msgid "This text will be shown at the footer of all pages."
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:132
+msgid "Footer Padding Top"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:133
+msgid "Use Footer Padding Top"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:138
+msgid "Footer Padding Bottom"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:139
+msgid "Use Footer Padding Bottom"
+msgstr ""
+
+#: components/theme/options/customizer/options-footer.php:146
+msgid "Back to top"
+msgstr ""
+
+#: components/theme/options/customizer/options-general.php:8
+msgid "General settings"
+msgstr ""
+
+#: components/theme/options/customizer/options-general.php:11
+msgid "logo"
+msgstr ""
+
+#: components/theme/options/customizer/options-general.php:12
+msgid ""
+"It's the main logo, mostly it will be shown on \"Default Menu\" type area."
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:15
+msgid "Header settings"
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:20
+msgid "Header builder Enable"
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:43
+msgid "Header style"
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:67
+msgid "Sticky header"
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:68
+msgid "Do you want to enable sticky nav?"
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:84
+msgid "Show Topbar"
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:85
+msgid "Do you want to show topbar?"
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:100
+msgid "Contact mail"
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:101
+msgid "Give mail."
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:102
+msgid "contact@domain.com"
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:107
+msgid "Contact address title"
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:108
+msgid "Give office address."
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:109
+msgid "105 Roosevelt Street CA"
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:114
+msgid "Contact number title"
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:115
+msgid "Give Contact Number for header  style 3."
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:116
+msgid "+1 212-554-1515"
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:120
+msgid "Search button show"
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:121
+msgid "Do you want to show search button in header ?"
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:141
+msgid "Show CTA button "
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:158
+msgid "Quote text"
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:159
+msgid "Navigation quote text."
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:160
+#: template-parts/headers/header-content.php:29
+msgid "Get a quote"
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:164
+msgid "Quote link"
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:165
+msgid "Navigation quote link."
+msgstr ""
+
+#: components/theme/options/customizer/options-header.php:166
+msgid "#"
+msgstr ""
+
+#: components/theme/options/customizer/options-preloader.php:7
+msgid "Preloader settings"
+msgstr ""
+
+#: components/theme/options/customizer/options-preloader.php:16
+msgid "Show Preloader"
+msgstr ""
+
+#: components/theme/options/customizer/options-preloader.php:24
+msgid "no"
+msgstr ""
+
+#: components/theme/options/customizer/options-preloader.php:38
+msgid "Custom svg"
+msgstr ""
+
+#: components/theme/options/customizer/options-preloader.php:42
+msgid "Custom"
+msgstr ""
+
+#: components/theme/options/customizer/options-preloader.php:46
+msgid "Simple"
+msgstr ""
+
+#: components/theme/options/customizer/options-preloader.php:70
+msgid "Custom svg code"
+msgstr ""
+
+#: components/theme/options/customizer/options-preloader.php:71
+msgid "Please check how to create your own svg preloader with animation"
+msgstr ""
+
+#: components/theme/options/customizer/options-style.php:7
+msgid "Style settings"
+msgstr ""
+
+#: components/theme/options/customizer/options-style.php:10
+msgid "Body background"
+msgstr ""
+
+#: components/theme/options/customizer/options-style.php:11
+msgid "Site's main background color."
+msgstr ""
+
+#: components/theme/options/customizer/options-style.php:17
+msgid "Primary color"
+msgstr ""
+
+#: components/theme/options/customizer/options-style.php:18
+msgid "Site's main color."
+msgstr ""
+
+#: components/theme/options/customizer/options-style.php:24
+msgid "Secondary color"
+msgstr ""
+
+#: components/theme/options/customizer/options-style.php:25
+msgid "Secondary color."
+msgstr ""
+
+#: components/theme/options/customizer/options-style.php:31
+msgid "Title color"
+msgstr ""
+
+#: components/theme/options/customizer/options-style.php:32
+msgid "Blog title color."
+msgstr ""
+
+#: components/theme/options/customizer/options-style.php:39
+msgid "Body Font"
+msgstr ""
+
+#: components/theme/options/customizer/options-style.php:40
+msgid "Choose the typography for the title"
+msgstr ""
+
+#: components/theme/options/customizer/options-style.php:72
+msgid "Heading H1"
+msgstr ""
+
+#: components/theme/options/customizer/options-style.php:73
+#: components/theme/options/customizer/options-style.php:92
+#: components/theme/options/customizer/options-style.php:111
+#: components/theme/options/customizer/options-style.php:129
+#: components/theme/options/customizer/options-style.php:147
+#: components/theme/options/customizer/options-style.php:165
+msgid "This is for heading google fonts"
+msgstr ""
+
+#: components/theme/options/customizer/options-style.php:91
+msgid "Heading H2 Fonts"
+msgstr ""
+
+#: components/theme/options/customizer/options-style.php:110
+msgid "Heading H3 Fonts"
+msgstr ""
+
+#: components/theme/options/customizer/options-style.php:128
+msgid "Heading H4 Fonts"
+msgstr ""
+
+#: components/theme/options/customizer/options-style.php:146
+msgid "Heading H5 Fonts"
+msgstr ""
+
+#: components/theme/options/customizer/options-style.php:164
+msgid "Heading H6 Fonts"
+msgstr ""
+
+#: components/theme/options/posts/page.php:8
+msgid "Page settings"
+msgstr ""
+
+#: components/theme/options/posts/page.php:15
+#: components/theme/options/posts/sassico-service.php:15
+msgid "Add your Page hero title"
+msgstr ""
+
+#: components/theme/options/posts/page.php:19
+#: components/theme/options/posts/sassico-service.php:19
+msgid "Upload a page header image"
+msgstr ""
+
+#: components/theme/options/posts/page.php:20
+#: components/theme/options/posts/sassico-service.php:20
+msgid "This default header image will be used for all your service."
+msgstr ""
+
+#: components/theme/options/posts/page.php:26
+#: components/theme/options/posts/sassico-service.php:26
+msgid "Display sub header menu?"
+msgstr ""
+
+#: components/theme/options/posts/page.php:27
+#: components/theme/options/posts/sassico-service.php:27
+msgid "Display sub menu"
+msgstr ""
+
+#: components/theme/options/posts/page.php:28
+#: components/theme/options/posts/sassico-service.php:28
+msgid "A menu will be displayed under Banner"
+msgstr ""
+
+#: components/theme/options/posts/post.php:5
+msgid "Featured video"
+msgstr ""
+
+#: components/theme/options/posts/post.php:12
+msgid "Video URL"
+msgstr ""
+
+#: components/theme/options/posts/post.php:13
+msgid ""
+"Paste a video link from Youtube, Vimeo, Dailymotion, Facebook or Twitter it "
+"will be embedded in the post and the thumb used as the featured image of "
+"this post. You need to choose \"Video Format\" as post format to use "
+"\"Featured Video\"."
+msgstr ""
+
+#: components/theme/options/posts/post.php:20
+msgid "Featured audio"
+msgstr ""
+
+#: components/theme/options/posts/post.php:27
+msgid "Audio URL"
+msgstr ""
+
+#: components/theme/options/posts/post.php:28
+msgid "Paste a soundcloud link here."
+msgstr ""
+
+#: components/theme/options/posts/post.php:34
+msgid "Featured gallary"
+msgstr ""
+
+#: components/theme/options/posts/post.php:42
+msgid "Featured gallery"
+msgstr ""
+
+#: components/theme/options/posts/post.php:43
+msgid "Select featured gallery images for this post."
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:8
+msgid "Service banner settings"
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:41
+msgid "Service icon/image settings"
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:49
+msgid "Image/Icon"
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:50
+msgid "Add image/icon on service box"
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:54
+msgid "Hover Background Image/Icon"
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:55
+msgid "Add hover background image on service box"
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:61
+msgid "Service style two settings"
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:68
+msgid "Featured"
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:69
+msgid "This style only for shadow icon box and bubble service box"
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:84
+msgid "This style only for shadow icon box"
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:90
+msgid "Service fat shadow style settings"
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:103
+msgid "Service single settings"
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:109
+msgid "Project Sub Title"
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:114
+msgid "Project Title"
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:124
+msgid "Site Text"
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:125
+msgid "View site"
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:129
+msgid "Site URI"
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:130
+msgid "https://www.google.com/"
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:134
+msgid "Categories"
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:144
+msgid "Client"
+msgstr ""
+
+#: components/theme/options/posts/sassico-service.php:150
+msgid "Show Social"
+msgstr ""
+
+#: components/theme/options/taxonomies/category.php:6
+#: components/theme/options/taxonomies/category.php:7
+msgid "Category icon"
+msgstr ""
+
+#: core/helpers/functions/global.php:245
+msgctxt "Google font: on or off"
+msgid "on"
+msgstr ""
+
+#: core/helpers/functions/template.php:21
+msgid "Previous post"
+msgstr ""
+
+#: core/helpers/functions/template.php:30
+msgid "Next post"
+msgstr ""
+
+#: core/helpers/functions/template.php:49
+msgid "Home"
+msgstr ""
+
+#: core/helpers/functions/template.php:76
+#: core/helpers/functions/template.php:80
+#: core/helpers/functions/template.php:84
+msgid "Blogs for"
+msgstr ""
+
+#: core/helpers/functions/template.php:88
+msgid "Author Blogs"
+msgstr ""
+
+#: core/helpers/functions/template.php:91
+msgid "Blogs"
+msgstr ""
+
+#: core/helpers/functions/template.php:94
+msgid "Search Result"
+msgstr ""
+
+#: core/helpers/functions/template.php:97
+msgid "404 Not Found"
+msgstr ""
+
+#: core/helpers/functions/template.php:193
+msgid "says:"
+msgstr ""
+
+#: core/helpers/functions/template.php:197
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: core/helpers/functions/template.php:204
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: core/helpers/functions/template.php:207
+msgid "(Edit)"
+msgstr ""
+
+#: core/helpers/functions/template.php:223
+msgid "More pages: "
+msgstr ""
+
+#: core/helpers/functions/template.php:229
+msgid "Next "
+msgstr ""
+
+#: core/helpers/functions/template.php:230
+msgid " Previous"
+msgstr ""
+
+#: core/hooks/blog.php:32
+msgid "Search"
+msgstr ""
+
+#: core/hooks/widget-areas.php:11
+msgid "Blog widget area"
+msgstr ""
+
+#: core/hooks/widget-areas.php:13
+msgid "Appears on posts."
+msgstr ""
+
+#: core/hooks/widget-areas.php:69
+msgid "Woocommerce sidebar Area"
+msgstr ""
+
+#: core/hooks/widget-areas.php:71
+msgid "Appears on posts and pages."
+msgstr ""
+
+#: core/installation-fragments/tgmpa-plugins.php:9
+msgid "Unyson"
+msgstr ""
+
+#: core/installation-fragments/tgmpa-plugins.php:14
+msgid "Elementor"
+msgstr ""
+
+#: core/installation-fragments/tgmpa-plugins.php:19
+msgid "Elementskit Lite"
+msgstr ""
+
+#: core/installation-fragments/tgmpa-plugins.php:24
+msgid "Contact form 7"
+msgstr ""
+
+#: core/installation-fragments/tgmpa-plugins.php:29
+msgid "Wp Social - Login, Share, Counter"
+msgstr ""
+
+#: core/installation-fragments/tgmpa-plugins.php:34
+msgid "Sassico Essentials"
+msgstr ""
+
+#: core/installation-fragments/theme-demos.php:7
+msgid "Demo"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:327
+msgid "Install Required Plugins"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:328
+msgid "Install Plugins"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: core/libs/class-tgm-plugin-activation.php:330
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: core/libs/class-tgm-plugin-activation.php:332
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:333
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#. translators: 1: plugin name(s).
+#: core/libs/class-tgm-plugin-activation.php:336
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: core/libs/class-tgm-plugin-activation.php:342
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: core/libs/class-tgm-plugin-activation.php:348
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: core/libs/class-tgm-plugin-activation.php:354
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: core/libs/class-tgm-plugin-activation.php:360
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: core/libs/class-tgm-plugin-activation.php:366
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/libs/class-tgm-plugin-activation.php:371
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/libs/class-tgm-plugin-activation.php:376
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/libs/class-tgm-plugin-activation.php:381
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/libs/class-tgm-plugin-activation.php:385
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:386
+#: core/libs/class-tgm-plugin-activation.php:823
+#: core/libs/class-tgm-plugin-activation.php:2529
+#: core/libs/class-tgm-plugin-activation.php:3576
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:387
+#: core/libs/class-tgm-plugin-activation.php:3155
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:388
+#: core/libs/class-tgm-plugin-activation.php:2948
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name.
+#: core/libs/class-tgm-plugin-activation.php:390
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: core/libs/class-tgm-plugin-activation.php:392
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#. translators: 1: dashboard link.
+#: core/libs/class-tgm-plugin-activation.php:394
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:395
+msgid "Dismiss this notice"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:396
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:397
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:518
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:519
+msgid "Update Required"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:930
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:930
+#: core/libs/class-tgm-plugin-activation.php:933
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:933
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:1117
+#: core/libs/class-tgm-plugin-activation.php:2944
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#. translators: %s: version number
+#: core/libs/class-tgm-plugin-activation.php:1978
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2269
+msgid "Required"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2272
+msgid "Recommended"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2288
+msgid "WordPress Repository"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2291
+msgid "External Source"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2294
+msgid "Pre-Packaged"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2311
+msgid "Not Installed"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2315
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2317
+msgid "Active"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2323
+msgid "Required Update not Available"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2326
+msgid "Requires Update"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2329
+msgid "Update recommended"
+msgstr ""
+
+#. translators: 1: install status, 2: update status
+#: core/libs/class-tgm-plugin-activation.php:2338
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: 1: number of plugins.
+#: core/libs/class-tgm-plugin-activation.php:2384
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: core/libs/class-tgm-plugin-activation.php:2388
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: core/libs/class-tgm-plugin-activation.php:2392
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: core/libs/class-tgm-plugin-activation.php:2396
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/libs/class-tgm-plugin-activation.php:2478
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2486
+msgid "Installed version:"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2494
+msgid "Minimum required version:"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2506
+msgid "Available version:"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2529
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2543
+msgid "Plugin"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2544
+msgid "Source"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2545
+msgid "Type"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2549
+msgid "Version"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2550
+msgid "Status"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: core/libs/class-tgm-plugin-activation.php:2599
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: core/libs/class-tgm-plugin-activation.php:2604
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: core/libs/class-tgm-plugin-activation.php:2610
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2680
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2713
+msgid "Install"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2719
+msgid "Update"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2722
+msgid "Activate"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2753
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2755
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2796
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2798
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2904
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:2930
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:3154
+msgid "Plugin activation failed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: core/libs/class-tgm-plugin-activation.php:3494
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#. translators: 1: plugin name, 2: error message.
+#: core/libs/class-tgm-plugin-activation.php:3497
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: core/libs/class-tgm-plugin-activation.php:3499
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:3503
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: core/libs/class-tgm-plugin-activation.php:3505
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:3505
+#: core/libs/class-tgm-plugin-activation.php:3513
+msgid "Show Details"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:3505
+#: core/libs/class-tgm-plugin-activation.php:3513
+msgid "Hide Details"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:3506
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: core/libs/class-tgm-plugin-activation.php:3508
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:3511
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: core/libs/class-tgm-plugin-activation.php:3513
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: core/libs/class-tgm-plugin-activation.php:3514
+msgid "All installations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: core/libs/class-tgm-plugin-activation.php:3516
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: functions.php:82
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:83
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:84
+msgid "Sub Header Menu"
+msgstr ""
+
+#: page.php:34 template-parts/blog/contents/content-single.php:42
+msgid "Edit"
+msgstr ""
+
+#: search.php:24
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: template-parts/blog/contents/content-none.php:2
+msgid "Nothing found!"
+msgstr ""
+
+#: template-parts/blog/contents/content-none.php:3
+msgid "It looks like nothing was found here. Maybe try a search?"
+msgstr ""
+
+#: template-parts/blog/contents/content-page.php:16
+#: template-parts/blog/contents/content-single.php:27
+msgid "Continue reading &rarr;"
+msgstr ""
+
+#: template-parts/blog/contents/format/standard-gallery.php:6
+#: template-parts/blog/contents/format/standard-image.php:8
+#: template-parts/blog/contents/format/standard-image.php:24
+#: template-parts/blog/contents/format/standard-quote.php:12
+#: template-parts/blog/contents/format/standard-video.php:6
+#: template-parts/blog/contents/format/standard.php:8
+#: template-parts/blog/contents/format/standard.php:24
+msgid "Sticky"
+msgstr ""
+
+#: template-parts/blog/post-parts/part-tags.php:8
+msgid "Tags: "
+msgstr ""
+
+#: template-parts/sassico-service/content-related.php:36
+msgid "Interested!"
+msgstr ""
+
+#: template-parts/sassico-service/content-related.php:37
+msgid "Have a look on Similar Case Studies"
+msgstr ""
+
+#: template-parts/sassico-service/content-related.php:69
+msgid "View Details"
+msgstr ""
+
+#: template-parts/sassico-service/content-single.php:48
+msgid "Categories : "
+msgstr ""
+
+#: template-parts/sassico-service/content-single.php:53
+msgid "Date : "
+msgstr ""
+
+#: template-parts/sassico-service/content-single.php:58
+msgid "Client : "
+msgstr ""
+
+#: template-parts/sassico-service/content-single.php:63
+msgid "Share : "
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "sassico"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://themeforest.net/user/xpeedstudio/portfolio"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "sassico is a Creative sass digital marketing WordPress Theme."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Xpeedstudio"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://xpeedstudio.com/"
+msgstr ""
