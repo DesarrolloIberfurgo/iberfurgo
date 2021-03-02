@@ -3376,14 +3376,26 @@ function ppb_car_search_func($atts, $content) {
 	
 	//Get available car brand
 	$available_brands = grandcarrental_get_carbrand();
-
-    $return_html.= '<select id="brand" name="brand">
-	    		<option value="">'.esc_html__('Any Brand', 'grandcarrental-custom-post' ).'</option>';
-	
-	foreach($available_brands as $key => $available_brand)	
-	{
-		$return_html.= '<option value="'.esc_attr($key).'">'.esc_attr($available_brand).'</option>';
+	list($httpCode, $response) = getDataApi(URL_API . 'maestro-delegacion', '{"valuePluck":"nombre", "keyPluck":"id", "order":["nombre asc"]}');
+	if ($httpCode != 200) {
+		return 'ha petado';
 	}
+
+	$return_html.= '<select id="brand" name="delegacion_id">
+	    		<option value="">'.esc_html__('Selecciona delegación', 'grandcarrental-custom-post' ).'</option>';
+	
+	foreach($response->data as $key => $value)	
+	{
+		$return_html .= '<option value="'.esc_attr($key).'">'.esc_attr($value).'</option>';
+	}
+
+    // $return_html.= '<select id="brand" name="brand">
+	//     		<option value="">'.esc_html__('Any Brand', 'grandcarrental-custom-post' ).'</option>';
+	
+	// foreach($available_brands as $key => $available_brand)	
+	// {
+	// 	$return_html.= '<option value="'.esc_attr($key).'">'.esc_attr($available_brand).'</option>';
+	// }
 
     $return_html.= '</select>
     		<span class="ti-angle-down"></span>
