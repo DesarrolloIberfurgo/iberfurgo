@@ -2362,8 +2362,6 @@ if (isset($_GET['activated']) && $_GET['activated']){
 	wp_redirect(admin_url("admin.php?page=functions.php&activate=true"));
 }
 
-require_once('shortcodes/shortcodes.php');
-require_once('functions-api/apiCalls.php');
-require_once('functions-api/connection.php');
+
 
 ?>
