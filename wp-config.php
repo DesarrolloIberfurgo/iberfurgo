@@ -46,12 +46,12 @@ define( 'DB_NAME', "Iberfurgo-wp" );
 
 /** MySQL database username */
 
-define( 'DB_USER', "iberfurgo" );
+define( 'DB_USER', "root" );
 
 
 /** MySQL database password */
 
-define( 'DB_PASSWORD', "iberfurgo" );
+define( 'DB_PASSWORD', "" );
 
 
 /** MySQL hostname */
@@ -102,6 +102,11 @@ define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
 define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
 
 define( 'NONCE_SALT',       'put your unique phrase here' );
+
+
+/** Propios */
+define('API_TOKEN', 'x49H4pR4SIvkWt7AMyHs6ZW5TeeDz9XW5In7UDRFBLyuKqHcGeq8x3fsrs15VCyt');
+define('URL_API', 'http://localhost/api-iberfurgo/public/api/v1/');
 
 
 /**#@-*/
