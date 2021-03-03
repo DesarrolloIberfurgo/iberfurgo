@@ -41,6 +41,7 @@ if ($httpCode != 200) {
                     <?php
                 }
 			?>
+             <?php echo do_shortcode('[tg_button href="http://localhost/iberfurgo-wp/delegaciones/delegacion-sevilla" color="" bg_color="" text_color=""][/tg_button]');?>
             <!-- </div> -->
             </div>
             </div>
