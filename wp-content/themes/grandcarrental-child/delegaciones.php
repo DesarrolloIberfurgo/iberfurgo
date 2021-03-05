@@ -32,17 +32,17 @@ if ($httpCode != 200) {
     		<?php 
     			foreach($response->data as $key => $value)	
                 {
-                    $texto = '';
+                    // $texto = '';
                     $last = '';
                     if (($key+1)%3 == 1) {
                         $last = ' last';
                     }
-                    $texto .= $value->descripcion . ' ' . $value->correo .' ' . $value->telefono .  ' ' . $value->whatsapp;
+                    $texto = $value->descripcion . ' ' . $value->correo .' ' . $value->telefono .  ' ' . $value->whatsapp;
                     ?>
                     <!-- <div class="one_third<?php echo esc_attr($last); ?>">  -->
                     <div class="element grid classic3_cols animated<?php echo esc_attr($key+1); ?>">
                         <div class="one_third gallery3 classic static filterable portfolio_type themeborder" data-id="post-<?php echo esc_attr($key+1); ?>">
-                        <?php echo do_shortcode('[tg_accordion title="'.esc_attr($value->nombre).'" icon="" close="1"]'.esc_attr($texto).'[/tg_accordion]'); ?>
+                        <?php echo do_shortcode('[tg_accordion_oficinas descripcion="'.esc_attr($value->descripcion).'" correo="'.esc_attr($value->correo).'" title="'.esc_attr($value->nombre).'" icon="" close="1"]'.esc_attr($texto).'[/tg_accordion_oficinas]'); ?>
                         </div>
                     </div>
                     <?php

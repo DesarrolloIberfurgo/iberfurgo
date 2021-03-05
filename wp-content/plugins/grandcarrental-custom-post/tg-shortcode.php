@@ -1065,6 +1065,48 @@ function tg_accordion_func($atts, $content) {
 
 add_shortcode('tg_accordion', 'tg_accordion_func');
 
+function tg_accordion_oficinas_func($atts, $content) {
+	//extract short code attr
+	extract(shortcode_atts(array(
+		'title' => '',
+		'close' => 0,
+	), $atts));
+	
+	$descripcion = $atts['descripcion'];
+	$correo = $atts['correo'];
+	
+	$close_class = '';
+
+	if(!empty($close))
+	{
+		$close_class = 'pp_accordion_close';
+	}
+	else
+	{
+		$close_class = 'pp_accordion';
+	}
+
+	//Add jquery ui script dynamically
+	wp_enqueue_script("jquery-ui-core");
+	wp_enqueue_script("jquery-ui-accordion");
+	wp_enqueue_script('grandcarrental-custom-accordion', get_template_directory_uri()."/js/custom-accordion.js", false, GRANDCARRENTAL_THEMEVERSION, true);
+
+	$return_html = '<div class="'.esc_attr($close_class).' has_icon"><h3><a href="#">';
+	$return_html.= $title.'</a></h3>';
+	// $return_html.= '<div><p>';
+	// $return_html.= do_shortcode($content);
+	// $return_html.= '</p></div>';
+	$return_html.= '<div><p>';
+	$return_html.= '<div>'.$descripcion.'</div>';
+	$return_html.= '<div>'.$correo.'</div>';
+	$return_html.= '</p></div>';
+	$return_html.= '</div>';
+
+	return $return_html;
+}
+
+add_shortcode('tg_accordion_oficinas', 'tg_accordion_oficinas_func');
+
 
 function tg_divider_func($atts, $content) {
 
