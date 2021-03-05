@@ -30,7 +30,11 @@
 		    {
 		?>
 	    	<div class="company_address">
-				<div id="top_contact_address"><span class="ti-location-pin"></span><?php echo esc_html($tg_menu_contact_address); ?></div>
+				<div id="top_contact_address"><span class="ti-location-pin"></span>Reservas: <i class="fas fa-phone-alt icon-top-bar"></i></span></i><a href="tel:0034964123456"> 964 123 456</a></div>
+			</div>
+
+			<div class="company_address">
+				<div id="top_contact_address"><span class="ti-location-pin"></span><i class="far fa-envelope icon-top-bar"></i></span></i><a href="mailto:info@iberfurgo.com"> info@iberfurgo.com</a></div>
 			</div>
 		<?php
 		    }
@@ -41,8 +45,8 @@
 		    if(!empty($tg_menu_contact_number))
 		    {
 		?>
-			<div>
-		    	<div id="top_contact_number"><a href="tel:<?php echo esc_attr($tg_menu_contact_number); ?>"><span class="ti-mobile"></span><?php echo esc_html($tg_menu_contact_number); ?></a></div>
+			<div class="company_address">
+		    	<div id="top_contact_number"><a href="/preguntas-frecuentes"> PREGUNTAS FRECUENTES</a></div>
 			</div>
 		<?php
 		    }
@@ -53,8 +57,8 @@
 		    if(!empty($tg_menu_contact_hours))
 		    {	
 		?>
-			<div>
-		    	<div id="top_contact_hours"><span class="ti-alarm-clock"></span><?php echo esc_html($tg_menu_contact_hours); ?></div>
+			<div class="company_address">
+		    	<div id="top_contact_hours"><a href="/contacto">CONTACTO</a></div>
 		    </div>
 		<?php
 		    }
