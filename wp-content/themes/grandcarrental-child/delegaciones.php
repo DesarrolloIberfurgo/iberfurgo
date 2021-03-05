@@ -11,6 +11,11 @@
 **/
 get_header(); 
 
+global $wp_query;
+echo 'Comida:'. $wp_query->query_vars['comida'];
+echo '<br />';
+echo 'Variedad:'. $wp_query->query_vars['variedad'];
+
 list($httpCode, $response) = getDataApi(URL_API . 'maestro-delegacion', '{"order":["nombre asc"]}');
 if ($httpCode != 200) {
 	return 'ha petado';
@@ -27,21 +32,24 @@ if ($httpCode != 200) {
     		<?php 
     			foreach($response->data as $key => $value)	
                 {
+                    $texto = '';
                     $last = '';
                     if (($key+1)%3 == 1) {
                         $last = ' last';
                     }
+                    $texto .= $value->descripcion . ' ' . $value->correo .' ' . $value->telefono .  ' ' . $value->whatsapp;
                     ?>
                     <!-- <div class="one_third<?php echo esc_attr($last); ?>">  -->
                     <div class="element grid classic3_cols animated<?php echo esc_attr($key+1); ?>">
                         <div class="one_third gallery3 classic static filterable portfolio_type themeborder" data-id="post-<?php echo esc_attr($key+1); ?>">
-                        <?php echo do_shortcode('[tg_accordion title="'.esc_attr($value->nombre).'" icon="" close="1"]'.esc_attr($value->descripcion).'[/tg_accordion]'); ?>
+                        <?php echo do_shortcode('[tg_accordion title="'.esc_attr($value->nombre).'" icon="" close="1"]'.esc_attr($texto).'[/tg_accordion]'); ?>
                         </div>
                     </div>
                     <?php
                 }
 			?>
-             <?php echo do_shortcode('[tg_button href="http://localhost/iberfurgo-wp/delegaciones/delegacion-sevilla" color="" bg_color="" text_color=""][/tg_button]');?>
+            <a href="http://localhost/iberfurgo-wp/delegaciones/?name=Madrid&id=1">ir</a>
+             <!-- <?php echo do_shortcode('[tg_button href="http://localhost/iberfurgo-wp/delegaciones/?delegacion_id=1" color="" bg_color="" text_color=""][/tg_button]');?> -->
             <!-- </div> -->
             </div>
             </div>
