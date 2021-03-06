@@ -22,43 +22,42 @@ if ($httpCode != 200) {
 }
 ?>
 
-<div id="page_content_wrapper" class="<?php if(!empty($pp_page_bg)) { ?>hasbg<?php } ?> <?php if(!empty($pp_page_bg) && !empty($grandcarrental_topbar)) { ?>withtopbar<?php } ?>">
-    <div class="inner">
-    	<!-- Begin main content -->
-    	<div class="inner_wrapper">
-    		<div class="sidebar_content full_width">
-            <!-- <div style="margin:auto;width:100%"> -->
-            <div id="portfolio_filter_wrapper" class="gallery classic three_cols portfolio-content section content clearfix" data-columns="3">
-    		<?php 
-    			foreach($response->data as $key => $value)	
+<div class="inner">
+    <div class="inner_wrapper nopadding">
+        <?php
+            if(!empty($data))
+            {
+        ?>
+                <div class="standard_wrapper"></div><br class="clear"/><br/>
+        <?php
+            }
+        ?>
+        <div id="page_main_content" class="sidebar_content full_width fixed_column">
+
+            <div class="standard_wrapper">  
+
+                <div id="portfolio_filter_wrapper" class="gallery classic three_cols portfolio-content section content clearfix" data-columns="3">
+                <?php foreach($response->data as $key => $value)	
                 {
-                    // $texto = '';
-                    $last = '';
-                    if (($key+1)%3 == 1) {
-                        $last = ' last';
-                    }
                     $texto = $value->descripcion . ' ' . $value->correo .' ' . $value->telefono .  ' ' . $value->whatsapp;
                     ?>
-                    <!-- <div class="one_third<?php echo esc_attr($last); ?>">  -->
                     <div class="element grid classic3_cols animated<?php echo esc_attr($key+1); ?>">
-                        <div class="one_third gallery3 classic static filterable portfolio_type themeborder" data-id="post-<?php echo esc_attr($key+1); ?>">
-                        <?php echo do_shortcode('[tg_accordion_oficinas descripcion="'.esc_attr($value->descripcion).'" correo="'.esc_attr($value->correo).'" title="'.esc_attr($value->nombre).'" icon="" close="1"]'.esc_attr($texto).'[/tg_accordion_oficinas]'); ?>
-                        </div>
+                    <!-- <div class="one_third<?php echo esc_attr($last); ?>">  -->
+                    <!-- <div class="element grid classic3_cols animated<?php echo esc_attr($key+1); ?>">
+                        <div class="one_third gallery3 classic static filterable portfolio_type themeborder" data-id="post-<?php echo esc_attr($key+1); ?>"> -->
+                        <?php echo do_shortcode('[tg_accordion_oficinas descripcion="'.esc_attr($value->descripcion).'" correo="'.esc_attr($texto).'" title="'.esc_attr($value->nombre).'" icon="" close="1"]'.esc_attr($texto).'[/tg_accordion_oficinas]'); ?>
+                        <!-- </div>-->
                     </div>
                     <?php
                 }
-			?>
-            <a href="http://localhost/iberfurgo-wp/delegaciones/?name=Madrid&id=1">ir</a>
-             <!-- <?php echo do_shortcode('[tg_button href="http://localhost/iberfurgo-wp/delegaciones/?delegacion_id=1" color="" bg_color="" text_color=""][/tg_button]');?> -->
-            <!-- </div> -->
-            </div>
-            </div>
-			<div class="fullwidth_comment_wrapper">
-				<?php comments_template( '', true ); ?>
-			</div>
-    	</div>
-    	<!-- End main content -->
-    </div> 
-</div>
+                ?>
+                </div>
+            
+            </div> <!-- standard_wrapper -->
+        
+        </div> <!-- page_main_content -->
+    </div>
+</div> <!-- inner -->
+
 <br class="clear"/>
 <?php get_footer(); ?>
