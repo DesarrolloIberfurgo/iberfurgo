@@ -54,7 +54,7 @@ $data = $response->data;
                                 <img src="<?php echo esc_url($small_image_url[0]); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" />
                                 <?php
                                     //Get car price
-                                    $car_price = $value->fianza;
+                                    $car_price = '';//$value->fianza;
                                     
                                     if(!empty($car_price))
                                     {
@@ -75,9 +75,9 @@ $data = $response->data;
 
                                         <?php
                                             //Display car attributes
-                                            $car_passengers = 2;
-                                            $car_luggages = 3;
-                                            $car_transmission = 4;
+                                            $car_passengers = $value->plazas;
+                                            $car_luggages = $value->carga_util;
+                                            $car_transmission = $value->puertas;
                                             
                                             if(!empty($car_passengers) OR !empty($car_luggages) OR !empty($car_transmission))
                                             {
@@ -108,7 +108,7 @@ $data = $response->data;
                                                             <div class="car_attribute_icon ti-briefcase"></div>
                                                             <div class="car_attribute_content">
                                                                 <?php
-                                                                    echo intval($car_luggages);
+                                                                    echo $car_luggages;
                                                                 ?>
                                                             </div>
                                                         </div>
@@ -143,7 +143,7 @@ $data = $response->data;
                                     <div class="car_attribute_price">
                                         <?php
                                             //Get car price
-                                            $car_price_day = $car_price; 
+                                            $car_price_day = $value->precioDesde; 
                                             
                                             if(!empty($car_price_day))
                                             {   
