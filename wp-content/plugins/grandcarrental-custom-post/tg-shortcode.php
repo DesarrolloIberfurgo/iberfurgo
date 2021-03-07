@@ -1072,7 +1072,10 @@ function tg_accordion_oficinas_func($atts, $content) {
 		'close' => 0,
 	), $atts));
 	
+	$direccion = $atts['direccion'];
 	$descripcion = $atts['descripcion'];
+	$whatsapp = $atts['whatsapp'];
+	$telefono = $atts['telefono'];
 	$correo = $atts['correo'];
 	
 	$close_class = '';
@@ -1097,9 +1100,23 @@ function tg_accordion_oficinas_func($atts, $content) {
 	// $return_html.= do_shortcode($content);
 	// $return_html.= '</p></div>';
 	$return_html.= '<div><p>';
-	$return_html.= '<div>'.$descripcion.'</div>';
-	$return_html.= '<div>'.$correo.'</div>';
+
+	$return_html.= '<div class="one"><h3>Contacto</h3></div>';
+	
+	$return_html.= '<div class="ppb_header_content">';
+	$return_html.= '<p>'.$direccion.'</p>';
+	$return_html.= '<p>'.$whatsapp.'</p>';
+	$return_html.= '<p>'.$telefono.'</p>';
+	$return_html.= '<p>'.$correo.'</p>';
+	$return_html.= '</div>';
+
+	$return_html.= '<div class=·"one"><h3>Horario</h3></div>';
+	$return_html.= '<p>'.$direccion.'</p>';
+
+	$return_html.= "<a class='button small ' style='background-color:#f4ae40 !important;color:#ffffff !important;border:1px solid #f4ae40 !important;' onclick='window.open('http://delegaciones?pepe=1', '_self')'>Buscar o Reservar o que</a>";
+
 	$return_html.= '</p></div>';
+
 	$return_html.= '</div>';
 
 	return $return_html;
