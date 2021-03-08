@@ -1113,7 +1113,7 @@ function tg_accordion_oficinas_func($atts, $content) {
 	$return_html.= '<div class=·"one"><h3>Horario</h3></div>';
 	$return_html.= '<p>'.$direccion.'</p>';
 
-	$return_html.= "<a class='button small ' style='background-color:#f4ae40 !important;color:#ffffff !important;border:1px solid #f4ae40 !important;' onclick='window.open('http://delegaciones?pepe=1', '_self')'>Buscar o Reservar o que</a>";
+	$return_html.= "<a href='index.php?id=1' class='button small ' style='background-color:#f4ae40 !important;color:#ffffff !important;border:1px solid #f4ae40 !important;' onclick='window.open('http://delegaciones?pepe=1', '_self')'>Buscar o Reservar o que</a>";
 
 	$return_html.= '</p></div>';
 

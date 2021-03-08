@@ -12,9 +12,9 @@
 get_header(); 
 
 global $wp_query;
-echo 'Comida:'. $wp_query->query_vars['comida'];
-echo '<br />';
-echo 'Variedad:'. $wp_query->query_vars['variedad'];
+echo 'Id:'. $wp_query->query_vars['id'];
+// echo '<br />';
+// echo 'Variedad:'. $wp_query->query_vars['variedad'];
 
 list($httpCode, $response) = getDataApi(URL_API . 'maestro-delegacion', '{"order":["nombre asc"]}');
 if ($httpCode != 200) {
