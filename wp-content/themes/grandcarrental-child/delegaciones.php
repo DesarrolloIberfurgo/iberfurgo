@@ -12,7 +12,9 @@
 get_header(); 
 
 global $wp_query;
-echo 'Id:'. $wp_query->query_vars['id'];
+echo 'Id:'. $wp_query->query_vars['category_name'];
+$state = get_query_var('state');
+echo 'State:' . $state;
 // echo '<br />';
 // echo 'Variedad:'. $wp_query->query_vars['variedad'];
 
