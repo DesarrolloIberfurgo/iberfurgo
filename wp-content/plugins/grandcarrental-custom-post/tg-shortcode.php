@@ -1065,6 +1065,65 @@ function tg_accordion_func($atts, $content) {
 
 add_shortcode('tg_accordion', 'tg_accordion_func');
 
+function tg_accordion_oficinas_func($atts, $content) {
+	//extract short code attr
+	extract(shortcode_atts(array(
+		'title' => '',
+		'close' => 0,
+	), $atts));
+	
+	$direccion = $atts['direccion'];
+	$descripcion = $atts['descripcion'];
+	$whatsapp = $atts['whatsapp'];
+	$telefono = $atts['telefono'];
+	$correo = $atts['correo'];
+	
+	$close_class = '';
+
+	if(!empty($close))
+	{
+		$close_class = 'pp_accordion_close';
+	}
+	else
+	{
+		$close_class = 'pp_accordion';
+	}
+
+	//Add jquery ui script dynamically
+	wp_enqueue_script("jquery-ui-core");
+	wp_enqueue_script("jquery-ui-accordion");
+	wp_enqueue_script('grandcarrental-custom-accordion', get_template_directory_uri()."/js/custom-accordion.js", false, GRANDCARRENTAL_THEMEVERSION, true);
+
+	$return_html = '<div class="'.esc_attr($close_class).' has_icon"><h3><a href="#">';
+	$return_html.= $title.'</a></h3>';
+	// $return_html.= '<div><p>';
+	// $return_html.= do_shortcode($content);
+	// $return_html.= '</p></div>';
+	$return_html.= '<div><p>';
+
+	$return_html.= '<div class="one"><h3>Contacto</h3></div>';
+	
+	$return_html.= '<div class="ppb_header_content">';
+	$return_html.= '<p>'.$direccion.'</p>';
+	$return_html.= '<p>'.$whatsapp.'</p>';
+	$return_html.= '<p>'.$telefono.'</p>';
+	$return_html.= '<p>'.$correo.'</p>';
+	$return_html.= '</div>';
+
+	$return_html.= '<div class=·"one"><h3>Horario</h3></div>';
+	$return_html.= '<p>'.$direccion.'</p>';
+
+	$return_html.= "<a href='index.php?id=1' class='button small ' style='background-color:#f4ae40 !important;color:#ffffff !important;border:1px solid #f4ae40 !important;' onclick='window.open('http://delegaciones?pepe=1', '_self')'>Buscar o Reservar o que</a>";
+
+	$return_html.= '</p></div>';
+
+	$return_html.= '</div>';
+
+	return $return_html;
+}
+
+add_shortcode('tg_accordion_oficinas', 'tg_accordion_oficinas_func');
+
 
 function tg_divider_func($atts, $content) {
 

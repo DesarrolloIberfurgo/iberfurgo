@@ -3369,7 +3369,7 @@ function ppb_car_search_func($atts, $content) {
 	
 	$return_html.= '<div class="standard_wrapper">';
 	$return_html.= '<div class="page_content_wrapper"><div class="inner">';
-	$return_html.= '<form class="car_search_form" method="get" action="'.esc_url($url).'">';
+	$return_html.= '<form class="car_search_form" method="get" action="busqueda">';
     $return_html.= '<div class="car_search_wrapper">';
     
     $return_html.= '<div class="one_fourth themeborder">';
@@ -3403,34 +3403,12 @@ function ppb_car_search_func($atts, $content) {
     	
     $return_html.= '<div class="one_fourth themeborder">';
 	
-	//Get available car types
-	$available_types = grandcarrental_get_cartype();
-
-    $return_html.= '<select id="type" name="type">
-	    		<option value="">'.esc_html__('Any Type', 'grandcarrental-custom-post' ).'</option>';
-	
-	foreach($available_types as $key => $available_type)	
-	{
-		$return_html.= '<option value="'.esc_attr($key).'">'.esc_attr($available_type).'</option>';
-	}
-
-    $return_html.= '</select>
-    		<span class="ti-angle-down"></span>
-    	</div>
+	$return_html.= '<input name="fecha_inicio" type="date">';
+	$return_html.='</div>
     	<div class="one_fourth themeborder">';
 
-	//Get available months
-	$sort_options = grandcarrental_get_sort_options();
 
-    $return_html.= '<select id="sort_by" name="sort_by">';
-
-	foreach($sort_options as $key => $sort_option)	
-	{
-		$return_html.= '<option value="'.esc_attr($key).'">'.esc_attr($sort_option).'</option>';	
-	}
-
-    $return_html.= '</select>
-    		<span class="ti-exchange-vertical"></span>
+    $return_html.= ' 
     	</div>
     	<div class="one_fourth last themeborder">
     		<input id="car_search_btn" type="submit" class="button" value="'.esc_html__( 'Search', 'grandcarrental-custom-post' ).'"/>
