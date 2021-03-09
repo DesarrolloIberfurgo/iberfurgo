@@ -1710,7 +1710,7 @@ body.js_nav #side_menu_wrapper
 	color: #222;
 	float: left;
 	line-height: 44px;
-	width: 60%;
+	width: 92%;
 }
 
 .top_contact_info span
@@ -1729,7 +1729,33 @@ body.js_nav #side_menu_wrapper
 
 .top_contact_info > div.company_address
 {
-	width: 40%;
+	width: 25%;
+}
+
+#top_contact_address
+{
+	font-size: 16px;
+	color: #ffffff;
+	font-family: Roboto;
+}
+
+#top_contact_number
+{
+	font-size: 16px;
+	color: #ffffff;
+	font-family: Roboto;
+}
+
+#top_contact_hours
+{
+	font-size: 16px;
+	color: #ffffff;
+	font-family: Roboto;
+}
+
+.icon-top-bar
+{
+	color: #ffffff;
 }
 
 .top_contact_info a

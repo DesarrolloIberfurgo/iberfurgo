@@ -1472,7 +1472,8 @@
 	
 	body.admin-bar .header_style_wrapper
 	{
-		padding-top: 46px;
+		padding-top: 0px;
+		
 	}
 	
 	.above_top_bar .social_wrapper

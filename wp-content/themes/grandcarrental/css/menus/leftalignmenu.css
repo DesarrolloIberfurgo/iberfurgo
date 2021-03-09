@@ -90,5 +90,6 @@ html[data-menu=leftalign] #logo_right_button
 	html[data-menu=leftalign] .top_bar
 	{
 		padding-bottom: 15px;
+		height: 70px;;
 	}
 }
