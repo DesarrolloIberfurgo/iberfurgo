@@ -1104,7 +1104,7 @@ function tg_accordion_oficinas_func($atts, $content) {
 	$return_html.= '<div class="one"><h3>Contacto</h3></div>';
 	
 	$return_html.= '<div class="ppb_header_content">';
-	$return_html.= '<p>'.$direccion.'</p>';
+	$return_html.= '<p>'.html_entity_decode($direccion).'</p>';
 	$return_html.= '<p>'.$whatsapp.'</p>';
 	$return_html.= '<p>'.$telefono.'</p>';
 	$return_html.= '<p>'.$correo.'</p>';
