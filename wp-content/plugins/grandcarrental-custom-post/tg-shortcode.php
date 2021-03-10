@@ -1071,12 +1071,15 @@ function tg_accordion_oficinas_func($atts, $content) {
 		'title' => '',
 		'close' => 0,
 	), $atts));
-	
+
 	$direccion = $atts['direccion'];
-	$descripcion = $atts['descripcion'];
 	$whatsapp = $atts['whatsapp'];
 	$telefono = $atts['telefono'];
-	$correo = $atts['correo'];
+	$email = $atts['email'];
+
+	$hlvm = $atts['hlvm'];
+	$hlvt = $atts['hlvt'];
+	$hs = $atts['hs'];
 	
 	$close_class = '';
 
@@ -1107,11 +1110,14 @@ function tg_accordion_oficinas_func($atts, $content) {
 	$return_html.= '<p>'.html_entity_decode($direccion).'</p>';
 	$return_html.= '<p>'.$whatsapp.'</p>';
 	$return_html.= '<p>'.$telefono.'</p>';
-	$return_html.= '<p>'.$correo.'</p>';
+	$return_html.= '<p>'.$email.'</p>';
 	$return_html.= '</div>';
 
 	$return_html.= '<div class=·"one"><h3>Horario</h3></div>';
-	$return_html.= '<p>'.$direccion.'</p>';
+	$return_html.= '<p>Lunes - Viernes</p>';
+	$return_html.= '<p>'.$hlvm.'</p>';
+	$return_html.= '<p>'.$hlvt.'</p>';
+	$return_html.= '<p>'.$hs.'</p>';
 
 	$return_html.= "<a href='index.php?id=1' class='button small ' style='background-color:#f4ae40 !important;color:#ffffff !important;border:1px solid #f4ae40 !important;' onclick='window.open('http://delegaciones?pepe=1', '_self')'>Buscar o Reservar o que</a>";
 
