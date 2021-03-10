@@ -41,10 +41,9 @@ if ($httpCode != 200) {
                 <div id="portfolio_filter_wrapper" class="gallery classic three_cols portfolio-content section content clearfix" data-columns="3">
                 <?php foreach($response->data as $key => $value)	
                 {
-                    $texto = $value->descripcion . ' ' . $value->correo .' ' . $value->telefono .  ' ' . $value->whatsapp;
                     ?>
                     <div class="element grid classic3_cols animated<?php echo esc_attr($key+1); ?>">
-                        <?php echo do_shortcode('[tg_accordion_oficinas direccion="'.esc_attr($value->direccion).'" descripcion="'.esc_attr($value->descripcion).'" whatsapp="'.esc_attr($value->whatsapp).'" telefono="'.esc_attr($value->telefono).'" correo="'.esc_attr($value->correo).'" title="'.esc_attr($value->nombre).'" icon="" close="1"]'.esc_attr($texto).'[/tg_accordion_oficinas]'); ?>
+                        <?php echo do_shortcode('[tg_accordion_oficinas direccion="'.esc_attr($value->direccion).'" descripcion="'.esc_attr($value->descripcion).'" whatsapp="'.esc_attr($value->whatsapp).'" telefono="'.esc_attr($value->telefono).'" correo="'.esc_attr($value->correo).'" title="'.esc_attr($value->nombre).'" icon="" close="1"][/tg_accordion_oficinas]'); ?>
                     </div>
                     <?php
                 }
