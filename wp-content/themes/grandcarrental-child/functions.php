@@ -21,7 +21,7 @@ function custom_rewrite_rule() {
 add_action('init', 'custom_rewrite_rule', 10, 0);
 
 function add_rules() {
-    add_rewrite_rule('^oficina/([^/]*)/?','index.php?page_id=4062&category_name=$matches[1]','top');
+    add_rewrite_rule('^oficinas/([^/]*)/?','index.php?pagename=oficina&category_name=$matches[1]','top');
 }
 add_action( 'init', 'add_rules', 10, 0);
 

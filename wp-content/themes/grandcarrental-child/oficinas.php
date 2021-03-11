@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Delegaciones
- * The main template file for display delegaciones page.
+ * Template Name: Oficinas
+ * The main template file for display oficinas page.
  *
  * @package WordPress
 */
@@ -12,7 +12,6 @@
 get_header(); 
 
 global $wp_query;
-echo 'category:'. $wp_query->query_vars['category_name'];
 
 list($httpCode, $response) = getDataApi(URL_API . 'maestro-delegacion', '{"order":["nombre asc"]}');
 if ($httpCode != 200) {
@@ -61,6 +60,5 @@ if ($httpCode != 200) {
         </div> <!-- page_main_content -->
     </div>
 </div> <!-- inner -->
-<?php echo do_shortcode('[tg_social_icons style="dark" size="small"]<i class="fa fa-facebook"></i>[/tg_social_icons]'); ?>
 <br class="clear"/>
 <?php get_footer(); ?>

@@ -9,7 +9,14 @@
 get_header(); 
 
 global $wp_query;
-echo 'category:'. $wp_query->query_vars['category_name'];
+$url_oficina = $wp_query->query_vars['category_name'];
+list($httpCode, $response) = getDataApi(URL_API . 'maestro-delegacion-datos-web', '{"url_oficina":'.$url_oficina.'}');
+if ($httpCode != 200) {
+	return 'ha petado';
+}
+
+echo $response->data[0]->direccion;
+
 ?>
-oficina
+
 <?php get_footer(); ?>

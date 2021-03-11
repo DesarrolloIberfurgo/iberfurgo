@@ -1081,7 +1081,7 @@ function tg_accordion_oficinas_func($atts, $content) {
 	$hlvt = $atts['hlvt'];
 	$hs = $atts['hs'];
 
-	$url = URL_WEB.'/oficina/'.$atts['url'];
+	$url = URL_WEB.'/oficinas/'.$atts['url'];
 	
 	$close_class = '';
 
