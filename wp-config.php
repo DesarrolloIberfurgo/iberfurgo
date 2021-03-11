@@ -109,6 +109,7 @@ define( 'NONCE_SALT',       'put your unique phrase here' );
 /** Propios */
 define('API_TOKEN', 'x49H4pR4SIvkWt7AMyHs6ZW5TeeDz9XW5In7UDRFBLyuKqHcGeq8x3fsrs15VCyt');
 define('URL_API', 'http://localhost/api-iberfurgo/public/api/v1/');
+define('URL_WEB', 'http://localhost/iberfurgo-wp');
 
 
 /**#@-*/

@@ -12,11 +12,7 @@
 get_header(); 
 
 global $wp_query;
-echo 'Id:'. $wp_query->query_vars['category_name'];
-$state = get_query_var('state');
-echo 'State:' . $state;
-// echo '<br />';
-// echo 'Variedad:'. $wp_query->query_vars['variedad'];
+echo 'category:'. $wp_query->query_vars['category_name'];
 
 list($httpCode, $response) = getDataApi(URL_API . 'maestro-delegacion', '{"order":["nombre asc"]}');
 if ($httpCode != 200) {
@@ -50,7 +46,8 @@ if ($httpCode != 200) {
                         email="'.esc_attr($value->delegacion_datos_web->email).'"
                         hlvm="'.esc_attr($value->delegacion_datos_web->horarios_lunes_viernes_manana).'"
                         hlvt="'.esc_attr($value->delegacion_datos_web->horarios_lunes_viernes_tarde).'"
-                        hs="'.esc_attr($value->delegacion_datos_web->horarios_sabado).'"   
+                        hs="'.esc_attr($value->delegacion_datos_web->horarios_sabado).'"
+                        url="'.esc_attr($value->delegacion_datos_web->url_oficina).'"   
                         title="'.esc_attr($value->nombre).'" 
                         icon="" close="1"][/tg_accordion_oficinas]'); ?>
                     </div>

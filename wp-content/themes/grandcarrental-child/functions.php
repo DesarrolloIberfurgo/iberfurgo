@@ -16,9 +16,14 @@ License: GPLv2
 // add_filter('query_vars', 'add_state_var', 0, 1);
 
 function custom_rewrite_rule() {
-  add_rewrite_rule('^delegaciones\/(.+)/?','index.php?pagename=delegaciones&category_name=$matches[1]','top');
+  add_rewrite_rule('^delegaciones\/(.+)/?','index.php?page_id=4062&category_name=$matches[1]','top');
 }
 add_action('init', 'custom_rewrite_rule', 10, 0);
+
+function add_rules() {
+    add_rewrite_rule('^oficina/([^/]*)/?','index.php?page_id=4062&category_name=$matches[1]','top');
+}
+add_action( 'init', 'add_rules', 10, 0);
 
 
 // function custom_rewrite_tag() {

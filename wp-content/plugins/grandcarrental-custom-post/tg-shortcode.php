@@ -1080,6 +1080,8 @@ function tg_accordion_oficinas_func($atts, $content) {
 	$hlvm = $atts['hlvm'];
 	$hlvt = $atts['hlvt'];
 	$hs = $atts['hs'];
+
+	$url = URL_WEB.'/oficina/'.$atts['url'];
 	
 	$close_class = '';
 
@@ -1118,8 +1120,9 @@ function tg_accordion_oficinas_func($atts, $content) {
 	$return_html.= '<p>'.$hlvm.'</p>';
 	$return_html.= '<p>'.$hlvt.'</p>';
 	$return_html.= '<p>'.$hs.'</p>';
+ 
 
-	$return_html.= "<a href='index.php?id=1' class='button small ' style='background-color:#f4ae40 !important;color:#ffffff !important;border:1px solid #f4ae40 !important;' onclick='window.open('http://delegaciones?pepe=1', '_self')'>Buscar o Reservar o que</a>";
+	$return_html.= "<a href='".esc_url($url)."' class='button small ' style='background-color:#f4ae40 !important;color:#ffffff !important;border:1px solid #f4ae40 !important;'>Ir a delegación</a>";
 
 	$return_html.= '</p></div>';
 
