@@ -1076,6 +1076,8 @@ function tg_accordion_oficinas_func($atts, $content) {
 	$whatsapp = $atts['whatsapp'];
 	$telefono = $atts['telefono'];
 	$email = $atts['email'];
+	$comoLlegar = $atts['mapa_oficina'];
+	
 
 	$hlvm = $atts['hlvm'];
 	$hlvt = $atts['hlvt'];
@@ -1099,23 +1101,26 @@ function tg_accordion_oficinas_func($atts, $content) {
 	wp_enqueue_script("jquery-ui-accordion");
 	wp_enqueue_script('grandcarrental-custom-accordion', get_template_directory_uri()."/js/custom-accordion.js", false, GRANDCARRENTAL_THEMEVERSION, true);
 
-	$return_html = '<div class="'.esc_attr($close_class).' has_icon"><h3><a href="#">';
+	$return_html = '<div class="'.esc_attr($close_class).' has_icon ibf_border_gray"><h3><a href="#" class="ibf_color_orange">';
 	$return_html.= $title.'</a></h3>';
 	// $return_html.= '<div><p>';
 	// $return_html.= do_shortcode($content);
 	// $return_html.= '</p></div>';
-	$return_html.= '<div><p>';
+	$return_html.= '<div class="ibf_pl_0 ibf_pr_0"><p>';
 
-	$return_html.= '<div class="one"><h3>Contacto</h3></div>';
+	$return_html.= '<div class="one"><h5 class="ibf_background_gray ibf_pt_5 ibf_pb_5"><Contacto class="ibf_ml_15">Contacto</span></h5></div>';
 	
-	$return_html.= '<div class="ppb_header_content">';
-	$return_html.= '<p>'.html_entity_decode($direccion).'</p>';
-	$return_html.= '<p>'.$whatsapp.'</p>';
-	$return_html.= '<p>'.$telefono.'</p>';
-	$return_html.= '<p>'.$email.'</p>';
+	$return_html.= '<div class="ppb_header_content ibf_pl_15 ibf_pt_20">';
+	$return_html.= '<p><i class="fas fa-phone-alt ibf_font_20 ibf_color_orange ibf_pr_10"></i><a class="ibf_font_18 ibf_font_bold" href="tel:0034'.$telefono.'">'.$telefono.'</a></p>';
+	$return_html.= '<p><i class="fab fa-whatsapp  ibf_font_24 ibf_color_orange ibf_pr_10"></i><a class="ibf_font_16" href="'.$whatsapp.'">'.substr($whatsapp,-9).'</a></p>';
+	$return_html.= '<p><i class="fas fa-at ibf_font_20 ibf_color_orange ibf_pr_10"></i><a class="ibf_font_16" href="tel:0034'.$email.'">'.$email.'</a></p>';
+	$return_html.= '<p><i class="fas fa-map-marker-alt  ibf_font_20 ibf_color_orange ibf_pr_15"></i><span class="ibf_font_16">'.html_entity_decode($direccion).'</span></p>';
+	$return_html.= '<p><a class="ibf_font_16" href="'.$comoLlegar.'">Como llegar</a></p>';
+	
+
 	$return_html.= '</div>';
 
-	$return_html.= '<div class=·"one"><h3>Horario</h3></div>';
+	$return_html.= '<div class="one"><h5 class="ibf_background_gray ibf_pt_5 ibf_pb_5"><Contacto class="ibf_ml_15">Horario</span></h5></div>';
 	$return_html.= '<p>Lunes - Viernes</p>';
 	$return_html.= '<p>'.$hlvm.'</p>';
 	$return_html.= '<p>'.$hlvt.'</p>';

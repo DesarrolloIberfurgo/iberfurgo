@@ -1845,16 +1845,16 @@ function grandcarrental_format_car_price($car_price = 0)
 		$tg_car_currency_decimal_sep = kirki_get_option('tg_car_currency_decimal_sep');
 		$tg_car_currency_decimal_number = kirki_get_option('tg_car_currency_decimal_number');
 		
-		if($tg_car_currency_display == 'before')
-		{
-			$return_html.= '<span class="single_car_currency">'.$tg_car_currency.'</span>';
-		}
+		// if($tg_car_currency_display == 'before')
+		// {
+		// 	$return_html.= '<span class="single_car_currency">'.$tg_car_currency.'</span>';
+		// }
 		
 		$return_html.= '<span class="single_car_price">'.number_format(floatval($car_price),$tg_car_currency_decimal_number,$tg_car_currency_decimal_sep,$tg_car_currency_thousand_sep).'</span>';
 		
-		if($tg_car_currency_display == 'after')
+		if($tg_car_currency_display == 'before')
 		{
-			$return_html.= '<span class="single_car_currency">'.$tg_car_currency.'</span>';
+			$return_html.= '<span class="single_car_currency ifb_color_black">&euro;</span>';
 		}
 		
 		return $return_html;

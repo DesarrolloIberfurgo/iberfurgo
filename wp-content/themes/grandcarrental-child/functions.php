@@ -26,6 +26,19 @@ function add_rules() {
 add_action( 'init', 'add_rules', 10, 0);
 
 
+
+add_action( 'wp_enqueue_scripts', 'custom_enqueue_styles');
+
+function custom_enqueue_styles() 
+{
+	wp_enqueue_style( 'custom-style', 
+	                  get_stylesheet_directory_uri() . '/css/iberfurgo.css', 
+                    array(), 
+                    wp_get_theme()->get('Version')
+                  );
+}
+
+
 // function custom_rewrite_tag() {
 //   add_rewrite_tag('%category_name%', '([^&]+)');
 //   // add_rewrite_tag('%variety%', '([^&]+)');
@@ -44,4 +57,5 @@ add_action( 'init', 'add_rules', 10, 0);
 require_once('shortcodes/shortcodes.php');
 require_once('functions-api/apiCalls.php');
 require_once('functions-api/connection.php');
+
 
