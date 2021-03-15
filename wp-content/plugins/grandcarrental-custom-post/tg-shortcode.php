@@ -1076,7 +1076,8 @@ function tg_accordion_oficinas_func($atts, $content) {
 	$whatsapp = $atts['whatsapp'];
 	$telefono = $atts['telefono'];
 	$email = $atts['email'];
-	$comoLlegar = $atts['mapa_oficina'];
+	$como_llegar = $atts['mapa_oficina'];
+	
 	
 
 	$hlvm = $atts['hlvm'];
@@ -1106,7 +1107,7 @@ function tg_accordion_oficinas_func($atts, $content) {
 	// $return_html.= '<div><p>';
 	// $return_html.= do_shortcode($content);
 	// $return_html.= '</p></div>';
-	$return_html.= '<div class="ibf_pl_0 ibf_pr_0"><p>';
+	$return_html.= '<div class="ibf_pl_0 ibf_pr_0 ibf_pb_0 ibf_pt_0">';
 
 	$return_html.= '<div class="one"><h5 class="ibf_background_gray ibf_pt_5 ibf_pb_5"><Contacto class="ibf_ml_15">Contacto</span></h5></div>';
 	
@@ -1115,21 +1116,18 @@ function tg_accordion_oficinas_func($atts, $content) {
 	$return_html.= '<p><i class="fab fa-whatsapp  ibf_font_24 ibf_color_orange ibf_pr_10"></i><a class="ibf_font_16" href="'.$whatsapp.'">'.substr($whatsapp,-9).'</a></p>';
 	$return_html.= '<p><i class="fas fa-at ibf_font_20 ibf_color_orange ibf_pr_10"></i><a class="ibf_font_16" href="tel:0034'.$email.'">'.$email.'</a></p>';
 	$return_html.= '<p><i class="fas fa-map-marker-alt  ibf_font_20 ibf_color_orange ibf_pr_15"></i><span class="ibf_font_16">'.html_entity_decode($direccion).'</span></p>';
-	$return_html.= '<p><a class="ibf_font_16" href="'.$comoLlegar.'">Como llegar</a></p>';
-	
-
+	$return_html.= '<p class="ibf_pl-15 ibf_font_bold"><a class="ibf_font_16 ibf_color_orange" href="'.$como_llegar.'">Como llegar</a></p>';
 	$return_html.= '</div>';
 
-	$return_html.= '<div class="one"><h5 class="ibf_background_gray ibf_pt_5 ibf_pb_5"><Contacto class="ibf_ml_15">Horario</span></h5></div>';
-	$return_html.= '<p>Lunes - Viernes</p>';
-	$return_html.= '<p>'.$hlvm.'</p>';
-	$return_html.= '<p>'.$hlvt.'</p>';
-	$return_html.= '<p>'.$hs.'</p>';
+	$return_html.= '<div class="one"><h5 class="ibf_background_gray ibf_pt_5 ibf_pb_5 ibf_mb_15"><Contacto class="ibf_ml_15">Horario</span></h5></div>';
+	$return_html.= '<p class="ibf_font_16 ibf_color_orange ibf_pl_15 ibf_font_bold ibf_pb_2">Lunes - Viernes</p>';
+	$return_html.= '<p class="ibf_pl_15 ibf_pb_2 ibf_pt_2">'.$hlvm.'</p>';
+	$return_html.= '<p class="ibf_pl_15 ibf_pb_2 ibf_pt_2">'.$hlvt.'</p>';
+	$return_html.= '<p class="ibf_font_16 ibf_color_orange ibf_pl_15 ibf_font_bold ibf_pb_2 ibf_pt_2">Sábado:<span class="ifb_color_black ibf_font_normal"> '.$hs.'</span></p>';
  
-
-	$return_html.= "<a href='".esc_url($url)."' class='button small ' style='background-color:#f4ae40 !important;color:#ffffff !important;border:1px solid #f4ae40 !important;'>Ir a delegación</a>";
-
-	$return_html.= '</p></div>';
+	$return_html.= "<a href='".esc_url($url)."' class='button left ibf_button_oficina ibf_mt_20'>Reservar vehículo aquí</a>";
+	
+	$return_html.= '</div>';
 
 	$return_html.= '</div>';
 

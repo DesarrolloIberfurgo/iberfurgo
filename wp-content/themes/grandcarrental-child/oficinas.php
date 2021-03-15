@@ -48,6 +48,7 @@ if ($httpCode != 200) {
                         hs="'.esc_attr($value->delegacion_datos_web->horarios_sabado).'"
                         url="'.esc_attr($value->delegacion_datos_web->url_oficina).'"   
                         title="'.esc_attr($value->nombre).'" 
+                        mapa_oficina="'.esc_attr($value->mapa_oficina).'"
                         icon="" close="1"][/tg_accordion_oficinas]'); ?>
                     </div>
                     <?php

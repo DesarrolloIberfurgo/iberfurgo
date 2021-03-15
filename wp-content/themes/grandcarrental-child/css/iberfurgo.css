@@ -1,9 +1,12 @@
 .ibf_title_car { color:#ea580c; font-size: 18px; }
 
+.ibf_text_center { text-align: center; }
+
 .ibf_color_orange { color: #ea580c!important;}
 .ifb_color_black { color: #000000!important;}
 .ibf_color_gray { color: #706F6F;}
 .ibf_font_bold { font-weight: bold;}
+.ibf_font_normal { font-weight: normal; }
 .ibf_background_gray {background-color: rgba(112, 111, 111, 0.2)!important;}
 
 .ibf_border_gray { border: 1px solid rgba(112, 111, 111, 0.2)!important;}
@@ -78,6 +81,14 @@
     border-radius:0!important;
 }
 
+.ibf_button_oficina{
+    width: 88%;  
+    background-color:#ea580c !important;
+    color:#ffffff !important;
+    border:1px solid #ea580c !important; 
+    border-radius:0!important;
+}
+
 .ui-accordion .ui-accordion-header .ui-icon { background-color:#ea580c!important;}
 
 .ibf_mr_1 { margin-right: 1px; }
@@ -125,6 +136,32 @@
 .ibf_mln_9 { margin-left: -9px; }
 .ibf_mln_10 { margin-left: -10px; }
 
+.ibf_mb_1 { margin-bottom: 1px; }
+.ibf_mb_2 { margin-bottom: 2px; }
+.ibf_mb_3 { margin-bottom: 3px; }
+.ibf_mb_4 { margin-bottom: 4px; }
+.ibf_mb_5 { margin-bottom: 5px; }
+.ibf_mb_6 { margin-bottom: 6px; }
+.ibf_mb_7 { margin-bottom: 7px; }
+.ibf_mb_8 { margin-bottom: 8px; }
+.ibf_mb_9 { margin-bottom: 9px; }
+.ibf_mb_10 { margin-bottom: 10px; }
+.ibf_mb_15 { margin-bottom: 15px; }
+
+.ibf_mt_1 { margin-top: 1px; }
+.ibf_mt_2 { margin-top: 2px; }
+.ibf_mt_3 { margin-top: 3px; }
+.ibf_mt_4 { margin-top: 4px; }
+.ibf_mt_5 { margin-top: 5px; }
+.ibf_mt_6 { margin-top: 6px; }
+.ibf_mt_7 { margin-top: 7px; }
+.ibf_mt_8 { margin-top: 8px; }
+.ibf_mt_9 { margin-top: 9px; }
+.ibf_mt_10 { margin-top: 10px; }
+.ibf_mt_15 { margin-top: 15px; }
+.ibf_mt_20 { margin-top: 20px; }
+
+.ibf_pt_0 { padding-top: 0px!important; }
 .ibf_pt_1 { padding-top: 1px; }
 .ibf_pt_2 { padding-top: 2px; }
 .ibf_pt_3 { padding-top: 3px; }
@@ -138,6 +175,7 @@
 .ibf_pt_15 { padding-top: 15px; }
 .ibf_pt_20 { padding-top: 20px; }
 
+.ibf_pb_0 { padding-bottom: 0px!important; }
 .ibf_pb_1 { padding-bottom: 1px; }
 .ibf_pb_2 { padding-bottom: 2px; }
 .ibf_pb_3 { padding-bottom: 3px; }
@@ -199,5 +237,6 @@
 .ui-accordion .ui-accordion-header { border-color: none!important;}
 .ui-accordion .ui-accordion-header .ui-icon { margin-left: 15px!important; }
 .ui-accordion .ui-accordion-header a { margin-left: 15px!important;}
+
 
     
