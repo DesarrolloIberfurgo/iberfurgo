@@ -1,0 +1,251 @@
+
+.ibf_title_car { color:#ea580c; font-size: 18px; }
+
+.ibf_text_center { text-align: center; }
+
+.ibf_color_orange { color: #ea580c!important;}
+.ifb_color_black { color: #000000!important;}
+.ibf_color_gray { color: #706F6F;}
+.ibf_font_bold { font-weight: bold;}
+.ibf_font_normal { font-weight: normal; }
+.ibf_background_gray {background-color: rgba(112, 111, 111, 0.2)!important;}
+
+.ibf_border_gray { border: 1px solid rgba(112, 111, 111, 0.2)!important;}
+
+.ibf_font_16 { font-size: 16px;}
+.ibf_font_18 { font-size: 18px;}
+.ibf_font_20 { font-size: 20px;}
+.ibf_font_24 { font-size: 24px;}
+
+.top_contact_info {
+    font-size: 13px;
+    color: #222;
+    float: left;
+    line-height: 44px;
+    width: 92%;
+}
+
+.top_contact_info > div.company_address {
+    width: 25%;
+}
+
+.header_style_wrapper {
+    width: 100%;
+    float: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    display: block;
+}
+
+.car_attribute_price_day.two_cols .ibf_price_title,
+.car_attribute_price_day.three_cols .ibf_price_title,
+.car_attribute_price_day.four_cols .ibf_price_title
+{
+	display: block!important;
+	font-size: 13px!important;
+	margin-top: -15px!important;
+}
+
+.car_attribute_price 
+{ 
+    width: 25%!important; 
+    float: right!important;
+}
+
+.car_attribute_wrapper 
+{ 
+    width: 75%!important; 
+    float: left!important;
+}
+
+.car_attribute_wrapper_icon
+{
+    width: 100%!important;
+}
+
+
+.one_fourth {
+    width: 26%!important;
+    float: left!important;
+    position: relative!important;
+    box-sizing: border-box!important;
+}
+
+.ibf_button_flota{
+    width: 98%; 
+    margin-left:-20px; 
+    background-color:#ea580c !important;
+    color:#ffffff !important;
+    border:1px solid #ea580c !important; 
+    border-radius:0!important;
+}
+
+.ibf_button_oficina{
+    width: 88%;  
+    background-color:#ea580c !important;
+    color:#ffffff !important;
+    border:1px solid #ea580c !important; 
+    border-radius:0!important;
+}
+
+.ui-accordion .ui-accordion-header .ui-icon { background-color:#ea580c!important;}
+
+.ibf_mr_1 { margin-right: 1px; }
+.ibf_mr_2 { margin-right: 2px; }
+.ibf_mr_3 { margin-right: 3px; }
+.ibf_mr_4 { margin-right: 4px; }
+.ibf_mr_5 { margin-right: 5px; }
+.ibf_mr_6 { margin-right: 6px; }
+.ibf_mr_7 { margin-right: 7px; }
+.ibf_mr_8 { margin-right: 8px; }
+.ibf_mr_9 { margin-right: 9px; }
+.ibf_mr_10 { margin-right: 10px; }
+
+.ibf_mrn_1 { margin-right: -1px; }
+.ibf_mrn_2 { margin-right: -2px; }
+.ibf_mrn_3 { margin-right: -3px; }
+.ibf_mrn_4 { margin-right: -4px; }
+.ibf_mrn_5 { margin-right: -5px; }
+.ibf_mrn_6 { margin-right: -6px; }
+.ibf_mrn_7 { margin-right: -7px; }
+.ibf_mrn_8 { margin-right: -8px; }
+.ibf_mrn_9 { margin-right: -9px; }
+.ibf_mrn_10 { margin-right: -10px; }
+
+.ibf_ml_1 { margin-left: 1px; }
+.ibf_ml_2 { margin-left: 2px; }
+.ibf_ml_3 { margin-left: 3px; }
+.ibf_ml_4 { margin-left: 4px; }
+.ibf_ml_5 { margin-left: 5px; }
+.ibf_ml_6 { margin-left: 6px; }
+.ibf_ml_7 { margin-left: 7px; }
+.ibf_ml_8 { margin-left: 8px; }
+.ibf_ml_9 { margin-left: 9px; }
+.ibf_ml_10 { margin-left: 10px; }
+.ibf_ml_15 { margin-left: 15px; }
+
+.ibf_mln_1 { margin-left: -1px; }
+.ibf_mln_2 { margin-left: -2px; }
+.ibf_mln_3 { margin-left: -3px; }
+.ibf_mln_4 { margin-left: -4px; }
+.ibf_mln_5 { margin-left: -5px; }
+.ibf_mln_6 { margin-left: -6px; }
+.ibf_mln_7 { margin-left: -7px; }
+.ibf_mln_8 { margin-left: -8px; }
+.ibf_mln_9 { margin-left: -9px; }
+.ibf_mln_10 { margin-left: -10px; }
+
+.ibf_mb_1 { margin-bottom: 1px; }
+.ibf_mb_2 { margin-bottom: 2px; }
+.ibf_mb_3 { margin-bottom: 3px; }
+.ibf_mb_4 { margin-bottom: 4px; }
+.ibf_mb_5 { margin-bottom: 5px; }
+.ibf_mb_6 { margin-bottom: 6px; }
+.ibf_mb_7 { margin-bottom: 7px; }
+.ibf_mb_8 { margin-bottom: 8px; }
+.ibf_mb_9 { margin-bottom: 9px; }
+.ibf_mb_10 { margin-bottom: 10px; }
+.ibf_mb_15 { margin-bottom: 15px; }
+
+.ibf_mt_1 { margin-top: 1px; }
+.ibf_mt_2 { margin-top: 2px; }
+.ibf_mt_3 { margin-top: 3px; }
+.ibf_mt_4 { margin-top: 4px; }
+.ibf_mt_5 { margin-top: 5px; }
+.ibf_mt_6 { margin-top: 6px; }
+.ibf_mt_7 { margin-top: 7px; }
+.ibf_mt_8 { margin-top: 8px; }
+.ibf_mt_9 { margin-top: 9px; }
+.ibf_mt_10 { margin-top: 10px; }
+.ibf_mt_15 { margin-top: 15px; }
+.ibf_mt_20 { margin-top: 20px; }
+
+.ibf_pt_0 { padding-top: 0px!important; }
+.ibf_pt_1 { padding-top: 1px; }
+.ibf_pt_2 { padding-top: 2px; }
+.ibf_pt_3 { padding-top: 3px; }
+.ibf_pt_4 { padding-top: 4px; }
+.ibf_pt_5 { padding-top: 5px; }
+.ibf_pt_6 { padding-top: 6px; }
+.ibf_pt_7 { padding-top: 7px; }
+.ibf_pt_8 { padding-top: 8px; }
+.ibf_pt_9 { padding-top: 9px; }
+.ibf_pt_10 { padding-top: 10px; }
+.ibf_pt_15 { padding-top: 15px; }
+.ibf_pt_20 { padding-top: 20px; }
+
+.ibf_pb_0 { padding-bottom: 0px!important; }
+.ibf_pb_1 { padding-bottom: 1px; }
+.ibf_pb_2 { padding-bottom: 2px; }
+.ibf_pb_3 { padding-bottom: 3px; }
+.ibf_pb_4 { padding-bottom: 4px; }
+.ibf_pb_5 { padding-bottom: 5px; }
+.ibf_pb_6 { padding-bottom: 6px; }
+.ibf_pb_7 { padding-bottom: 7px; }
+.ibf_pb_8 { padding-bottom: 8px; }
+.ibf_pb_9 { padding-bottom: 9px; }
+.ibf_pb_10 { padding-bottom: 10px; }
+
+.ibf_pl_0 { padding-left: 0px!important;}
+.ibf_pl_15 { padding-left: 15px!important;}
+
+.ibf_pr_0 { padding-right: 0px!important;}
+.ibf_pr_1 { padding-right: 1px!important;}
+.ibf_pr_2 { padding-right: 2px!important;}
+.ibf_pr_3 { padding-right: 3px!important;}
+.ibf_pr_4 { padding-right: 4px!important;}
+.ibf_pr_5 { padding-right: 5px!important;}
+.ibf_pr_6 { padding-right: 6px!important;}
+.ibf_pr_7 { padding-right: 7px!important;}
+.ibf_pr_8 { padding-right: 8px!important;}
+.ibf_pr_9 { padding-right: 9px!important;}
+.ibf_pr_10 { padding-right: 10px!important;}
+.ibf_pr_15 { padding-right: 15px!important;}
+.ibf_pr_20 { padding-right: 20px!important;}
+
+.ibf_mtn_10 { margin-top: -10px;}
+
+.ibf_pad_15 { padding: 15px!important;}
+
+.ibf_padl_15 { padding-left: 15px!important;}
+
+
+.ibf_icon_door { 
+    background-image: url("../imagenes_iberfurgo/iconos/ibf_icon_door_black.png");
+    height: 20px;
+    width: 20px;
+}
+
+.ibf_icon_charge { 
+    background-image: url("../imagenes_iberfurgo/iconos/ibf_icon_charge_black.png");
+    height: 20px;
+    width: 20px;
+}
+
+.ibf_icon_people { 
+    background-image: url("../imagenes_iberfurgo/iconos/ibf_icon_people_black.png");
+    height: 20px;
+    width: 20px;
+}
+
+.ibf_head_oficinas {
+    background-image: url("../imagenes_iberfurgo/oficinas_iberfurgo/iberfurgo-oficinas.jpg") !important;
+}
+
+#page_caption.hasbg:after {
+    background-image: none !important;
+}
+
+
+.ui-accordion .ui-accordion-header .ui-icon {
+    color:#ea580c!important;
+}
+
+.ui-accordion .ui-accordion-header { border-color: none!important;}
+.ui-accordion .ui-accordion-header .ui-icon { margin-left: 15px!important; }
+.ui-accordion .ui-accordion-header a { margin-left: 15px!important;}
+
+
+    
