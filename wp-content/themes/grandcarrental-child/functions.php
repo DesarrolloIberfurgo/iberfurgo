@@ -59,3 +59,23 @@ require_once('functions-api/apiCalls.php');
 require_once('functions-api/connection.php');
 
 
+function get_times() {
+
+  $start = "00:00"; 
+  $end = "23:30";
+  global $showing;
+    $tStart = strtotime($start);
+    $tEnd = strtotime($end);
+    $tNow = $tStart;
+    
+  while($tNow <= $tEnd){
+    // if(date("H:i",$tNow)=='10:00'){
+    //     $showing  .= '<option value="'.date("H:i",$tNow).'" selected>'.date("H:i",$tNow).'</option>';
+    // }else{
+        $showing  .= '<option value="'.date("H:i",$tNow).'">'.date("H:i",$tNow).'</option>';
+    // }
+      $tNow = strtotime('+30 minutes',$tNow);
+  }
+  return $showing;
+}
+

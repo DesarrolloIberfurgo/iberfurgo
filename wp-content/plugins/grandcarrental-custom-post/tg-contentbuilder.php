@@ -3372,7 +3372,7 @@ function ppb_car_search_func($atts, $content) {
 	$return_html.= '<form class="car_search_form" method="get" action="busqueda">';
     $return_html.= '<div class="car_search_wrapper">';
     
-    $return_html.= '<div class="one_fourth themeborder">';
+    $return_html.= '<div class="one_fifth themeborder">';
 	
 	//Get available car brand
 	$available_brands = grandcarrental_get_carbrand();
@@ -3396,21 +3396,36 @@ function ppb_car_search_func($atts, $content) {
 	// {
 	// 	$return_html.= '<option value="'.esc_attr($key).'">'.esc_attr($available_brand).'</option>';
 	// }
+	//[date* pickup-date "mm/dd/yyyy"]
+	//[select* pickup-time include_blank "1:00" "1:30" "2:00" "2:30" "3:00" "3:30" "5:00" "5:30" "6:00" "6:30" "7:00" "7:30" "8:00" "8:30" "9:00" "9:30" "10:00" "10:30" "11:00" "11:30" "12:00" "12:30" "13:00" "13:30" "14:00" "14:30" "15:00" "15:30" "16:00" "16:30" "17:00" "17:30" "18:00" "18:30" "19:00" "19:30" "20:00" "20:30" "21:00" "21:30" "22:00" "22:30" "23:00" "23:30" "24:00" "24:30"]
+
+	$horas = get_times();
 
     $return_html.= '</select>
-    		<span class="ti-angle-down"></span>
     	</div>';
     	
-    $return_html.= '<div class="one_fourth themeborder">';
+    $return_html.= '<div class="one_fifth themeborder">';
 	
 	$return_html.= '<input name="fecha_inicio" type="date">';
-	$return_html.='</div>
-    	<div class="one_fourth themeborder">';
+	$return_html.='</div>';
 
+	$return_html.= '<div class="one_fifth themeborder">';
+	$return_html.= '<select name="hora_inicio" ><option value="">---</option>';
+	$return_html.= $horas;
+	$return_html.='</select>';
+	$return_html.='</div>';
 
-    $return_html.= ' 
-    	</div>
-    	<div class="one_fourth last themeborder">
+    $return_html.='<div class="one_fifth themeborder">';
+	$return_html.= '<input name="fecha_fin" type="date">';
+    $return_html.= '</div>';
+    	
+	$return_html.= '<div class="one_fifth themeborder">';
+	$return_html.= '<select name="hora_fin"><option value="">---</option>';
+	$return_html.= $horas;
+	$return_html.='</select>';
+	$return_html.='</div>';
+    
+	$return_html.='<div class="one right themeborder">
     		<input id="car_search_btn" type="submit" class="button" value="'.esc_html__( 'Search', 'grandcarrental-custom-post' ).'"/>
     	</div>
     </div>
