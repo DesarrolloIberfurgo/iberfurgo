@@ -32,7 +32,7 @@ if ($httpCode != 200) {
             }
         ?>
         <div id="page_main_content" class="sidebar_content full_width fixed_column">
-            <div class="ibf_head_oficinas"></div>
+            <!-- <div class="ibf_head_oficinas"></div> -->
             
             <div class="standard_wrapper"> 
                 <h1 class="ibf_color_orange">Oficinas Iberfurgo en España</h1>  
@@ -66,7 +66,7 @@ if ($httpCode != 200) {
                         hs="'.esc_attr($value->delegacion_datos_web->horarios_sabado).'"
                         url="'.esc_attr($value->delegacion_datos_web->url_oficina).'"   
                         title="'.esc_attr($value->nombre).'" 
-                        mapa_oficina="'.esc_attr($value->mapa_oficina).'"
+                        mapa_oficina="'.esc_attr($value->delegacion_datos_web->mapa_oficina).'"
                         icon="" close="1"][/tg_accordion_oficinas]'); ?>
                     </div>
                     <?php

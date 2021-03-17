@@ -1116,7 +1116,7 @@ function tg_accordion_oficinas_func($atts, $content) {
 	$return_html.= '<p><i class="fab fa-whatsapp  ibf_font_24 ibf_color_orange ibf_pr_10"></i><a class="ibf_font_16" href="'.$whatsapp.'">'.substr($whatsapp,-9).'</a></p>';
 	$return_html.= '<p><i class="fas fa-at ibf_font_20 ibf_color_orange ibf_pr_10"></i><a class="ibf_font_16" href="tel:0034'.$email.'">'.$email.'</a></p>';
 	$return_html.= '<p><i class="fas fa-map-marker-alt  ibf_font_20 ibf_color_orange ibf_pr_15"></i><span class="ibf_font_16">'.html_entity_decode($direccion).'</span></p>';
-	$return_html.= '<p class="ibf_pl-15 ibf_font_bold"><a class="ibf_font_16 ibf_color_orange" href="'.$como_llegar.'">Como llegar</a></p>';
+	$return_html.= '<p class="ibf_pl-15 ibf_font_bold"><a class="ibf_font_16 ibf_color_orange" target="_blank" href="'.$como_llegar.'">Como llegar</a></p>';
 	$return_html.= '</div>';
 
 	$return_html.= '<div class="one"><h5 class="ibf_background_gray ibf_pt_5 ibf_pb_5 ibf_mb_15"><Contacto class="ibf_ml_15">Horario</span></h5></div>';

@@ -231,7 +231,11 @@
 }
 
 .ibf_head_oficinas {
-    background-image: url("../imagenes_iberfurgo/oficinas_iberfurgo/iberfurgo-oficinas.jpg");
+    background-image: url("../imagenes_iberfurgo/oficinas_iberfurgo/iberfurgo-oficinas.jpg") !important;
+}
+
+#page_caption.hasbg:after {
+    background-image: none !important;
 }
 
 
