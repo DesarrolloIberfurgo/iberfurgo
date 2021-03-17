@@ -35,18 +35,42 @@ if ($httpCode != 200) {
                     <div class="standard_wrapper">
                         <div class="one">
                             <div class="one_third">
-                            <?php 
-                                echo $value->direccion;
-                            ?>
+                                <h5 class="ibf_background_gray ibf_pt_5 ibf_pb_5 ibf_mb_15"><Contacto class="ibf_ml_15">Dirección</span></h5>
+                                <?php 
+                                    echo $value->direccion;
+                                ?>
                             </div>
+
                             <div class="one_third">
-                            <h3>Horario</h3>
-                            pepe
+                                <h5 class="ibf_background_gray ibf_pt_5 ibf_pb_5 ibf_mb_15"><Contacto class="ibf_ml_15">Horario</span></h5>
+                                <p class="ibf_font_16 ibf_color_orange ibf_pl_15 ibf_font_bold ibf_pb_2">Lunes - Viernes</p>
+                                <p class="ibf_pl_15 ibf_pb_2 ibf_pt_2">
+                                <?php 
+                                    echo $value->horarios_lunes_viernes_manana;
+                                ?>   
+                                </p>
+                                <p class="ibf_pl_15 ibf_pb_2 ibf_pt_2">
+                                <?php 
+                                    echo $value->horarios_lunes_viernes_tarde;
+                                ?>
+                                </p>
+                                <p class="ibf_font_16 ibf_color_orange ibf_pl_15 ibf_font_bold ibf_pb_2 ibf_pt_2">Sábado:<span class="ifb_color_black ibf_font_normal">
+                                <?php
+                                    echo $value->horarios_sabado;
+                                ?>
+                                </span>
+                                </p>
                             </div>
+
                             <div class="one_third last">
-                            <?php 
-                                echo $value->direccion;
-                            ?>
+                                <h5 class="ibf_background_gray ibf_pt_5 ibf_pb_5"><Contacto class="ibf_ml_15">Contacto</span></h5>
+                                <div class="ppb_header_content ibf_pl_15 ibf_pt_20">
+                            <p><i class="fas fa-phone-alt ibf_font_20 ibf_color_orange ibf_pr_10"></i><a class="ibf_font_18 ibf_font_bold" href="tel:0034'.$telefono.'">'.$telefono.'</a></p>
+                            <p><i class="fab fa-whatsapp  ibf_font_24 ibf_color_orange ibf_pr_10"></i><a class="ibf_font_16" href="'.$whatsapp.'">'.substr($whatsapp,-9).'</a></p>
+                            <p><i class="fas fa-at ibf_font_20 ibf_color_orange ibf_pr_10"></i><a class="ibf_font_16" href="tel:0034'.$email.'">'.$email.'</a></p>
+                            <p><i class="fas fa-map-marker-alt  ibf_font_20 ibf_color_orange ibf_pr_15"></i><span class="ibf_font_16">'.html_entity_decode($direccion).'</span></p>
+                            <p class="ibf_pl-15 ibf_font_bold"><a class="ibf_font_16 ibf_color_orange" target="_blank" href="'.$como_llegar.'">Como llegar</a></p>
+                                </div>;
                             </div>
                         </div>
                     </div> <!-- standard_wrapper -->
