@@ -19,6 +19,8 @@ if ($httpCode != 200) {
 }
 ?>
 
+<div id="page_caption" class="hasbg  withtopbar ibf_head_oficinas" ></div>
+
 <div class="inner">
     <div class="inner_wrapper nopadding">
         <?php
@@ -30,8 +32,24 @@ if ($httpCode != 200) {
             }
         ?>
         <div id="page_main_content" class="sidebar_content full_width fixed_column">
-
-            <div class="standard_wrapper">  
+            <div class="ibf_head_oficinas"></div>
+            
+            <div class="standard_wrapper"> 
+                <h1 class="ibf_color_orange">Oficinas Iberfurgo en España</h1>  
+            
+                <p class="ibf_font_16">Iberfurgo es una empresa de alquiler de furgonetas de reciente creación, pero en pleno estado de expansión. 
+                    Contamos con años de profesionalidad y experiencia en el sector. A nuestro lado puedes disfrutar de la tranquilidad y seguridad 
+                    de un trabajo bien hecho. </p>
+                <p class="ibf_font_16">En Iberfurgo dispondrás de una amplia flota de vehículos comerciales. 
+                    Todos ellos pueden manejarse con el carnet de conducir estándar, es decir, categoría B, por lo que no tendrás problema 
+                    a la hora de alquilar la furgoneta que mejor se amolde a tus necesidades. Además, podrás ser atendido en cualquiera 
+                    de nuestras oficinas, ubicadas a lo largo y ancho de la geografía española. </p>
+                <p class="ibf_font_16">Aunque actualmente no es posible la entrega y devolución de la furgoneta o vehí­culo fuera de la 
+                    provincia donde el usuario realizó la contratación del servicio de alquiler, en Iberfurgo no descartamos esta opción y 
+                    queremos seguir escuchando a nuestros clientes para conocer sus necesidades. </p>
+                <p class="ibf_font_16">Los servicios de alquiler de furgonetas de Iberfurgo están disponibles en las ubicaciones que 
+                    encontrarás en la parte inferior. Para conocer los datos de contacto de cada una de ellas, pincha en la oficina que más 
+                    te interese: </p>
 
                 <div id="portfolio_filter_wrapper" class="gallery classic three_cols portfolio-content section content clearfix" data-columns="3">
                 <?php foreach($response->data as $key => $value)	

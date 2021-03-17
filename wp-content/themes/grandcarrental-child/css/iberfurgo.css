@@ -1,3 +1,4 @@
+
 .ibf_title_car { color:#ea580c; font-size: 18px; }
 
 .ibf_text_center { text-align: center; }
@@ -227,6 +228,10 @@
     background-image: url("../imagenes_iberfurgo/iconos/ibf_icon_people_black.png");
     height: 20px;
     width: 20px;
+}
+
+.ibf_head_oficinas {
+    background-image: url("../imagenes_iberfurgo/oficinas_iberfurgo/iberfurgo-oficinas.jpg");
 }
 
 
