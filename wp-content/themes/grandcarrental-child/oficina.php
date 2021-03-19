@@ -33,54 +33,77 @@ if ($httpCode != 200) {
                 <div id="page_main_content" class="sidebar_content full_width fixed_column">
 
                     <div class="standard_wrapper">
+                    <h1 class="ibf_color_orange ibf_mb_20">Alquiler de furgonetas en <?php echo $value->oficinaNombre; ?></h1> 
                         <div class="one">
                             <div class="one_third">
-                                <h5 class="ibf_background_gray ibf_pt_5 ibf_pb_5 ibf_mb_15"><Contacto class="ibf_ml_15">Dirección</span></h5>
-                                <?php 
-                                    echo $value->direccion;
-                                ?>
+                                <h5 class="ibf_border_bottom ibf_pt_5 ibf_pb_5">
+                                    <Contacto class="ibf_ml_15">Dirección</span>
+                                </h5>
+                                <div class=" ibf_pl_15">
+                                    <p>
+                                        <?php 
+                                            echo $value->direccion;
+                                        ?>
+                                    </p>
+                                </div>
+                                <a class="button small left ibf_button_50">Como llegar <i class="fas fa-chevron-right"></i></a>
                             </div>
+                                
 
                             <div class="one_third">
-                                <h5 class="ibf_background_gray ibf_pt_5 ibf_pb_5 ibf_mb_15"><Contacto class="ibf_ml_15">Horario</span></h5>
+                                <h5 class="ibf_border_bottom ibf_pt_5 ibf_pb_5">
+                                    <span class="ibf_ml_15">Horario</span>
+                                </h5>
                                 <p class="ibf_font_16 ibf_color_orange ibf_pl_15 ibf_font_bold ibf_pb_2">Lunes - Viernes</p>
                                 <p class="ibf_pl_15 ibf_pb_2 ibf_pt_2">
-                                <?php 
-                                    echo $value->horarios_lunes_viernes_manana;
-                                ?>   
+                                    <?php 
+                                        echo $value->horarios_lunes_viernes_manana;
+                                    ?>   
                                 </p>
                                 <p class="ibf_pl_15 ibf_pb_2 ibf_pt_2">
-                                <?php 
-                                    echo $value->horarios_lunes_viernes_tarde;
-                                ?>
+                                    <?php 
+                                        echo $value->horarios_lunes_viernes_tarde;
+                                    ?>
                                 </p>
-                                <p class="ibf_font_16 ibf_color_orange ibf_pl_15 ibf_font_bold ibf_pb_2 ibf_pt_2">Sábado:<span class="ifb_color_black ibf_font_normal">
-                                <?php
-                                    echo $value->horarios_sabado;
-                                ?>
-                                </span>
+                                <p class="ibf_font_16 ibf_color_orange ibf_pl_15 ibf_font_bold ibf_pb_2 ibf_pt_2">Sábado:
+                                    <span class="ifb_color_black ibf_font_normal">
+                                        <?php
+                                            echo $value->horarios_sabado;
+                                        ?>
+                                    </span>
                                 </p>
                             </div>
 
                             <div class="one_third last">
-                                <h5 class="ibf_background_gray ibf_pt_5 ibf_pb_5"><Contacto class="ibf_ml_15">Contacto</span></h5>
-                                <div class="ppb_header_content ibf_pl_15 ibf_pt_20">
-                                    <p><i class="fas fa-phone-alt ibf_font_20 ibf_color_orange ibf_pr_10"></i><a class="ibf_font_18 ibf_font_bold" href="tel:0034'<?php echo $value->telefono ?>'">
-                                    <?php
-                                        echo $value->telefono;
-                                    ?>
-                                    </a>
+                                <h5 class="ibf_border_bottom ibf_pt_5 ibf_pb_5">
+                                    <span class="ibf_ml_15">Contacto</span>
+                                </h5>
+                                <div class=" ibf_pl_15">
+                                    <p>
+                                        <i class="fas fa-phone-alt ibf_font_20 ibf_color_orange ibf_pr_10"></i>
+                                        <a class="ibf_font_18 ibf_font_bold" href="tel:0034'<?php echo $value->telefono ?>'">
+                                            <?php
+                                                echo $value->telefono;
+                                            ?>
+                                        </a>
                                     </p>
-                                    <p><i class="fab fa-whatsapp  ibf_font_24 ibf_color_orange ibf_pr_10"></i><a class="ibf_font_16" href="'<?php echo $value->whatsapp ?>'">
-                                    <?php
-                                        echo substr($value->whatsapp, -9);
-                                    ?>
-                                    <p><i class="fas fa-at ibf_font_20 ibf_color_orange ibf_pr_10"></i><a class="ibf_font_16" href="tel:0034'<?php echo $value->email ?>'">
-                                    <?php
-                                        echo $value->email;
-                                    ?>
-                                    </a>
-                                </p>
+                                    <p>
+                                        <i class="fab fa-whatsapp  ibf_font_24 ibf_color_orange ibf_pr_10"></i>
+                                        <a class="ibf_font_16" href="'<?php echo $value->whatsapp ?>'">
+                                            <?php
+                                                echo substr($value->whatsapp, -9);
+                                            ?>
+                                        </a>
+                                    </p>
+                                        
+                                    <p>
+                                        <i class="fas fa-at ibf_font_20 ibf_color_orange ibf_pr_10"></i>
+                                        <a class="ibf_font_16" href="tel:0034'<?php echo $value->email ?>'">
+                                            <?php
+                                                echo $value->email;
+                                            ?>
+                                        </a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
