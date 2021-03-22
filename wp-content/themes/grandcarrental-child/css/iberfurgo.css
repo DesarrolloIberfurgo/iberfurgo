@@ -3,15 +3,19 @@
 
 .ibf_text_center { text-align: center; }
 
+.ibf_border_bottom { border-bottom: 1px solid #ea580c; }
+
 .ibf_color_orange { color: #ea580c!important;}
 .ifb_color_black { color: #000000!important;}
 .ibf_color_gray { color: #706F6F;}
+.ibf_color_white { color: #ffffff!important;}
 .ibf_font_bold { font-weight: bold;}
 .ibf_font_normal { font-weight: normal; }
 .ibf_background_gray {background-color: rgba(112, 111, 111, 0.2)!important;}
 
 .ibf_border_gray { border: 1px solid rgba(112, 111, 111, 0.2)!important;}
 
+.ibf_font_12 { font-size: 12px;}
 .ibf_font_16 { font-size: 16px;}
 .ibf_font_18 { font-size: 18px;}
 .ibf_font_20 { font-size: 20px;}
@@ -19,7 +23,7 @@
 
 .top_contact_info {
     font-size: 13px;
-    color: #222;
+    color: #ffffff;
     float: left;
     line-height: 44px;
     width: 92%;
@@ -82,6 +86,15 @@
     border-radius:0!important;
 }
 
+.ibf_button_50 {
+    width: 50%;
+    background-color:#ea580c !important;
+    color:#ffffff !important;
+    border:1px solid #ea580c !important; 
+    border-radius:0!important;
+    margin-left: 15px;
+}
+
 .ibf_button_oficina{
     width: 88%;  
     background-color:#ea580c !important;
@@ -137,6 +150,7 @@
 .ibf_mln_9 { margin-left: -9px; }
 .ibf_mln_10 { margin-left: -10px; }
 
+.ibf_mb_0 { margin-bottom: 0px!important; }
 .ibf_mb_1 { margin-bottom: 1px; }
 .ibf_mb_2 { margin-bottom: 2px; }
 .ibf_mb_3 { margin-bottom: 3px; }
@@ -148,6 +162,7 @@
 .ibf_mb_9 { margin-bottom: 9px; }
 .ibf_mb_10 { margin-bottom: 10px; }
 .ibf_mb_15 { margin-bottom: 15px; }
+.ibf_mb_20 { margin-bottom: 20px; }
 
 .ibf_mt_1 { margin-top: 1px; }
 .ibf_mt_2 { margin-top: 2px; }
@@ -175,6 +190,7 @@
 .ibf_pt_10 { padding-top: 10px; }
 .ibf_pt_15 { padding-top: 15px; }
 .ibf_pt_20 { padding-top: 20px; }
+.ibf_pt_25 { padding-top: 25px; }
 
 .ibf_pb_0 { padding-bottom: 0px!important; }
 .ibf_pb_1 { padding-bottom: 1px; }
@@ -187,6 +203,9 @@
 .ibf_pb_8 { padding-bottom: 8px; }
 .ibf_pb_9 { padding-bottom: 9px; }
 .ibf_pb_10 { padding-bottom: 10px; }
+.ibf_pb_15 { padding-bottom: 15px; }
+.ibf_pb_20 { padding-bottom: 20px; }
+.ibf_pb_25 { padding-bottom: 25px; }
 
 .ibf_pl_0 { padding-left: 0px!important;}
 .ibf_pl_15 { padding-left: 15px!important;}
@@ -230,8 +249,17 @@
     width: 20px;
 }
 
+.ibf_slider { height: 696px!important; max-height: 696px!important; margin-bottom: 0px!important;}
 .ibf_head_oficinas {
     background-image: url("../imagenes_iberfurgo/oficinas_iberfurgo/iberfurgo-oficinas.jpg") !important;
+}
+
+.ibf_head_oficina_sevilla {
+    background-image: url("../imagenes_iberfurgo/oficinas_iberfurgo/iberfurgo-oficina-sevilla.jpg") !important;
+}
+
+.ibf_head_oficina_torrejon-ardoz {
+    background-image: url("../imagenes_iberfurgo/oficinas_iberfurgo/iberfurgo-oficina-torrejon.jpg") !important;
 }
 
 #page_caption.hasbg:after {
@@ -246,6 +274,18 @@
 .ui-accordion .ui-accordion-header { border-color: none!important;}
 .ui-accordion .ui-accordion-header .ui-icon { margin-left: 15px!important; }
 .ui-accordion .ui-accordion-header a { margin-left: 15px!important;}
+a, .post_detail.single_post {color: #000000!important;}
+
+.elementor-column-gap-default>.elementor-column>.elementor-element-populated{ padding-top: 0px!important;}
 
 
-    
+/*Moviles*/
+@media (max-width: 480px) {
+    .above_top_bar {display: none!important;}
+    .ibf_slider{height: 200px!important; max-height: 200px!important; margin-bottom: 0px!important;}
+}
+
+/*pantllas superiores FHD hasta 2k*/
+@media (min-width: 1920px) and (max-width: 2560px)  {
+    .ibf_slider { height: 950px!important; max-height: 950px!important; margin-bottom: 0px!important;}
+}
