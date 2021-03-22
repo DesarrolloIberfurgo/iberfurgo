@@ -10,12 +10,11 @@ get_header();
 
 global $wp_query;
 $url_oficina = $wp_query->query_vars['category_name'];
-list($httpCode, $response) = getDataApi(URL_API . 'maestro-delegacion-datos-web', '{"url_oficina":'.$url_oficina.'}');
+$dataApi['url_oficina'] = $url_oficina;
+list($httpCode, $response) = getDataApi(URL_API . 'maestro-delegacion-datos-web', json_encode($dataApi));
 if ($httpCode != 200) {
 	return 'ha petado';
 }
-
-
 
 ?>
 
