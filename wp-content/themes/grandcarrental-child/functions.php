@@ -15,15 +15,20 @@ License: GPLv2
 // }
 // add_filter('query_vars', 'add_state_var', 0, 1);
 
-function custom_rewrite_rule() {
-  add_rewrite_rule('^delegaciones\/(.+)/?','index.php?page_id=4062&category_name=$matches[1]','top');
-}
-add_action('init', 'custom_rewrite_rule', 10, 0);
+// function custom_rewrite_rule() {
+//   add_rewrite_rule('^delegaciones\/(.+)/?','index.php?page_id=4062&category_name=$matches[1]','top');
+// }
+// add_action('init', 'custom_rewrite_rule', 10, 0);
 
 function add_rules() {
     add_rewrite_rule('^oficinas/([^/]*)/?','index.php?pagename=oficina&category_name=$matches[1]','top');
 }
 add_action( 'init', 'add_rules', 10, 0);
+
+function add_rules_flota() {
+  add_rewrite_rule('^flota/([^/]*)/?','index.php?pagename=vehiculo&category_name=$matches[1]','top');
+}
+add_action( 'init', 'add_rules_flota', 10, 0);
 
 
 

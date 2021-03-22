@@ -30,11 +30,11 @@
 		    {
 		?>
 	    	<div class="company_address">
-				<div id="top_contact_address"><span class="ti-location-pin"></span>Reservas: <i class="fas fa-phone-alt icon-top-bar"></i></span></i><a href="tel:0034964123456"> 964 123 456</a></div>
+				<div id="top_contact_address"><span class="ti-location-pin"></span>Reservas: <i class="fas fa-phone-alt icon-top-bar"></i></span></i><a href="tel:0034964123456" class="ibf_color_white"> 964 123 456</a></div>
 			</div>
 
 			<div class="company_address">
-				<div id="top_contact_address"><span class="ti-location-pin"></span><i class="far fa-envelope icon-top-bar"></i></span></i><a href="mailto:info@iberfurgo.com"> info@iberfurgo.com</a></div>
+				<div id="top_contact_address"><span class="ti-location-pin"></span><i class="far fa-envelope icon-top-bar"></i></span></i><a href="mailto:info@iberfurgo.com" class="ibf_color_white"> info@iberfurgo.com</a></div>
 			</div>
 		<?php
 		    }
@@ -46,7 +46,7 @@
 		    {
 		?>
 			<div class="company_address">
-		    	<div id="top_contact_number"><a href="/preguntas-frecuentes"> PREGUNTAS FRECUENTES</a></div>
+		    	<div id="top_contact_number"><a href="/preguntas-frecuentes" class="ibf_color_white"> PREGUNTAS FRECUENTES</a></div>
 			</div>
 		<?php
 		    }
@@ -58,7 +58,7 @@
 		    {	
 		?>
 			<div class="company_address">
-		    	<div id="top_contact_hours"><a href="/contacto">CONTACTO</a></div>
+		    	<div id="top_contact_hours"><a href="/contacto" class="ibf_color_white">CONTACTO</a></div>
 		    </div>
 		<?php
 		    }

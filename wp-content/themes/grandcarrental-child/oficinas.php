@@ -19,7 +19,7 @@ if ($httpCode != 200) {
 }
 ?>
 
-<div id="page_caption" class="hasbg  withtopbar ibf_head_oficinas" ></div>
+<div id="page_caption" class="hasbg  withtopbar ibf_slider ibf_head_oficinas" ></div>
 
 <div class="inner">
     <div class="inner_wrapper nopadding">

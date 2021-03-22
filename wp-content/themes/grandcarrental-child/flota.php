@@ -16,6 +16,7 @@ if ($httpCode != 200) {
 
 $data = $response->data;
 
+
 ?>
 <div class="inner">
     <div class="inner_wrapper">
@@ -37,6 +38,7 @@ $data = $response->data;
                         $key++;
                         $image_url = '';
                         $car_ID = get_the_ID();
+                        $url = URL_WEB.'/flota/'.$value->url;
 
                         // if(has_post_thumbnail($car_ID, 'grandcarrental-gallery-grid'))
                         // {
@@ -151,7 +153,7 @@ $data = $response->data;
                                         ?>
                                     </div>
                                     <br class="clear"/>
-                                    <a class="button small left ibf_button_flota">Comprobar disponibilidad</a>
+                                    <a class="button small left ibf_button_flota" href="<?php echo esc_url($url); ?>">Comprobar disponibilidad</a>
                                 </div>
                                 
                             </div>
