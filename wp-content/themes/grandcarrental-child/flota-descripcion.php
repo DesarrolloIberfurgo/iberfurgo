@@ -170,6 +170,10 @@
                         
                     </div>
                 </div>
+
+                <div class="one">
+                    <?php echo do_shortcode('[ppb_car_search][/ppb_car_search]') ?>
+                </div>
             </div>
 
             
