@@ -30,6 +30,11 @@ function add_rules_flota() {
 }
 add_action( 'init', 'add_rules_flota', 10, 0);
 
+// function add_rules_paso_final() {
+//   add_rewrite_rule('^flota/([^/]*)/?','index.php?pagename=vehiculo&category_name=$matches[1]','top');
+// }
+// add_action( 'init', 'add_rules_paso_final', 10, 0);
+
 
 
 add_action( 'wp_enqueue_scripts', 'custom_enqueue_styles');

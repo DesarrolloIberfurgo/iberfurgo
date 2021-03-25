@@ -100,6 +100,7 @@ $data = $response->data;
 			$key++;
 			$image_url = '';
 			$car_ID = get_the_ID();
+			$parametros = "delegacionId=".$delegacionId."&fechaInicio=".$fechaInicio."&fechaFin=".$fechaFin."&horaInicio=".$horaInicio."&horaFin=".$horaFin."&tipoId=".$value->tipo_id."&importe_vehiculo=".$value->importe_vehiculo."&importe_vehiculo_iva=".$value->importe_vehiculo_iva."&tramo_id=".$value->id;
 					
 			if(has_post_thumbnail($car_ID, 'grandcarrental-gallery-list'))
 			{
@@ -122,7 +123,7 @@ $data = $response->data;
 				
 				<div class="two_third last">
 						<div class="car_attribute_wrapper">
-							<a class="car_link" href="<?php echo esc_url($permalink_url); ?>"><h3><?php echo esc_attr($value->tipo->nombre); ?></h3></a>
+							<a class="car_link" href="paso-final?<?php echo $parametros?>"><h3><?php echo esc_attr($value->tipo->nombre); ?></h3></a>
 	        		       <?php
 		        	   		$overall_rating_arr = grandcarrental_get_review($car_ID, 'overall_rating');
 					   		$overall_rating = intval($overall_rating_arr['average']);
