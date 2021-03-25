@@ -1065,6 +1065,34 @@ function tg_accordion_func($atts, $content) {
 
 add_shortcode('tg_accordion', 'tg_accordion_func');
 
+function tg_formulario_detalle_func($atts, $content)
+{
+
+	extract(shortcode_atts(array(
+		'title' => '',
+		'close' => 0,
+	), $atts));
+	$fechaInicio = $atts['fecha_inicio'];
+	$fechaFin = $atts['fecha_fin'];
+	$horaInicio = $atts['hora_inicio'];
+	$horaFin = $atts['hora_fin'];
+	$nombreDelegacion = $atts['nombre_delegacion'];
+
+	$return_html = '';
+	$return_html.= '<form class="car_search_form" method="get" action="detalle-reserva">';
+	$return_html.= '<input id="delegacion_id_res" name="delegacion_id_res" value="'.$nombreDelegacion.'" disabled>';
+	$return_html.= '<input id="fecha_inicio_res" name="fecha_inicio_res" value="'.$fechaInicio.':'.$horaInicio.'" disabled>';
+	$return_html.= '<input id="fecha_fin_res" name="fecha_fin_res" value="'.$fechaFin.':'.$horaFin.'" disabled>';
+	$return_html.= '<input id="fecha_inicio_res" name="fecha_inicio_res">';
+	$return_html.= '</form>';
+
+	return $return_html;
+
+}
+
+add_shortcode('tg_formulario_detalle', 'tg_formulario_detalle_func');
+
+
 function tg_accordion_oficinas_func($atts, $content) {
 	//extract short code attr
 	extract(shortcode_atts(array(
