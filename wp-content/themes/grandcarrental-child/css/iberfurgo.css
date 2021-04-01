@@ -12,6 +12,10 @@
 .ibf_font_bold { font-weight: bold;}
 .ibf_font_normal { font-weight: normal; }
 .ibf_background_gray {background-color: rgba(112, 111, 111, 0.2)!important;}
+.ibf_background_black {background-color: #000000!important;}
+.ibf_background_orange {background-color: #ea580c!important;}
+
+.ibf_no_background { background-color: transparent!important; border: none!important;} 
 
 .ibf_border_gray { border: 1px solid rgba(112, 111, 111, 0.2)!important;}
 
@@ -105,6 +109,7 @@
 
 .ui-accordion .ui-accordion-header .ui-icon { background-color:#ea580c!important;}
 
+.ibf_mr_0 { margin-right: 0px!important; }
 .ibf_mr_1 { margin-right: 1px; }
 .ibf_mr_2 { margin-right: 2px; }
 .ibf_mr_3 { margin-right: 3px; }
@@ -127,6 +132,7 @@
 .ibf_mrn_9 { margin-right: -9px; }
 .ibf_mrn_10 { margin-right: -10px; }
 
+.ibf_ml_0 { margin-left: 0px!important; }
 .ibf_ml_1 { margin-left: 1px; }
 .ibf_ml_2 { margin-left: 2px; }
 .ibf_ml_3 { margin-left: 3px; }
@@ -163,6 +169,8 @@
 .ibf_mb_10 { margin-bottom: 10px; }
 .ibf_mb_15 { margin-bottom: 15px; }
 .ibf_mb_20 { margin-bottom: 20px; }
+.ibf_mb_25 { margin-bottom: 25px; }
+.ibf_mb_30 { margin-bottom: 30px; }
 
 .ibf_mt_1 { margin-top: 1px; }
 .ibf_mt_2 { margin-top: 2px; }
@@ -174,7 +182,7 @@
 .ibf_mt_8 { margin-top: 8px; }
 .ibf_mt_9 { margin-top: 9px; }
 .ibf_mt_10 { margin-top: 10px; }
-.ibf_mt_15 { margin-top: 15px; }
+.ibf_mt_15 { margin-top: 15px!important; }
 .ibf_mt_20 { margin-top: 20px; }
 .ibf_mt_30 { margin-top: 30px; }
 
@@ -294,11 +302,17 @@ a, .post_detail.single_post {color: #000000!important;}
     font-family: inherit;
     vertical-align: super!important;
 }
+ .ibf_datepicker { width: 100%!important; border-radius: 0px!important;}
+ .ibf_field_form { border-radius: 0px!important; }
+ .ibf_label_form { padding-top: 0px!important; padding-bottom: 10px!important;}
+
+ .ibf_btn_form { border: none!important; border-radius: 0px!important; margin-top: 36px; }
 
 /*Moviles*/
 @media (max-width: 480px) {
     .above_top_bar {display: none!important;}
     .ibf_slider{height: 200px!important; max-height: 200px!important; margin-bottom: 0px!important;}
+    .ibf_widthm_100 { width: 100%!important;}
 }
 
 /*pantllas superiores FHD hasta 2k*/

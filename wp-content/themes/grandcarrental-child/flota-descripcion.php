@@ -57,7 +57,7 @@
                                         $car_fianza = $value->fianza;
                                         $car_franquicia = $value->franquicia;
 
-                                        if (!empty($car_passengers) or !empty($car_luggages) or !empty($car_doors)) {
+                                        // if (!empty($car_passengers) or !empty($car_luggages) or !empty($car_doors)) {
                                         ?>
                                             <div class="car_attribute_wrapper ibf_width_50">
                                                 <?php
@@ -90,7 +90,7 @@
                                                 ?>
                                                     <div class="one_half ibf_width_100 ibf_font_16">
                                                         <i class="fas fa-euro-sign ibf_pl_5" style="font-size: 30px;;"></i>
-                                                        <span class="ibf_va_tb  ibf_ml_8"><strong>Fianza: </strong><?php echo $car_fianza; ?> </span>
+                                                        <span class="ibf_va_tb  ibf_ml_8"><strong>Fianza: </strong><?php echo $car_fianza; ?> €</span>
                                                     </div>
                                                 <?php
                                                 }
@@ -128,7 +128,7 @@
                                                 ?>
                                                     <div class="one_half ibf_width_100 ibf_font_16">
                                                         <i class="fas fa-euro-sign ibf_pl_5" style="font-size: 30px;"></i>
-                                                        <span class="ibf_va_tb ibf_ml_8"><strong>Franquicia: </strong><?php echo $car_franquicia; ?> </span>
+                                                        <span class="ibf_va_tb ibf_ml_8"><strong>Franquicia: </strong><?php echo $car_franquicia; ?> €</span>
                                                     </div>
                                                 <?php
                                                 }
@@ -136,7 +136,7 @@
                                             </div>
                                             <br class="clear" />
                                         <?php
-                                        } //car attributes
+                                        // } //car attributes
                                         ?>
                                 </div>
 
@@ -150,26 +150,26 @@
                                                 $car_large = $value->largo_vehiculo;
                                                ?>
                                                 <p class="ibf_font_16 ibf_pt_0"><strong>Medidas: </strong> <?php echo $car_height; ?> x <?php echo $car_width; ?> x <?php echo $car_large; ?> (alto x ancho x largo) </p> 
-
-                                                
                                             </div>
-
-                                            
                                             <br class="clear" />
-                                        
                                 </div>
                             </div>
-
-                            
 
                             <div class="one_half ibf_mt_30 ibf_mrp_2">
                                 <h3 class="ibf_color_black ibf_mb_15">Medidas de carga</h3>
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/imagenes_iberfurgo/flota/<?php echo $value->tipoId; ?>/medidas-carga.png">
                             </div>
-                        </div>
-                        
+                        </div>   
                     </div>
                 </div>
+
+                <div class="one">
+                    <div class="standard_wrapper">
+                        <h2 class="ibf_color_orange ibf_pt_20 ibf_text_center">Reserva tu <?php echo $value->nombre; ?> en Iberfurgo</h2>
+                    </div>
+                    <?php echo do_shortcode('[ppb_car_search][/ppb_car_search]') ?>
+                </div>
+                
             </div>
 
             

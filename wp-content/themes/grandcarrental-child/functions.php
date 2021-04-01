@@ -49,6 +49,35 @@ function custom_enqueue_styles()
 }
 
 
+//funcion para enviar email mediante SMTP
+add_action('phpmailer_init','send_smtp_email');
+function send_smtp_email( $phpmailer )
+{
+    // Define que estamos enviando por SMTP
+    $phpmailer->isSMTP();
+ 
+    // La dirección del HOST del servidor de correo SMTP p.e. smtp.midominio.com
+    $phpmailer->Host = "smtp.iberfurgo.com";
+ 
+    // Uso autenticación por SMTP (true|false)
+    $phpmailer->SMTPAuth = true;
+ 
+    // Puerto SMTP - Suele ser el 25, 465 o 587
+    $phpmailer->Port = "587";
+ 
+    // Usuario de la cuenta de correo
+    $phpmailer->Username = "reservas@iberfurgo.com";
+ 
+    // Contraseña para la autenticación SMTP
+    $phpmailer->Password = "R3s3rv1s#4rd9@";
+ 
+    // El tipo de encriptación que usamos al conectar - ssl (deprecated) o tls
+    $phpmailer->SMTPSecure = "tls";
+ 
+    $phpmailer->From = "reservas@ibergurgo.com";
+    $phpmailer->FromName = "Iberfurgo::Reservas";
+}
+
 // function custom_rewrite_tag() {
 //   add_rewrite_tag('%category_name%', '([^&]+)');
 //   // add_rewrite_tag('%variety%', '([^&]+)');
@@ -67,7 +96,7 @@ function custom_enqueue_styles()
 require_once('shortcodes/shortcodes.php');
 require_once('functions-api/apiCalls.php');
 require_once('functions-api/connection.php');
-
+require_once('includes/formulario-contacto.php');
 
 function get_times() {
 
