@@ -319,18 +319,6 @@ get_template_part("/templates/template-car-header");
                 ?>
             </div>
             
-            <?php
-                //Check if enable car sharing
-                $tg_car_single_share = kirki_get_option('tg_car_single_share');
-                
-                if(!empty($tg_car_single_share))
-                {
-            ?>
-            <a id="single_car_share_button" href="javascript:;" class="button ghost themeborder"><span class="ti-email"></span><?php esc_html_e("Share this car", 'grandcarrental'); ?></a>
-            <?php
-                }
-            ?>
-            
             <?php 
                 if (is_active_sidebar('single-car-sidebar')) { ?>
                 <ul class="sidebar_widget">
