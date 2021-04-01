@@ -1065,6 +1065,59 @@ function tg_accordion_func($atts, $content) {
 
 add_shortcode('tg_accordion', 'tg_accordion_func');
 
+function tg_formulario_detalle_func($atts, $content)
+{
+
+	extract(shortcode_atts(array(
+		'title' => '',
+		'close' => 0,
+	), $atts));
+	$fechaInicio = $atts['fecha_inicio'];
+	$fechaFin = $atts['fecha_fin'];
+	$horaInicio = $atts['hora_inicio'];
+	$horaFin = $atts['hora_fin'];
+	$nombreDelegacion = $atts['nombre_delegacion'];
+
+	$return_html = '';
+	$return_html.= '<form class="car_search_form" method="post" action="../aviso-reserva">';
+	$return_html.= '<label for="delegacion_id_res">oficina</label>';
+	$return_html.= '<input id="delegacion_id_res" value="'.$nombreDelegacion.'" disabled>';
+	$return_html.= '<input hidden name="delegacion_id_res" value="'.$nombreDelegacion.'">';
+	$return_html.= '<label for="fecha_inicio_res">Fecha recogida</label>';
+	$return_html.= '<input id="fecha_inicio_res" value="'.$fechaInicio.':'.$horaInicio.'" disabled>';
+	$return_html.= '<input hidden name="fecha_inicio_res" value="'.$fechaInicio.'">';
+	$return_html.= '<input hidden name="hora_inicio_res" value="'.$horaInicio.'">';
+	$return_html.= '<label for="fecha_fin_res">Fecha devolución</label>';
+	$return_html.= '<input id="fecha_fin_res" value="'.$fechaFin.':'.$horaFin.'" disabled>';
+	$return_html.= '<input hidden name="fecha_fin_res" value="'.$fechaFin.'">';
+	$return_html.= '<input hidden name="hora_fin_res" value="'.$horaFin.'">';
+	$return_html.= '<label for="nombre_res">Nombre/Empresa</label>';
+	$return_html.= '<input id="nombre_res" name="nombre_res" placeholder="Nombre o empresa">';
+	$return_html.= '<label for="dni_res">DNI/NIE</label>';
+	$return_html.= '<input id="dni_res" name="dni_res" placeholder="DNI o NIE">';
+	$return_html.= '<label for="direccion_res">Dirección</label>';
+	$return_html.= '<input id="direccion_res" name="direccion_res" placeholder="Dirección">';
+	$return_html.= '<label for="forma_pago_res">Forma de pago</label>';
+	$return_html.= '<select id="forma_pago_res" name="forma_pago_res" placeholder="Forma de pago">';
+	$return_html.= '<option value="1">Efectivo</option>';
+	$return_html.= '<option value="2">Tarjeta</option>';
+	$return_html.= '<option value="3">Transferencia</option>';
+	$return_html.= '</select>';
+	$return_html.= '<label for="telefono_res">Teléfono</label>';
+	$return_html.= '<input id="telefono_res" name="telefono_res" placeholder="Teléfono">';
+	$return_html.= '<label for="email_res">Email</label>';
+	$return_html.= '<input id="email_res" name="email_res" placeholder="Email">';
+	$return_html.= '<textarea id="comentarios_res" name="comentarios_res" placeholder="Comentarios"></textarea>';
+	$return_html.= '<input id="reservar_res" type="submit" class="button" value="Reservar">';
+	$return_html.= '</form>';
+
+	return $return_html;
+
+}
+
+add_shortcode('tg_formulario_detalle', 'tg_formulario_detalle_func');
+
+
 function tg_accordion_oficinas_func($atts, $content) {
 	//extract short code attr
 	extract(shortcode_atts(array(

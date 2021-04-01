@@ -12,6 +12,7 @@ grandcarrental_set_recently_view_cars();
 get_header(); 
 // global $wp_query;
 $delegacionId = $_GET['delegacionId'];
+$nombreDelegacion = $_GET['nombreDelegacion'];
 $fechaInicio = $_GET['fechaInicio'];
 $fechaFin = $_GET['fechaFin'];
 $horaInicio = $_GET['horaInicio'];
@@ -277,10 +278,17 @@ get_template_part("/templates/template-car-header");
             ?>
             <div class="single_car_booking_wrapper themeborder <?php if(!empty($car_booking_product) && intval($car_booking_product) > 0) { ?>book_instantly<?php } ?>">
                 <?php
-                    if(!empty($car_booking_contactform7) && intval($car_booking_contactform7) > 0)
-                    {
-                        echo do_shortcode('[contact-form-7 id="'.esc_attr($car_booking_contactform7).'"]');
-                    }
+                    echo do_shortcode('[tg_formulario_detalle
+                        fecha_inicio="'.esc_attr($fechaInicio).'"
+                        hora_inicio="'.esc_attr($horaInicio).'"
+                        fecha_fin="'.esc_attr($fechaFin).'"
+                        hora_fin="'.esc_attr($horaFin).'"
+                        nombre_delegacion="'.esc_attr($nombreDelegacion).'"
+                    ][/tg_formulario_detalle]');
+                    // if(!empty($car_booking_contactform7) && intval($car_booking_contactform7) > 0)
+                    // {
+                    //     echo do_shortcode('[contact-form-7 id="'.esc_attr($car_booking_contactform7).'"]');
+                    // }
 
                     if(class_exists('Woocommerce') && !empty($car_booking_product) && intval($car_booking_product) > 0)
                     {
@@ -310,18 +318,6 @@ get_template_part("/templates/template-car-header");
                     }
                 ?>
             </div>
-            
-            <?php
-                //Check if enable car sharing
-                $tg_car_single_share = kirki_get_option('tg_car_single_share');
-                
-                if(!empty($tg_car_single_share))
-                {
-            ?>
-            <a id="single_car_share_button" href="javascript:;" class="button ghost themeborder"><span class="ti-email"></span><?php esc_html_e("Share this car", 'grandcarrental'); ?></a>
-            <?php
-                }
-            ?>
             
             <?php 
                 if (is_active_sidebar('single-car-sidebar')) { ?>

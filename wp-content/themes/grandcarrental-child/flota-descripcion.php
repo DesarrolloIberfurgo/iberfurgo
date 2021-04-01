@@ -164,12 +164,14 @@
                 </div>
 
                 <div class="one">
+
                     <div class="standard_wrapper">
                         <h2 class="ibf_color_orange ibf_pt_20 ibf_text_center">Reserva tu <?php echo $value->nombre; ?> en Iberfurgo</h2>
                     </div>
                     <?php echo do_shortcode('[ppb_car_search][/ppb_car_search]') ?>
                 </div>
                 
+
             </div>
 
             
