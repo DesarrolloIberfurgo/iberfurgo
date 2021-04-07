@@ -43,7 +43,7 @@ $grandcarrental_page_content_class = grandcarrental_get_page_content_class();
 get_template_part("/templates/template-header");
 
 //Include custom car search feature
-get_template_part("/templates/template-car-search");
+// get_template_part("/templates/template-car-search");
 
 
 // global $wp_query;
@@ -91,230 +91,228 @@ $data = $response->data;
 	<div id="page_main_content" class="sidebar_content full_width">
 	
 	<div class="standard_wrapper">
+		<?php echo do_shortcode('[ppb_car_search][/ppb_car_search]') ?>
+
+		<div id="portfolio_filter_wrapper" class="gallery classic two_cols portfolio-content section content clearfix" data-columns="3">
 	
-	<div id="portfolio_filter_wrapper" class="gallery classic two_cols portfolio-content section content clearfix" data-columns="3">
-	
-	<?php
-		$key = 0;
-		foreach ($data as $key => $value) {
-			$key++;
-			$image_url = '';
-			$car_ID = get_the_ID();
-			$parametros = "tipoId=".$value->tipo_id."&delegacionId=".$delegacionId."&nombreDelegacion=".$value->nombreDelegacion."&fechaInicio=".$fechaInicio."&fechaFin=".$fechaFin."&horaInicio=".$horaInicio."&horaFin=".$horaFin."&tipoId=".$value->tipo_id."&importe_vehiculo=".$value->importe_vehiculo."&importe_vehiculo_iva=".$value->importe_vehiculo_iva."&tramo_id=".$value->id;
+			<?php
+				$key = 0;
+				foreach ($data as $key => $value) {
+					$key++;
+					$image_url = '';
 					
-			if(has_post_thumbnail($car_ID, 'grandcarrental-gallery-list'))
-			{
-			    $image_id = get_post_thumbnail_id($car_ID);
-			    $small_image_url = wp_get_attachment_image_src($image_id, 'grandcarrental-gallery-list', true);
-			}
-			
-			$permalink_url = get_permalink($car_ID);
-	?>
-			<?php 
-				if(true) //!empty($small_image_url[0])
-				{
+					$parametros = "tipoId=".$value->tipo_id."&delegacionId=".$delegacionId."&nombreDelegacion=".$value->nombreDelegacion."&fechaInicio=".$fechaInicio."&fechaFin=".$fechaFin."&horaInicio=".$horaInicio."&horaFin=".$horaFin."&tipoId=".$value->tipo_id."&importe_vehiculo=".$value->importe_vehiculo."&importe_vehiculo_iva=".$value->importe_vehiculo_iva."&tramo_id=".$value->id;
+					
+					$permalink_url = get_permalink($car_ID);
 			?>
-			<div class="car_list_wrapper floatleft themeborder">
-				<div class="one_third">
-					<a class="car_image" href="<?php echo esc_url($permalink_url); ?>">
-						<img src="<?php echo esc_url($small_image_url[0]); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" />
-					</a>
-				</div>
+				<?php 
+					if(true) //!empty($small_image_url[0])
+					{
+				?>
+					<div class="car_list_wrapper floatleft themeborder">
+						<div class="one_third">
+							<a class="car_image" href="paso-final?<?php echo $parametros?>">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/imagenes_iberfurgo/flota/<?php echo $value->tipo->tipoId; ?>/34.jpg" alt="<?php echo esc_attr(get_the_title()); ?>" />
+							</a>
+						</div>
 				
-				<div class="two_third last">
-						<div class="car_attribute_wrapper">
-							<a class="car_link" href="paso-final?<?php echo $parametros?>"><h3><?php echo esc_attr($value->tipo->nombre); ?></h3></a>
-	        		       <?php
-		        	   		$overall_rating_arr = grandcarrental_get_review($car_ID, 'overall_rating');
-					   		$overall_rating = intval($overall_rating_arr['average']);
-					   		$overall_rating_count = intval($overall_rating_arr['count']);
-					   		
-					   		if(!empty($overall_rating))
-					   		{
-					   ?>
-					   		<div class="car_attribute_rating">
-					   <?php
-					   			if($overall_rating > 0)
-					   			{
-					   ?>
-					   			<div class="br-theme-fontawesome-stars-o">
-					   				<div class="br-widget">
-					   <?php
-					   				for( $i=1; $i <= $overall_rating; $i++ ) {
-					   					echo '<a href="javascript:;" class="br-selected"></a>';
-					   				}
-					   				
-					   				$empty_star = 5 - $overall_rating;
-					   				
-					   				if(!empty($empty_star))
-					   				{
-					   					for( $i=1; $i <= $empty_star; $i++ ) {
-					   						echo '<a href="javascript:;"></a>';
-					   					}
-					   				}
-					   	?>
-					   				</div>
-					   			</div>
-					   	<?php
-					   			}
-					   			
-					   			if($overall_rating_count > 0)
-					   			{
-					   	?>
-					   			<div class="car_attribute_rating_count">
-					   				<?php echo intval($overall_rating_count); ?>&nbsp;
-					   				<?php
-					   					if($overall_rating_count > 1)
-					   					{
-					   						echo esc_html__('reviews', 'grandcarrental' );
-					   					}
-					   					else
-					   					{
-					   						echo esc_html__('review', 'grandcarrental' );
-					   					}
-					   				?>
-					   			</div>
-					   	<?php
-					   			}
-					   	?>
-					   		</div>
-					   	<?php
-					   		}    
-		        	   	?>
-		        	   	
-		        	   	<?php
-							//Display car attributes
-							$car_passengers = $value->tipo->plazas;
-							$car_luggages = $value->tipo->puertas;
-							$car_transmission = $value->tipo->carga_util;
-							$car_doors = $value->tipo->carga_util;
-			    	
-							if(!empty($car_passengers) OR !empty($car_luggages) OR !empty($car_transmission) OR !empty($car_doors))
-							{
-						?>
-							<div class="car_attribute_wrapper_icon">
+						<div class="two_third last">
+							<div class="car_attribute_wrapper">
+								<a class="car_link" href="paso-final?<?php echo $parametros?>">
+									<h3 class="ibf_color_orange"><?php echo esc_attr($value->tipo->nombre); ?></h3>
+								</a>
 								<?php
-									if(!empty($car_passengers))
+									$overall_rating_arr = grandcarrental_get_review($car_ID, 'overall_rating');
+									$overall_rating = intval($overall_rating_arr['average']);
+									$overall_rating_count = intval($overall_rating_arr['count']);
+									
+									if(!empty($overall_rating))
 									{
 								?>
-									<div class="one_fourth">
-										<div class="car_attribute_icon ti-user"></div>
-										<div class="car_attribute_content">
-										<?php
-											echo intval($car_passengers);
-										?>
-										</div>
-									</div>
-								<?php
-									}
-								?>
-								
-								<?php
-									if(!empty($car_luggages))
-									{
-								?>
-									<div class="one_fourth">
-										<div class="car_attribute_icon ti-briefcase"></div>
-										<div class="car_attribute_content">
-											<?php
-												echo intval($car_luggages);
-											?>
-										</div>
-									</div>
-								<?php
-									}
-								?>
-								
-								<?php
-									if(!empty($car_transmission))
-									{
-								?>
-									<div class="one_fourth">
-										<div class="car_attribute_icon ti-panel"></div>
-										<div class="car_attribute_content">
-											<?php 
-												echo ucfirst($car_transmission);
-											?>
-										</div>
-									</div>
-								<?php
-									}
-								?>
-								
-								<?php
-									if(!empty($car_doors))
-									{
-								?>
-									<div class="one_fourth last">
-										<div class="car_attribute_icon ti-car"></div>
-										<div class="car_attribute_content">
-											<?php echo intval($car_doors); ?>&nbsp;
-											<?php esc_html_e("Doors", 'grandcarrental'); ?>
-										</div>
-									</div>
-								<?php
-									}
-								?>
-								
-							</div><br class="clear"/>
-						<?php
-							}
-						?>
-        			   </div>
-        			   <div class="car_attribute_price">
-			        	<?php
-				         	//Get car price
-						 	$car_price_day = $value->importe_vehiculo; 
-						 	
-						 	if(!empty($car_price_day))
-						 	{   
-				         ?>
-				         <div class="car_attribute_price_day two_cols">
-				         	<?php echo grandcarrental_format_car_price($car_price_day); ?>
-				         	<span class="car_unit_day"><?php esc_html_e('Per Day', 'grandcarrental' ); ?></span>
-				         </div>
-				         <?php
-					     	}
-					     ?>
-		        		</div>
-		        		<?php
-						    $car_included = [];//get_post_meta($post->ID, 'car_included', true);
-							$car_included[] = "Fianza: ".$value->tipo->fianza."€";
-							$car_included[] = "Franquicia: ".$value->tipo->franquicia."€";
-							$car_included[] = "Km diarios: ".$value->tipo->km_diarios;
-						    $car_included[] = "Importe km extra: ".$value->tipo->km_extras."€";
-						    if(!empty($car_included))
-							{
-						?>
-						<ul class="single_car_departure_wrapper themeborder">
-							<li>
-								<div class="single_car_departure_content full_width">
+								<div class="car_attribute_rating">
 									<?php
-										if(!empty($car_included) && is_array($car_included))
+										if($overall_rating > 0)
 										{
-											foreach($car_included as $key => $car_included_item)
-											{
-												$last_class = '';
-												if(($key+1)%2 == 0)	
-												{
-													$last_class = 'last';
-												}
 									?>
-									<div class="one_half <?php echo esc_attr($last_class); ?>">
-										<span class="ti-check"></span><?php echo esc_html($car_included_item); ?>
-									</div>
+									<div class="br-theme-fontawesome-stars-o">
+										<div class="br-widget">
 									<?php
+										for( $i=1; $i <= $overall_rating; $i++ ) {
+											echo '<a href="javascript:;" class="br-selected"></a>';
+										}
+										
+										$empty_star = 5 - $overall_rating;
+										
+										if(!empty($empty_star))
+										{
+											for( $i=1; $i <= $empty_star; $i++ ) {
+												echo '<a href="javascript:;"></a>';
 											}
 										}
 									?>
+										</div>
+									</div>
+									<?php
+									}	
+									if($overall_rating_count > 0)
+									{
+									?>
+									<div class="car_attribute_rating_count">
+										<?php echo intval($overall_rating_count); ?>&nbsp;
+										<?php
+											if($overall_rating_count > 1)
+											{
+												echo esc_html__('reviews', 'grandcarrental' );
+											}
+											else
+											{
+												echo esc_html__('review', 'grandcarrental' );
+											}
+										?>
+									</div>
+									<?php
+									}
+									?>
 								</div>
-							</li>
-						</ul>
-						<?php
-							}
-						?>
-        			</div>
-				</div>
+								<?php
+									}    
+								?>
+							
+								<?php
+									//Display car attributes
+									$car_passengers = $value->tipo->plazas;
+									$car_m3 = $value->tipo->m3;
+									$car_transmission = $value->tipo->carga_util;
+									$car_doors = $value->tipo->puertas;
+							
+									if(!empty($car_passengers) OR !empty($car_m3) OR !empty($car_transmission) OR !empty($car_doors))
+									{
+								?>
+								<div class="car_attribute_wrapper_icon">
+									<?php
+										if(!empty($car_passengers))
+										{
+									?>
+										<div class="one_sixth ibf_width_16">
+											<div class="ibf_float_left ibf_mr_15" title="Pasajeros"></div>
+											<div class="car_attribute_content ibf_mt_0 ibf_font_16">
+												<img class="ibf_float_left ibf_mr_15" src="<?php echo get_stylesheet_directory_uri(); ?>/imagenes_iberfurgo/iconos/ibf_icon_passengers_30_black.png" title="Plazas">
+												<p class="ibf_float_left ibf_mtn_10"><?php echo intval($car_passengers);?></p>
+											</div>
+										</div>
+									<?php
+										}
+									?>
+									
+									<?php
+										if(!empty($car_m3))
+										{
+									?>
+										<div class="one_sixth ibf_width_16">
+											<div class="ibf_float_left ibf_mr_15" title="Carga"></div>
+											<div class="car_attribute_content ibf_mt_0 ibf_font_16">
+												<img class="ibf_float_left ibf_mr_15"  src="<?php echo get_stylesheet_directory_uri(); ?>/imagenes_iberfurgo/iconos/ibf_icon_vol_30_black.png" title="Capacidad">
+												<p class="ibf_float_left ibf_mtn_10"><?php echo intval($car_m3); ?> m<sup>3</sup></p>
+											</div>
+										</div>
+									<?php
+										}
+									?>
+									
+									<?php
+										if(!empty($car_transmission))
+										{
+									?>
+										<div class="one_sixth ibf_width_16">
+											<div class="ibf_float_left ibf_mr_15" title="Puertas"></div>
+											<div class="car_attribute_content ibf_mt_0 ibf_font_16">
+												<img class="ibf_float_left ibf_mr_15"  src="<?php echo get_stylesheet_directory_uri(); ?>/imagenes_iberfurgo/iconos/ibf_icon_charge_30_black.png" title="Carga"> 
+												<p class="ibf_float_left ibf_mtn_10"><?php echo ucfirst($car_transmission); ?></p>
+											</div>
+										</div>
+									<?php
+										}
+									?>
+									
+									<?php
+										if(!empty($car_doors))
+										{
+									?>
+										<div class="one_sixth last ibf_width_16">
+											<div class="ibf_float_left ibf_mr_15" title="Puertas"></div>
+											<div class="car_attribute_content ibf_mt_0 ibf_font_16">
+											<img class="ibf_float_left ibf_mr_15"  src="<?php echo get_stylesheet_directory_uri(); ?>/imagenes_iberfurgo/iconos/ibf_icon_door_30_black.png" title="Puertas">
+											<p class="ibf_float_left ibf_mtn_10"><?php echo intval($car_doors); ?></p>
+											</div>
+										</div>
+									<?php
+										}
+									?>
+									
+								</div>
+								<br class="clear"/>
+								<?php
+									}
+								?>
+							</div>
+							<div class="car_attribute_price">
+								<?php
+									//Get car price
+									$car_price_day = $value->importe_vehiculo; 
+									
+									if(!empty($car_price_day))
+									{   
+								?>
+								<div class="car_attribute_price_day two_cols ibf_color_orange">
+									<?php echo grandcarrental_format_car_price($car_price_day); ?>
+									<span class="car_unit_day"><?php esc_html_e('+ IVA', 'grandcarrental' ); ?></span>
+								</div>
+								<?php
+									}
+								?>
+							</div>
+							<?php
+								$car_included = [];//get_post_meta($post->ID, 'car_included', true);
+								$car_included[] = "Fianza: ".$value->tipo->fianza."€";
+								$car_included[] = "Franquicia: ".$value->tipo->franquicia."€";
+								$car_included[] = "Km diarios: ".$value->tipo->km_diarios;
+								$car_included[] = "Importe km extra: ".$value->tipo->km_extras."€";
+								if(!empty($car_included))
+								{
+							?>
+							<ul class="single_car_departure_wrapper themeborder">
+								<li>
+									<div class="single_car_departure_content full_width">
+										<?php
+											if(!empty($car_included) && is_array($car_included))
+											{
+												foreach($car_included as $key => $car_included_item)
+												{
+													$last_class = '';
+													if(($key+1)%2 == 0)	
+													{
+														$last_class = 'last';
+													}
+										?>
+										<div class="one_half <?php echo esc_attr($last_class); ?> ibf_font_16">
+											<span class="ti-check ibf_color_orange"></span><?php echo esc_html($car_included_item); ?>
+										</div>
+										<?php
+												}
+											}
+										?>
+									</div>
+								</li>
+							</ul>
+							
+							<?php
+								}
+							?>
+							<a class="button left small ibf_button_result ibf_font_16" href="paso-final?<?php echo $parametros?>">Ver condiciones <i class="fas fa-angle-right"></i></a>
+						</div>
+						
+						
+					</div>
 			<?php
 				} //if(!empty($small_image_url[0]))
 			?>

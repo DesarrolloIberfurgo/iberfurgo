@@ -20,10 +20,12 @@
 .ibf_border_gray { border: 1px solid rgba(112, 111, 111, 0.2)!important;}
 
 .ibf_font_12 { font-size: 12px;}
-.ibf_font_16 { font-size: 16px;}
+.ibf_font_16 { font-size: 16px!important;}
 .ibf_font_18 { font-size: 18px;}
 .ibf_font_20 { font-size: 20px;}
 .ibf_font_24 { font-size: 24px;}
+
+.ibf_float_left { float: left!important;}
 
 .top_contact_info {
     font-size: 13px;
@@ -99,6 +101,16 @@
     margin-left: 15px;
 }
 
+.ibf_button_result {
+    width: 25%;
+    background-color:#ea580c !important;
+    color:#ffffff !important;
+    border:1px solid #ea580c !important; 
+    border-radius:0!important;
+    margin-left: 15px;
+    float: right!important;
+}
+
 .ibf_button_oficina{
     width: 88%;  
     background-color:#ea580c !important;
@@ -120,6 +132,7 @@
 .ibf_mr_8 { margin-right: 8px; }
 .ibf_mr_9 { margin-right: 9px; }
 .ibf_mr_10 { margin-right: 10px; }
+.ibf_mr_15 { margin-right: 15px!important; }
 
 .ibf_mrn_1 { margin-right: -1px; }
 .ibf_mrn_2 { margin-right: -2px; }
@@ -172,6 +185,7 @@
 .ibf_mb_25 { margin-bottom: 25px; }
 .ibf_mb_30 { margin-bottom: 30px; }
 
+.ibf_mt_0 { margin-top: 0px!important; }
 .ibf_mt_1 { margin-top: 1px; }
 .ibf_mt_2 { margin-top: 2px; }
 .ibf_mt_3 { margin-top: 3px; }
@@ -185,6 +199,20 @@
 .ibf_mt_15 { margin-top: 15px!important; }
 .ibf_mt_20 { margin-top: 20px; }
 .ibf_mt_30 { margin-top: 30px; }
+
+.ibf_mtn_1 { margin-top: -1px; }
+.ibf_mtn_2 { margin-top: -2px; }
+.ibf_mtn_3 { margin-top: -3px; }
+.ibf_mtn_4 { margin-top: -4px; }
+.ibf_mtn_5 { margin-top: -5px; }
+.ibf_mtn_6 { margin-top: -6px; }
+.ibf_mtn_7 { margin-top: -7px; }
+.ibf_mtn_8 { margin-top: -8px; }
+.ibf_mtn_9 { margin-top: -9px; }
+.ibf_mtn_10 { margin-top: -10px; }
+.ibf_mtn_15 { margin-top: -15px!important; }
+.ibf_mtn_20 { margin-top:-20px; }
+.ibf_mtn_30 { margin-top: -30px; }
 
 .ibf_pt_0 { padding-top: 0px!important; }
 .ibf_pt_1 { padding-top: 1px; }
@@ -292,6 +320,7 @@ a, .post_detail.single_post {color: #000000!important;}
 
 .ibf_width_100 { width: 100%!important;}
 .ibf_width_50 { width: 50%!important;}
+.ibf_width_16 { width: 16%!important;}
 .ibf_va_tb { 
     margin: 0;
     padding: 0;
@@ -302,17 +331,20 @@ a, .post_detail.single_post {color: #000000!important;}
     font-family: inherit;
     vertical-align: super!important;
 }
- .ibf_datepicker { width: 100%!important; border-radius: 0px!important;}
+ .ibf_datepicker { width: 100%!important; border-radius: 0px!important; height: 38px!important;}
  .ibf_field_form { border-radius: 0px!important; }
  .ibf_label_form { padding-top: 0px!important; padding-bottom: 10px!important;}
 
  .ibf_btn_form { border: none!important; border-radius: 0px!important; margin-top: 36px; }
+ .ibf_datepicker_parent { width: 70%!important; float: left!important;}
 
 /*Moviles*/
 @media (max-width: 480px) {
     .above_top_bar {display: none!important;}
     .ibf_slider{height: 200px!important; max-height: 200px!important; margin-bottom: 0px!important;}
     .ibf_widthm_100 { width: 100%!important;}
+    .ibf_select_form { width: 100%!important;}
+    .ibf_button_result {width: 80%;}
 }
 
 /*pantllas superiores FHD hasta 2k*/

@@ -46,7 +46,7 @@
 		    {
 		?>
 			<div class="company_address">
-		    	<div id="top_contact_number"><a href="/preguntas-frecuentes" class="ibf_color_white"> PREGUNTAS FRECUENTES</a></div>
+		    	<div id="top_contact_number"><a href="<?php echo site_url(); ?>/preguntas-frecuentes" class="ibf_color_white"> PREGUNTAS FRECUENTES</a></div>
 			</div>
 		<?php
 		    }
@@ -58,7 +58,7 @@
 		    {	
 		?>
 			<div class="company_address">
-		    	<div id="top_contact_hours"><a href="/contacto" class="ibf_color_white">CONTACTO</a></div>
+		    	<div id="top_contact_hours"><a href="<?php echo site_url(); ?>/contacto" class="ibf_color_white">CONTACTO</a></div>
 		    </div>
 		<?php
 		    }

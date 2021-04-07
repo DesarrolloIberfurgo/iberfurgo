@@ -1854,7 +1854,7 @@ function grandcarrental_format_car_price($car_price = 0)
 		
 		if($tg_car_currency_display == 'before')
 		{
-			$return_html.= '<span class="single_car_currency ifb_color_black">&euro;</span>';
+			$return_html.= '<span class="single_car_currency">&euro;</span>';
 		}
 		
 		return $return_html;
