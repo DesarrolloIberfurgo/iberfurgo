@@ -95,16 +95,15 @@ $data = $response->data;
 
 		<div id="portfolio_filter_wrapper" class="gallery classic two_cols portfolio-content section content clearfix" data-columns="3">
 	
-			<?php
-				$key = 0;
-				foreach ($data as $key => $value) {
-					$key++;
-					$image_url = '';
-					
-					$parametros = "tipoId=".$value->tipo_id."&delegacionId=".$delegacionId."&nombreDelegacion=".$value->nombreDelegacion."&fechaInicio=".$fechaInicio."&fechaFin=".$fechaFin."&horaInicio=".$horaInicio."&horaFin=".$horaFin."&tipoId=".$value->tipo_id."&importe_vehiculo=".$value->importe_vehiculo."&importe_vehiculo_iva=".$value->importe_vehiculo_iva."&tramo_id=".$value->id;
-					
-					$permalink_url = get_permalink($car_ID);
-			?>
+	<?php
+		$key = 0;
+		foreach ($data as $key => $value) {
+			$key++;
+			$image_url = '';
+			$car_ID = get_the_ID();
+			$parametros = "tipoId=".$value->tipo_id."&delegacionId=".$delegacionId."&nombreDelegacion=".$value->nombreDelegacion."&fechaInicio=".$fechaInicio."&fechaFin=".$fechaFin."&horaInicio=".$horaInicio."&horaFin=".$horaFin."&tipoId=".$value->tipo_id."&importe_vehiculo=".$value->importe_vehiculo."&importe_vehiculo_iva=".$value->importe_vehiculo_iva."&tramo_id=".$value->id."&dias=".$value->dias."&euros_dia=".$value->eur_dia;
+			$permalink_url = get_permalink($car_ID);
+	?>
 				<?php 
 					if(true) //!empty($small_image_url[0])
 					{

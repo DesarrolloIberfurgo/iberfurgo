@@ -118,3 +118,8 @@ function get_times() {
   return $showing;
 }
 
+add_action('wp_enqueue_scripts', 'reserva_enqueue_custom_js');
+function reserva_enqueue_custom_js() {
+    wp_enqueue_script('custom', get_stylesheet_directory_uri().'/js/reserva.js');
+}
+
