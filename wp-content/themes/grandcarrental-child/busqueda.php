@@ -100,7 +100,7 @@ $data = $response->data;
 			$key++;
 			$image_url = '';
 			$car_ID = get_the_ID();
-			$parametros = "tipoId=".$value->tipo_id."&delegacionId=".$delegacionId."&nombreDelegacion=".$value->nombreDelegacion."&fechaInicio=".$fechaInicio."&fechaFin=".$fechaFin."&horaInicio=".$horaInicio."&horaFin=".$horaFin."&tipoId=".$value->tipo_id."&importe_vehiculo=".$value->importe_vehiculo."&importe_vehiculo_iva=".$value->importe_vehiculo_iva."&tramo_id=".$value->id;
+			$parametros = "tipoId=".$value->tipo_id."&delegacionId=".$delegacionId."&nombreDelegacion=".$value->nombreDelegacion."&fechaInicio=".$fechaInicio."&fechaFin=".$fechaFin."&horaInicio=".$horaInicio."&horaFin=".$horaFin."&tipoId=".$value->tipo_id."&importe_vehiculo=".$value->importe_vehiculo."&importe_vehiculo_iva=".$value->importe_vehiculo_iva."&tramo_id=".$value->id."&dias=".$value->dias."&euros_dia=".$value->eur_dia;
 					
 			if(has_post_thumbnail($car_ID, 'grandcarrental-gallery-list'))
 			{

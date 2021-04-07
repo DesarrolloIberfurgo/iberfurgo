@@ -20,6 +20,8 @@ $horaFin = $_GET['horaFin'];
 $tipoId = $_GET['tipoId'];
 $importeVehiculo = $_GET['importe_vehiculo'];
 $importeVehiculoIva = $_GET['importe_vehiculo_iva'];
+$dias = $_GET['dias'];
+$euros_dia = $_GET['euros_dia'];
 $tramoId = $_GET['tramo_id'];
 $data['tipo_id'] = $tipoId;
 list($httpCode, $response) = getApi(URL_API . 'flota-tipo/'.$tipoId);
@@ -187,7 +189,9 @@ get_template_part("/templates/template-car-header");
                 </div>  
         </div>
         <div class="one">
-            <select id="kilometraje" name="kilometraje">
+            <input type="hidden" id="eur_dia" value="<?php echo $response->km_extras?>">
+            <input type="hidden" id="euros_dia" value="<?php echo $euros_dia?>">
+            <select id="kilometraje" name="kilometraje" onchange="addExtras()">
                 <option value="">Selecciona</option>
                 <option value="100">100km extra</option>
                 <option value="200">200km extra</option>
@@ -195,15 +199,15 @@ get_template_part("/templates/template-car-header");
             </select>
         </div>
         <div class="one">
-            <input id="conductor_adicional" name="conductor_adicional" type="checkbox" value=1>
+            <input id="conductor_adicional" name="conductor_adicional" type="checkbox" value=1 onclick="addExtras()">
             <label for="conductor_adicional">Conductor adicional.</label>
         </div>
         <div class="one">
-            <input id="conductor_menor" name="conductor_menor" type="checkbox" value=1>
+            <input id="conductor_menor" name="conductor_menor" type="checkbox" value=1 onclick="addExtras()">
             <label for="conductor_menor">Conductor menor.</label>
         </div>
         <div class="one">
-            <input id="reduccion_franquicia" name="reduccion_franquicia" type="checkbox" value=1>
+            <input id="reduccion_franquicia" name="reduccion_franquicia" type="checkbox" value=1 onclick="addExtras()">
             <label for="reduccion_franquicia">Reducción franquicia.</label>
         </div>                
 </div>
@@ -277,14 +281,57 @@ get_template_part("/templates/template-car-header");
                 $car_booking_product = get_post_meta($post->ID, 'car_booking_product', true);
             ?>
             <div class="single_car_booking_wrapper themeborder <?php if(!empty($car_booking_product) && intval($car_booking_product) > 0) { ?>book_instantly<?php } ?>">
+            <form class="car_search_form" method="post" action="../aviso-reserva">
+                <label for="delegacion_id_res">oficina</label>
+                <input id="delegacion_id_res" value="<?php echo $nombreDelegacion?>" disabled>
+                <input hidden name="delegacion_id_res" value="<?php echo $nombreDelegacion?>">
+                <label for="fecha_inicio_res">Fecha recogida</label>
+                <input id="fecha_inicio_res" value="<?php echo $fechaInicio.':'.$horaInicio?>" disabled>
+                <input hidden name="fecha_inicio_res" value="<?php echo $fechaInicio?>">
+                <input hidden name="hora_inicio_res" value="<?php echo $horaInicio?>">
+                <label for="fecha_fin_res">Fecha devolución</label>
+                <input id="fecha_fin_res" value="<?php echo $fechaFin.':'.$horaFin?>" disabled>
+                <input hidden name="fecha_fin_res" value="<?php echo $fechaFin?>">
+                <input hidden name="hora_fin_res" value="<?php echo $horaFin?>">
+                <label for="nombre_res">Nombre/Empresa</label>
+                <input id="nombre_res" name="nombre_res" placeholder="Nombre o empresa">
+                <label for="dni_res">DNI/NIE</label>
+                <input id="dni_res" name="dni_res" placeholder="DNI o NIE">
+                <label for="direccion_res">Dirección</label>
+                <input id="direccion_res" name="direccion_res" placeholder="Dirección">
+                <label for="forma_pago_res">Forma de pago</label>
+                <select id="forma_pago_res" name="forma_pago_res" placeholder="Forma de pago">
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="Tarjeta">Tarjeta</option>
+                    <option value="Transferencia">Transferencia</option>
+                </select>
+                <label for="telefono_res">Teléfono</label>
+                <input id="telefono_res" name="telefono_res" placeholder="Teléfono">
+                <label for="email_res">Email</label>
+                <input id="email_res" name="email_res" placeholder="Email">
+                <textarea id="comentarios_res" name="comentarios_res" placeholder="Comentarios"></textarea>
+                <input hidden name="tipo_id_res" value="<?php echo $tipoId?>">
+                <input hidden id="dias_res" name="dias_res" value="<?php echo $dias?>">
+                <input hidden id="precio_res" name="precio_res" value="<?php echo $importeVehiculo?>">
+                <input hidden id="precio_extra_res" name="precio_extra_res" value="0">
+                <input hidden id="precio_final_con_extras_res" name="precio_final_con_extras_res" value="<?php echo $importeVehiculo?>">
+                <!-- <input hidden id="extras_res" name="extras_res"> -->
+                <input hidden id="texto_extras_res" name="texto_extras_res" value="">
+                <input id="reservar_res" type="submit" class="button" value="Reservar">
+            </form>
+                
                 <?php
-                    echo do_shortcode('[tg_formulario_detalle
-                        fecha_inicio="'.esc_attr($fechaInicio).'"
-                        hora_inicio="'.esc_attr($horaInicio).'"
-                        fecha_fin="'.esc_attr($fechaFin).'"
-                        hora_fin="'.esc_attr($horaFin).'"
-                        nombre_delegacion="'.esc_attr($nombreDelegacion).'"
-                    ][/tg_formulario_detalle]');
+                    // echo do_shortcode('[tg_formulario_detalle
+                    //     fecha_inicio="'.esc_attr($fechaInicio).'"
+                    //     hora_inicio="'.esc_attr($horaInicio).'"
+                    //     fecha_fin="'.esc_attr($fechaFin).'"
+                    //     hora_fin="'.esc_attr($horaFin).'"
+                    //     nombre_delegacion="'.esc_attr($nombreDelegacion).'"
+                    //     tipo_id="'.esc_attr($tipoId).'"
+                    //     car_price="'.esc_attr($importeVehiculo).'"
+                    //     dias="'.esc_attr($dias).'"
+                    //     extras="100"
+                    // ][/tg_formulario_detalle]');
                     // if(!empty($car_booking_contactform7) && intval($car_booking_contactform7) > 0)
                     // {
                     //     echo do_shortcode('[contact-form-7 id="'.esc_attr($car_booking_contactform7).'"]');

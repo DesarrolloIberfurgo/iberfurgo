@@ -25,21 +25,23 @@
     "delegacion"=>$data['delegacion_id_res'],
     "fecha_reco"=>$data['fecha_inicio_res'],
     "fecha_dev"=>$data['fecha_fin_res'],
-    "hora_reco"=>"10:00",
-    "hora_dev"=>"11:00",
-    "groupo_vehi"=>"grupo vehiculo",
-    "des_vehi"=>"descripcion",
-    "dias_contra"=>"25",
-    "precio_vehi"=>"300.50",
-    "extras_name"=>"100km extra",
-    "precio_extra"=>"10",
-    "fecha_reserva"=>"2020/12/11",
+    "hora_reco"=>$data['hora_inicio_res'],
+    "hora_dev"=>$data['hora_fin_res'],
+    "dias_contra"=>$data['dias_res'],
+    "precio_vehi"=>$data['precio_res'],
+    "extras_name"=>$data['texto_extras_res'],
+    "precio_extra"=>$data['precio_extra_res'],
+    "fecha_reserva"=>date('Y-m-d'),
     "comunicaciones_comerciales"=>1,
     "politica_privacidad"=>1,
     "condiciones_generales"=>1,
+    "tipo_id"=>$data['tipo_id_res'],
     ];
+    
 
     list($httpCode, $response) = postDataApi(URL_API . 'reservas-web', json_encode($dataApi));
+    var_dump($httpCode);
     if ($httpCode != 200) {
         return 'ha petado';
     }
+

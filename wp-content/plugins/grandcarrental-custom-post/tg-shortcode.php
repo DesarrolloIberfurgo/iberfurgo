@@ -1077,6 +1077,10 @@ function tg_formulario_detalle_func($atts, $content)
 	$horaInicio = $atts['hora_inicio'];
 	$horaFin = $atts['hora_fin'];
 	$nombreDelegacion = $atts['nombre_delegacion'];
+	$tipoId = $atts['tipo_id'];
+	$dias = $atts['dias'];
+	$precio = $atts['car_price'];
+	$extras = $atts['extras'];
 
 	$return_html = '';
 	$return_html.= '<form class="car_search_form" method="post" action="../aviso-reserva">';
@@ -1099,15 +1103,19 @@ function tg_formulario_detalle_func($atts, $content)
 	$return_html.= '<input id="direccion_res" name="direccion_res" placeholder="Dirección">';
 	$return_html.= '<label for="forma_pago_res">Forma de pago</label>';
 	$return_html.= '<select id="forma_pago_res" name="forma_pago_res" placeholder="Forma de pago">';
-	$return_html.= '<option value="1">Efectivo</option>';
-	$return_html.= '<option value="2">Tarjeta</option>';
-	$return_html.= '<option value="3">Transferencia</option>';
+	$return_html.= '<option value="Efectivo">Efectivo</option>';
+	$return_html.= '<option value="Tarjeta">Tarjeta</option>';
+	$return_html.= '<option value="Transferencia">Transferencia</option>';
 	$return_html.= '</select>';
 	$return_html.= '<label for="telefono_res">Teléfono</label>';
 	$return_html.= '<input id="telefono_res" name="telefono_res" placeholder="Teléfono">';
 	$return_html.= '<label for="email_res">Email</label>';
 	$return_html.= '<input id="email_res" name="email_res" placeholder="Email">';
 	$return_html.= '<textarea id="comentarios_res" name="comentarios_res" placeholder="Comentarios"></textarea>';
+	$return_html.= '<input hidden name="tipo_id_res" value="'.$tipoId.'">';
+	$return_html.= '<input hidden name="dias_res" value="'.$dias.'">';
+	$return_html.= '<input hidden name="precio_res" value="'.$precio.'">';
+	$return_html.= '<input hidden id="extras_res" name="extras_res" value="'.$extras.'">';
 	$return_html.= '<input id="reservar_res" type="submit" class="button" value="Reservar">';
 	$return_html.= '</form>';
 
