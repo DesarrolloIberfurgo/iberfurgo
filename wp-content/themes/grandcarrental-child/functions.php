@@ -98,7 +98,7 @@ require_once('functions-api/apiCalls.php');
 require_once('functions-api/connection.php');
 require_once('includes/formulario-contacto.php');
 
-function get_times() {
+function get_times($time) {
 
   $start = "00:00"; 
   $end = "23:30";
@@ -108,11 +108,11 @@ function get_times() {
     $tNow = $tStart;
     
   while($tNow <= $tEnd){
-    // if(date("H:i",$tNow)=='10:00'){
-    //     $showing  .= '<option value="'.date("H:i",$tNow).'" selected>'.date("H:i",$tNow).'</option>';
-    // }else{
+    if(date("H:i",$tNow)==$time){
+        $showing  .= '<option value="'.date("H:i",$tNow).'" selected>'.date("H:i",$tNow).'</option>';
+    }else{
         $showing  .= '<option value="'.date("H:i",$tNow).'">'.date("H:i",$tNow).'</option>';
-    // }
+    }
       $tNow = strtotime('+30 minutes',$tNow);
   }
   return $showing;

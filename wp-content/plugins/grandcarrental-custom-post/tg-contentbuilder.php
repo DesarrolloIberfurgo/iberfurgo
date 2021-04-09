@@ -3387,9 +3387,15 @@ function ppb_car_search_func($atts, $content) {
 	
 	foreach($response->data as $key => $value)	
 	{
-		$return_html .= '<option value="'.esc_attr($key).'">'.esc_attr($value).'</option>';
+		if ($atts['delegacionId'] = $key) {
+			$selected='selected';
+		}
+		else {
+			$selected='';
+		}
+		$return_html .= '<option value="'.esc_attr($key).'" '.$selected.'>'.esc_attr($value).'</option>';
 	}
-		$horas = get_times();
+		$horas = get_times($atts['horainicio']);
 
     $return_html.= '</select>
     	</div>';
@@ -3397,7 +3403,7 @@ function ppb_car_search_func($atts, $content) {
     $return_html.= 	'<div class="one_fourth ibf_widthm_100 ibf_no_background">
 						<p class="ibf_font_16 ibf_font_bold ibf_color_white ibf_field_form ibf_label_form">Fecha/hora recogida</p>
 						<div class="one_half themeborder ibf_mr_0 ibf_datepicker_parent">';
-	$return_html.= 			'<input name="fecha_inicio" type="date" class="ibf_datepicker">';
+	$return_html.= 			'<input name="fecha_inicio" type="date" class="ibf_datepicker" value="'.esc_attr($atts['fechainicio']).'">';
 	$return_html.=		'</div>';
 
 	$return_html.= 		'<div class="one_third themeborder ibf_mr_0" style="width:30%;">';
@@ -3410,9 +3416,9 @@ function ppb_car_search_func($atts, $content) {
     $return_html.=	'<div class="one_fourth ibf_widthm_100 ibf_no_background">
 						<p class="ibf_font_16 ibf_font_bold ibf_color_white ibf_field_form ibf_label_form">Fecha/hora devolución</p>
 						<div class="one_half themeborder ibf_mr_0 ibf_datepicker_parent">';
-	$return_html.= 			'<input name="fecha_fin" type="date" class="ibf_datepicker">';
+	$return_html.= 			'<input name="fecha_fin" type="date" class="ibf_datepicker" value="'.esc_attr($atts['fechafin']).'">';
     $return_html.= 		'</div>';
-    	
+	$horas = get_times($atts['horafin']);
 	$return_html.= 		'<div class="one_third themeborder ibf_mr_0" style="width:30%;">';
 	$return_html.= 			'<select name="hora_fin" class="ibf_field_form ibf_width_100"><option value="">Hora</option>';
 	$return_html.= 				$horas;

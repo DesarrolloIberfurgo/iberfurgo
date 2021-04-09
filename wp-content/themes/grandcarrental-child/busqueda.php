@@ -91,7 +91,15 @@ $data = $response->data;
 	<div id="page_main_content" class="sidebar_content full_width">
 	
 	<div class="standard_wrapper">
-		<?php echo do_shortcode('[ppb_car_search][/ppb_car_search]') ?>
+		<?php 
+		echo do_shortcode('[ppb_car_search 
+			delegacionId="'.esc_attr($delegacionId).'"
+			fechaInicio="'.esc_attr($fechaInicio).'"
+			fechaFin="'.esc_attr($fechaFin).'"
+			horaInicio="'.esc_attr($horaInicio).'"
+			horaFin="'.esc_attr($horaFin).'"
+			][/ppb_car_search]') 
+		?>
 
 		<div id="portfolio_filter_wrapper" class="gallery classic two_cols portfolio-content section content clearfix" data-columns="3">
 	
@@ -110,14 +118,14 @@ $data = $response->data;
 				?>
 					<div class="car_list_wrapper floatleft themeborder">
 						<div class="one_third">
-							<a class="car_image" href="paso-final?<?php echo $parametros?>">
+ 							<a class="car_image" href="<?php echo site_url()?>/paso-final?<?php echo $parametros?>">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/imagenes_iberfurgo/flota/<?php echo $value->tipo->tipoId; ?>/34.jpg" alt="<?php echo esc_attr(get_the_title()); ?>" />
 							</a>
 						</div>
 				
 						<div class="two_third last">
 							<div class="car_attribute_wrapper">
-								<a class="car_link" href="paso-final?<?php echo $parametros?>">
+								<a class="car_link" href="<?php echo site_url()?>/paso-final?<?php echo $parametros?>">
 									<h3 class="ibf_color_orange"><?php echo esc_attr($value->tipo->nombre); ?></h3>
 								</a>
 								<?php
@@ -307,7 +315,7 @@ $data = $response->data;
 							<?php
 								}
 							?>
-							<a class="button left small ibf_button_result ibf_font_16" href="paso-final?<?php echo $parametros?>">Ver condiciones <i class="fas fa-angle-right"></i></a>
+							<a class="button left small ibf_button_result ibf_font_16" href="<?php echo site_url()?>/paso-final?<?php echo $parametros?>">Ver condiciones <i class="fas fa-angle-right"></i></a>
 						</div>
 						
 						
