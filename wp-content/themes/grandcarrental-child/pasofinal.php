@@ -209,7 +209,10 @@ get_template_part("/templates/template-car-header");
         <div class="one">
             <input id="reduccion_franquicia" name="reduccion_franquicia" type="checkbox" value=1 onclick="addExtras()">
             <label for="reduccion_franquicia">Reducción franquicia.</label>
-        </div>                
+        </div>    
+        <div class="one">
+            <span id="mostrar_texto_extras"></span>
+        </div>            
 </div>
 
 <div class="sidebar_wrapper">

@@ -46,6 +46,7 @@ function addExtras()
     let precio_total = precio_car + precio_extras;
 
     document.getElementById("texto_extras_res").value = texto;
+    document.getElementById("mostrar_texto_extras").innerHTML = texto;
     document.getElementById("precio_extra_res").value = precio_extras.toFixed(2);
     document.getElementById("precio_final_con_extras_res").value = precio_total.toFixed(2);
     document.getElementById("single_car_price").innerHTML = '<span class="single_car_price">'+precio_total.toFixed(2)+'</span><span class="single_car_currency ifb_color_black">€</span>';
