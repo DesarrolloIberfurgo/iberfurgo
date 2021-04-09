@@ -1175,7 +1175,7 @@ function tg_accordion_oficinas_func($atts, $content) {
 	$return_html.= '<div class="ppb_header_content ibf_pl_15 ibf_pt_20">';
 	$return_html.= '<p><i class="fas fa-phone-alt ibf_font_20 ibf_color_orange ibf_pr_10"></i><a class="ibf_font_18 ibf_font_bold" href="tel:0034'.$telefono.'">'.$telefono.'</a></p>';
 	$return_html.= '<p><i class="fab fa-whatsapp  ibf_font_24 ibf_color_orange ibf_pr_10"></i><a class="ibf_font_16" href="'.$whatsapp.'">'.substr($whatsapp,-9).'</a></p>';
-	$return_html.= '<p><i class="fas fa-at ibf_font_20 ibf_color_orange ibf_pr_10"></i><a class="ibf_font_16" href="tel:0034'.$email.'">'.$email.'</a></p>';
+	$return_html.= '<p><i class="fas fa-at ibf_font_20 ibf_color_orange ibf_pr_10"></i><a class="ibf_font_16" href="mailto:'.$email.'">'.$email.'</a></p>';
 	$return_html.= '<p><i class="fas fa-map-marker-alt  ibf_font_20 ibf_color_orange ibf_pr_15"></i><span class="ibf_font_16">'.html_entity_decode($direccion).'</span></p>';
 	$return_html.= '<p class="ibf_pl-15 ibf_font_bold"><a class="ibf_font_16 ibf_color_orange" target="_blank" href="'.$como_llegar.'">Como llegar</a></p>';
 	$return_html.= '</div>';
