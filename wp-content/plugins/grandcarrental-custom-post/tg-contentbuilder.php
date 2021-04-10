@@ -3327,7 +3327,7 @@ function ppb_car_search_func($atts, $content) {
 		'margin_bottom' => 0,
 		'margin_left' => 0,
 		'builder_id' => '',
-	), $atts));
+	), $atts));	
 	
 	$sec_id = '';
 	if(!empty($slug))
@@ -3387,7 +3387,7 @@ function ppb_car_search_func($atts, $content) {
 	
 	foreach($response->data as $key => $value)	
 	{
-		if ($atts['delegacionId'] = $key) {
+		if ($atts['delegacionId'] == $key) {
 			$selected='selected';
 		}
 		else {
