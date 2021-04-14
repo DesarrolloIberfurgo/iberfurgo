@@ -23,6 +23,7 @@
 .ibf_font_16 { font-size: 16px!important;}
 .ibf_font_18 { font-size: 18px;}
 .ibf_font_20 { font-size: 20px;}
+.ibf_font_21 { font-size: 21px;}
 .ibf_font_24 { font-size: 24px;}
 
 .ibf_float_left { float: left!important;}
@@ -77,7 +78,7 @@
 
 
 .one_fourth {
-    width: 26%!important;
+    width: 23%!important;
     float: left!important;
     position: relative!important;
     box-sizing: border-box!important;
@@ -90,6 +91,18 @@
     color:#ffffff !important;
     border:1px solid #ea580c !important; 
     border-radius:0!important;
+}
+
+.ibf_button_book{
+    width: 100%; 
+    background-color:#ea580c !important;
+    color:#ffffff !important;
+    border:1px solid #ea580c !important; 
+    border-radius:0!important;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 18px!important;
 }
 
 .ibf_button_50 {
@@ -248,6 +261,7 @@
 .ibf_pl_5 { padding-left: 5px!important;}
 .ibf_pl_10 { padding-left: 10px!important;}
 .ibf_pl_15 { padding-left: 15px!important;}
+.ibf_pl_20 { padding-left: 20px!important;}
 
 .ibf_pr_0 { padding-right: 0px!important;}
 .ibf_pr_1 { padding-right: 1px!important;}
@@ -321,6 +335,7 @@ a, .post_detail.single_post {color: #000000!important;}
 .ibf_width_100 { width: 100%!important;}
 .ibf_width_50 { width: 50%!important;}
 .ibf_width_16 { width: 16%!important;}
+.ibf_width_19 { width: 19%!important;}
 .ibf_va_tb { 
     margin: 0;
     padding: 0;
@@ -338,6 +353,11 @@ a, .post_detail.single_post {color: #000000!important;}
  .ibf_btn_form { border: none!important; border-radius: 0px!important; margin-top: 36px; }
  .ibf_datepicker_parent { width: 70%!important; float: left!important;}
 
+ .ibf_img_initial { background-size: initial!important; background-color: #ffffff!important;}
+ .ibf_input_form {width: 95%; height: 38px; border: 1px solid #ea580c; padding-left: 10px; font-size: 16px;}
+ .ibf_select_form { border: 1px solid #ea580c; font-size: 16px;}
+
+ .ibf_li li{ padding: 10px 0 10px 0!important; border-top: none!important; list-style-type: none!important;}
 /*Moviles*/
 @media (max-width: 480px) {
     .above_top_bar {display: none!important;}
