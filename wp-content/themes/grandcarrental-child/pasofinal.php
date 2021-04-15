@@ -304,7 +304,7 @@ get_template_part("/templates/template-car-header");
                             <input class="ibf_input_form" id="telefono_res" name="telefono_res" placeholder="Teléfono" required>
 
                             <label for="email_res"  class="ibf_font_18 ibf_mt_10">Email</label>
-                            <input type="email" class="ibf_input_form" id="email_res" name="email_res" placeholder="Email">
+                            <input type="email" class="ibf_input_form" id="email_res" name="email_res" placeholder="Email" required>
 
                             <textarea class="ibf_mt_15 ibf_select_form" cols="27" rows="5" id="comentarios_res" name="comentarios_res" placeholder="Comentarios"></textarea>
 
