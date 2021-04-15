@@ -46,14 +46,14 @@ define( 'DB_NAME', "Iberfurgo-wp" );
 
 /** MySQL database username */
 
-// define( 'DB_USER', "root" );
-define( 'DB_USER', "iberfurgo" );
+define( 'DB_USER', "root" );
+// define( 'DB_USER', "iberfurgo" );
 
 
 /** MySQL database password */
 
-// define( 'DB_PASSWORD', "" );
-define( 'DB_PASSWORD', "iberfurgo" );
+define( 'DB_PASSWORD', "" );
+// define( 'DB_PASSWORD', "iberfurgo" );
 
 
 /** MySQL hostname */

@@ -46,7 +46,6 @@ get_template_part("/templates/template-car-header");
             $overall_rating_arr = grandcarrental_get_review($post->ID, 'overall_rating');
             $overall_rating = intval($overall_rating_arr['average']);
             $overall_rating_count = intval($overall_rating_arr['count']);
-            var_dump($response);
             //Display car attributes
             $car_passengers = $response->plazas;
             $car_luggages = $response->carga_util;
@@ -286,13 +285,13 @@ get_template_part("/templates/template-car-header");
                             </div>
 
                             <label for="nombre_res" class="ibf_font_18 ibf_mt_10">Nombre/Empresa</label>
-                            <input class="ibf_input_form" id="nombre_res" name="nombre_res" placeholder="Nombre o empresa">
+                            <input class="ibf_input_form" id="nombre_res" name="nombre_res" placeholder="Nombre o empresa" required>
 
                             <label for="dni_res" class="ibf_font_18 ibf_mt_10">DNI/NIE</label>
-                            <input class="ibf_input_form" id="dni_res" name="dni_res" placeholder="DNI o NIE">
+                            <input class="ibf_input_form" id="dni_res" name="dni_res" placeholder="DNI o NIE" required>
 
                             <label for="direccion_res"  class="ibf_font_18 ibf_mt_10">Dirección</label>
-                            <input class="ibf_input_form" id="direccion_res" name="direccion_res" placeholder="Dirección">
+                            <input class="ibf_input_form" id="direccion_res" name="direccion_res" placeholder="Dirección" required>
 
                             <label for="forma_pago_res"  class="ibf_font_18 ibf_mt_10">Forma de pago</label>
                             <select class="ibf_select_form" id="forma_pago_res" name="forma_pago_res" placeholder="Forma de pago">
@@ -302,10 +301,10 @@ get_template_part("/templates/template-car-header");
                             </select>
 
                             <label for="telefono_res"  class="ibf_font_18 ibf_mt_10">Teléfono</label>
-                            <input class="ibf_input_form" id="telefono_res" name="telefono_res" placeholder="Teléfono">
+                            <input class="ibf_input_form" id="telefono_res" name="telefono_res" placeholder="Teléfono" required>
 
                             <label for="email_res"  class="ibf_font_18 ibf_mt_10">Email</label>
-                            <input class="ibf_input_form" id="email_res" name="email_res" placeholder="Email">
+                            <input type="email" class="ibf_input_form" id="email_res" name="email_res" placeholder="Email">
 
                             <textarea class="ibf_mt_15 ibf_select_form" cols="27" rows="5" id="comentarios_res" name="comentarios_res" placeholder="Comentarios"></textarea>
 

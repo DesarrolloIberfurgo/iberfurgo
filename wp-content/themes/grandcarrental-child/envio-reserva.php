@@ -9,10 +9,10 @@
     // get_header(); 
     
     // get_footer(); 
-    print_r($_POST);
 
     $data = $_POST;
- 
+
+
     $dataApi = [
     "nombre"=> $data['nombre_res'],
     "apellidos"=>"Baldayo",
@@ -32,12 +32,11 @@
     "extras_name"=>$data['texto_extras_res'],
     "precio_extra"=>$data['precio_extra_res'],
     "fecha_reserva"=>date('Y-m-d'),
-    "comunicaciones_comerciales"=>1,
-    "politica_privacidad"=>1,
-    "condiciones_generales"=>1,
+    "comunicaciones_comerciales"=>$data['comunicaciones_comerciales'] ?? 0,
+    "politica_privacidad"=>$data['condiciones_generales'] ?? 0,
+    "condiciones_generales"=>$data['condiciones_generales'] ?? 0,
     "tipo_id"=>$data['tipo_id_res'],
     ];
-    
 
     list($httpCode, $response) = postDataApi(URL_API . 'reservas-web', json_encode($dataApi));
     var_dump($httpCode);
