@@ -200,7 +200,7 @@ $data = $response->data;
 										if(!empty($car_passengers))
 										{
 									?>
-										<div class="one_sixth ibf_width_16">
+										<div class="one_sixth ibf_width_19">
 											<div class="ibf_float_left ibf_mr_15" title="Pasajeros"></div>
 											<div class="car_attribute_content ibf_mt_0 ibf_font_16">
 												<img class="ibf_float_left ibf_mr_15" src="<?php echo get_stylesheet_directory_uri(); ?>/imagenes_iberfurgo/iconos/ibf_icon_passengers_30_black.png" title="Plazas">
@@ -215,7 +215,7 @@ $data = $response->data;
 										if(!empty($car_m3))
 										{
 									?>
-										<div class="one_sixth ibf_width_16">
+										<div class="one_sixth ibf_width_19">
 											<div class="ibf_float_left ibf_mr_15" title="Carga"></div>
 											<div class="car_attribute_content ibf_mt_0 ibf_font_16">
 												<img class="ibf_float_left ibf_mr_15"  src="<?php echo get_stylesheet_directory_uri(); ?>/imagenes_iberfurgo/iconos/ibf_icon_vol_30_black.png" title="Capacidad">
@@ -230,7 +230,7 @@ $data = $response->data;
 										if(!empty($car_transmission))
 										{
 									?>
-										<div class="one_sixth ibf_width_16">
+										<div class="one_sixth ibf_width_19">
 											<div class="ibf_float_left ibf_mr_15" title="Puertas"></div>
 											<div class="car_attribute_content ibf_mt_0 ibf_font_16">
 												<img class="ibf_float_left ibf_mr_15"  src="<?php echo get_stylesheet_directory_uri(); ?>/imagenes_iberfurgo/iconos/ibf_icon_charge_30_black.png" title="Carga"> 
@@ -245,7 +245,7 @@ $data = $response->data;
 										if(!empty($car_doors))
 										{
 									?>
-										<div class="one_sixth last ibf_width_16">
+										<div class="one_sixth last ibf_width_19">
 											<div class="ibf_float_left ibf_mr_15" title="Puertas"></div>
 											<div class="car_attribute_content ibf_mt_0 ibf_font_16">
 											<img class="ibf_float_left ibf_mr_15"  src="<?php echo get_stylesheet_directory_uri(); ?>/imagenes_iberfurgo/iconos/ibf_icon_door_30_black.png" title="Puertas">

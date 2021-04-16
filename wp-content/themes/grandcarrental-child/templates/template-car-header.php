@@ -36,11 +36,14 @@ $tg_car_single_header = kirki_get_option('tg_car_single_header');
     $grandcarrental_topbar = grandcarrental_get_topbar();
 	$grandcarrental_screen_class = grandcarrental_get_screen_class();
 
+	//Get header featured content
+	$car_header_type = get_post_meta(get_the_ID(), 'car_header_type', true);
+
 	$tipoId = $_GET['tipoId'];
 	$pp_page_bg = get_stylesheet_directory_uri()."/imagenes_iberfurgo/flota/".$tipoId."/34.jpg";
 	
 ?>
-<div id="page_caption" class="<?php if(!empty($pp_page_bg)) { ?>hasbg<?php } ?> <?php if(!empty($grandcarrental_topbar)) { ?>withtopbar<?php } ?> <?php if(!empty($grandcarrental_screen_class)) { ?>split<?php } ?>" <?php if(!empty($pp_page_bg)) { ?>style="background-image:url(<?php echo $pp_page_bg; ?>);"<?php } ?>>
+<div id="page_caption" class="ibf_img_initial <?php if(!empty($pp_page_bg)) { ?>hasbg<?php } ?> <?php if(!empty($grandcarrental_topbar)) { ?>withtopbar<?php } ?> <?php if(!empty($grandcarrental_screen_class)) { ?>split<?php } ?>" <?php if(!empty($pp_page_bg)) { ?>style="background-image:url(<?php echo $pp_page_bg; ?>); margin-bottom: 0px;"<?php } ?>>
 	
 	<div class="single_car_header_content">
 		<div class="standard_wrapper">
@@ -63,47 +66,12 @@ $tg_car_single_header = kirki_get_option('tg_car_single_header');
 					}
 					else
 					{
-						$default_price_unit = esc_html__('Per Day', 'grandcarrental' );
+						$default_price_unit = esc_html__('+ IVA', 'grandcarrental' );
 					}
 				?>
 				<span id="single_car_price"><?php echo grandcarrental_format_car_price($car_price_day); ?></span>
 				<span id="single_car_price_per_unit_change" class="single_car_price_per_unit">
 					<span id="single_car_unit"><?php echo esc_attr($default_price_unit); ?></span>
-					<span class="ti-angle-down"></span>
-					
-					<ul id="price_per_unit_select">
-						<li class="icon arrow"></li>
-						<?php
-							if(!empty($car_price_day))
-							{
-						?>
-						<li class="active">
-							<a class="active" href="javascript:;" data-filter="car_price_day" data-price="<?php echo esc_attr(grandcarrental_format_car_price($car_price_day)); ?>"><?php esc_html_e('Per Day', 'grandcarrental' ); ?></a>
-						</li>
-						<?php
-							}
-						?>
-						<?php
-							if(!empty($car_price_hour))
-							{
-						?>
-						<li>
-							<a class="active" href="javascript:;" data-filter="car_price_hour" data-price="<?php echo esc_attr(grandcarrental_format_car_price($car_price_hour)); ?>"><?php esc_html_e('Per Hour', 'grandcarrental' ); ?></a>
-						</li>
-						<?php
-							}
-						?>
-						<?php
-							if(!empty($car_price_airport))
-							{
-						?>
-						<li>
-							<a class="active" href="javascript:;" data-filter="car_price_airport" data-price="<?php echo esc_attr(grandcarrental_format_car_price($car_price_airport)); ?>"><?php esc_html_e('Airport Transfer', 'grandcarrental' ); ?></a>
-						</li>
-						<?php
-							}
-						?>
-					</ul>
 				</span>
 			</div>
 			<?php
