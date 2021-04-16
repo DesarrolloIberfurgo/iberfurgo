@@ -3,6 +3,8 @@ function addExtras()
     let precio_extras = 0;
     let texto = '';
     let texto_hidden = '';
+    let tipo_id = document.getElementById('tipo_id_res').value;
+    console.log(tipo_id);
 
     //precio 
     let precio_car = parseFloat(document.getElementById("precio_res").value);
@@ -43,7 +45,11 @@ function addExtras()
 
     let franquicia = document.getElementById("reduccion_franquicia");
     if (franquicia.checked == true){
-        precio_extras += parseFloat(6.99*dias);
+        let value_franquicia = 10;
+        if (tipo_id == 'F' || tipo_id == 'G') {
+            value_franquicia = 15;
+        }
+        precio_extras += parseFloat(value_franquicia*dias);
         texto_hidden = texto_hidden + 'reduccion franquicia,';
         texto = texto + '<span class="ti-check ibf_color_orange"></span> <span class="ibf_color_black">Reducción franquicia: </span> <span class="ibf_color_orange">' + parseFloat(6.99*dias) + '€</span><br>';
     }

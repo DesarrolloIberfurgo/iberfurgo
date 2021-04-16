@@ -301,7 +301,7 @@ get_template_part("/templates/template-car-header");
                             </select>
 
                             <label for="telefono_res"  class="ibf_font_18 ibf_mt_10">Teléfono</label>
-                            <input class="ibf_input_form" id="telefono_res" name="telefono_res" placeholder="Teléfono" required>
+                            <input type="tel" class="ibf_input_form" id="telefono_res" name="telefono_res" placeholder="123456789" pattern="[0-9]{9}" required>
 
                             <label for="email_res"  class="ibf_font_18 ibf_mt_10">Email</label>
                             <input type="email" class="ibf_input_form" id="email_res" name="email_res" placeholder="Email" required>
@@ -309,13 +309,13 @@ get_template_part("/templates/template-car-header");
                             <textarea class="ibf_mt_15 ibf_select_form" cols="27" rows="5" id="comentarios_res" name="comentarios_res" placeholder="Comentarios"></textarea>
 
                             
-                            <input class="ibf_mr_10 ibf_font_16" id="condiciones_generales" name="condiciones_generales" type="checkbox" value=1> 
+                            <input class="ibf_mr_10 ibf_font_16" id="condiciones_generales" name="condiciones_generales" type="checkbox" value=1 required> 
                                 He leído y acepto la <a href="<?php echo site_url(); ?>/politica-de-privacidad">política de privacidad</a> y <a href="<?php echo site_url(); ?>/condiciones-generales">condiciones generales</a> de contratación.
                             <br>
                             <input class="ibf_mr_10 ibf_font_16" id="comunicaciones_comerciales" name="comunicaciones_comerciales" type="checkbox" value=1> 
                                 <span>Autorizo la cesión de mis datos para comunicaciones comerciales, promociones especiales y cupones descuento.</span>
                             
-                            <input hidden name="tipo_id_res" value="<?php echo $tipoId ?>">
+                            <input hidden name="tipo_id_res" value="<?php echo $tipoId ?>" id="tipo_id_res">
                             <input hidden id="dias_res" name="dias_res" value="<?php echo $dias ?>">
                             <input hidden id="precio_res" name="precio_res" value="<?php echo $importeVehiculo ?>">
                             <input hidden id="precio_extra_res" name="precio_extra_res" value="0">
