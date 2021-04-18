@@ -3369,7 +3369,8 @@ function ppb_car_search_func($atts, $content) {
 	
 	$return_html.= '<div class="standard_wrapper">';
 	$return_html.= '<div class="page_content_wrapper"><div class="inner">';
-	$return_html.= '<form class="car_search_form ibf_background_black" method="get" action="busqueda">';
+	$return_html.= '<div class="alert_box error"><i class="fa fa-exclamation-circle alert_icon"></i><div class="alert_box_msg">This is an example of Error alert box</div><a href="#" class="close_alert"><i class="fa fa-times"></i></a></div>';
+	$return_html.= '<form class="car_search_form ibf_background_black" id="busqueda_form" method="get" action="busqueda">';
     $return_html.= '<div class="car_search_wrapper">';
     
     $return_html.= '<div class="one_fourth ibf_widthm_100 ibf_no_background ibf_mr_0">
@@ -3382,7 +3383,7 @@ function ppb_car_search_func($atts, $content) {
 		return 'ha petado';
 	}
 
-	$return_html.= '<select id="brand" name="delegacion_id" class="ibf_field_form ibf_select_form">
+	$return_html.= '<select id="brand" name="delegacion_id" class="ibf_field_form ibf_select_form" required>
 	    				<option value="">'.esc_html__('Selecciona delegación', 'grandcarrental-custom-post' ).'</option>';
 	
 	foreach($response->data as $key => $value)	
@@ -3403,11 +3404,11 @@ function ppb_car_search_func($atts, $content) {
     $return_html.= 	'<div class="one_fourth ibf_widthm_100 ibf_no_background">
 						<p class="ibf_font_16 ibf_font_bold ibf_color_white ibf_field_form ibf_label_form">Fecha/hora recogida</p>
 						<div class="one_half themeborder ibf_mr_0 ibf_datepicker_parent">';
-	$return_html.= 			'<input id="fecha_inicio_dp" name="fecha_inicio" type="date" class="ibf_datepicker" value="'.esc_attr($atts['fechainicio']).'">';
+	$return_html.= 			'<input id="fecha_inicio_dp" name="fecha_inicio" type="date" class="ibf_datepicker" value="'.esc_attr($atts['fechainicio']).'" required>';
 	$return_html.=		'</div>';
 
 	$return_html.= 		'<div class="one_third themeborder ibf_mr_0" style="width:30%;">';
-	$return_html.= 			'<select name="hora_inicio" class="ibf_field_form ibf_width_100"><option value="">Hora</option>';
+	$return_html.= 			'<select name="hora_inicio" class="ibf_field_form ibf_width_100" required><option value="">Hora</option>';
 	$return_html.= 				$horas;
 	$return_html.=			'</select>';
 	$return_html.=		'</div>';
@@ -3416,18 +3417,18 @@ function ppb_car_search_func($atts, $content) {
     $return_html.=	'<div class="one_fourth ibf_widthm_100 ibf_no_background">
 						<p class="ibf_font_16 ibf_font_bold ibf_color_white ibf_field_form ibf_label_form">Fecha/hora devolución</p>
 						<div class="one_half themeborder ibf_mr_0 ibf_datepicker_parent">';
-	$return_html.= 			'<input id="fecha_fin_dp" name="fecha_fin" type="date" class="ibf_datepicker" value="'.esc_attr($atts['fechafin']).'">';
+	$return_html.= 			'<input id="fecha_fin_dp" name="fecha_fin" type="date" class="ibf_datepicker" value="'.esc_attr($atts['fechafin']).'" required>';
     $return_html.= 		'</div>';
 	$horas = get_times($atts['horafin']);
 	$return_html.= 		'<div class="one_third themeborder ibf_mr_0" style="width:30%;">';
-	$return_html.= 			'<select name="hora_fin" class="ibf_field_form ibf_width_100"><option value="">Hora</option>';
+	$return_html.= 			'<select name="hora_fin" class="ibf_field_form ibf_width_100" required><option value="">Hora</option>';
 	$return_html.= 				$horas;
 	$return_html.=			'</select>';
 	$return_html.=		'</div>
 					</div>';
     
 	$return_html.=	'<div class="one_sixth ibf_mr_0">
-    					<input id="car_search_btn" type="submit" class="button ibf_btn_form" value="'.esc_html__( 'RESERVAR', 'grandcarrental-custom-post' ).'"/>
+    					<input id="car_search_btn" type="submit" onclick="validateSearch()" class="button ibf_btn_form" value="'.esc_html__( 'RESERVAR', 'grandcarrental-custom-post' ).'"/>
     				</div>
 					</div>
 				</form>';
