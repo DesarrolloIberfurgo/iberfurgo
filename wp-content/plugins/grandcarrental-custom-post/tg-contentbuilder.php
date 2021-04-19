@@ -3369,7 +3369,7 @@ function ppb_car_search_func($atts, $content) {
 	
 	$return_html.= '<div class="standard_wrapper">';
 	$return_html.= '<div class="page_content_wrapper"><div class="inner">';
-	$return_html.= '<div class="alert_box error"><i class="fa fa-exclamation-circle alert_icon"></i><div class="alert_box_msg">This is an example of Error alert box</div><a href="#" class="close_alert"><i class="fa fa-times"></i></a></div>';
+	$return_html.= '<div class="alert_box error hide"><i class="fa fa-exclamation-circle alert_icon"></i><div class="alert_box_msg">This is an example of Error alert box</div><a href="#" class="close_alert"><i class="fa fa-times"></i></a></div>';
 	$return_html.= '<form class="car_search_form ibf_background_black" id="busqueda_form" method="get" action="busqueda">';
     $return_html.= '<div class="car_search_wrapper">';
     
@@ -3408,7 +3408,7 @@ function ppb_car_search_func($atts, $content) {
 	$return_html.=		'</div>';
 
 	$return_html.= 		'<div class="one_third themeborder ibf_mr_0" style="width:30%;">';
-	$return_html.= 			'<select name="hora_inicio" class="ibf_field_form ibf_width_100" required><option value="">Hora</option>';
+	$return_html.= 			'<select id="hora_inicio_dp" name="hora_inicio" class="ibf_field_form ibf_width_100" required><option value="">Hora</option>';
 	$return_html.= 				$horas;
 	$return_html.=			'</select>';
 	$return_html.=		'</div>';
@@ -3421,14 +3421,14 @@ function ppb_car_search_func($atts, $content) {
     $return_html.= 		'</div>';
 	$horas = get_times($atts['horafin']);
 	$return_html.= 		'<div class="one_third themeborder ibf_mr_0" style="width:30%;">';
-	$return_html.= 			'<select name="hora_fin" class="ibf_field_form ibf_width_100" required><option value="">Hora</option>';
+	$return_html.= 			'<select id="hora_fin_dp" name="hora_fin" class="ibf_field_form ibf_width_100" required><option value="">Hora</option>';
 	$return_html.= 				$horas;
 	$return_html.=			'</select>';
 	$return_html.=		'</div>
 					</div>';
     
 	$return_html.=	'<div class="one_sixth ibf_mr_0">
-    					<input id="car_search_btn" type="submit" onclick="validateSearch()" class="button ibf_btn_form" value="'.esc_html__( 'RESERVAR', 'grandcarrental-custom-post' ).'"/>
+    					<input id="car_search_btn" onclick="validateSearch(event)" class="button ibf_btn_form" value="'.esc_html__( 'RESERVAR', 'grandcarrental-custom-post' ).'"/>
     				</div>
 					</div>
 				</form>';

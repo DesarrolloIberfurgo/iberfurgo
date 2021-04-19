@@ -358,6 +358,11 @@ a, .post_detail.single_post {color: #000000!important;}
  .ibf_select_form { border: 1px solid #ea580c; font-size: 16px;}
 
  .ibf_li li{ padding: 10px 0 10px 0!important; border-top: none!important; list-style-type: none!important;}
+
+ .hide {
+	display: none!important;
+ }
+
 /*Moviles*/
 @media (max-width: 480px) {
     .above_top_bar {display: none!important;}
