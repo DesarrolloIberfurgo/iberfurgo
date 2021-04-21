@@ -6,9 +6,7 @@
  * @package WordPress
 */
 
-    // get_header(); 
-    
-    // get_footer(); 
+    get_header(); 
 
     $data = $_POST;
 
@@ -39,8 +37,20 @@
     ];
 
     list($httpCode, $response) = postDataApi(URL_API . 'reservas-web', json_encode($dataApi));
-    var_dump($httpCode);
+
     if ($httpCode != 200) {
         return 'ha petado';
     }
+?>
+<div class="inner">
+	<div class="inner_wrapper nopadding">
+        <div id="page_main_content" class="sidebar_content fixed_column">
+            <div class="standard_wrapper">
+                <div class="one">página éxito reserva</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <?php
 
+    get_footer();
