@@ -29,6 +29,8 @@ function validateSearch(event)
     let horaFin = jQuery( "#hora_fin_dp" ).val();
     let dateInicio = new Date(fechaInicio);
     let dateFin = new Date(fechaFin);
+    let dt = new Date();
+    dt.getHours; 
 
     if (delegacionId == '' || fechaInicio == '' || fechaFin == '' || horaInicio == '' || horaFin == '') {
         jQuery('.alert_box.error').removeClass('hide');
@@ -67,6 +69,12 @@ function validateSearch(event)
                 jQuery('.alert_box_msg').html('Hora fin tiene que ser 2 horas mayor que hora inicio.');
                 return;
             }
+        }
+        
+        if (dt.getHours() > parseInt(hora1[0])) {
+            jQuery('.alert_box.error').removeClass('hide');
+            jQuery('.alert_box_msg').html('Hora inicio tiene que ser mayor a hora actual.');
+            return;
         }
     }
     
