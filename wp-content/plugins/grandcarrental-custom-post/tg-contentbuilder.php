@@ -3378,7 +3378,7 @@ function ppb_car_search_func($atts, $content) {
 	
 	//Get available car brand
 	$available_brands = grandcarrental_get_carbrand();
-	list($httpCode, $response) = getDataApi(URL_API . 'maestro-delegacion', '{"valuePluck":"nombre", "keyPluck":"id", "order":["nombre asc"]}');
+	list($httpCode, $response) = getDataApi(URL_API . 'maestro-delegacion', '{"valuePluck":"nombre", "keyPluck":"id", "order":["nombre asc"], "id":"!3,16,21"}');
 	if ($httpCode != 200) {
 		return 'ha petado';
 	}

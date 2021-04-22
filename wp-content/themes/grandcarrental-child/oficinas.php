@@ -13,7 +13,7 @@ get_header();
 
 global $wp_query;
 
-list($httpCode, $response) = getDataApi(URL_API . 'maestro-delegacion', '{"order":["nombre asc"]}');
+list($httpCode, $response) = getDataApi(URL_API . 'maestro-delegacion', '{"order":["nombre asc"], "id":"!3,16,21"}');
 if ($httpCode != 200) {
 	return 'ha petado';
 }
