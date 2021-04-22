@@ -40,7 +40,36 @@ function validateSearch(event)
         jQuery('.alert_box_msg').html('Fecha fin no puede ser menor que fecha inicio');
         return;
     }
-    //falta validar la hora
+    if (fechaInicio == fechaFin) {
+        if (horaInicio == horaFin) {
+            jQuery('.alert_box.error').removeClass('hide');
+            jQuery('.alert_box_msg').html('Hora inicio no puede ser la misma que hora fin.');
+            return;
+        }
+        hora1 = horaInicio.split(':');
+        hora2 = horaFin.split(':');
+        
+        if (parseInt(hora1[0]) > parseInt(hora2[0])) {
+            jQuery('.alert_box.error').removeClass('hide');
+            jQuery('.alert_box_msg').html('Hora inicio no puede ser mayor que hora fin.');
+            return;
+        }
+
+        if (parseInt(hora2[0]) - parseInt(hora1[0]) == 1 || parseInt(hora2[0]) - parseInt(hora1[0]) == 0) {
+            jQuery('.alert_box.error').removeClass('hide');
+            jQuery('.alert_box_msg').html('Hora fin tiene que ser mínimo 2 horas mayor que hora inicio.');
+            return;
+        }
+
+        if ((parseInt(hora2[0]) - parseInt(hora1[0])) == 2) {
+            if ((hora1[1] != 0 && hora2[1] == 0)) {
+                jQuery('.alert_box.error').removeClass('hide');
+                jQuery('.alert_box_msg').html('Hora fin tiene que ser 2 horas mayor que hora inicio.');
+                return;
+            }
+        }
+    }
+    
 
     jQuery('#busqueda_form').submit();
 }

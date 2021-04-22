@@ -3388,7 +3388,7 @@ function ppb_car_search_func($atts, $content) {
 	
 	foreach($response->data as $key => $value)	
 	{
-		if ($atts['delegacionId'] == $key) {
+		if ($atts['delegacionid'] == $key) {
 			$selected='selected';
 		}
 		else {
