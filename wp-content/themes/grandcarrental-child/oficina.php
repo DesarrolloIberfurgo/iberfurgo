@@ -46,8 +46,18 @@ if(!empty($response->data))
             }
         ?>
                 <div id="page_main_content" class="sidebar_content full_width fixed_column">
-
-                    <div class="standard_wrapper">
+                    <div class="one">
+                        <?php 
+                        echo do_shortcode('[ppb_car_search 
+                            delegacionId="'.esc_attr($dataApi['delegacion_id']).'"
+                            fechaInicio=""
+                            fechaFin=""
+                            horaInicio=""
+                            horaFin=""
+                            ][/ppb_car_search]') 
+                        ?>
+                    </div>
+                    <div class="standard_wrapper">                    
                     <h1 class="ibf_color_orange ibf_mb_20">Alquiler de furgonetas en <?php echo $value->oficinaNombre; ?></h1> 
                     <div class="one ibf_font_16">
                         <?php echo $value->texto_landing; ?>
