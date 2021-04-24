@@ -68,25 +68,10 @@ $data = $response->data;
 ?>
 
 <!-- Begin content -->
-<?php
-	//Get all portfolio items for paging
-	$wp_query = grandcarrental_get_wp_query();
-	$current_photo_count = $wp_query->post_count;
-	$all_photo_count = $wp_query->found_posts;
-?>
     
 <div class="inner">
 
 	<div class="inner_wrapper nopadding">
-	
-	<?php
-	    if(!empty($post->post_content) && empty($term))
-	    {
-	?>
-	    <div class="standard_wrapper"><?php echo grandcarrental_apply_content($post->post_content); ?></div><br class="clear"/><br/>
-	<?php
-	    }
-	?>
 	
 	<div id="page_main_content" class="sidebar_content full_width">
 	
@@ -110,7 +95,6 @@ $data = $response->data;
 			$image_url = '';
 			$car_ID = get_the_ID();
 			$parametros = "tipoId=".$value->tipo_id."&delegacionId=".$delegacionId."&nombreDelegacion=".$value->nombreDelegacion."&fechaInicio=".$fechaInicio."&fechaFin=".$fechaFin."&horaInicio=".$horaInicio."&horaFin=".$horaFin."&tipoId=".$value->tipo_id."&importe_vehiculo=".$value->importe_vehiculo."&importe_vehiculo_iva=".$value->importe_vehiculo_iva."&tramo_id=".$value->id."&dias=".$value->dias."&euros_dia=".$value->eur_dia;
-			$permalink_url = get_permalink($car_ID);
 	?>
 				<?php 
 					if(true) //!empty($small_image_url[0])
@@ -128,71 +112,15 @@ $data = $response->data;
 								<a class="car_link" href="<?php echo site_url()?>/paso-final?<?php echo $parametros?>">
 									<h3 class="ibf_color_orange"><?php echo esc_attr($value->tipo->nombre); ?></h3>
 								</a>
-								<?php
-									$overall_rating_arr = grandcarrental_get_review($car_ID, 'overall_rating');
-									$overall_rating = intval($overall_rating_arr['average']);
-									$overall_rating_count = intval($overall_rating_arr['count']);
-									
-									if(!empty($overall_rating))
-									{
-								?>
-								<div class="car_attribute_rating">
-									<?php
-										if($overall_rating > 0)
-										{
-									?>
-									<div class="br-theme-fontawesome-stars-o">
-										<div class="br-widget">
-									<?php
-										for( $i=1; $i <= $overall_rating; $i++ ) {
-											echo '<a href="javascript:;" class="br-selected"></a>';
-										}
-										
-										$empty_star = 5 - $overall_rating;
-										
-										if(!empty($empty_star))
-										{
-											for( $i=1; $i <= $empty_star; $i++ ) {
-												echo '<a href="javascript:;"></a>';
-											}
-										}
-									?>
-										</div>
-									</div>
-									<?php
-									}	
-									if($overall_rating_count > 0)
-									{
-									?>
-									<div class="car_attribute_rating_count">
-										<?php echo intval($overall_rating_count); ?>&nbsp;
-										<?php
-											if($overall_rating_count > 1)
-											{
-												echo esc_html__('reviews', 'grandcarrental' );
-											}
-											else
-											{
-												echo esc_html__('review', 'grandcarrental' );
-											}
-										?>
-									</div>
-									<?php
-									}
-									?>
-								</div>
-								<?php
-									}    
-								?>
 							
 								<?php
 									//Display car attributes
 									$car_passengers = $value->tipo->plazas;
 									$car_m3 = $value->tipo->m3;
-									$car_transmission = $value->tipo->carga_util;
+									$car_carga_util = $value->tipo->carga_util;
 									$car_doors = $value->tipo->puertas;
 							
-									if(!empty($car_passengers) OR !empty($car_m3) OR !empty($car_transmission) OR !empty($car_doors))
+									if(!empty($car_passengers) OR !empty($car_m3) OR !empty($car_carga_util) OR !empty($car_doors))
 									{
 								?>
 								<div class="car_attribute_wrapper_icon">
@@ -227,14 +155,14 @@ $data = $response->data;
 									?>
 									
 									<?php
-										if(!empty($car_transmission))
+										if(!empty($car_carga_util))
 										{
 									?>
 										<div class="one_sixth ibf_width_19">
 											<div class="ibf_float_left ibf_mr_15" title="Puertas"></div>
 											<div class="car_attribute_content ibf_mt_0 ibf_font_16">
 												<img class="ibf_float_left ibf_mr_15"  src="<?php echo get_stylesheet_directory_uri(); ?>/imagenes_iberfurgo/iconos/ibf_icon_charge_30_black.png" title="Carga"> 
-												<p class="ibf_float_left ibf_mtn_10"><?php echo ucfirst($car_transmission); ?></p>
+												<p class="ibf_float_left ibf_mtn_10"><?php echo ucfirst($car_carga_util); ?></p>
 											</div>
 										</div>
 									<?php
@@ -279,7 +207,7 @@ $data = $response->data;
 								?>
 							</div>
 							<?php
-								$car_included = [];//get_post_meta($post->ID, 'car_included', true);
+								$car_included = [];
 								$car_included[] = "Fianza: ".$value->tipo->fianza."€";
 								$car_included[] = "Franquicia: ".$value->tipo->franquicia."€";
 								$car_included[] = "Km diarios: ".$value->tipo->km_diarios;
