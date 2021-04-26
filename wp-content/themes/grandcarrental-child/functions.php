@@ -48,6 +48,16 @@ function custom_enqueue_styles()
                   );
 }
 
+function rpthem_enqueue_style(){
+  wp_enqueue_style( 'bootstrapcss','https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css', false, null );
+  }
+  function rpthem_enqueue_script() {
+  wp_enqueue_script( 'bootstapjs', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js', false, null );
+  }
+  
+  add_action( 'wp_enqueue_scripts', 'rpthem_enqueue_style' );
+  add_action( 'wp_enqueue_scripts', 'rpthem_enqueue_script' );
+
 
 //funcion para enviar email mediante SMTP
 add_action('phpmailer_init','send_smtp_email');
@@ -126,4 +136,9 @@ function reserva_enqueue_custom_js() {
 add_action('wp_enqueue_scripts', 'busqueda_enqueue_custom_js');
 function busqueda_enqueue_custom_js() {
     wp_enqueue_script('reserva', get_stylesheet_directory_uri().'/js/busqueda.js');
+}
+
+add_action('wp_enqueue_scripts', 'carousel_enqueue_custom_js');
+function carousel_enqueue_custom_js() {
+    wp_enqueue_script('carousel', get_stylesheet_directory_uri().'/js/carousel.js');
 }
