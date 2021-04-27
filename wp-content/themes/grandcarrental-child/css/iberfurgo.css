@@ -1,7 +1,7 @@
 
 .ibf_title_car { color:#ea580c; font-size: 18px; }
 
-.ibf_text_center { text-align: center; }
+.ibf_text_center { text-align: center!important; }
 
 .ibf_border_bottom { border-bottom: 1px solid #ea580c; }
 
@@ -25,6 +25,9 @@
 .ibf_font_20 { font-size: 20px;}
 .ibf_font_21 { font-size: 21px;}
 .ibf_font_24 { font-size: 24px;}
+.ibf_font_32 { font-size: 32px;}
+.ibf_font_40 { font-size: 40px!important;}
+.ibf_font_50 { font-size: 50px!important;}
 
 .ibf_float_left { float: left!important;}
 
@@ -85,7 +88,7 @@
 }
 
 .ibf_button_flota{
-    width: 98%; 
+    width: 111%; 
     margin-left:-20px; 
     background-color:#ea580c !important;
     color:#ffffff !important;
@@ -125,7 +128,7 @@
 }
 
 .ibf_button_oficina{
-    width: 88%;  
+    width: 100%;  
     background-color:#ea580c !important;
     color:#ffffff !important;
     border:1px solid #ea580c !important; 
@@ -362,6 +365,8 @@ a, .post_detail.single_post {color: #000000!important;}
  .hide {
 	display: none!important;
  }
+
+ .card-title { margin-bottom: 0px!important;}
 
 /*Moviles*/
 @media (max-width: 480px) {

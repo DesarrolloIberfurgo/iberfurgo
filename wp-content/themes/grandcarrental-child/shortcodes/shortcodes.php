@@ -50,11 +50,10 @@ function shortcode_familias_vehiculos()
     $data = $response->data;
     $html = '<div class="one">';
     $html .= '<div class="container-fluid">
-                <h1 class="text-center mb-3">Bootstrap Multi-Card Carousel</h1>
+                <h1 class="text-center ibf_mb_15">Descubre toda nuestra flota</h1>
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner row w-100 mx-auto">';
     foreach ($data as $key => $value){
-        var_dump($value);
         $active = '';
         if($key == 0) { $active = 'active'; }
         $html .= '
@@ -62,9 +61,9 @@ function shortcode_familias_vehiculos()
               <div class="card">
                 <img class="card-img-top img-fluid" src="'.get_stylesheet_directory_uri().'/imagenes_iberfurgo/flota/'.$value->tipoId.'/34.jpg" alt="Card image cap">
                 <div class="card-body">
-                  <h4 class="card-title">Card 1</h4>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <h4 class="card-title ibf_text_center">'.$value->tipo_vehiculo.'</h4>
+                  <p class="card-text ibf_text_center">Desde <span class="ibf_color_orange ibf_font_40 ibf_font_bold ">'.$value->precioDesde .'</span>€/día.</p>
+                  <a class="button left small ibf_button_book ibf_font_16" href="'.site_url().'/flota">Ver vehículos <i class="fas fa-angle-right"></i></a>
                 </div>
               </div>
             </div>
