@@ -13,7 +13,7 @@
 
     $dataApi = [
     "nombre"=> $data['nombre_res'],
-    "apellidos"=>"Baldayo",
+    "apellidos"=>"Sin Apellido",
     "dni"=>$data['dni_res'],
     "direccion"=>$data['direccion_res'],
     "telefono"=>$data['telefono_res'],
@@ -41,6 +41,19 @@
     if ($httpCode != 200) {
         return 'ha petado';
     }
+
+    $my_variable = "An example string";
+    // $body = include_once('email-cliente.php');
+    
+
+    ob_start();
+    include('email-cliente.php');
+    $email_content = ob_get_contents();
+    ob_end_clean();
+    $headers = array('Content-Type: text/html; charset=UTF-8');
+    var_dump($email_content);
+    wp_mail($data['email_res'], "Booking details", $email_content, $headers);
+
 ?>
 <div class="inner">
 	<div class="inner_wrapper nopadding">
