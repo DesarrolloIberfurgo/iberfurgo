@@ -48,11 +48,19 @@
 
     ob_start();
     include('email-cliente.php');
-    $email_content = ob_get_contents();
+    $email_cliente_content = ob_get_contents();
     ob_end_clean();
     $headers = array('Content-Type: text/html; charset=UTF-8');
-    var_dump($email_content);
-    wp_mail($data['email_res'], "Booking details", $email_content, $headers);
+    var_dump($email_cliente_content);
+    wp_mail($data['email_res'], "Booking details", $email_cliente_content, $headers);
+
+    ob_start();
+    include('email-oficina.php');
+    $email_oficina_content = ob_get_contents();
+    ob_end_clean();
+    $headers = array('Content-Type: text/html; charset=UTF-8');
+    var_dump($email_oficina_content);
+    wp_mail($data['email_res'], "Booking details", $email_oficina_content, $headers);
 
 ?>
 <div class="inner">
