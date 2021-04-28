@@ -259,9 +259,10 @@ get_template_part("/templates/template-car-header");
                    
                         <!-- <form class="car_search_form" method="post" action="../aviso-reserva"> -->
                         <form method="post" action="../aviso-reserva">
-                            <label for="delegacion_id_res" class="ibf_font_18">Oficina</label>
-                            <input  class="ibf_font_16" id="delegacion_id_res" value="<?php echo $nombreDelegacion ?>" disabled>
-                            <input hidden name="delegacion_id_res" value="<?php echo $nombreDelegacion ?>">
+                            <label for="delegacion_nombre_res" class="ibf_font_18">Oficina</label>
+                            <input  class="ibf_font_16" id="delegacion_nombre_res" value="<?php echo $nombreDelegacion ?>" disabled>
+                            <input hidden name="delegacion_nombre_res" value="<?php echo $nombreDelegacion ?>">
+                            <input hidden name="delegacion_id_res" value="<?php echo $delegacionId ?>">
 
                             <label for="fecha_inicio_res" class="ibf_font_18 ibf_mt_10">Fecha recogida</label>
                             <!-- <input  class="ibf_font_16 ibf_width_100" id="fecha_inicio_res" value="<?php  //echo  '<span>Fecha:</span> '. $fechaInicio . ' Hora:' . $horaInicio ?>" disabled> -->
@@ -325,21 +326,6 @@ get_template_part("/templates/template-car-header");
                         </form>
 
                         <?php
-                        // echo do_shortcode('[tg_formulario_detalle
-                        //     fecha_inicio="'.esc_attr($fechaInicio).'"
-                        //     hora_inicio="'.esc_attr($horaInicio).'"
-                        //     fecha_fin="'.esc_attr($fechaFin).'"
-                        //     hora_fin="'.esc_attr($horaFin).'"
-                        //     nombre_delegacion="'.esc_attr($nombreDelegacion).'"
-                        //     tipo_id="'.esc_attr($tipoId).'"
-                        //     car_price="'.esc_attr($importeVehiculo).'"
-                        //     dias="'.esc_attr($dias).'"
-                        //     extras="100"
-                        // ][/tg_formulario_detalle]');
-                        // if(!empty($car_booking_contactform7) && intval($car_booking_contactform7) > 0)
-                        // {
-                        //     echo do_shortcode('[contact-form-7 id="'.esc_attr($car_booking_contactform7).'"]');
-                        // }
 
                         if (class_exists('Woocommerce') && !empty($car_booking_product) && intval($car_booking_product) > 0) {
                         ?>

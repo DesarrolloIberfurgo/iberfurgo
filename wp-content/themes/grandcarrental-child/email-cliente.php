@@ -127,7 +127,7 @@
                                                                 </tr>
                                                             </tbody>
                                                         </table>
-                                                        <h3 style="margin:0px 0px 10px;color:rgb(81,78,115);font-size:21px;line-height:1.3;padding:0px;text-align:left;word-wrap:normal">Delegación: <?php echo $data['delegacion_id_res']; ?></h3>
+                                                        <h3 style="margin:0px 0px 10px;color:rgb(81,78,115);font-size:21px;line-height:1.3;padding:0px;text-align:left;word-wrap:normal">Delegación: <?php echo $data['delegacion_nombre_res']; ?></h3>
                                                         <div align="center">
                                                             <a style="width: 50%; background-color:#ea580c !important;color:#ffffff !important; border:1px solid #ea580c !important; border-radius:0!important; padding:15px; " href="<?php echo $como_llegar; ?>">Como llegar</a>
                                                         </div>

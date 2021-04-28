@@ -20,7 +20,7 @@
     "email"=>$data['email_res'],
     "formaPago"=>$data['forma_pago_res'],
     "observaciones"=>$data['comentarios_res'],
-    "delegacion"=>$data['delegacion_id_res'],
+    "delegacion"=>$data['delegacion_nombre_res'],
     "fecha_reco"=>$data['fecha_inicio_res'],
     "fecha_dev"=>$data['fecha_fin_res'],
     "hora_reco"=>$data['hora_inicio_res'],
@@ -41,6 +41,20 @@
     if ($httpCode != 200) {
         return 'ha petado';
     }
+
+    $dataApi['delegacion_id_res'] = $data['delegacion_id_res'];
+    list($httpCode, $response_delegacion) = getDataApi(URL_API . 'maestro-delegacion-datos-web', json_encode($dataApi));
+    //response_delegacion[0]->
+    if ($httpCode != 200) {
+	    return 'ha petado';
+    }
+
+    list($httpCode, $response_tipo) = getApi(URL_API . 'flota-tipo/' . $data['tipo_id_res']);
+    //$response_tipo->
+    if ($httpCode != 200) {
+	    return 'ha petado';
+    }
+
 
     $my_variable = "An example string";
     // $body = include_once('email-cliente.php');
