@@ -34,34 +34,33 @@
 
                 <div class="one_half">
                     <h3 class="ibf_mb_30">Formulario de contacto</h3>
-                    <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="POST">
+                    <form method="post" action="../contacto-enviado">
 
                         <input class="one" type="text" id="txtnombre" name="txtnombre" placeholder="Nombre*" required>
                         <input class="one ibf_mt_15" type="email" id="txtemail" name="txtemail" placeholder="Email*" required>
                         <input class="one ibf_mt_15" type="tel" id="txttelefono" name="txttelefono" placeholder="Teléfono*" required>
 
                         <?php 
-                            list($httpCode, $response) = getApi(URL_API . 'maestro-delegacion');
+                            list($httpCode, $response) = getDataApi(URL_API . 'maestro-delegacion', '{"order":["nombre asc"], "id":"!3,16,21"}');
                             if ($httpCode != 200) {
                                 return 'ha petado';
                             }
 
-                            echo '<select class="one ibf_mt_15" id="brand" name="delegacion_id" class="ibf_field_form">
+                            echo '<select class="one ibf_mt_15" id="brand" name="delegacion_id" class="ibf_field_form" required>
                                 <option value="">'.esc_html__('Selecciona oficina', 'grandcarrental-custom-post' ).'</option>';
         
                             foreach($response->data as $delegacion)	
                             {
                                 
-                                echo '<option value="'.esc_attr($delegacion->delegacion_datos_web->email).'">'.esc_attr($delegacion->nombre).'</option>';
+                                echo '<option value="'.esc_attr($delegacion->id).'">'.esc_attr($delegacion->nombre).'</option>';
                             }
-                                $horas = get_times();
                             
                             echo '</select>';
                         ?>
                         <br class="clear"/>
-                        <input class="one ibf_mt_15" type="text" id="txtasunto" name="txtasunto" placeholder="Asunto">
+                        <input class="one ibf_mt_15" type="text" id="txtasunto" name="txtasunto" placeholder="Asunto" required>
                         <br class="clear"/>
-                        <textarea class="one ibf_mt_15" name="txtcomentarios" id="txtcomentarios" cols="15" rows="5" placeholder="Comentarios"></textarea>
+                        <textarea class="one ibf_mt_15" name="txtcomentarios" id="txtcomentarios" cols="15" rows="5" placeholder="Comentarios" required></textarea>
                         <br class="clear"/>
                         <input class="one ibf_mt_15 ibf_button_flota ibf_ml_0 ibf_mb_30" type="submit" value="Enviar">
                         <input type="hidden" name="action" value="contactform">
