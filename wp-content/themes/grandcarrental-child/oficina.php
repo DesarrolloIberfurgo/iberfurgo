@@ -58,8 +58,9 @@ if(!empty($response->data))
                         ?>
                     </div>
                     <div class="standard_wrapper">                    
-                    <h1 class="ibf_color_orange ibf_mb_20">Alquiler de furgonetas en <?php echo $value->oficinaNombre; ?></h1> 
+                    
                     <div class="one ibf_font_16">
+                        <h1 class="ibf_color_orange ibf_mb_20">Alquiler de furgonetas en <?php echo $value->oficinaNombre; ?></h1> 
                         <?php echo $value->texto_landing; ?>
                     </div>
                         <div class="one">

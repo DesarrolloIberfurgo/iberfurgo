@@ -3370,7 +3370,7 @@ function ppb_car_search_func($atts, $content) {
 	$return_html.= '<div class="standard_wrapper">';
 	$return_html.= '<div class="page_content_wrapper"><div class="inner">';
 	$return_html.= '<div class="alert_box error hide"><i class="fa fa-exclamation-circle alert_icon"></i><div class="alert_box_msg">This is an example of Error alert box</div><a href="#" class="close_alert"><i class="fa fa-times"></i></a></div>';
-	$return_html.= '<form class="car_search_form ibf_background_black" id="busqueda_form" method="get" action="busqueda">';
+	$return_html.= '<form class="car_search_form ibf_background_black" id="busqueda_form" method="get" action="'.site_url(). '/busqueda">';
     $return_html.= '<div class="car_search_wrapper">';
     
     $return_html.= '<div class="one_fourth ibf_widthm_100 ibf_no_background ibf_mr_0">

@@ -22,7 +22,7 @@ function addExtras()
         if (km == 300) {
             precio_extras += dias * 30;
         }
-        texto_hidden = texto_hidden + km + 'km adicionales,';
+        texto_hidden = texto_hidden + km + 'Km. adicionales,';
         texto = '<span class="ti-check ibf_color_orange"></span> <span class="ibf_color_black">' + texto + km+ ' Km. adicionales </span><span class="ibf_color_orange">' + precio_extras + '€</span><br>';
     }
     else {
@@ -32,15 +32,15 @@ function addExtras()
     let adicional = document.getElementById("conductor_adicional");
     if (adicional.checked == true){
         precio_extras += parseFloat(5.00*dias);
-        texto_hidden = texto_hidden + 'conductor adicional,';
+        texto_hidden = texto_hidden + 'Conductor adicional,';
         texto = texto + '<span class="ti-check ibf_color_orange"></span> <span class="ibf_color_black">Conductor adicional:</span> <span class="ibf_color_orange">' + parseFloat(5.00*dias) + '€</span><br>';
     }
 
     let menor = document.getElementById("conductor_menor");
     if (menor.checked == true){
         precio_extras += parseFloat(7.00*dias);
-        texto_hidden = texto_hidden + 'conductor menor,';
-        texto = texto + '<span class="ti-check ibf_color_orange"></span> <span class="ibf_color_black">conductor menor 23 años: </span> <span class="ibf_color_orange">' + parseFloat(7.00*dias) + '€</span><br>';
+        texto_hidden = texto_hidden + 'Conductor menor de 23 años,';
+        texto = texto + '<span class="ti-check ibf_color_orange"></span> <span class="ibf_color_black">Conductor menor 23 años: </span> <span class="ibf_color_orange">' + parseFloat(7.00*dias) + '€</span><br>';
     }
 
     let franquicia = document.getElementById("reduccion_franquicia");
@@ -50,7 +50,7 @@ function addExtras()
             value_franquicia = 15;
         }
         precio_extras += parseFloat(value_franquicia*dias);
-        texto_hidden = texto_hidden + 'reduccion franquicia,';
+        texto_hidden = texto_hidden + 'Reduccion de franquicia,';
         texto = texto + '<span class="ti-check ibf_color_orange"></span> <span class="ibf_color_black">Reducción franquicia: </span> <span class="ibf_color_orange">' + parseFloat(6.99*dias) + '€</span><br>';
     }
 

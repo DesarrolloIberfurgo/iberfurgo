@@ -16,7 +16,7 @@
                                                 <tr style="padding:0px;vertical-align:top">
                                                     <div align="center">
                                                         <th align="center" style="margin:0px;color:rgb(49,54,83);font-size:16px;font-weight:400;">
-                                                            <img align="center" img src="https://www.iberfurgo.com/wp-content/uploads/elementor/thumbs/logo-iberfurgo-p2ewy7qiikn5w3dsy6lp4flea93q6t3sur80ju069c.png" class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469logotype" alt="Iberfurgo ❘ Alquiler de Furgonetas" style="clear: both; display: block; max-width: 100%; outline: 0px; ">
+                                                            <img align="center" img src="https://www.iberfurgo.com/wp-content/uploads/elementor/thumbs/logo-iberfurgo-p2ewy7qiikn5w3dsy6lp4flea93q6t3sur80ju069c.png" class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469logotype" alt="Iberfurgo ❘ Alquiler de Furgonetas" style="clear: both; display: block; max-width: 100%; outline: 0px; margin-left:auto; margin-right:auto; ">
                                                             <table class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469spacer" style="border-collapse:collapse;padding:0px;vertical-align:top;width:548px;height:auto!important">
                                                                 <tbody>
                                                                     <tr style="padding:0px;vertical-align:top">
@@ -25,14 +25,7 @@
                                                                 </tbody>
                                                             </table>
                                                             <h1 style="margin:0px 0px 10px;color:#ea580c;font-size:36px;line-height:1.3;padding:0px;text-align:center;word-wrap:normal">Hola <?php echo $data['nombre_res']; ?> </h1>
-                                                            <table class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469spacer" style="border-collapse:collapse;padding:0px;vertical-align:top;width:548px;height:auto!important">
-                                                                <tbody>
-                                                                    <tr style="padding:0px;vertical-align:top">
-                                                                        <td height="27" style="margin:0px;color:rgb(49,54,83);font-size:27px;line-height:27px;padding:0px;vertical-align:top;word-wrap:break-word;border-collapse:collapse"> </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                                <div align="center">
-                                                            </table><img src="https://gallery.mailchimp.com/f34cfbaa8c84a87cd9053835d/images/7afe95cb-b962-47c5-b33c-eceaab2227ce.png" class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469wiggly" style="clear: both; display: block; max-width: 100%; outline: 0px; height: 11px; width: 90px;align-content: center;">
+                                                            
                                                         </th>
                                                     </div>
                                                     <th class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469expander" style="margin:0px;color:rgb(49,54,83);font-size:16px;font-weight:400;line-height:1.3;width:0px;padding:0px"></th>
@@ -66,17 +59,10 @@
                                                                 </tr>
                                                             </tbody>
                                                         </table>
-                                                        <p style="margin:0px 0px 20px;color:rgb(122,115,146);line-height:1.7;padding:0px;text-align:center;">
-                                                            <strong>Muchas gracias por confiar en Iberfurgo, En breve procesaremos tu solicitud de reserva, por lo que está pendiente de confirmarse.
+                                                        <p style="margin:0px 0px 20px;color:#000000;line-height:1.7;padding:0px;text-align:center;">
+                                                            <strong>Muchas gracias por confiar en Iberfurgo.<br> Estamos tramitando tu solicitud.
                                                             <br> En breve, uno de nuestros agentes se pondrá en contacto contigo para confirmarte la disponibilidad del vehículo solicitado.</strong><br></p>
-                                                        <table class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469spacer" style="border-collapse:collapse;padding:0px;vertical-align:top;width:548px;height:auto!important">
-                                                            <tbody>
-                                                                <tr style="padding:0px;vertical-align:top">
-                                                                    <td height="20" style="margin:0px;color:rgb(49,54,83);font-size:20px;line-height:20px;padding:0px;vertical-align:top;word-wrap:break-word;border-collapse:collapse"> </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table><a href="http://mail.codeverse.com/track/click/30992431/goo.gl?p=eyJzIjoiZTFBblZ2NmdTNnctOUl0dGN6bDRTbFV6Z2N3IiwidiI6MSwicCI6IntcInVcIjozMDk5MjQzMSxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL2dvby5nbFxcXC9tYXBzXFxcL1FOTExLTjNBRG8xMlwiLFwiaWRcIjpcIjY0Nzk2ZGZlMWRlZjRhOGE5N2EzNGU4MjRiYTEwYTMzXCIsXCJ1cmxfaWRzXCI6W1wiZTEzMDc1OGMyZGQ3OGJkODgwOWMwZTRmZTk0OWUyMTI2ZTAyOTg5OVwiXX0ifQ" style="color:rgb(62,124,249);margin:0px;line-height:1.3;padding:0px;text-align:left"></a>
-
+                                                        
                                                         <table align="center" class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469container" style="margin:0px auto;border-collapse:collapse;padding:0px;text-align:inherit;vertical-align:top;width:548px;height:auto!important;background-position:0px 0px">
                                                             <tbody>
                                                                 <tr style="padding:0px;text-align:left;vertical-align:top">
@@ -127,13 +113,12 @@
                                                                 </tr>
                                                             </tbody>
                                                         </table>
-                                                        <h3 style="margin:0px 0px 10px;color:rgb(81,78,115);font-size:21px;line-height:1.3;padding:0px;text-align:left;word-wrap:normal">Delegación: <?php echo $data['delegacion_nombre_res']; ?></h3>
+                                
+                                                        <h3 style="margin:0px 0px 10px;color:#ea580c;font-size:21px;line-height:1.3;padding:0px;text-align:left;word-wrap:normal">Oficina de recogida: <span style="color:#000000;"><?php echo $data['delegacion_nombre_res']; ?>  </span><br><br><a style="color:#ea580c !important; font-weight: bold;" href="<?php echo $response_oficina->data[0]->mapa_oficina; ?>">Como llegar a nuestra oficina >></a></h3>
+                                                        
+                                                        <h3 style="float:left; margin:0px 0px 10px;color:#000000;font-size:21px;line-height:1.3;padding:16px;text-align:left;word-wrap:normal">Detalles de tu reserva.</h3>
                                                         <div align="center">
-                                                            <a style="width: 50%; background-color:#ea580c !important;color:#ffffff !important; border:1px solid #ea580c !important; border-radius:0!important; padding:15px; " href="<?php echo $como_llegar; ?>">Como llegar</a>
-                                                        </div>
-                                                        <h3 style="float:left; margin:0px 0px 10px;color:rgb(81,78,115);font-size:21px;line-height:1.3;padding:16px;text-align:left;word-wrap:normal">Detalles de tu reserva:</h3>
-                                                        <div align="center">
-                                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/imagenes_iberfurgo/flota/<?php echo $data['tipo_id_res']; ?>/34.jpg" alt="Iberfurgo - <?php echo $value->nombre; ?>" height="262" title="Iberfurgo - <?php echo $value->nombre; ?>" />
+                                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/imagenes_iberfurgo/flota/<?php echo $data['tipo_id_res']; ?>/34.jpg" alt="Iberfurgo - <?php echo $response_tipo->nombre ?>" height="262" title="Iberfurgo - <?php echo $response_tipo->nombre; ?>" />
                                                         </div>
                                                         <table class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469spacer m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469show-for-large" style="border-collapse:collapse;padding:0px;vertical-align:top;width:548px;height:auto!important">
                                                             <tbody>
@@ -154,15 +139,8 @@
                                                                                             <tbody>
                                                                                                 <tr style="padding:0px;vertical-align:top">
                                                                                                     <th style="margin:0px;color:rgb(49,54,83);font-size:16px;font-weight:400;line-height:1.3;padding:0px">
-                                                                                                        <table class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469spacer m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469show-for-large" style="border-collapse:collapse;padding:0px;vertical-align:top;width:242px;height:auto!important">
-                                                                                                            <tbody>
-                                                                                                                <tr style="padding:0px;vertical-align:top">
-                                                                                                                    <td height="30" style="margin:0px;color:rgb(49,54,83);font-size:30px;line-height:30px;padding:0px;vertical-align:top;word-wrap:break-word;border-collapse:collapse"> </td>
-                                                                                                                </tr>
-                                                                                                            </tbody>
-                                                                                                        </table>
-                                                                                                        <h4 style="margin:0px 0px 5px;color:rgb(81,78,115);line-height:1.3;padding:0px;text-align:left;word-wrap:normal">Fecha recogida</h4>
-                                                                                                        <p style="margin:0px 0px 20px;color:rgb(122,115,146);line-height:1.3;padding:0px;text-align:left"><?php echo $data['fecha_inicio_res']; ?></p>
+                                                                                                        <h4 style="margin:0px 0px 5px;color:#ea580c;line-height:1.3;padding:0px;text-align:left;word-wrap:normal">Fecha de recogida</h4>
+                                                                                                        <p style="margin:0px 0px 20px;color:#000000;line-height:1.3;padding:0px;text-align:left"><?php echo $data['fecha_inicio_res']; ?></p>
                                                                                                     </th>
                                                                                                 </tr>
                                                                                             </tbody>
@@ -173,15 +151,8 @@
                                                                                             <tbody>
                                                                                                 <tr style="padding:0px;vertical-align:top">
                                                                                                     <th style="margin:0px;color:rgb(49,54,83);font-size:16px;font-weight:400;line-height:1.3;padding:0px">
-                                                                                                        <table class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469spacer m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469show-for-large" style="border-collapse:collapse;padding:0px;vertical-align:top;width:242px;height:auto!important">
-                                                                                                            <tbody>
-                                                                                                                <tr style="padding:0px;vertical-align:top">
-                                                                                                                    <td height="30" style="margin:0px;color:rgb(49,54,83);font-size:30px;line-height:30px;padding:0px;vertical-align:top;word-wrap:break-word;border-collapse:collapse"> </td>
-                                                                                                                </tr>
-                                                                                                            </tbody>
-                                                                                                        </table>
-                                                                                                        <h4 style="margin:0px 0px 5px;color:rgb(81,78,115);line-height:1.3;padding:0px;text-align:left;word-wrap:normal">Fecha devolución</h4>
-                                                                                                        <p style="margin:0px 0px 20px;color:rgb(122,115,146);line-height:1.3;padding:0px;text-align:left"><?php echo $data['fecha_fin_res']; ?></p>
+                                                                                                        <h4 style="margin:0px 0px 5px;color:#ea580c;line-height:1.3;padding:0px;text-align:left;word-wrap:normal">Hora de recogida</h4>
+                                                                                                        <p style="margin:0px 0px 20px;color:#000000;line-height:1.3;padding:0px;text-align:left"><?php echo $data['hora_inicio_res']; ?></p>
                                                                                                     </th>
                                                                                                 </tr>
                                                                                             </tbody>
@@ -194,16 +165,8 @@
                                                                                             <tbody>
                                                                                                 <tr style="padding:0px;vertical-align:top">
                                                                                                     <th style="margin:0px;color:rgb(49,54,83);font-size:16px;font-weight:400;line-height:1.3;padding:0px">
-                                                                                                        <table class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469spacer m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469show-for-large" style="border-collapse:collapse;padding:0px;vertical-align:top;width:242px;height:auto!important">
-                                                                                                            <tbody>
-                                                                                                                <tr style="padding:0px;vertical-align:top">
-                                                                                                                    <td height="30" style="margin:0px;color:rgb(49,54,83);font-size:30px;line-height:30px;padding:0px;vertical-align:top;word-wrap:break-word;border-collapse:collapse"> </td>
-                                                                                                                </tr>
-                                                                                                            </tbody>
-                                                                                                        </table>
-                                                                                                        <h4 style="margin:0px 0px 5px;color:rgb(81,78,115);line-height:1.3;padding:0px;text-align:left;word-wrap:normal">Hora recogida</h4>
-                                                                                                        <p style="margin:0px 0px 20px;color:rgb(122,115,146);line-height:1.3;padding:0px;text-align:left"><?php echo $data['hora_inicio_res']; ?></p>
-
+                                                                                                        <h4 style="margin:0px 0px 5px;color:#ea580c;line-height:1.3;padding:0px;text-align:left;word-wrap:normal">Fecha de devolución</h4>
+                                                                                                        <p style="margin:0px 0px 20px;color:#000000;line-height:1.3;padding:0px;text-align:left"><?php echo $data['fecha_fin_res']; ?></p>
                                                                                                     </th>
                                                                                                 </tr>
                                                                                             </tbody>
@@ -214,16 +177,8 @@
                                                                                             <tbody>
                                                                                                 <tr style="padding:0px;vertical-align:top">
                                                                                                     <th style="margin:0px;color:rgb(49,54,83);font-size:16px;font-weight:400;line-height:1.3;padding:0px">
-                                                                                                        <table class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469spacer m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469show-for-large" style="border-collapse:collapse;padding:0px;vertical-align:top;width:242px;height:auto!important">
-                                                                                                            <tbody>
-                                                                                                                <tr style="padding:0px;vertical-align:top">
-                                                                                                                    <td height="30" style="margin:0px;color:rgb(49,54,83);font-size:30px;line-height:30px;padding:0px;vertical-align:top;word-wrap:break-word;border-collapse:collapse"> </td>
-                                                                                                                </tr>
-                                                                                                            </tbody>
-                                                                                                        </table>
-                                                                                                        <h4 style="margin:0px 0px 5px;color:rgb(81,78,115);line-height:1.3;padding:0px;text-align:left;word-wrap:normal">Hora devolución</h4>
-                                                                                                        <p style="margin:0px 0px 20px;color:rgb(122,115,146);line-height:1.3;padding:0px;text-align:left"><?php echo $data['hora_fin_res']; ?></p>
-
+                                                                                                        <h4 style="margin:0px 0px 5px;color:#ea580c;line-height:1.3;padding:0px;text-align:left;word-wrap:normal">Hora de devolución</h4>
+                                                                                                        <p style="margin:0px 0px 20px;color:#000000;line-height:1.3;padding:0px;text-align:left"><?php echo $data['hora_fin_res']; ?></p>
                                                                                                     </th>
                                                                                                 </tr>
                                                                                             </tbody>
@@ -240,8 +195,8 @@
                                                                                             <tbody>
                                                                                                 <tr style="padding:0px;vertical-align:top">
                                                                                                     <th style="margin:0px;color:rgb(49,54,83);font-size:16px;font-weight:400;line-height:1.3;padding:0px">
-                                                                                                        <h4 style="margin:0px 0px 5px;color:rgb(81,78,115);line-height:1.3;padding:0px;text-align:left;word-wrap:normal">Tipo de vehículo</h4>
-                                                                                                        <p style="margin:0px 0px 20px;color:rgb(122,115,146);line-height:1.3;padding:0px;text-align:left"><?php echo $tipoVehiculo; ?> - Grupo <?php echo $data['tipo_id_res']; ?> </p>
+                                                                                                        <h4 style="margin:0px 0px 5px;color:#ea580c;line-height:1.3;padding:0px;text-align:left;word-wrap:normal">Tipo de vehículo</h4>
+                                                                                                        <p style="margin:0px 0px 20px;color:#000000;line-height:1.3;padding:0px;text-align:left"><?php echo $response_tipo->nombre; ?> - Grupo <?php echo $data['tipo_id_res']; ?> </p>
                                                                                                     </th>
                                                                                                 </tr>
                                                                                             </tbody>
@@ -263,11 +218,12 @@
                                                         </table>
 
                                                         <?php if (isset($data['texto_extras_res']) && $data['texto_extras_res'] != '') { ?>
+                                                        <h3 style="float:left; margin:0px 0px 10px;color:#000000;font-size:21px;line-height:1.3;padding:16px;text-align:left;word-wrap:normal">Extras contratados.</h3>
                                                         <table align="center" class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469container m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469outlined m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469cart" style="margin:0px auto;border:2px solid rgb(230,234,238);border-collapse:collapse;padding:20px;text-align:inherit;vertical-align:top;width:506px;height:auto!important;background-position:0px 0px">
                                                             <tbody>
                                                                 <tr style="padding:0px;text-align:left;vertical-align:top">
                                                                     <td style="margin:0px;color:rgb(49,54,83);font-size:16px;line-height:1.3;padding:0px;vertical-align:top;word-wrap:break-word;border-collapse:collapse">
-                                                                        <table class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469row m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469total" style="background-color:rgba(235, 88, 12, 0.15);border:0px solid rgb(230,234,238);border-collapse:collapse;padding:0px;vertical-align:top;width:544px;height:auto!important">
+                                                                        <table class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469row m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469total" style="background-color:#ffffff;border:0px solid rgb(230,234,238);border-collapse:collapse;padding:0px;vertical-align:top;width:544px;height:auto!important">
                                                                             <tbody>
                                                                                 <tr style="padding:0px;vertical-align:top">
                                                                                     <th class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469small-8 m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469large-6 m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469columns m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469first" style="margin:0px auto;color:rgb(49,54,83);font-size:16px;font-weight:400;line-height:1.3;padding:0px 0px 10px 30px;width:242px">
@@ -283,7 +239,7 @@
                                                                                                                 </tr>
                                                                                                             </tbody>
                                                                                                         </table>
-                                                                                                        <h4 style="margin:0px 0px 5px;color:rgb(81,78,115);line-height:1.3;padding:0px;text-align:left;word-wrap:normal"><?php echo str_replace(",","<br>",$data['texto_extras_res']); ?></h4>
+                                                                                                        <h4 style="margin:0px 0px 5px;color:#ea580c;line-height:1.3;padding:0px;text-align:left;word-wrap:normal"><?php echo str_replace(",","<br>",$data['texto_extras_res']); ?></h4>
                                                                                                     </th>
                                                                                                 </tr>
                                                                                             </tbody>
@@ -302,7 +258,7 @@
                                                                                                                 </tr>
                                                                                                             </tbody>
                                                                                                         </table>
-                                                                                                        <h4 class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469text-right" style="margin:0px 0px 5px;color:rgb(81,78,115);line-height:1.3;padding:0px;text-align:right;word-wrap:normal"></h4>
+                                                                                                        <h4 class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469text-right" style="margin:0px 0px 5px;color:#ea580c;line-height:1.3;padding:0px;text-align:right;word-wrap:normal"></h4>
                                                                                                     </th>
                                                                                                 </tr>
                                                                                             </tbody>
@@ -324,49 +280,34 @@
                                                             <tbody>
                                                                 <tr style="padding:0px;text-align:left;vertical-align:top">
                                                                     <td style="margin:0px;color:rgb(49,54,83);font-size:16px;line-height:1.3;padding:0px;vertical-align:top;word-wrap:break-word;border-collapse:collapse">
-                                                                        <table class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469row m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469total" style="background-color:rgba(235, 88, 12, 0.15);border:0px solid rgb(230,234,238);border-collapse:collapse;padding:0px;vertical-align:top;width:544px;height:auto!important">
+                                                                        <table class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469row m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469total" style="background-color:#ffffff;border:0px solid rgb(230,234,238);border-collapse:collapse;padding:0px;vertical-align:top;width:544px;height:auto!important">
                                                                             <tbody>
                                                                                 <tr style="padding:0px;vertical-align:top">
                                                                                     <th class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469small-8 m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469large-6 m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469columns m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469first" style="margin:0px auto;color:rgb(49,54,83);font-size:16px;font-weight:400;line-height:1.3;padding:0px 0px 10px 30px;width:242px">
-                                                                                        <table style="border-collapse:collapse;padding:0px;vertical-align:top;width:242px;height:auto!important">
+                                                                                        <table style="border-collapse:collapse;padding:0px;vertical-align:top;width:100%;height:auto!important">
                                                                                             <tbody>
                                                                                                 <tr style="padding:0px;vertical-align:top">
-                                                                                                    <th style="margin:0px;color:rgb(49,54,83);font-size:16px;font-weight:400;line-height:1.3;padding:0px">
-                                                                                                        <table class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469spacer m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469show-for-large" style="border-collapse:collapse;padding:0px;vertical-align:top;width:242px;height:auto!important">
+                                                                                                    <th style="margin:0px;color:rgb(49,54,83);font-size:16px;font-weight:400;line-height:1.3;padding:0px">   
+                                                                                                         <table class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469spacer m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469show-for-large" style="border-collapse:collapse;padding:0px;vertical-align:top;width:242px;height:auto!important">
                                                                                                             <tbody>
                                                                                                                 <tr style="padding:0px;vertical-align:top">
                                                                                                                     <td height="15" style="margin:0px;color:rgb(49,54,83);font-size:15px;line-height:15px;padding:0px;vertical-align:top;word-wrap:break-word;border-collapse:collapse"> </td>
                                                                                                                 </tr>
                                                                                                             </tbody>
-                                                                                                        </table>
-                                                                                                        
+                                                                                                        </table>                                                                                                     
                                                                                                         <?php if (isset($data['texto_extras_res']) && $data['texto_extras_res'] != '') { ?>
-                                                                                                            <h4 style="margin:0px 0px 5px;color:rgb(81,78,115);line-height:1.3;padding:0px;text-align:left;word-wrap:normal">Importe reserva: <?php echo $data['precio_res'] + $data['precio_extra_res']; ?>€</h4>
-                                                                                                        <?php } else { ?>}
-                                                                                                            <h4 style="margin:0px 0px 5px;color:rgb(81,78,115);line-height:1.3;padding:0px;text-align:left;word-wrap:normal">Importe Reserva: <?php echo $data['precio_res']; ?>€</h4>
+                                                                                                            <h4 style="margin:0px 0px 5px;color:#ea580c;line-height:1.3;padding:0px;text-align:right;word-wrap:normal; margin-right: 50px;">Importe vehículo: <?php echo $data['precio_res']; ?> €</h4>
+                                                                                                            <h4 style="margin:0px 0px 5px;color:#ea580c;line-height:1.3;padding:0px;text-align:right;word-wrap:normal; margin-right: 50px;">Importe extras: <?php echo $data['precio_extra_res']; ?> €</h4>
+                                                                                                            <h4 style="margin:0px 0px 5px;color:#ea580c;line-height:1.3;padding:0px;text-align:right;word-wrap:normal; margin-right: 50px;">Importe total reserva: <?php echo $data['precio_res'] + $data['precio_extra_res']; ?> € +IVA</h4>
+                                                                                                        <?php } else { ?>
+                                                                                                            <h4 style="margin:0px 0px 5px;color:#ea580c;line-height:1.3;padding:0px;text-align:right;word-wrap:normal; margin-right: 50px;">Importe total reserva: <?php echo $data['precio_res']; ?> €<sub style="font-size:12px;color:#000000;">+IVA</sub></h4>
                                                                                                         <?php } ?>
                                                                                                     </th>
                                                                                                 </tr>
                                                                                             </tbody>
                                                                                         </table>
                                                                                     </th>
-                                                                                    <th class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469small-4 m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469large-6 m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469columns m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469last" style="margin:0px auto;color:rgb(49,54,83);font-size:16px;font-weight:400;line-height:1.3;padding:0px 30px 10px 0px;width:242px">
-                                                                                        <table style="border-collapse:collapse;padding:0px;vertical-align:top;width:242px;height:auto!important">
-                                                                                            <tbody>
-                                                                                                <tr style="padding:0px;vertical-align:top">
-                                                                                                    <th style="margin:0px;color:rgb(49,54,83);font-size:16px;font-weight:400;line-height:1.3;padding:0px">
-                                                                                                        <table class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469spacer m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469show-for-large" style="border-collapse:collapse;padding:0px;vertical-align:top;width:242px;height:auto!important">
-                                                                                                            <tbody>
-                                                                                                                <tr style="padding:0px;vertical-align:top">
-                                                                                                                    <td height="15" style="margin:0px;color:rgb(49,54,83);font-size:15px;line-height:15px;padding:0px;vertical-align:top;word-wrap:break-word;border-collapse:collapse"></td>
-                                                                                                                </tr>
-                                                                                                            </tbody>
-                                                                                                        </table>
-                                                                                                    </th>
-                                                                                                </tr>
-                                                                                            </tbody>
-                                                                                        </table>
-                                                                                    </th>
+                                                                                    
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
