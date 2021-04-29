@@ -48,45 +48,36 @@ function custom_enqueue_styles()
                   );
 }
 
-function rpthem_enqueue_style(){
-  wp_enqueue_style( 'bootstrapcss','https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css', false, null );
-  }
-  function rpthem_enqueue_script() {
-  wp_enqueue_script( 'bootstapjs', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js', false, null );
-  }
-  
-  add_action( 'wp_enqueue_scripts', 'rpthem_enqueue_style' );
-  add_action( 'wp_enqueue_scripts', 'rpthem_enqueue_script' );
 
 
-//funcion para enviar email mediante SMTP
-add_action('phpmailer_init','send_smtp_email');
-function send_smtp_email( $phpmailer )
-{
-    // Define que estamos enviando por SMTP
-    $phpmailer->isSMTP();
+// //funcion para enviar email mediante SMTP
+// add_action('phpmailer_init','send_smtp_email');
+// function send_smtp_email( $phpmailer )
+// {
+//     // Define que estamos enviando por SMTP
+//     $phpmailer->isSMTP();
  
-    // La dirección del HOST del servidor de correo SMTP p.e. smtp.midominio.com
-    $phpmailer->Host = "smtp.iberfurgo.com";
+//     // La dirección del HOST del servidor de correo SMTP p.e. smtp.midominio.com
+//     $phpmailer->Host = "smtp.iberfurgo.com";
  
-    // Uso autenticación por SMTP (true|false)
-    $phpmailer->SMTPAuth = true;
+//     // Uso autenticación por SMTP (true|false)
+//     $phpmailer->SMTPAuth = true;
  
-    // Puerto SMTP - Suele ser el 25, 465 o 587
-    $phpmailer->Port = "587";
+//     // Puerto SMTP - Suele ser el 25, 465 o 587
+//     $phpmailer->Port = "587";
  
-    // Usuario de la cuenta de correo
-    $phpmailer->Username = "reservas@iberfurgo.com";
+//     // Usuario de la cuenta de correo
+//     $phpmailer->Username = "reservas@iberfurgo.com";
  
-    // Contraseña para la autenticación SMTP
-    $phpmailer->Password = "R3s3rv1s#4rd9@";
+//     // Contraseña para la autenticación SMTP
+//     $phpmailer->Password = "R3s3rv1s#4rd9@";
  
-    // El tipo de encriptación que usamos al conectar - ssl (deprecated) o tls
-    $phpmailer->SMTPSecure = "tls";
+//     // El tipo de encriptación que usamos al conectar - ssl (deprecated) o tls
+//     $phpmailer->SMTPSecure = "tls";
  
-    $phpmailer->From = "reservas@ibergurgo.com";
-    $phpmailer->FromName = "Iberfurgo::Reservas";
-}
+//     $phpmailer->From = "reservas@ibergurgo.com";
+//     $phpmailer->FromName = "Iberfurgo::Reservas";
+// }
 
 // function custom_rewrite_tag() {
 //   add_rewrite_tag('%category_name%', '([^&]+)');

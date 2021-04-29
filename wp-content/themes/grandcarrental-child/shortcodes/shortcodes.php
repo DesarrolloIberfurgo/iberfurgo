@@ -44,6 +44,7 @@ function shortcode_tipo_vehiculo()
 
 add_shortcode('tipo_vehiculo', 'shortcode_tipo_vehiculo');
 
+//Shortcode para mostrar carrusel de vehículos
 function shortcode_familias_vehiculos()
 {
     list($httpCode, $response) = getApi(URL_API. 'get-familias-vehiculo');
