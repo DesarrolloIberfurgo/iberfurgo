@@ -139,6 +139,13 @@
                                                                                             <tbody>
                                                                                                 <tr style="padding:0px;vertical-align:top">
                                                                                                     <th style="margin:0px;color:rgb(49,54,83);font-size:16px;font-weight:400;line-height:1.3;padding:0px">
+                                                                                                        <table class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469spacer m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469show-for-large" style="border-collapse:collapse;padding:0px;vertical-align:top;width:242px;height:auto!important">
+                                                                                                            <tbody>
+                                                                                                                <tr style="padding:0px;vertical-align:top">
+                                                                                                                    <td height="15" style="margin:0px;color:rgb(49,54,83);font-size:15px;line-height:15px;padding:0px;vertical-align:top;word-wrap:break-word;border-collapse:collapse"> </td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>  
                                                                                                         <h4 style="margin:0px 0px 5px;color:#ea580c;line-height:1.3;padding:0px;text-align:left;word-wrap:normal">Fecha de recogida</h4>
                                                                                                         <p style="margin:0px 0px 20px;color:#000000;line-height:1.3;padding:0px;text-align:left"><?php echo $data['fecha_inicio_res']; ?></p>
                                                                                                     </th>
@@ -151,6 +158,13 @@
                                                                                             <tbody>
                                                                                                 <tr style="padding:0px;vertical-align:top">
                                                                                                     <th style="margin:0px;color:rgb(49,54,83);font-size:16px;font-weight:400;line-height:1.3;padding:0px">
+                                                                                                        <table class="m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469spacer m_6954324870914482144m_-5771756102854641929m_5947206293277663676m_5646839109059454175gmail-m_-4671297290340321469show-for-large" style="border-collapse:collapse;padding:0px;vertical-align:top;width:242px;height:auto!important">
+                                                                                                            <tbody>
+                                                                                                                <tr style="padding:0px;vertical-align:top">
+                                                                                                                    <td height="15" style="margin:0px;color:rgb(49,54,83);font-size:15px;line-height:15px;padding:0px;vertical-align:top;word-wrap:break-word;border-collapse:collapse"> </td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>  
                                                                                                         <h4 style="margin:0px 0px 5px;color:#ea580c;line-height:1.3;padding:0px;text-align:left;word-wrap:normal">Hora de recogida</h4>
                                                                                                         <p style="margin:0px 0px 20px;color:#000000;line-height:1.3;padding:0px;text-align:left"><?php echo $data['hora_inicio_res']; ?></p>
                                                                                                     </th>

@@ -441,6 +441,7 @@
                                                     <h4 style="margin:0px 0px 5px;color:#ea580c;line-height:1.3;padding:0px;text-align:right;word-wrap:normal; margin-right: 50px;">Importe vehículo: <?php echo $data['precio_res']; ?> €</h4>
                                                     <h4 style="margin:0px 0px 5px;color:#ea580c;line-height:1.3;padding:0px;text-align:right;word-wrap:normal; margin-right: 50px;">Importe extras: <?php echo $data['precio_extra_res']; ?> €</h4>
                                                     <h4 style="margin:0px 0px 5px;color:#ea580c;line-height:1.3;padding:0px;text-align:right;word-wrap:normal; margin-right: 50px;">Importe total reserva: <?php echo $data['precio_res'] + $data['precio_extra_res']; ?> €</h4>
+                                                    
                                                     <?php } else { ?>
                                                     <h4 style="margin:0px 0px 5px;color:#ea580c;line-height:1.3;padding:0px;text-align:right;word-wrap:normal;  margin-right: 50px;">Importe total reserva: <?php echo $data['precio_res']; ?> €</h4>
                                                     <?php } ?>

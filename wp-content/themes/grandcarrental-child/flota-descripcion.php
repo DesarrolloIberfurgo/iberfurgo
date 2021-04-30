@@ -55,7 +55,7 @@
                                         $car_doors = $value->puertas;
                                         $car_vol = $value->m3;
                                         $car_fianza = $value->fianza;
-                                        $car_franquicia = $value->franquicia;
+                                        $car_franquicia = $value->completa;
 
                                         // if (!empty($car_passengers) or !empty($car_luggages) or !empty($car_doors)) {
                                         ?>
