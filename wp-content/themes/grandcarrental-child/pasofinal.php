@@ -136,7 +136,7 @@ get_template_part("/templates/template-car-header");
                                 <span class="ti-check ibf_color_orange"></span>Cobertura contra daños y robos.
                             </div>
                             <div class="one">
-                                <span class="ti-check ibf_color_orange"></span>Seguro con franquicia de <?php echo $response->franquicia ?> €.
+                                <span class="ti-check ibf_color_orange"></span>Seguro con franquicia de <?php echo $response->completa ?> €.
                             </div>
                         </div>
                     </li>

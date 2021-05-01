@@ -215,7 +215,7 @@ $data = $response->data;
 							<?php
 								$car_included = [];
 								$car_included[] = "Fianza: ".$value->tipo->fianza."€";
-								$car_included[] = "Franquicia: ".$value->tipo->franquicia."€";
+								$car_included[] = "Franquicia: ".$value->tipo->completa."€";
 								$car_included[] = "Km diarios: ".$value->tipo->km_diarios;
 								$car_included[] = "Importe km extra: ".$value->tipo->km_extras."€";
 								if(!empty($car_included))

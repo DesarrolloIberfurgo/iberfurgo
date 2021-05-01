@@ -46,7 +46,6 @@
 
     $dataApiDelegacion['delegacion_id'] = $data['delegacion_id_res'];
     list($httpCode, $response_oficina) = getDataApi(URL_API . 'maestro-delegacion-datos-web', json_encode($dataApiDelegacion));
-    //response_delegacion[0]->
     if ($httpCode != 200) {
 	    return 'ha petado';
     }

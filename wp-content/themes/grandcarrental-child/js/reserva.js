@@ -40,7 +40,7 @@ function addExtras()
     if (menor.checked == true){
         precio_extras += parseFloat(7.00*dias);
         texto_hidden = texto_hidden + 'Conductor menor de 23 años,';
-        texto = texto + '<span class="ti-check ibf_color_orange"></span> <span class="ibf_color_black">Conductor menor 23 años: </span> <span class="ibf_color_orange">' + parseFloat(7.00*dias) + '€</span><br>';
+        texto = texto + '<span class="ti-check ibf_color_orange"></span> <span class="ibf_color_black">Conductor menor de 23 años: </span> <span class="ibf_color_orange">' + parseFloat(7.00*dias) + '€</span><br>';
     }
 
     let franquicia = document.getElementById("reduccion_franquicia");
