@@ -8,7 +8,8 @@
  */
 get_header();
 
-list($httpCode, $response) = getApi(URL_API . 'flota-tipo');
+list($httpCode, $response) = getDataApi(URL_API . 'flota-tipo', '{"activo_web":"!0"}');
+
 // var_dump($response->data);
 if ($httpCode != 200) {
     return 'ha petado';
