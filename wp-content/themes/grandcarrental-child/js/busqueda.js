@@ -1,21 +1,46 @@
 jQuery(document).ready(function($) {
-    $( "#fecha_inicio_dp" ).datepicker({ minDate: '0', dateFormat: 'yy-mm-dd'});
-    $( "#fecha_fin_dp" ).datepicker({ minDate: '0', dateFormat: 'yy-mm-dd'});
-});
+    $( "#fecha_inicio_dp" ).datepicker({ minDate: '0', dateFormat: 'dd/mm/yy'});
+    $( "#fecha_fin_dp" ).datepicker({ minDate: '0', dateFormat: 'dd/mm/yy'});
 
-jQuery("#fecha_inicio_dp").on( 'change', function(){
-    let fechaInicio = jQuery( "#fecha_inicio_dp" ).val();
-    let date = new Date(fechaInicio);
-    date.setDate(date.getDate() + 30);
+    jQuery("#fecha_inicio_dp").on( 'change', function(){
+        let fechaInicio = jQuery( "#fecha_inicio_dp" ).val();
 
+        let date = new Date(changeEnglishFormat(fechaInicio));
+        date.setDate(date.getDate() + 30);
     
+        
+        var dateString = date.toISOString().split('T')[0]; 
     var dateString = date.toISOString().split('T')[0]; 
-   
-    dateString.replaceAll('-', '/');
-    
-    jQuery('#fecha_fin_dp').datepicker('option', 'maxDate', dateString);
+        var dateString = date.toISOString().split('T')[0]; 
+       
+        // dateString.replaceAll('-', '/');
+        dateString = changeSpanishFormat(dateString);
+
+        jQuery('#fecha_fin_dp').datepicker('option', 'maxDate', dateString);
+    });
 });
 
+
+function changeEnglishFormat(date)
+{
+    var arr = date.split('/');
+    return arr[2]+'/'+arr[1]+'/'+arr[0];
+}
+
+function changeSpanishFormat(date)
+{
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) 
+        month = '0' + month;
+    if (day.length < 2) 
+        day = '0' + day;
+
+    return [day, month, year].join('/');
+}
 
 
 function validateSearch(event)
@@ -27,10 +52,22 @@ function validateSearch(event)
     let fechaFin = jQuery( "#fecha_fin_dp" ).val();
     let horaInicio = jQuery( "#hora_inicio_dp" ).val();
     let horaFin = jQuery( "#hora_fin_dp" ).val();
-    let dateInicio = new Date(fechaInicio);
-    let dateFin = new Date(fechaFin);
+    let dateInicio = new Date(changeEnglishFormat(fechaInicio));
+    let dateFin = new Date(changeEnglishFormat(fechaFin));
     let dt = new Date();
     dt.getHours; 
+    
+    if (isNaN(dateInicio.getTime())) {
+        jQuery('.alert_box.error').removeClass('hide');
+        jQuery('.alert_box_msg').html('Fecha inicio no es válida.');
+        return;
+    }
+
+    if (isNaN(dateFin.getTime())) {
+        jQuery('.alert_box.error').removeClass('hide');
+        jQuery('.alert_box_msg').html('Fecha fin no es válida.');
+        return;
+    }
 
     if (delegacionId == '' || fechaInicio == '' || fechaFin == '' || horaInicio == '' || horaFin == '') {
         jQuery('.alert_box.error').removeClass('hide');

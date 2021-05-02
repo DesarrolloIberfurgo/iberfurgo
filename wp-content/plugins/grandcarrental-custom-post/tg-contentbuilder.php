@@ -3404,7 +3404,7 @@ function ppb_car_search_func($atts, $content) {
     $return_html.= 	'<div class="one_fourth ibf_widthm_100 ibf_no_background">
 						<p class="ibf_font_16 ibf_font_bold ibf_color_white ibf_field_form ibf_label_form">Fecha/hora recogida</p>
 						<div class="one_half themeborder ibf_mr_0 ibf_datepicker_parent">';
-	$return_html.= 			'<input id="fecha_inicio_dp" name="fecha_inicio" type="date" class="ibf_datepicker" value="'.esc_attr($atts['fechainicio']).'" required>';
+	$return_html.= 			'<input id="fecha_inicio_dp" name="fecha_inicio" type="text" class="ibf_datepicker" value="'.esc_attr($atts['fechainicio']).'" required>';
 	$return_html.=		'</div>';
 
 	$return_html.= 		'<div class="one_third themeborder ibf_mr_0" style="width:30%;">';
@@ -3417,7 +3417,7 @@ function ppb_car_search_func($atts, $content) {
     $return_html.=	'<div class="one_fourth ibf_widthm_100 ibf_no_background">
 						<p class="ibf_font_16 ibf_font_bold ibf_color_white ibf_field_form ibf_label_form">Fecha/hora devolución</p>
 						<div class="one_half themeborder ibf_mr_0 ibf_datepicker_parent">';
-	$return_html.= 			'<input id="fecha_fin_dp" name="fecha_fin" type="date" class="ibf_datepicker" value="'.esc_attr($atts['fechafin']).'" required>';
+	$return_html.= 			'<input id="fecha_fin_dp" name="fecha_fin" type="text" class="ibf_datepicker" value="'.esc_attr($atts['fechafin']).'" required>';
     $return_html.= 		'</div>';
 	$horas = get_times($atts['horafin']);
 	$return_html.= 		'<div class="one_third themeborder ibf_mr_0" style="width:30%;">';

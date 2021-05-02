@@ -53,11 +53,17 @@ $fechaFin = $_GET['fecha_fin'];
 $horaInicio = $_GET['hora_inicio'];
 $horaFin = $_GET['hora_fin'];
 
+$arrayFechaInicio = explode("/", $fechaInicio);
+$fechaInicioNew = $arrayFechaInicio[2].'-'.$arrayFechaInicio[1].'-'.$arrayFechaInicio[0];
+
+$arrayFechaFin = explode("/", $fechaFin);
+$fechaFinNew = $arrayFechaFin[2].'-'.$arrayFechaFin[1].'-'.$arrayFechaFin[0];
+
 
 $dataApi['tipo_tarifa'] = "DAY";
 $dataApi['delegacion_id'] = $delegacionId;
-$dataApi['fecha_inicio'] = $fechaInicio.' '.$horaInicio;
-$dataApi['fecha_fin'] = $fechaFin.' '.$horaFin;
+$dataApi['fecha_inicio'] = $fechaInicioNew.' '.$horaInicio;
+$dataApi['fecha_fin'] = $fechaFinNew.' '.$horaFin;
 
 list($httpCode, $response) = getDataApi(URL_API . 'get-tarifa', json_encode($dataApi));
 if ($httpCode != 200) {
