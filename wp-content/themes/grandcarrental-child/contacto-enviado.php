@@ -26,22 +26,24 @@
     }
     
     $dataApi['delegacion_id'] = $data['delegacion_id'];
-    list($httpCode, $response_delegacion) = getDataApi(URL_API . 'maestro-delegacion-datos-web', json_encode($dataApi));
-    //response_delegacion[0]->
-    var_dump($data);
+    list($httpCode, $response_delegacion) = getDataApi(URL_API . 'maestro-delegacion-datos-web', json_encode($dataApi['delegacion_id']));
+
+    list($httpCode, $response_nombre_delegacion) = getDataApi(URL_API . 'maestro-delegacion', '{"order":["nombre asc"], "id":"'.$dataApi['delegacion_id'].'"}');
+
     if ($httpCode != 200) {
 	    return 'ha petado';
     }
 
     ob_start();
-    include('email-cliente.php');
+    include('email-contacto.php');
     $email_cliente_content = ob_get_contents();
     ob_end_clean();
+    $correo_oficina = $response_delegacion->data[0];
     $headers = array('Content-Type: text/html; charset=UTF-8');
     $headers[] .= 'From: Iberfurgo::Reservas <info@iberfurgo.com>';
     $headers[] .= 'Bcc: sergio.abril@iberfurgo.com';
+    $headers[] .= "Bcc: $correo_oficina->email";
     
-    var_dump($email_cliente_content);
     wp_mail($data['txtemail'], "Contacto::Iberfurgo", $email_cliente_content, $headers);
 
 ?>

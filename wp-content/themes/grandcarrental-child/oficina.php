@@ -21,7 +21,6 @@ if(!empty($response->data))
     $dataApi = [];
     $dataApi['tipo_tarifa'] = 'DAY';
     $dataApi['desde'] = 22;
-    $dataApi['hasta'] = 30;
     $dataApi['fecha_inicio'] = "<=" . date('Y-m-d');
     $dataApi['fecha_fin'] = ">=" . date('Y-m-d');
     $dataApi['delegacion_id'] = $response->data[0]->delegacion_id;
@@ -141,6 +140,7 @@ if(!empty($response->data))
                         <div class="one">
                             <h2 class="ibf_pt_25 ibf_pb_20">Precio de alquiler de vehículos en <?php echo $value->oficinaNombre; ?></h2>
                         <?php foreach ($preciosFlota as $precio) {  ?>
+                        
                             <table class="table one">
                                 <thead class="ibf_background_gray ibf_font_18">
                                     <tr>

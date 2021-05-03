@@ -53,8 +53,8 @@ $data = $response->data;
 
                             <div class="one_third gallery3 classic static filterable portfolio_type themeborder" data-id="post-<?php echo esc_attr($key + 1); ?>">
 
-                                <a class="car_image" href="<?php echo esc_url($permalink_url); ?>">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/imagenes_iberfurgo/flota/<?php echo $value->tipoId; ?>/34.jpg" alt="Iberfurgo - <?php echo $value->nombre; ?>" height="262" title="Iberfurgo - <?php echo $value->nombre; ?>" />
+                                <a class="car_image" href="<?php echo esc_url($url); ?>">
+                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/imagenes_iberfurgo/flota/<?php echo $value->tipoId; ?>/34.jpg" alt="Iberfurgo - <?php echo $value->nombre; ?>" title="Iberfurgo - <?php echo $value->nombre; ?>" />
                                     <?php
                                     //Get car price
                                     $car_price = ''; //$value->fianza;
@@ -70,7 +70,7 @@ $data = $response->data;
                                 </a>
 
                                 <div class="portfolio_info_wrapper">
-                                    <a class="car_link" href="<?php echo esc_url($permalink_url); ?>">
+                                    <a class="car_link" href="<?php echo esc_url($url); ?>">
                                         <h4 class="ibf_title_car"><?php echo $value->nombre; ?></h4>
                                     </a>
                                     <div class="car_attribute_wrapper">
