@@ -20,7 +20,7 @@ final class Plugin
 
     public function version()
     {
-        return '1.4.4';
+        return '1.4.7';
     }
 
     public function package_type()
@@ -349,8 +349,8 @@ final class Plugin
             function admin_menu()
             {
                 add_menu_page(
-                    esc_html__('MetForm'),
-                    esc_html__('MetForm'),
+                    esc_html__('MetForm', 'metform'),
+                    esc_html__('MetForm', 'metform'),
                     'read',
                     'metform-menu',
                     '',

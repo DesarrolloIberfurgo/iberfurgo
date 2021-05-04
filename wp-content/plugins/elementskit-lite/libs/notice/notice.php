@@ -285,7 +285,6 @@ class Notice{
         }else{
             $expired = '';
         }
-        // echo $expired; exit;
 
         global $oxaim_lib_notice_list;
 
@@ -371,7 +370,6 @@ class Notice{
 		$notice_id   = ( isset( $_POST['notice_id'] ) ) ? $_POST['notice_id'] : '';
 		$dismissible = ( isset( $_POST['dismissible'] ) ) ? $_POST['dismissible'] : '';
 		$expired_time = ( isset( $_POST['expired_time'] ) ) ? $_POST['expired_time'] : '';
-        // print_r([$notice_id, $dismissible, $expired_time]);
 
 		if ( ! empty( $notice_id ) ) {
 			if ( 'user' === $dismissible ) {

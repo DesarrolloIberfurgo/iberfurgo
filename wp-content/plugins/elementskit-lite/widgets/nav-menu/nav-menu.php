@@ -62,7 +62,7 @@ class ElementsKit_Widget_Nav_Menu extends Widget_Base {
         $this->add_control(
             'elementskit_nav_menu',
             [
-                'label'     =>esc_html__( 'Select menu', 'elementskit-lite' ),
+                'label'     => esc_html__( 'Select menu', 'elementskit-lite' ),
                 'type'      => Controls_Manager::SELECT,
                 'options'   => $this->get_menus(),
             ]
@@ -127,7 +127,7 @@ class ElementsKit_Widget_Nav_Menu extends Widget_Base {
             [
                 'label' => esc_html__( ' Custom Link', 'elementskit-lite' ),
                 'type' => Controls_Manager::URL,
-                'placeholder' => 'https://your-link.com',
+                'placeholder' => 'https://wpmet.com',
                 'condition' => [
                     'elementskit_nav_menu_logo_link_to' => 'custom',
                 ],
@@ -372,7 +372,6 @@ class ElementsKit_Widget_Nav_Menu extends Widget_Base {
             [
                 'name' => 'elementskit_content_typography',
                 'label' => esc_html__( 'Typography', 'elementskit-lite' ),
-                'scheme' => Scheme_Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .elementskit-navbar-nav > li > a',
             ]
         );
@@ -585,7 +584,6 @@ class ElementsKit_Widget_Nav_Menu extends Widget_Base {
             [
                 'name' => 'elementskit_menu_item_typography',
                 'label' => esc_html__( 'Typography', 'elementskit-lite' ),
-                'scheme' => Scheme_Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .elementskit-navbar-nav .elementskit-submenu-panel > li > a',
             ]
         );
@@ -1088,10 +1086,6 @@ class ElementsKit_Widget_Nav_Menu extends Widget_Base {
             [
                 'label' => esc_html__( 'Humber Icon Color', 'elementskit-lite' ),
                 'type' => Controls_Manager::COLOR,
-                'scheme' => [
-                    'type' => Scheme_Color::get_type(),
-                    'value' => Scheme_Color::COLOR_1,
-                ],
                 'default' => 'rgba(0, 0, 0, 0.5)',
                 'selectors' => [
                     '{{WRAPPER}} .elementskit-menu-hamburger:hover .elementskit-menu-hamburger-icon' => 'background-color: {{VALUE}}',
@@ -1119,7 +1113,6 @@ class ElementsKit_Widget_Nav_Menu extends Widget_Base {
             [
                 'name' => 'elementskit_menu_close_typography',
                 'label' => esc_html__( 'Typography', 'elementskit-lite' ),
-                'scheme' => Scheme_Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .elementskit-menu-close',
             ]
         );
@@ -1252,10 +1245,6 @@ class ElementsKit_Widget_Nav_Menu extends Widget_Base {
             [
                 'label' => esc_html__( 'Humber Icon Color', 'elementskit-lite' ),
                 'type' => Controls_Manager::COLOR,
-                'scheme' => [
-                    'type' => Scheme_Color::get_type(),
-                    'value' => Scheme_Color::COLOR_1,
-                ],
                 'default' => 'rgba(51, 51, 51, 1)',
                 'selectors' => [
                     '{{WRAPPER}} .elementskit-menu-close' => 'color: {{VALUE}}',
@@ -1297,10 +1286,6 @@ class ElementsKit_Widget_Nav_Menu extends Widget_Base {
             [
                 'label' => esc_html__( 'Humber Icon Color', 'elementskit-lite' ),
                 'type' => Controls_Manager::COLOR,
-                'scheme' => [
-                    'type' => Scheme_Color::get_type(),
-                    'value' => Scheme_Color::COLOR_1,
-                ],
                 'default' => 'rgba(0, 0, 0, 0.5)',
                 'selectors' => [
                     '{{WRAPPER}} .elementskit-menu-close:hover' => 'color: {{VALUE}}',
@@ -1443,7 +1428,7 @@ class ElementsKit_Widget_Nav_Menu extends Widget_Base {
             $responsive_menu_breakpoint = "767";
         }
 
-        echo '<div class="ekit-wid-con '.$settings['elementskit_responsive_breakpoint'].'" data-hamburger-icon="'.$hamburger_icon_value.'" data-hamburger-icon-type="'.$hamburger_icon_type.'" data-responsive-breakpoint="'.$responsive_menu_breakpoint.'">';
+        echo '<div class="ekit-wid-con '.esc_attr($settings['elementskit_responsive_breakpoint']).'" data-hamburger-icon="'.$hamburger_icon_value.'" data-hamburger-icon-type="'.$hamburger_icon_type.'" data-responsive-breakpoint="'.esc_attr($responsive_menu_breakpoint).'">';
         $this->render_raw();
         echo '</div>';
     }
@@ -1452,6 +1437,32 @@ class ElementsKit_Widget_Nav_Menu extends Widget_Base {
         $settings = $this->get_settings_for_display();
 
         if($settings['elementskit_nav_menu'] != '' && wp_get_nav_menu_items($settings['elementskit_nav_menu']) !== false && count(wp_get_nav_menu_items($settings['elementskit_nav_menu'])) > 0){
+            /**
+             * Hamburger Toggler Button
+             */
+            ?>
+            <button class="elementskit-menu-hamburger elementskit-menu-toggler">
+                <?php
+                /**
+                 * Show Default Icon
+                 */
+                if ( $settings['elementskit_hamburger_icon']['value'] === '' ):
+                ?>
+                    <span class="elementskit-menu-hamburger-icon"></span><span class="elementskit-menu-hamburger-icon"></span><span class="elementskit-menu-hamburger-icon"></span>
+                <?php
+                endif;
+                
+                /**
+                 * Show Icon or, SVG
+                 */
+                Icons_Manager::render_icon( $settings['elementskit_hamburger_icon'], [ 'aria-hidden' => 'true', 'class' => 'ekit-menu-icon' ] );
+                ?>
+            </button>
+            <?php
+
+            /**
+             * Main Menu Container
+             */
             $link = $target = $nofollow = '';
 
             if (isset($settings['elementskit_nav_menu_logo_link_to']) && $settings['elementskit_nav_menu_logo_link_to'] == 'home') {
@@ -1462,12 +1473,12 @@ class ElementsKit_Widget_Nav_Menu extends Widget_Base {
                 $nofollow = ($settings['elementskit_nav_menu_logo_link']['nofollow'] != "on" ? "" : "nofollow");
             }
 
-            $metadata = \ElementsKit_Lite\Utils::img_meta($settings['elementskit_nav_menu_logo']['id']);
+            $metadata = \ElementsKit_Lite\Utils::img_meta(esc_attr($settings['elementskit_nav_menu_logo']['id']));
             $markup = '
 				<div class="elementskit-nav-identity-panel">
 					<div class="elementskit-site-title">
-						<a class="elementskit-nav-logo" href="'.$link.'" target="'.(!empty($target) ? $target : '_self').'" rel="'.$nofollow.'">
-							<img src="'.$settings['elementskit_nav_menu_logo']['url'].'" alt="'.(isset($metadata['alt']) ? $metadata['alt'] : '').'">
+						<a class="elementskit-nav-logo" href="'.esc_url($link).'" target="'.(!empty($target) ? esc_attr($target) : '_self').'" rel="'.esc_attr($nofollow).'">
+							<img src="'.esc_url($settings['elementskit_nav_menu_logo']['url']).'" alt="'.(isset($metadata['alt']) ? esc_attr($metadata['alt']) : '').'">
 						</a>
 					</div>
 					<button class="elementskit-menu-close elementskit-menu-toggler" type="button">X</button>
@@ -1488,7 +1499,20 @@ class ElementsKit_Widget_Nav_Menu extends Widget_Base {
             ];
 
             wp_nav_menu($args);
+            
+
+            /**
+             * Mobile Menu Overlay
+             */
+            ?><div class="elementskit-menu-overlay elementskit-menu-offcanvas-elements elementskit-menu-toggler ekit-nav-menu--overlay"></div><?php
+
+
+            /**
+             * Editor: Widget Empty Fallback on Responsive View
+             */
+            if ( Plugin::$instance->editor->is_edit_mode() ):
+                ?><span class="ekit-nav-menu--empty-fallback">&nbsp;</span><?php
+            endif;
         }
     }
-    protected function _content_template() { }
 }

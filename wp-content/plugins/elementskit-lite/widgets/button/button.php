@@ -61,7 +61,7 @@ class ElementsKit_Widget_Button extends Widget_Base {
 			[
 				'label' =>esc_html__( 'URL', 'elementskit-lite' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' =>esc_url('http://your-link.com'),
+				'placeholder' =>esc_url('https://wpmet.com'),
 				'dynamic' => [
                     'active' => true,
                 ],
@@ -281,9 +281,6 @@ class ElementsKit_Widget_Button extends Widget_Base {
 		$this->end_controls_tab();
 		$this->end_controls_tabs();
 		$this->end_controls_section();
-
-
-
 
         $this->start_controls_section(
 			'ekit_btn_border_style_tabs',
@@ -541,7 +538,13 @@ class ElementsKit_Widget_Button extends Widget_Base {
         $btn_text = $settings['ekit_btn_text'];
         $btn_class = ($settings['ekit_btn_class'] != '') ? $settings['ekit_btn_class'] : '';
         $btn_id = ($settings['ekit_btn_id'] != '') ? 'id='.$settings['ekit_btn_id'] : '';
-        $icon_align = $settings['ekit_btn_icon_align'];
+
+		$options_ekit_btn_icon_align = array_keys([
+			'left' => esc_html__( 'Before', 'elementskit-lite' ),
+			'right' => esc_html__( 'After', 'elementskit-lite' ),
+		]);
+
+        $icon_align = \ElementsKit_Lite\Utils::esc_options($settings['ekit_btn_icon_align'], $options_ekit_btn_icon_align, 'left');
 
 		if ( ! empty( $settings['ekit_btn_url']['url'] ) ) {
 			$this->add_link_attributes( 'button', $settings['ekit_btn_url'] );
@@ -599,6 +602,4 @@ class ElementsKit_Widget_Button extends Widget_Base {
 		</div>
         <?php
     }
-
-    protected function _content_template() { }
 }

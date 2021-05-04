@@ -71,11 +71,11 @@ class Attr{
 
 
     public function register_settings_contents__settings(){
-        include self::get_dir() . 'views/settings-init.php';
+        include self::get_dir() . 'views/init.php';
     }
 
     public function user_consent_for_banner(){
-        include self::get_dir() . 'views/user-consent-for-banner.php';
+        include self::get_dir() . 'views/layout-user-consent-for-banner.php';
     }
 
 }

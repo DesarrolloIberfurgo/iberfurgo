@@ -64,7 +64,7 @@
                                             <option value=""><?php esc_html_e('No icon', 'elementskit-lite'); ?></option>
                                             <?php
                                     foreach( self::get_icons() as $icon_class){
-                                        echo "<option value='$icon_class'>'$icon_class'</option>";
+                                        echo "<option value='".esc_attr($icon_class)."'>'".esc_html($icon_class)."'</option>";
                                     }
                                 ?>
                                         </select>

@@ -312,7 +312,6 @@ class ElementsKit_Widget_Fluent_Forms extends Widget_Base {
             [
                 'name' => 'heading_description_typography',
                 'label' => __('Typography', 'elementskit-lite'),
-                'scheme' => Scheme_Typography::TYPOGRAPHY_4,
                 'selector' => '{{WRAPPER}} .ekit-fluentform-widget-description',
                 'condition' => [
                     'custom_title_description' => 'yes',
@@ -1936,10 +1935,6 @@ class ElementsKit_Widget_Fluent_Forms extends Widget_Base {
                 [
                     'label'     => __( 'Label Color', 'elementskit-lite' ),
                     'type'      => Controls_Manager::COLOR,
-                    'scheme'    => [
-                        'type'  => Scheme_Color::get_type(),
-                        'value' => Scheme_Color::COLOR_1,
-                    ],
                     'selectors' => [
                         '{{WRAPPER}} .ff-el-progress-status' => 'color: {{VALUE}}',
                     ],
@@ -1954,7 +1949,6 @@ class ElementsKit_Widget_Fluent_Forms extends Widget_Base {
                 [
                     'name' => 'form_progressbar_label_typography',
                     'label' => __( 'Typography', 'elementskit-lite' ),
-                    'scheme' => Scheme_Typography::TYPOGRAPHY_1,
                     'selector' => '{{WRAPPER}} .ff-el-progress-status',
                     'condition' => [
                         'show_label'    => 'yes'
@@ -2032,10 +2026,6 @@ class ElementsKit_Widget_Fluent_Forms extends Widget_Base {
                 [
                     'label' => __( 'Text Color', 'elementskit-lite' ),
                     'type'  =>   Controls_Manager::COLOR,
-                    'scheme' => [
-                        'type' =>   Scheme_Color::get_type(),
-                        'value' =>  Scheme_Color::COLOR_1,
-                    ],
                     'selectors' => [
                         '{{WRAPPER}} .ff-el-progress-bar span' => 'color: {{VALUE}};',
                     ],
@@ -2167,7 +2157,6 @@ class ElementsKit_Widget_Fluent_Forms extends Widget_Base {
                 [
                     'name' => 'form_pagination_button_typography',
                     'label' => __( 'Typography', 'elementskit-lite' ),
-                    'scheme' => Scheme_Typography::TYPOGRAPHY_1,
                     'selector' => '{{WRAPPER}} .step-nav button',
                 ]
             );
@@ -2628,6 +2617,8 @@ class ElementsKit_Widget_Fluent_Forms extends Widget_Base {
         $settings = $this->get_settings_for_display();
         extract($settings);
 
+        $form_list_id_sanitize = isset($form_list) ? intval($form_list) : 0;
+
         $this->add_render_attribute(
             'ekit_fluent_forms_widget_wrapper',
             [
@@ -2658,7 +2649,7 @@ class ElementsKit_Widget_Fluent_Forms extends Widget_Base {
             $this->add_render_attribute( 'ekit_fluent_forms_widget_wrapper', 'class', 'fluentform-widget-align-'.$form_container_alignment.'' );
         }
 
-        if ( ! empty( $form_list ) ) { ?>
+        if ( ! empty( $form_list_id_sanitize ) ) { ?>
 
             <div <?php echo $this->get_render_attribute_string('ekit_fluent_forms_widget_wrapper'); ?>>
 
@@ -2671,13 +2662,13 @@ class ElementsKit_Widget_Fluent_Forms extends Widget_Base {
                         <?php } ?>
                         <?php if ($form_description_custom != '') { ?>
                             <p class="ekit-fluentform-widget-description">
-                                <?php echo $this->parse_text_editor($form_description_custom); ?>
+                                <?php echo \ElementsKit_Lite\Utils::kses($form_description_custom); ?>
                             </p>
                         <?php } ?>
                     </div>
                 <?php } ?>
 
-                <?php echo do_shortcode('[fluentform id="' . $form_list . '"]'); ?>
+                <?php echo do_shortcode('[fluentform id="' . $form_list_id_sanitize . '"]'); ?>
             </div>
 
             <?php

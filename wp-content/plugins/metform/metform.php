@@ -5,10 +5,11 @@ defined( 'ABSPATH' ) || exit;
  * Plugin Name: MetForm
  * Plugin URI:  http://products.wpmet.com/metform/
  * Description: Most flexible and design friendly form builder for Elementor
- * Version: 1.4.4
+ * Version: 1.4.7
  * Author: Wpmet
  * Author URI:  https://wpmet.com
  * Text Domain: metform
+ * Domain Path: /languages
  * License:  GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */

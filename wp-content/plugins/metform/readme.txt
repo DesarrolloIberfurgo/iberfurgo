@@ -3,7 +3,7 @@ Contributors: ataurr, wpmet, emranio, prappo_p, atiqsu, easin55474, enamulhoquem
 Tags: Form builder, Elementor form builder, contact form, custom form, forms,  drag & drop form builder
 Requires at least: 4.8
 Tested up to: 5.5.1
-Stable tag: 1.4.4
+Stable tag: 1.4.7
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -23,7 +23,9 @@ Metform builder contact form gives you full flexibility to build any form on the
 Metform built with elementor. Every field is an elementor widget.
 
 
-[ **Check our Live Demos** ](https://products.wpmet.com/metform/#demo) - [ **Buy Pro** ](https://products.wpmet.com/metform/pricing/)
+
+###USEFUL LINKS###
+> **[Landing Page + Form Demo](https://products.wpmet.com/metform/)** |  **[Need Support?](http://wpmet.com/support-help/)** | **[Documentation](https://help.wpmet.com/docs-cat/metform/)** | **[Video Tutorials](https://www.youtube.com/watch?v=zg1QIouKO_Q&list=PL3t2OjZ6gY8NoB_48DwWKUDRtBEuBOxSc&ab_channel=Wpmet)** |  [ **Buy Pro** ](https://products.wpmet.com/metform/pricing/)
 
 
 Metform allows you to create any beautiful contact forms, feedback form, subscription forms, and other types of forms for your site in minutes, not hours! Full flexibility on your own hand.
@@ -218,9 +220,24 @@ Connect with Gmail, Slack, Mailchimp, and many more.
 
 
 
-
-
 == Changelog ==
+Version 1.4.7
+Fix: Fixed Scheme Namespace debug log issue
+Fix: Rest api integration form broken
+Fix: Required check for character length validation.
+
+Version 1.4.6
+Fix: Date widget js minification
+
+Version 1.4.5
+added: Added pre-defined control for checkbox widget
+added: Added pre-defined control for radio widget
+Fix: Display position left for checkbox widget
+Fix: Display position left for radio widget
+fix: Opt-in widget style controls
+fix: GDPR widget style controls
+fix: File-upload widget input padding, position left control
+
 Version 1.4.4
 Fix: Showing response message on the screen after form submission
 Fix: MailChimp multiple audience saving issue
@@ -394,7 +411,7 @@ New: Added Response message at the top of the form by default
 Version 1.3.0-beta1
 New: All form widgets are supported by ReactJS
 Huge optimization
-""Metform 1.3.0-beta1 is a major update. We have reconstructed the widgets with react and huge optimization for future proof. If you faced any issue please contact our support team from here https://help.wpmet.com/""
+""Metform 1.3.0-beta1 is a major update. We have reconstructed the widgets with react and huge optimization for future proof. If you faced any issue please contact our support team from here https://wpmet.com/support-ticket""
 
 Version v1.2.3
 New: .pot file added
@@ -479,7 +496,7 @@ Added widget area to edit save use from same page.
 
 
 == Upgrade Notice ==
-Metform 1.3.0-beta1 is a major update. We have reconstructed the widgets with react and huge optimization for future proof. If you faced any issue please contact our support team from here https://help.wpmet.com/
+Metform 1.3.0-beta1 is a major update. We have reconstructed the widgets with react and huge optimization for future proof. If you faced any issue please contact our support team from here https://wpmet.com/support-ticket
 
 == Installation ==
 

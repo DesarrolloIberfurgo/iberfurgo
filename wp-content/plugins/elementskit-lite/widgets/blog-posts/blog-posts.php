@@ -1450,10 +1450,6 @@ class ElementsKit_Widget_Blog_Posts extends Widget_Base {
            [
                'label' => esc_html__( 'Triangle Background', 'elementskit-lite' ),
                'type' => Controls_Manager::COLOR,
-               'scheme' => [
-                   'type' => Scheme_Color::get_type(),
-                   'value' => Scheme_Color::COLOR_1,
-               ],
                'selectors' => [
                    '{{WRAPPER}} .elementskit-meta-lists.elementskit-style-tag > .elementskit-single-meta::before' => 'color: {{VALUE}}',
                ],
@@ -2662,7 +2658,7 @@ class ElementsKit_Widget_Blog_Posts extends Widget_Base {
                             <?php if ( 'yes' == $ekit_blog_posts_feature_img && has_post_thumbnail() ): ?>
                                 <div class="<?php echo esc_attr( $column_size.' '.$img_order ); ?>">
                                     <a href="<?php the_permalink(); ?>" class="elementskit-entry-thumb">
-                                        <img src="<?php the_post_thumbnail_url( $ekit_blog_posts_feature_img_size_size ); ?>" alt="<?php the_title(); ?>">
+                                        <img src="<?php the_post_thumbnail_url( esc_attr( $ekit_blog_posts_feature_img_size_size ) ); ?>" alt="<?php the_title(); ?>">
                                     </a><!-- .elementskit-entry-thumb END -->
                                 </div>
                             <?php endif; ?>
@@ -2708,7 +2704,7 @@ class ElementsKit_Widget_Blog_Posts extends Widget_Base {
                         <div class="elementskit-entry-header">
                             <?php if ( 'elementskit-post-image-card' == $ekit_blog_posts_layout_style && 'yes' == $ekit_blog_posts_feature_img && has_post_thumbnail() ): ?>
                                 <a href="<?php the_permalink(); ?>" class="elementskit-entry-thumb">
-                                    <img src="<?php the_post_thumbnail_url( $ekit_blog_posts_feature_img_size_size ); ?>" alt="<?php the_title(); ?>">
+                                    <img src="<?php the_post_thumbnail_url( esc_attr( $ekit_blog_posts_feature_img_size_size ) ); ?>" alt="<?php the_title(); ?>">
                                 </a><!-- .elementskit-entry-thumb END -->
                                 <?php if('yes' == $settings['ekit_blog_posts_floating_date']) : ?>
                                 <?php if($ekit_blog_posts_floating_date_style == 'style1'): ?>

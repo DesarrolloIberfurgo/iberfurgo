@@ -44,8 +44,8 @@ class Init{
 	public function register_widgets($widgets_manager){
 		$widgets = get_posts([
 			'post_type'   => 'elementskit_widget',
-			'post_status' => 'publish'
-            // 'numberposts' => 0
+			'post_status' => 'publish',
+            'numberposts' => -1
 		]);
 
 		$upload = wp_upload_dir();

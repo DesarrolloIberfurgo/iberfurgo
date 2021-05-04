@@ -230,7 +230,6 @@ class ElementsKit_Widget_Piechart extends Widget_Base {
             [
                 'name' => 'ekit_piechart_title_typography_group',
                 'label' => esc_html__( 'Title Typography', 'elementskit-lite' ),
-                'scheme' => Scheme_Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .ekit-piechart-title',
                 'condition' => [
                     'ekit_piechart_style' => 'withcontent'
@@ -291,7 +290,6 @@ class ElementsKit_Widget_Piechart extends Widget_Base {
             [
                 'name' => 'ekit_piechart_content_typography_group',
                 'label' => esc_html__( 'Typography', 'elementskit-lite' ),
-                'scheme' => Scheme_Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .withcontent p',
                 'condition' => [
                     'ekit_piechart_style' => 'withcontent'

@@ -133,16 +133,16 @@ endforeach;
 
 <div class="wpmet-dashboard-widget-block">
     <div class="wpmet-footer-bar">
-        <a href="https://help.wpmet.com/" target="_blank">
-            <?php echo esc_html__('Need Help?', $this->text_domain); ?> 
+        <a href="https://wpmet.com/support-ticket" target="_blank">
+            <?php echo esc_html__('Need Help?', 'metform'); ?> 
             <span aria-hidden="true" class="dashicons dashicons-external"></span>
         </a>
         <a href="https://wpmet.com/blog/?utm_source=wpmet_announcements&utm_medium=inplugin_campaign&utm_campaign=blog" target="_blank">
-        <?php echo esc_html__('Blog', $this->text_domain) ;?> 
+        <?php echo esc_html__('Blog', 'metform') ;?> 
             <span aria-hidden="true" class="dashicons dashicons-external"></span>
         </a>
         <a href="https://go.wpmet.com/facebook-group" target="_blank" style="color: #27ae60;">
-            <?php echo esc_html__('Facebook Community', $this->text_domain); ?> 
+            <?php echo esc_html__('Facebook Community', 'metform'); ?> 
             <span aria-hidden="true" class="dashicons dashicons-external"></span>
         </a>
     </div>

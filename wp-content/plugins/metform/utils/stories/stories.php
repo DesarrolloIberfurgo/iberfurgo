@@ -252,7 +252,7 @@ if (!class_exists('\Wpmet\Libs\Stories')):
 
             $this->title = (isset($this->title) && !empty($this->title) ? $this->title . ' ' : '') . 'Stories';
 
-            wp_add_dashboard_widget( 'wpmet-stories', __( 'Wpmet Stories', $this->text_domain ), [ $this, 'show' ] );
+            wp_add_dashboard_widget( 'wpmet-stories', __( 'Wpmet Stories', 'metform' ), [ $this, 'show' ] );
 
             // Move our widget to top.
             global $wp_meta_boxes;

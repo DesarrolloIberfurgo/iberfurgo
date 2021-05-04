@@ -342,7 +342,7 @@ Class MetForm_Input_File_Upload extends Widget_base{
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'mf_file_upload_file_name_typography',
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .mf-file-name span',
 			]
 		);
@@ -449,7 +449,7 @@ Class MetForm_Input_File_Upload extends Widget_base{
 				</label>
 			<?php endif; ?>
 
-			<div className="mf-file-upload-container">
+			<div className="mf-file-upload-container multi-option-input-type">
 				<input
 					type="file"
 					className="mf-input mf-input-file-upload <?php echo $class; ?>"
@@ -468,7 +468,7 @@ Class MetForm_Input_File_Upload extends Widget_base{
 					?>
 				</label>
 				<div className="mf-file-name">
-					<span>${parent.getFileLabel( '<?php echo esc_attr($mf_input_name); ?>', '<?php esc_html_e($mf_input_no_file); ?>' )}</span>
+					<span>${parent.getFileLabel( '<?php echo esc_attr($mf_input_name); ?>', '<?php esc_html_e($mf_input_no_file, 'metform'); ?>' )}</span>
 				</div>
 				
 			</div>

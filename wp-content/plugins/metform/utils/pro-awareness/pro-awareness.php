@@ -15,7 +15,7 @@ if(!class_exists('\Wpmet\Libs\Pro_Awareness')) :
 		private $plugin_file;
 		private $parent_menu_slug;
 		private $menu_slug = '_get_help';
-		private $default_grid_link  = 'https://help.wpmet.com/';
+		private $default_grid_link  = 'https://wpmet.com/support-ticket';
 		private $default_grid_title = 'Support Center';
 		private $default_grid_thumbnail = '';
 		private $default_grid_desc  = '';
@@ -153,7 +153,7 @@ if(!class_exists('\Wpmet\Libs\Pro_Awareness')) :
 
 				$this->grids[] = [
 					'url'         => $conf['url'],
-					'title'       => empty($conf['title']) ? esc_html__('Default Title', $this->text_domain) : $conf['title'],
+					'title'       => empty($conf['title']) ? esc_html__('Default Title', 'metform') : $conf['title'],
 					'thumbnail'   => empty($conf['thumbnail']) ? '' : esc_url($conf['thumbnail']),
 					'description' => empty($conf['description']) ? '' : $conf['description'],
 				];

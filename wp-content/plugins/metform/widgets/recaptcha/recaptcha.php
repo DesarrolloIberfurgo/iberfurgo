@@ -37,7 +37,7 @@ Class MetForm_Input_Recaptcha extends Widget_Base{
 		$this->add_control(
 			'mf_recaptcha_notice_info',
 			[
-				'label' => esc_html__( 'reCAPTCHA configure: ', 'metform-pro' ),
+				'label' => esc_html__( 'reCAPTCHA configure: ', 'metform' ),
 				'type' => Controls_Manager::RAW_HTML,
 				'raw' => \MetForm\Utils\Util::kses( 'Turn on recaptcha from form setting.<br>Then you have to must configure recaptcha site and secret key from MetForm -> Settings <a target="__blank" href="'.get_dashboard_url().'admin.php?page=metform-menu-settings'.'">from here.</a><br><a target="__blank" href="https://help.wpmet.com/docs/form-settings/#2-recaptcha-integration">See Documentation.</a>', 'metform-pro' ),
 				'content_classes' => 'mf-input-map-api-notice',
@@ -67,8 +67,8 @@ Class MetForm_Input_Recaptcha extends Widget_Base{
 				'label' => esc_html__( 'Warning Text Color:', 'metform' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'default' => '#f00',
 				'selectors' => [
@@ -82,7 +82,7 @@ Class MetForm_Input_Recaptcha extends Widget_Base{
 			[
 				'name' => 'mf_input_warning_text_typography',
 				'label' => esc_html__( 'Warning Text Typography', 'metform' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .mf-error-message',
 			]
 		);

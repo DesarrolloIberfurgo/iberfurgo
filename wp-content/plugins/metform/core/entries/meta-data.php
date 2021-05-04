@@ -79,7 +79,7 @@ class Meta_Data
     {
         add_meta_box(
             'metform_entries__form_data',
-            esc_html__('Data'),
+            esc_html__('Data', 'metform'),
             [$this, 'show_form_data_cmb'],
             $this->cpt->get_name(),
             'normal',
@@ -101,7 +101,7 @@ class Meta_Data
 
         add_meta_box(
             'metform_form__entry_browser_data',
-            esc_html__('Browser Data'),
+            esc_html__('Browser Data', 'metform'),
             [$this, 'show_browser_data_cmb'],
             $this->cpt->get_name(),
             'side',
@@ -149,7 +149,7 @@ class Meta_Data
 
         add_meta_box(
             'metform_entries__file_upload',
-            esc_html__('Files'),
+            esc_html__('Files', 'metform'),
             [$this, 'show_file_upload_cmb'],
             $this->cpt->get_name(),
             'normal',
@@ -181,7 +181,7 @@ class Meta_Data
             $file_url = isset($value['url']) ? $value['url'] : '';
             $file_type = isset($value['type']) ? $value['type'] : '';
             if ($file_url != '') {
-                echo esc_html(((isset($this->fields[$key]->mf_input_label)) ? $this->fields[$key]->mf_input_label : $key) . " : ") . "<a target='_blank' class='mf-file-url' href=" . esc_url($file_url) . " download>" . esc_html__('Download', 'elementskit') . "</a>";
+                echo esc_html(((isset($this->fields[$key]->mf_input_label)) ? $this->fields[$key]->mf_input_label : $key) . " : ") . "<a target='_blank' class='mf-file-url' href=" . esc_url($file_url) . " download>" . esc_html__('Download', 'metform') . "</a>";
                 echo((in_array($file_type, ['image/jpeg', 'image/png', 'image/jpg', 'image/gif', 'image/ico'])) ? ' | <a href="#" class="" data-toggle="modal" data-target="#mfFileUploadModal' . $key . '">' . esc_html__('View', 'metform') . '</a>' : '');
             } else {
                 echo esc_html(((isset($this->fields[$key]->mf_input_label)) ? $this->fields[$key]->mf_input_label : $key) . " : ") . esc_html__('This file is not uploaded.', 'metform');
@@ -221,7 +221,7 @@ class Meta_Data
     {
         add_meta_box(
             'metform_entries__woo_checkout_status',
-            esc_html__('Woocommerce Checkout'),
+            esc_html__('Woocommerce Checkout', 'metform'),
             [$this, 'show_woo_checkout_status_cmb'],
             $this->cpt->get_name(),
             'side',
@@ -283,7 +283,7 @@ class Meta_Data
 
         add_meta_box(
             'metform_entries__payment_status',
-            esc_html__('Payment'),
+            esc_html__('Payment', 'metform'),
             [$this, 'show_form_payment_status_cmb'],
             $this->cpt->get_name(),
             'side',

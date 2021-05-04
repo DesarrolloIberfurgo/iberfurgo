@@ -270,6 +270,7 @@
 .ibf_pl_10 { padding-left: 10px!important;}
 .ibf_pl_15 { padding-left: 15px!important;}
 .ibf_pl_20 { padding-left: 20px!important;}
+.ibf_pl_32 { padding-left: 32px!important;}
 
 .ibf_pr_0 { padding-right: 0px!important;}
 .ibf_pr_1 { padding-right: 1px!important;}
@@ -323,6 +324,14 @@
     background-image: url("../imagenes_iberfurgo/oficinas_iberfurgo/iberfurgo-oficina-torrejon.jpg") !important;
 }
 
+.ibf_head_oficina_alicante {
+    background-image: url("../imagenes_iberfurgo/oficinas_iberfurgo/iberfurgo-oficina-alicante.jpg") !important;
+}
+
+.ibf_head_oficina_palma-del-rio {
+    background-image: url("../imagenes_iberfurgo/oficinas_iberfurgo/iberfurgo-oficina-palma-del-rio.jpg") !important;
+}
+
 #page_caption.hasbg:after {
     background-image: none !important;
 }
@@ -373,13 +382,33 @@ a, .post_detail.single_post {color: #000000!important;}
 
  .card-title { margin-bottom: 0px!important;}
 
+ .ibf_img_contact { 
+    font-size: 18px!important;
+    text-align: center!important;
+    padding: 113px 0px!important;
+    color: rgb(255, 255, 255) !important;
+    z-index: 0!important;
+    margin-top: 85px;
+    /* background-color: rgba(0,0,0,0.8)!important;
+    filter: brightness(0.4)!important; */
+    
+    background-image: url("../imagenes_iberfurgo/contacto/contact-photo.jpg") !important;
+    background-position: center center!important;
+ }
+
+ #jarallax-container-0 {
+    background-color: rgba(0,0,0,0.8)!important;
+    filter: brightness(0.4)!important;
+ }
+
 /*Moviles*/
 @media (max-width: 480px) {
-    .above_top_bar {display: none!important;}
-    .ibf_slider{height: 200px!important; max-height: 200px!important; margin-bottom: 0px!important;}
+    .above_top_bar { display: none!important; }
+    .ibf_slider { height: 200px!important; max-height: 200px!important; margin-bottom: 0px!important; }
     .ibf_widthm_100 { width: 100%!important;}
     .ibf_select_form { width: 100%!important;}
     .ibf_button_result {width: 80%;}
+    .ibf_mv_mb_15 { margin-bottom: 15px!important;}
 }
 
 /*pantllas superiores FHD hasta 2k*/

@@ -8,8 +8,8 @@ use \Elementor\Group_Control_Box_Shadow;
 use \Elementor\Group_Control_Image_Size;
 use \Elementor\Group_Control_Typography;
 use \Elementor\Utils;
-use \Elementor\Scheme_Typography;
-use \Elementor\Scheme_Color;
+use \Elementor\Core\Schemes\Typography;
+use \Elementor\Core\Schemes\Color;
 use \Elementor\Repeater;
 
 defined( 'ABSPATH' ) || exit;
@@ -296,7 +296,7 @@ trait Common_Controls{
 				],
 				'selectors' => [
 					'{{WRAPPER}} .mf-input-label' => 'width: {{SIZE}}{{UNIT}};',
-					'{{WRAPPER}} .mf-input-wrapper .mf-input:not(.mf-left-parent)' => 'display: inline-block; width: calc(100% - {{SIZE}}{{UNIT}} - 7px)',
+					'{{WRAPPER}} .mf-input-wrapper .mf-input:not(.mf-left-parent), {{WRAPPER}} .mf-input-wrapper .multi-option-input-type' => 'display: inline-block; width: calc(100% - {{SIZE}}{{UNIT}} - 7px)',
 					'{{WRAPPER}} .mf-input-wrapper > .iti' => 'width: calc(100% - {{SIZE}}{{UNIT}} - 7px)',
 					'{{WRAPPER}} .mf-input-calculation-total' => 'width: calc(100% - {{SIZE}}{{UNIT}} - 7px); display: inline-block;',
 					'{{WRAPPER}} .range-slider' => 'width: calc(100% - {{SIZE}}{{UNIT}} - 7px)',
@@ -315,8 +315,8 @@ trait Common_Controls{
                 'label' => esc_html__( 'Color', 'metform' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .mf-input-label' => 'color: {{VALUE}}',
@@ -332,7 +332,7 @@ trait Common_Controls{
 			[
 				'name' => 'mf_input_label_typography',
 				'label' => esc_html__( 'Typography', 'metform' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .mf-input-label',
 				'condition'    => [
                     'mf_input_label_status' => 'yes',
@@ -374,8 +374,8 @@ trait Common_Controls{
 				'label' => esc_html__( 'Required Indicator Color:', 'metform' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'default' => '#f00',
 				'selectors' => [
@@ -406,8 +406,8 @@ trait Common_Controls{
 				'label' => esc_html__( 'Warning Text Color:', 'metform' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'default' => '#f00',
 				'selectors' => [
@@ -436,7 +436,7 @@ trait Common_Controls{
 			[
 				'name' => 'mf_input_warning_text_typography',
 				'label' => esc_html__( 'Warning Text Typography', 'metform' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .mf-error-message',
 				'conditions' => [
 					'relation' => 'or',
@@ -466,6 +466,7 @@ trait Common_Controls{
 				'size_units' => [ 'px', '%', 'em' ],
 				'selectors' => [
 					'{{WRAPPER}} .mf-input' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .mf-input-file-upload-label' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 					'{{WRAPPER}} .mf-input-calculation-total' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 					'{{WRAPPER}} .mf_select__control, {{WRAPPER}} .mf-input-select .mf_select__option, {{WRAPPER}} .mf_multiselect__control .mf_multiselect__value-container, {{WRAPPER}} .mf_multiselect__option, {{WRAPPER}} .mf_multiselect__menu-notice--no-options' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 					'{{WRAPPER}} .mf-input-wrapper .range-slider' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -481,6 +482,7 @@ trait Common_Controls{
                 'size_units' => [ 'px', '%', 'em' ],
 				'selectors' => [
 					'{{WRAPPER}} .mf-input' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .mf-input-file-upload-label' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 					'{{WRAPPER}} .mf-input-calculation-total' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 					'{{WRAPPER}} .mf-input-wrapper .range-slider' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}}',
 				],
@@ -503,8 +505,8 @@ trait Common_Controls{
 					'label' => esc_html__( 'Input Color', 'metform' ),
 					'type' => Controls_Manager::COLOR,
 					'scheme' => [
-						'type' => Scheme_Color::get_type(),
-						'value' => Scheme_Color::COLOR_1,
+						'type' => \Elementor\Core\Schemes\Color::get_type(),
+						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 					],
 					'selectors' => [
 						'{{WRAPPER}} .mf-input, {{WRAPPER}} {{WRAPPER}} .mf-input-wrapper .iti--separate-dial-code .iti__selected-flag, {{WRAPPER}} .mf-input-wrapper .iti--separate-dial-code .iti__selected-dial-code' 				=> 'color: {{VALUE}}',
@@ -567,12 +569,13 @@ trait Common_Controls{
 					'label' => esc_html__( 'Input Color', 'metform' ),
 					'type' => Controls_Manager::COLOR,
 					'scheme' => [
-						'type' => Scheme_Color::get_type(),
-						'value' => Scheme_Color::COLOR_1,
+						'type' => \Elementor\Core\Schemes\Color::get_type(),
+						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 					],
 					'selectors' => [
 						'{{WRAPPER}} .mf-input:hover, {{WRAPPER}} .mf-input-wrapper:hover .iti--separate-dial-code .iti__selected-flag, {{WRAPPER}} .mf-input-wrapper:hover .iti--separate-dial-code .iti__selected-dial-code' => 'color: {{VALUE}}',
 						'{{WRAPPER}} .irs--round .irs-handle:hover'	=> 'border-color: {{VALUE}}',
+						'{{WRAPPER}} .mf-input-file-upload-label:hover'	=> 'color: {{VALUE}}',
 						
 						'{{WRAPPER}} .mf-input:hover .mf_select__single-value' => 'color: {{VALUE}}',
 	
@@ -626,13 +629,13 @@ trait Common_Controls{
 					'label' => esc_html__( 'Input Color', 'metform' ),
 					'type' => Controls_Manager::COLOR,
 					'scheme' => [
-						'type' => Scheme_Color::get_type(),
-						'value' => Scheme_Color::COLOR_1,
+						'type' => \Elementor\Core\Schemes\Color::get_type(),
+						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 					],
 					'selectors' => [
 						'{{WRAPPER}} .mf-input:focus, {{WRAPPER}} .mf-input-wrapper:focus .iti--separate-dial-code .iti__selected-flag, {{WRAPPER}} .mf-input-wrapper:focus .iti--separate-dial-code .iti__selected-dial-code' => 'color: {{VALUE}}',
 						'{{WRAPPER}} .irs--round .irs-handle:focus'	=> 'border-color: {{VALUE}}',
-						
+						'{{WRAPPER}} .mf-input-file-upload-label:hover'	=> 'color: {{VALUE}}',
 						'{{WRAPPER}} .mf-file-upload-container:focus .mf-input-file-upload-label, {{WRAPPER}} .mf-file-upload-container:focus .mf-image-label, {{WRAPPER}} .mf-input-calculation-total:focus'	=> 'color: {{VALUE}};',
 
 						'{{WRAPPER}} .mf-file-upload-container:focus .mf-input-file-upload-label svg path'	=> 'stroke: {{VALUE}}; fill: {{VALUE}};',
@@ -687,7 +690,7 @@ trait Common_Controls{
 				[
 					'name' => 'mf_input_typgraphy',
 					'label' => esc_html__( 'Typography', 'metform' ),
-					'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 					'selector' => '{{WRAPPER}} .mf-input, {{WRAPPER}} .irs--round .irs-single, {{WRAPPER}} .asRange .asRange-pointer .asRange-tip, {{WRAPPER}} .mf-file-upload-container .mf-input-file-upload-label, {{WRAPPER}} .mf-input-wrapper .iti--separate-dial-code .iti__selected-flag, {{WRAPPER}} .mf-input-calculation-total, {{WRAPPER}} .mf-input-wrapper .input-range__label-container',
 				]
 			);
@@ -740,7 +743,7 @@ trait Common_Controls{
 			[
 				'name' => 'mf_input_place_holder_typography',
 				'label' => esc_html__( 'Typography', 'metform' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .text, {{WRAPPER}} .mf-input::placeholder, {{WRAPPER}} .mf_select__placeholder',
 			]
 		);
@@ -751,8 +754,8 @@ trait Common_Controls{
 				'label' => esc_html__( 'Color', 'metform' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
                     '{{WRAPPER}} .mf-input:not([type="submit"]):not([type="checkbox"]):not([type="radio"])::-webkit-input-placeholder' => 'color: {{VALUE}};',
@@ -779,7 +782,7 @@ trait Common_Controls{
 			[
 				'name' => 'mf_input_help_text_typography',
 				'label' => esc_html__( 'Typography', 'metform' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .mf-input-help',
 			]
 		);
@@ -790,8 +793,8 @@ trait Common_Controls{
 				'label' => esc_html__( 'Color', 'metform' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .mf-input-help' => 'color: {{VALUE}}',

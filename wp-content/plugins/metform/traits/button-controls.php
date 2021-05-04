@@ -8,8 +8,8 @@ use \Elementor\Group_Control_Box_Shadow;
 use \Elementor\Group_Control_Image_Size;
 use \Elementor\Group_Control_Typography;
 use \Elementor\Utils;
-use \Elementor\Scheme_Typography;
-use \Elementor\Scheme_Color;
+use \Elementor\Core\Schemes\Typography;
+use \Elementor\Core\Schemes\Color;
 use \Elementor\Repeater;
 use \Elementor\Group_Control_Text_Shadow;
 
@@ -378,8 +378,8 @@ trait Button_Controls{
 				'label' => esc_html__( 'Icon Color', 'metform' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'default' => '#FFFFFF',
 				'selectors' => [

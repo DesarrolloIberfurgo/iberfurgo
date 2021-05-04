@@ -22,6 +22,8 @@ class Enqueue_Scripts{
         wp_register_script( 'ekit-slick', \ElementsKit_Lite::widget_url() . 'init/assets/js/slick.min.js', [], \ElementsKit_Lite::version(), true );
 
         // Enqueue Scripts
+        wp_enqueue_script( 'ekit-popover', 'https://unpkg.com/popper.js@1', [], \ElementsKit_Lite::version(), true );
+        wp_enqueue_script( 'ekit-typpy', 'https://unpkg.com/tippy.js@5', [], \ElementsKit_Lite::version(), true );
         wp_enqueue_script( 'elementskit-elementor', \ElementsKit_Lite::widget_url() . 'init/assets/js/elementor.js', ['jquery', 'elementor-frontend', 'ekit-slick'], \ElementsKit_Lite::version(), true );
 
         // added fluent form styles on the editor

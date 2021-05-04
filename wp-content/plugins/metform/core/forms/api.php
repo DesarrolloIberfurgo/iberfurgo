@@ -314,7 +314,35 @@ class Api extends \MetForm\Base\Api
             $return['msg'] = 'Helpscout access token';
             $return['access_token'] = $access_token;
             update_option('mf_helpscout_access_token',$access_token);
-		}
+        }
+        
+        $url = 'https://api.helpscout.net/v2/mailboxes';
+
+    $mailboxes = [];
+
+    $token = $access_token;
+
+    $response = wp_remote_get($url, [
+      'method' => 'GET',
+      'headers' => [
+
+        'Authorization' => 'Bearer ' . $token,
+        'Content-Type' => 'application/json; charset=utf-8'
+      ],
+    ]);
+
+    $data = json_decode( wp_remote_retrieve_body( $response ) , true);
+
+    foreach ($data['_embedded']['mailboxes'] as $mailbox) {
+
+        array_push( $mailboxes, [
+            'id' => $mailbox['id'],
+            'name' => $mailbox['name']
+        ]);
+        
+    }
+
+    update_option('mf_helpscout_mailboxes',$mailboxes);
 
 		return $return;
     }

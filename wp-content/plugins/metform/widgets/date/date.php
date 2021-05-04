@@ -439,7 +439,7 @@ Class MetForm_Input_Date extends Widget_Base{
 			[
 				'name' => 'mf_date_calender_typography',
 				'label' => esc_html__( 'Calendar Typography', 'metform' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .mf-input-wrapper .flatpickr-calendar',
 				'exclude' => [ 'font_size', 'text_decoration', 'line_height', 'letter_spacing' ],
 			]

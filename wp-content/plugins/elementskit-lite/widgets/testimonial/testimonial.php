@@ -836,7 +836,6 @@ class ElementsKit_Widget_Testimonial extends Widget_Base {
 			[
 				'name' => 'ekit_testimonial_description_typography',
 				'label' => esc_html__( 'Typography', 'elementskit-lite' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .elementskit-single-testimonial-slider  .elementskit-commentor-content > p, {{WRAPPER}} .elementskit-testimonial_card .elementskit-commentor-coment',
 			]
 		);
@@ -2323,6 +2322,4 @@ class ElementsKit_Widget_Testimonial extends Widget_Base {
 			require Handler::get_dir() . 'style/'.$style.'.php';
 	 	endif; // end if check testimonila array
     }
-
-    protected function _content_template() { }
 }

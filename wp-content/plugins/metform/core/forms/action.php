@@ -121,7 +121,7 @@ Class Action{
             return;
         }
 
-        $this->title = ($this->form_setting['form_title'] != '') ? $this->form_setting['form_title'] : 'New Form # '.time();
+        $this->title = ($this->form_setting['form_title'] != '') ? $this->form_setting['form_title'] : 'Form # '.time();
 
         if( isset( $this->form_setting['form_title'] ) ){
             $update_post = array(

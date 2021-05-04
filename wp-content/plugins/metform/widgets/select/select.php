@@ -235,8 +235,8 @@ Class MetForm_Input_Select extends Widget_Base{
                 'label' => esc_html__( 'Color', 'metform' ),
                 'type' => Controls_Manager::COLOR,
                 'scheme' => [
-                    'type' => Scheme_Color::get_type(),
-                    'value' => Scheme_Color::COLOR_1,
+                    'type' => \Elementor\Core\Schemes\Color::get_type(),
+                    'value' => \Elementor\Core\Schemes\Color::COLOR_1,
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .mf-input-select .mf_select__option' => 'color: {{VALUE}}',
@@ -270,8 +270,8 @@ Class MetForm_Input_Select extends Widget_Base{
                 'label' => esc_html__( 'Color', 'metform' ),
                 'type' => Controls_Manager::COLOR,
                 'scheme' => [
-                    'type' => Scheme_Color::get_type(),
-                    'value' => Scheme_Color::COLOR_1,
+                    'type' => \Elementor\Core\Schemes\Color::get_type(),
+                    'value' => \Elementor\Core\Schemes\Color::COLOR_1,
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .mf-input-select .mf_select__option:hover, {{WRAPPER}} .mf-input-select .mf_select__option.mf_select__option--is-focused' => 'color: {{VALUE}}',
@@ -305,8 +305,8 @@ Class MetForm_Input_Select extends Widget_Base{
                 'label' => esc_html__( 'Color', 'metform' ),
                 'type' => Controls_Manager::COLOR,
                 'scheme' => [
-                    'type' => Scheme_Color::get_type(),
-                    'value' => Scheme_Color::COLOR_1,
+                    'type' => \Elementor\Core\Schemes\Color::get_type(),
+                    'value' => \Elementor\Core\Schemes\Color::COLOR_1,
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .mf-input-select .mf_select__option.mf_select__option--is-selected' => 'color: {{VALUE}}',

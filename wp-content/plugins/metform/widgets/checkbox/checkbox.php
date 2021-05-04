@@ -45,65 +45,7 @@ Class MetForm_Input_Checkbox extends Widget_Base{
 			]
 		);
 
-		$this->add_control(
-			'mf_input_label_status',
-			[
-				'label' => esc_html__( 'Show Label', 'metform' ),
-				'type' => Controls_Manager::SWITCHER,
-				'on' => esc_html__( 'Show', 'metform' ),
-				'off' => esc_html__( 'Hide', 'metform' ),
-				'return_value' => 'yes',
-				'default' => 'yes',
-				'description' => esc_html__('for adding label on input turn it on. Don\'t want to use label? turn it off.', 'metform'),
-			]
-		);
-
-		$this->add_control(
-			'mf_input_label_display_property',
-			[
-				'label' => esc_html__( 'Position', 'metform' ),
-				'type' => Controls_Manager::SELECT,
-				'default' => 'block',
-				'options' => [
-					'block' => esc_html__( 'Top', 'metform' ),
-					'inline-block' => esc_html__( 'Left', 'metform' ),
-                ],
-                'selectors' => [
-					'{{WRAPPER}} .mf-input-label' => 'display: {{VALUE}}; vertical-align: top',
-					'{{WRAPPER}} .mf-checkbox' => 'display: inline-block',
-				],
-				'condition'    => [
-                    'mf_input_label_status' => 'yes',
-				],
-				'description' => esc_html__('Select label position. where you want to see it. top of the input or left of the input.', 'metform'),
-
-			]
-		);
-
-        $this->add_control(
-			'mf_input_label',
-			[
-				'label' => esc_html__( 'Input Label : ', 'metform' ),
-				'type' => Controls_Manager::TEXT,
-				'default' => $this->get_title(),
-				'title' => esc_html__( 'Enter here label of input', 'metform' ),
-				'condition'    => [
-                    'mf_input_label_status' => 'yes',
-                ],
-			]
-		);
-
-		$this->add_control(
-			'mf_input_name',
-			[
-				'label' => esc_html__( 'Name', 'metform' ),
-				'type' => Controls_Manager::TEXT,
-				'default' => $this->get_name(),
-				'title' => esc_html__( 'Enter here name of the input', 'metform' ),
-				'description' => esc_html__('Name is must required. Enter name without space or any special character. use only underscore/ hyphen (_/-) for multiple word. Name must be different.', 'metform'),
-				'frontend_available' => true,
-			]
-		);
+		$this->input_content_controls(['NO_PLACEHOLDER']); 
 
 		$this->add_control(
 			'mf_input_display_option',
@@ -169,7 +111,22 @@ Class MetForm_Input_Checkbox extends Widget_Base{
 				'label_block' => true,
 				'description' => esc_html__('Want to make a option? which user can see the option but can\'t select it. make it disable.', 'metform'),
             ]
+		);
+
+		$input_fields->add_control(
+            'mf_input_option_selected', [
+                'label' => esc_html__( 'Select it default ? ', 'metform' ),
+                'type' => Controls_Manager::SELECT,
+                'default' => '',
+                'options' => [
+					'checked' => esc_html__( 'Yes', 'metform' ),
+					''  => esc_html__( 'No', 'metform' ),
+                ],
+                'description' => esc_html__('Make this option default selected', 'metform'),
+            ]
         );
+		
+
 
         $this->add_control(
             'mf_input_list',
@@ -199,15 +156,6 @@ Class MetForm_Input_Checkbox extends Widget_Base{
             ]
 		);
 		
-		$this->add_control(
-			'mf_input_help_text',
-			[
-				'label' => esc_html__( 'Help Text : ', 'metform' ),
-				'type' => Controls_Manager::TEXTAREA,
-				'rows' => 3,
-				'placeholder' => esc_html__( 'Type your help text here', 'metform' ),
-			]
-		);
 
         $this->end_controls_section();
 
@@ -218,6 +166,7 @@ Class MetForm_Input_Checkbox extends Widget_Base{
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
+
 
 		$this->input_setting_controls();
 
@@ -247,115 +196,8 @@ Class MetForm_Input_Checkbox extends Widget_Base{
 			]
 		);
 
-		$this->add_control(
-			'mf_input_label_color',
-			[
-                'label' => esc_html__( 'Color', 'metform' ),
-				'type' => Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
-				],
-				'selectors' => [
-					'{{WRAPPER}} .mf-input-label' => 'color: {{VALUE}}',
-				],
-				'default' => '#000000',
-				'condition'    => [
-                    'mf_input_label_status' => 'yes',
-                ],
-			]
-		);
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'mf_input_label_typography',
-				'label' => esc_html__( 'Typography', 'metform' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
-				'selector' => '{{WRAPPER}} .mf-input-label',
-				'condition'    => [
-                    'mf_input_label_status' => 'yes',
-                ],
-			]
-		);
-		$this->add_responsive_control(
-			'mf_input_label_padding',
-			[
-				'label' => esc_html__( 'Padding', 'metform' ),
-				'type' => Controls_Manager::DIMENSIONS,
-                'size_units' => [ 'px', '%', 'em' ],
-				'selectors' => [
-					'{{WRAPPER}} .mf-input-label' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-				],
-				'condition'    => [
-                    'mf_input_label_status' => 'yes',
-                ],
-			]
-		);
-		$this->add_responsive_control(
-			'mf_input_label_margin',
-			[
-				'label' => esc_html__( 'Margin', 'metform' ),
-				'type' => Controls_Manager::DIMENSIONS,
-                'size_units' => [ 'px', '%', 'em' ],
-				'selectors' => [
-					'{{WRAPPER}} .mf-input-label' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-				],
-				'condition'    => [
-                    'mf_input_label_status' => 'yes',
-                ],
-			]
-		);
 
-		$this->add_control(
-			'mf_input_required_indicator_color',
-			[
-				'label' => esc_html__( 'Required Indicator Color:', 'metform' ),
-				'type' => Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
-				],
-				'default' => '#f00',
-				'selectors' => [
-					'{{WRAPPER}} .mf-input-required-indicator' => 'color: {{VALUE}}'
-				],
-				'condition'    => [
-                    'mf_input_required' => 'yes',
-                ],
-			]
-		);
-
-		$this->add_control(
-			'mf_input_warning_text_color',
-			[
-				'label' => esc_html__( 'Warning Text Color:', 'metform' ),
-				'type' => Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
-				],
-				'default' => '#f00',
-				'selectors' => [
-					'{{WRAPPER}} .mf-error-message' => 'color: {{VALUE}}'
-				],
-				'condition'    => [
-                    'mf_input_required' => 'yes',
-                ],
-			]
-		);
-
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'mf_input_warning_text_typography',
-				'label' => esc_html__( 'Warning Text Typography', 'metform' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
-				'selector' => '{{WRAPPER}} .mf-error-message',
-				'condition' => [
-                    'mf_input_required' => 'yes',
-                ],
-			]
-		);
+		$this->input_label_controls(['VERTICAL_POSITION']);
 
         $this->end_controls_section();
 
@@ -396,8 +238,8 @@ Class MetForm_Input_Checkbox extends Widget_Base{
 				'label' => esc_html__( 'Text Color', 'metform' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .mf-checkbox-option' => 'color: {{VALUE}}',
@@ -422,8 +264,8 @@ Class MetForm_Input_Checkbox extends Widget_Base{
 				'label' => esc_html__( 'Checkbox Color', 'metform' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .mf-checkbox-option input[type="checkbox"] + span:before' => 'color: {{VALUE}}'
@@ -447,8 +289,8 @@ Class MetForm_Input_Checkbox extends Widget_Base{
 				'label' => esc_html__( 'Checkbox Color', 'metform' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .mf-checkbox-option input[type="checkbox"]:checked + span:before' => 'color: {{VALUE}}'
@@ -504,7 +346,7 @@ Class MetForm_Input_Checkbox extends Widget_Base{
 			[
 				'name' => 'mf_input_typgraphy',
 				'label' => esc_html__( 'Typography for icon', 'metform' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'exclude' => [ 'font_family', 'text_transform', 'font_style', 'text_decoration', 'letter_spacing' ],
 				'selector' => '{{WRAPPER}} .mf-checkbox, {{WRAPPER}} .mf-checkbox-option input[type="checkbox"] + span:before',
 			]
@@ -515,7 +357,7 @@ Class MetForm_Input_Checkbox extends Widget_Base{
 			[
 				'name' => 'mf_input_typgraphy_text',
 				'label' => esc_html__( 'Typography for text', 'metform' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .mf-checkbox, {{WRAPPER}} .mf-checkbox-option input[type="checkbox"] + span',
 			]
         );
@@ -533,44 +375,8 @@ Class MetForm_Input_Checkbox extends Widget_Base{
 				]
 			]
 		);
-		
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'mf_input_help_text_typography',
-				'label' => esc_html__( 'Typography', 'metform' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
-				'selector' => '{{WRAPPER}} .mf-input-help',
-			]
-		);
 
-		$this->add_control(
-			'mf_input_help_text_color',
-			[
-				'label' => esc_html__( 'Color', 'metform' ),
-				'type' => Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
-				],
-				'selectors' => [
-					'{{WRAPPER}} .mf-input-help' => 'color: {{VALUE}}',
-				],
-				'default' => '#939393',
-			]
-		);
-
-		$this->add_responsive_control(
-			'mf_input_help_text_padding',
-			[
-				'label' => esc_html__( 'Padding', 'metform' ),
-				'type' => Controls_Manager::DIMENSIONS,
-				'size_units' => [ 'px', '%', 'em' ],
-				'selectors' => [
-					'{{WRAPPER}} .mf-input-help' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-				],
-			]
-		);
+		$this->input_help_text_controls();
 
 		$this->end_controls_section();
 		
@@ -604,7 +410,7 @@ Class MetForm_Input_Checkbox extends Widget_Base{
 				</label>
 			<?php endif; ?>
 
-			<div class="mf-checkbox" id="mf-input-checkbox-<?php echo esc_attr($this->get_id()); ?>">
+			<div class="mf-checkbox multi-option-input-type" id="mf-input-checkbox-<?php echo esc_attr($this->get_id()); ?>">
 				<?php
 				foreach($mf_input_list as $indx=>$option){
 					?>
@@ -619,11 +425,16 @@ Class MetForm_Input_Checkbox extends Widget_Base{
 								class="mf-input mf-checkbox-input <?php echo $class; ?>"
 								name="<?php echo esc_attr($mf_input_name); ?>"
 								value="<?php echo esc_attr($option['mf_input_option_value']); ?>"
+								data-checked="<?php echo esc_attr($option['mf_input_option_selected']); ?>"
+								
 								<?php echo esc_attr($option['mf_input_option_status']); ?>
 								<?php if ( !$is_edit_mode ): ?>
 									onInput=${ parent.handleCheckbox }
 									aria-invalid=${validation.errors['<?php echo esc_attr($mf_input_name); ?>'] ? 'true' : 'false'}
-									ref=${el => parent.activateValidation(<?php echo json_encode($configData); ?>, el)}
+									ref=${el => {
+										parent.handleCheckboxDefault(el);
+										parent.activateValidation(<?php echo json_encode($configData); ?>, el)}
+									}
 								<?php endif; ?>
 								/>
 							<span>

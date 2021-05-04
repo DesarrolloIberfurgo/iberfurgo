@@ -516,6 +516,4 @@ class ElementsKit_Widget_Progressbar extends Widget_Base {
         </div>
         <?php
     }
-
-    protected function _content_template() { }
 }

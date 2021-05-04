@@ -38,9 +38,9 @@ class Utils{
      */ 
     public function is_widget_active_class( $widget_name, $pro_active ){
         if($pro_active){
-            return 'label-'.$widget_name.' attr-panel-heading';
+            return 'label-'.esc_attr($widget_name).' attr-panel-heading';
         }else{
-            return 'label-'.$widget_name.' attr-panel-heading pro-disabled';
+            return 'label-'.esc_attr($widget_name).' attr-panel-heading pro-disabled';
         }
     }
 

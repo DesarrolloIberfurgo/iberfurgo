@@ -1,9 +1,9 @@
-=== Elements kit Elementor addons (Header & Footer Builder, Mega Menu Builder, Layout Library) ===
-Contributors: Ataurr, wpmet, emranio, pobonpaul1994, easin55474, khalidjubair, enamulhoquemohon
+=== Elementskit Elementor addons (Header & Footer Builder, Mega Menu Builder, Layout Library) ===
+Contributors: Ataurr, wpmet, emranio, easin55474, enamulhoquemohon
 Tags: elementor addons, mega menu, header footer builder, elements, elementor extensions, elementor modules, page builder addons, elementor addon, elementor widget, addons
 Requires at least: 5.0
-Tested up to: 5.6
-Stable tag: 2.1.6
+Tested up to: 5.7
+Stable tag: 2.2.2
 Requires PHP: 7.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -12,41 +12,43 @@ ElementsKit All in one addon for Elementor page builder. It includes most compre
 
 == Description ==
 
-### **ATTENTION:** ElementsKit  2.0 Out with huge code optimisation and speed optimization. If you faced any issue please contact our team    [from here](https://wpmet.com/support-ticket)  ###
+ElementsKit is an ultimate All in one addons for Elementor Page Builder. It includes most comprehensive modules, such as Header Footer Builder, Mega Menu Builder Layoutkit etc under the one hood. It has 55+ custom widgets to create any sites with ease. It has some most unique and powerful custom controls for Elementor, such as Image Picker, Ajax Select2, Advanced Widget and many more. Why do you need multiple plugins? Where everything under the one hood?
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ECFC0QregXg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-ElementsKit is an ultimate All in one addons for Elementor Page Builder. It includes most comprehensive modules, such as Header Footer Builder, Mega Menu Builder Layoutkit etc under the one hood. It has 55+ custom widgets to create any sites with ease. It has some most unique and powerful custom controls for Elementor, such as Image Picker, Ajax Select2, Advanced Widget and many more. Why do you need multiple plugins? Where everything under the one hood?
 
 
-**Elements kit** Elementor Addon has Exclusive features that blow your mind. Like our Mega Menu Builder, Header and Footer Builder layout library, One Page Scroll, Sticky Content, Parallax Effects, you will get tons of Premium features that you have never imagined.
+
+**Elementskit** Elementor Addon has Exclusive features that blow your mind. Like our Mega Menu Builder, Header and Footer Builder layout library, One Page Scroll, Sticky Content, Parallax Effects, you will get tons of Premium features that you have never imagined.
 
 
-[ **Check our Live Demos** ](http://go.wpmet.com/ekitpro)
+###USEFUL LINKS###
+> **[ElementsKit Landing Page](http://go.wpmet.com/ekitpro)** |  **[Need Support?](http://wpmet.com/support-help/)** | **[Documentation](https://help.wpmet.com/docs-cat/elements-kit/)** | **[Video Tutorials](https://www.youtube.com/watch?v=VhBl3dHT5SY&list=PL3t2OjZ6gY8MVnyA4OLB6qXb77-roJOuY&ab_channel=Wpmet)** |
 
 
-###SUPPORT###
 
-**Found issue or new features? [Contact our team from here](https://wpmet.com/support-ticket)**.
 
 ==== KEY FEATURES ====
+- Header Footer Builder
+- Widget Builder
 - Mega Menu Builder
 - Vertical Mega Menu
+- 70+ Free and Premium Widgets
 - 45+ Pre-designed Header & Footer Templates
-- 55+ Free and Premium elements
+- 35+ Ready Pages
 - 500+ Ready Sections
-- 30+ Ready Pages
-- 30+ Widget Presets
 - WooCommerce Widgets
 - One Page Scroll
-- Sticky Content
-- Parallax Effects
-- Multi Widgets area
-- Elementor Gallery Pack. Filterable, Masonry, Grid
-- Cross Browser Compatible
+- Sticky Content - PRO
+- Parallax Effects - PRO
+- Cross-Domain Copy Paste - PRO
+- Multi Widgets Area
+- Gallery Widget. Filterable, Masonry, Grid - PRO
+- Cross-Browser Compatible
 - Fully Responsive
 - Expert Support Team
 - Build with Elementor
+
 
 
 
@@ -56,10 +58,10 @@ ElementsKit is an ultimate All in one addons for Elementor Page Builder. It incl
 With ElementsKit we have Layout library features where over 7+ ready-made homepage available and 300+ ready-made sections available. Just click the layout icon and insert it into your site, it's so easy to use without any hassle like importing JSON.  You will get a complete native feel when you use this.
 
 == 250+ Ready blocks ==
-Elements Kit All in one elementor addon comes with 250+ readymade blocks.  Make any website on the fly with readymade blocks from the Exclusive layout kit library. You don't need to create from scratch just input the design from the layout kit library and modify according to your need that’s it. Your site is now ready to launch.
+ElementsKit All in one elementor addon comes with 250+ readymade blocks.  Make any website on the fly with readymade blocks from the Exclusive layout kit library. You don't need to create from scratch just input the design from the layout kit library and modify according to your need that’s it. Your site is now ready to launch.
 
 == Modular based and Lightweight  ==
-Elements Kit build optimization in mind. We develop our plugin Modular based so if you don't need any addons. You can enable/disable specific elements from the Elements Kit option panel to prevent overloading your website with Extra  CSS or JS code you will not use which helps your website have a blazing fast performance.
+ElementsKit build optimization in mind. We develop our plugin Modular based so if you don't need any addons. You can enable/disable specific elements from the ElementsKit option panel to prevent overloading your website with Extra  CSS or JS code you will not use which helps your website have a blazing fast performance.
 
 == Completely Customizable  ==
 Every elementor widgets have Huge customizable options to control any widgets according to your needs.  You can build any style you want with our plugin.
@@ -345,6 +347,30 @@ Our Hotspot Widget for Elementor page builder offers lots of styles including: H
 - Widgets area
 
 == Changelog ==
+
+Version: 2.2.2 (14-04-2021)
+New: 'Text' option for 'Header Offcanvas' widget menu.
+New: 'Info Text' tooltip option to 'Pricing Table' Widget.
+New: 'Vertical Alignment' control added for 'Icon Box' Widget.
+Fix: Compatibility issues with Elementor 3.2.0.
+Fix: Minutes typography options for 'Countdown Timer' Widget.
+
+Version: 2.2.1 (08-03-2021)
+New: Added Responsive Alignment Control for Category List, Page List and Post List Widgets.
+Fix: Missing dependency issue with One Page Scroll Module.
+Fix: Category Query were empty for Woo Product Carousel Widget.
+
+Version: 2.2.0 (02-03-2021)
+Improve: Minor bug fix and code improvements.
+Improve: Minor escaping and validation improvements.
+
+Version: 2.1.7 (25-02-2021)
+New: Featured Image Size control for Post List Widget.
+New: Option to Show/Hide Facebook Messenger Dialog Box.
+Fix: Widget builder limited widget issue.
+Fix: Tab Widget arrow not showing when body background was set.
+Fix: Nav Menu widget showing empty widget on responsive when toggle button is visible.
+
 Version: 2.1.6 (07-02-2021)
 Fix: basic tags support for text shadow option in Heading Widget.
 
@@ -550,7 +576,7 @@ version: 1.5.8
 - added width control on megamenu settings
 
 version: 1.5.7
-- Elements Kit widget builder Beta released. https://youtu.be/zE6TMrkZeOI
+- ElementsKit widget builder Beta released. https://youtu.be/zE6TMrkZeOI
 - Fixed few css bugs
 
 version: 1.5.6

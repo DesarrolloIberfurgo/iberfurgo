@@ -35,7 +35,7 @@
                         <div class="attr-modal-body" id="metform_form_modal_body">
                             <div class="mf-input-group">
                                 <label for="attr-input-label" class="attr-input-label"><?php esc_html_e('Title:', 'metform'); ?></label>
-                                <input type="text" name="form_title" class="mf-form-modalinput-title attr-form-control" data-default-value="<?php echo esc_html__('New Form # ', 'meform') . time(); ?>">
+                                <input type="text" name="form_title" class="mf-form-modalinput-title attr-form-control" data-default-value="<?php echo esc_html__('New Form # ', 'metform') . time(); ?>">
                                 <span class='mf-input-help'><?php esc_html_e('This is the form title', 'metform'); ?></span>
                             </div>
 
@@ -418,7 +418,7 @@
                                             $forms = mailster('forms')->get();
                                             foreach ($forms as $form) :
                                             ?>
-                                                <option value="<?php esc_html_e($form->ID); ?>"><?php esc_html_e($form->name); ?></option>
+                                                <option value="<?php esc_html_e($form->ID, 'metform'); ?>"><?php esc_html_e($form->name, 'metform'); ?></option>
                                             <?php
                                             endforeach;
 
@@ -547,7 +547,7 @@
 
                                         <label class="attr-input-label">
 
-                                            <span><?php esc_html_e('Fetch hubspot forms'); ?><span class="dashicons dashicons-update metfrom-btn-refresh-hubsopt-list"></span></span>
+                                            <span><?php esc_html_e('Fetch hubspot forms', 'metform'); ?><span class="dashicons dashicons-update metfrom-btn-refresh-hubsopt-list"></span></span>
                                         </label>
 
                                         <select name='hubspot_forms' class="attr-form-control hubspot_forms">
@@ -589,9 +589,9 @@
                                     <div style="display: none;" class="helpscout_forms_section">
 
                                         <label class="attr-input-label">
-                                            <span><?php esc_html_e('Available Mailboxes'); ?></span>
+                                            <span><?php esc_html_e('Available Mailboxes', 'metform'); ?></span>
                                         </label>
-                                        <?php echo 'Saved mailbox ' . \MetForm\Utils\Util::get_form_settings('mf_helpscout_mailbox'); ?>
+                                        
                                         <?php if(get_option('mf_helpscout_mailboxes') && is_array(get_option('mf_helpscout_mailboxes'))): ?>
                                         <select id="mf_helpscout_mailbox" name='mf_helpscout_mailbox' class="attr-form-control helpscout_mailboxes">
                                             <?php foreach(get_option('mf_helpscout_mailboxes') as $mailbox): ?>

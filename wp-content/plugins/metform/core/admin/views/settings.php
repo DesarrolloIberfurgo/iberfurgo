@@ -275,12 +275,12 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                             </div>
                                         </div> <!-- ./End Section heading -->
                                         <div class="mf-admin-right-content--button">
-                                            <a target="_blank" href="https://wordpress.org/support/plugin/metform/reviews/?rate=5#new-post" class="mf-admin-setting-btn fatty"><span class="mf mf-star-1"></span><?php esc_html_e('Rate it now', 'elementskit'); ?></a>
+                                            <a target="_blank" href="https://wordpress.org/support/plugin/metform/reviews/?rate=5#new-post" class="mf-admin-setting-btn fatty"><span class="mf mf-star-1"></span><?php esc_html_e('Rate it now', 'metform'); ?></a>
                                         </div>
                                     </div>
 
                                     <div class="mf-admin-left-thumb">
-                                        <img src="<?php echo plugin_dir_url(__FILE__) . '../images/rate-now-thumb.png'; ?>" alt="<?php esc_attr_e('Rate Now Thumb', 'elementskit'); ?>">
+                                        <img src="<?php echo plugin_dir_url(__FILE__) . '../images/rate-now-thumb.png'; ?>" alt="<?php esc_attr_e('Rate Now Thumb', 'metform'); ?>">
                                     </div>
                                 </div>
 
@@ -625,7 +625,7 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                                         <div class="mf-setting-input-desc">
                                                             <div class="mf-setting-input-desc-data">
                                                                 <h2 class="mf-setting-input-desc--title">
-                                                                    <?php esc_html_e('How To', 'metfrom') ?></h2>
+                                                                    <?php esc_html_e('How To', 'metform') ?></h2>
                                                                 <p><?php esc_html_e('Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.', 'metform') ?>
                                                                 </p>
                                                                 <ol>
@@ -690,7 +690,7 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                                             <div class="mf-setting-input-desc">
                                                                 <div class="mf-setting-input-desc-data">
                                                                     <h2 class="mf-setting-input-desc--title">
-                                                                        <?php esc_html_e('How To', 'metfrom') ?></h2>
+                                                                        <?php esc_html_e('How To', 'metform') ?></h2>
                                                                     <p><?php esc_html_e('Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.', 'metform') ?>
                                                                     </p>
                                                                     <ol>
@@ -732,7 +732,7 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                                             <div class="mf-setting-input-desc">
                                                                 <div class="mf-setting-input-desc-data">
                                                                     <h2 class="mf-setting-input-desc--title">
-                                                                        <?php esc_html_e('How To', 'metfrom') ?></h2>
+                                                                        <?php esc_html_e('How To', 'metform') ?></h2>
                                                                     <p><?php esc_html_e('Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.', 'metform') ?>
                                                                     </p>
                                                                     <ol>
@@ -773,7 +773,7 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                                             <div class="mf-setting-input-desc">
                                                                 <div class="mf-setting-input-desc-data">
                                                                     <h2 class="mf-setting-input-desc--title">
-                                                                        <?php esc_html_e('How To', 'metfrom') ?></h2>
+                                                                        <?php esc_html_e('How To', 'metform') ?></h2>
                                                                     <p><?php esc_html_e('Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.', 'metform') ?>
                                                                     </p>
                                                                     <ol>
@@ -800,7 +800,7 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                                             <div class="mf-setting-input-desc">
                                                                 <div class="mf-setting-input-desc-data">
                                                                     <h2 class="mf-setting-input-desc--title">
-                                                                        <?php esc_html_e('How To', 'metfrom') ?></h2>
+                                                                        <?php esc_html_e('How To', 'metform') ?></h2>
                                                                     <p><?php esc_html_e('Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.', 'metform') ?>
                                                                     </p>
                                                                     <ol>
@@ -833,7 +833,7 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                                             <div class="mf-setting-input-desc">
                                                                 <div class="mf-setting-input-desc-data">
                                                                     <h2 class="mf-setting-input-desc--title">
-                                                                        <?php esc_html_e('How To', 'metfrom') ?></h2>
+                                                                        <?php esc_html_e('How To', 'metform') ?></h2>
                                                                     <p><?php esc_html_e('Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.', 'metform') ?>
                                                                     </p>
                                                                     <ol>
@@ -860,7 +860,7 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                                             <div class="mf-setting-input-desc">
                                                                 <div class="mf-setting-input-desc-data">
                                                                     <h2 class="mf-setting-input-desc--title">
-                                                                        <?php esc_html_e('How To', 'metfrom') ?></h2>
+                                                                        <?php esc_html_e('How To', 'metform') ?></h2>
                                                                     <p><?php esc_html_e('Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.', 'metform') ?>
                                                                     </p>
                                                                     <ol>

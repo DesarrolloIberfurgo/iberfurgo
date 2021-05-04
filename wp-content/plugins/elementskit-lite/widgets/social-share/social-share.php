@@ -618,7 +618,6 @@ class ElementsKit_Widget_Social_Share extends Widget_Base {
 			[
 				'name' => 'ekit_socialshare_list_typography',
 				'label' => esc_html__( 'Typography', 'elementskit-lite' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .ekit_socialshare > li > a',
 			]
 		);
@@ -701,9 +700,9 @@ class ElementsKit_Widget_Social_Share extends Widget_Base {
                         <?php endif; ?>
                         <?php if($settings['ekit_socialshare_style'] != 'icon' ): ?>
                         <?php if ($icon['ekit_socialshare_label'] == '') : ?>
-                        <?php echo esc_html((preg_replace('/[#$%^&*()+=\-\[\]\';,.\/{}|":<>?~\\\\]/', ' ', ucwords($icon['ekit_socialshare_label_text']))), 'elementskit-lite')?>
+                        <?php echo esc_html(preg_replace('/[#$%^&*()+=\-\[\]\';,.\/{}|":<>?~\\\\]/', ' ', ucwords($icon['ekit_socialshare_label_text'])));?>
                         <?php else : ?>
-                        <?php echo esc_html($icon['ekit_socialshare_label'], 'elementskit-lite')?>
+                        <?php echo esc_html($icon['ekit_socialshare_label'])?>
                         <?php endif; ?>
                         <?php endif; ?>
                         <?php if($settings['ekit_socialshare_style'] != 'text' && $settings['ekit_socialshare_style_icon_position'] == 'after'): ?>

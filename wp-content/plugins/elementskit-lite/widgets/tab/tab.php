@@ -2098,7 +2098,7 @@ class ElementsKit_Widget_Tab extends Widget_Base {
                     <li class="elementkit-nav-item elementor-repeater-item-<?php echo esc_attr( $tab[ '_id' ] ); ?>">
                         <a class="elementkit-nav-link <?php echo esc_attr($is_active);?> <?php echo esc_attr($ekit_tab_header_icon_pos_style); ?>" id="content-<?php echo esc_attr($tab['_id'].$tab_id); ?>-tab" data-ekit-handler-id="<?php echo esc_html( $handler_id ); ?>" data-ekit-toggle="tab" href="#content-<?php echo esc_attr($tab['_id'].$tab_id); ?>"
                            role="tab" aria-controls="content-<?php echo esc_attr($tab['_id'].$tab_id); ?>" aria-selected="true">
-                            <?php echo $icon_html.$img_html; ?>
+                            <?php echo \ElementsKit_Lite\Utils::kses($icon_html.$img_html); ?>
                             <span class="elementskit-tab-title"><?php echo esc_html($tab['ekit_tab_title']); ?></span>
                         </a>
                     </li>
@@ -2113,7 +2113,7 @@ class ElementsKit_Widget_Tab extends Widget_Base {
                     <div class="tab-pane elementkit-tab-pane elementor-repeater-item-<?php echo esc_attr( $tab[ '_id' ] ); ?> <?php echo esc_attr($is_active);?>" id="content-<?php echo esc_attr($tab['_id'].$tab_id); ?>" role="tabpanel"
                          aria-labelledby="content-<?php echo esc_attr($tab['_id'].$tab_id); ?>-tab">
                         <div class="animated fadeIn">
-                            <?php echo do_shortcode($tab['ekit_tab_content']);?>
+                            <?php echo do_shortcode( \ElementsKit_Lite\Utils::kses( $tab['ekit_tab_content'] ) );?>
                         </div>
                     </div>
                 <?php endforeach; ?>

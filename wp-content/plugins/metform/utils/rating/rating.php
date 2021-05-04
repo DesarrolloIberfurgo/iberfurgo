@@ -349,7 +349,7 @@ if (!class_exists('Wpmet\Libs\Rating')) {
                         'icon' => 'dashicons-before dashicons-smiley'
                     ])
                     ->set_button([
-                        'url' => 'https://help.wpmet.com/',
+                        'url' => 'https://wpmet.com/support-ticket',
                         'text' => 'I need support',
                         'class' => 'button-default',
                         'id' => '#',

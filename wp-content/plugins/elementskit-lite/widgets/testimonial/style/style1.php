@@ -32,7 +32,7 @@
 					<div class="elementskit-profile-image-card">
 						<?php if (isset($testimonial['client_photo']) && !empty($testimonial['client_photo']['url']) &&  sizeof($testimonial['client_photo']) > 0) {
 								$clientPhoto = isset($testimonial['client_photo']['url']) ? $testimonial['client_photo']['url'] : ''; ?>
-								<img src="<?php echo esc_url($clientPhoto); ?>" alt="<?php esc_attr_e("Client Image","elementskit-lite");?>">
+								<img src="<?php echo esc_url($clientPhoto); ?>" alt="<?php esc_attr_e("Client Image", "elementskit-lite");?>">
 						<?php } ?>
 						<?php if( isset($ekit_testimonial_enable_social) && $ekit_testimonial_enable_social == 'yes'):?>
 							<div class="elementskit-hover-area">
@@ -49,7 +49,6 @@
 									<?php if(isset($testimonial['youtube_url']) && strlen($testimonial['youtube_url']) > 5){?>
 									<li><a href="<?php esc_attr_e($testimonial['youtube_url'], 'elementskit-lite');?>" class="youtube"><i class="fa fa-youtube"></i></a></li>
 									<?php }?>
-
 								</ul>
 							</div>
 						<?php endif;?>

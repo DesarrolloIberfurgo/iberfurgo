@@ -276,14 +276,14 @@ class ElementsKit_Widget_Pricing extends Widget_Base {
             ]
         );
 
-		// $repeater->add_group_control(
-		// 	Group_Control_Typography::get_type(),
-		// 	[
-		// 		'name' => 'ekit_pricing_list_content_typography_group',
-		// 		'label' =>esc_html__( 'Icon Typography', 'elementskit-lite' ),
-		// 		'selector' => '{{WRAPPER}} .elementskit-single-pricing .elementskit-pricing-lists {{CURRENT_ITEM}} i',
-		// 	]
-		// );
+		$repeater->add_control(
+			'ekit_pricing_list_info',
+			[
+				'label'	=> esc_html__( 'Info Text', 'elementskit-lite' ),
+				'type'	=> Controls_Manager::TEXT,
+			]
+		);
+
         $this->add_control(
             'ekit_pricing_table_content_repeater',
             [
@@ -334,7 +334,7 @@ class ElementsKit_Widget_Pricing extends Widget_Base {
 			[
 				'label' =>esc_html__( 'Link', 'elementskit-lite' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' =>esc_url('http://your-link.com'),
+				'placeholder' =>esc_url('https://wpmet.com'),
 				'default' => [
 					'url' => '#',
 				],
@@ -2421,6 +2421,21 @@ class ElementsKit_Widget_Pricing extends Widget_Base {
 		$settings = $this->get_settings_for_display();
 		extract($settings);
 
+
+		$options_ekit_pricing_title_size = array_keys([
+			'h1' => 'H1',
+			'h2' => 'H2',
+			'h3' => 'H3',
+			'h4' => 'H4',
+			'h5' => 'H5',
+			'h6' => 'H6',
+			'div' => 'div',
+			'span' => 'span',
+			'p' => 'p',
+		]);
+
+		$ekit_pricing_title_size_validate = \ElementsKit_Lite\Utils::esc_options( $ekit_pricing_title_size, $options_ekit_pricing_title_size, 'h3');
+
         $table_title = $settings[ 'ekit_pricing_table_title' ];
         $table_subtitle = $settings[ 'ekit_pricing_table_subtitle' ];
 		$table_content = $settings[ 'ekit_pricing_table_content' ];
@@ -2492,9 +2507,9 @@ class ElementsKit_Widget_Pricing extends Widget_Base {
 				<?php endif; ?>
 
 				<?php if($table_title != ''): ?>
-                	<<?php echo \ElementsKit_Lite\Utils::render($settings['ekit_pricing_title_size']); ?>
+                	<<?php echo \ElementsKit_Lite\Utils::render($ekit_pricing_title_size_validate); ?>
 					class=" elementskit-pricing-title"><?php echo esc_html($table_title); ?>
-					</<?php echo \ElementsKit_Lite\Utils::render($settings['ekit_pricing_title_size']); ?>>
+					</<?php echo \ElementsKit_Lite\Utils::render($ekit_pricing_title_size_validate); ?>>
 				<?php endif; ?>
 				<?php if($table_subtitle != ''): ?>
                 	<p class=" elementskit-pricing-subtitle"><?php echo esc_html($table_subtitle); ?></p>
@@ -2522,10 +2537,20 @@ class ElementsKit_Widget_Pricing extends Widget_Base {
                 <?php } ?>
                 <?php if($content_style == 'list'){ ?>
                     <ul class="elementskit-pricing-lists">
-                        <?php  foreach($table_content_repeater as $repeat){  ?>
+                        <?php foreach($table_content_repeater as $repeat){  ?>
 							<li class="elementor-repeater-item-<?php echo esc_attr( $repeat[ '_id' ] ); ?>">
 								<?php Icons_Manager::render_icon( $repeat['ekit_pricing_check_icons'], [ 'aria-hidden' => 'true' ] ); ?>
-								<?php echo esc_html($repeat['ekit_pricing_list']); ?></li>
+								<?php // echo esc_html($repeat['ekit_pricing_list']); ?>
+
+								<?php echo esc_html($repeat['ekit_pricing_list']); ?>
+								
+								<?php if ( !empty( $repeat[ 'ekit_pricing_list_info' ] ) ): ?>
+									<div class="ekit-pricing-list-info eicon-info-circle-o" data-info-tip="true">
+										<span></span>
+										<p class="ekit-pricing-list-info-content ekit-pricing-<?php echo esc_attr( $this->get_ID() ); ?> ekit-pricing-list-info-<?php echo esc_attr( $repeat[ '_id' ] ); ?>" data-info-tip-content="true"><?php echo esc_attr( $repeat[ 'ekit_pricing_list_info' ] ); ?></p>
+									</div>
+								<?php endif; ?>
+							</li>
                         <?php } ?>
                     </ul>
                 <?php } ?>

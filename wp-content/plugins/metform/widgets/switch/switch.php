@@ -148,8 +148,8 @@ Class MetForm_Input_Switch extends Widget_Base{
 				'label' => esc_html__( 'Input Active Color', 'metform' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .mf-input-control:checked~.mf-input-control-label::before' => 'border-color: {{VALUE}}; background-color: {{VALUE}}',

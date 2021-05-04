@@ -60,6 +60,7 @@ class Utils {
 				'title' => array(),
 			),
 			'code'							 => array(),
+			'pre'							 => array(),
 			'del'							 => array(
 				'datetime'	 => array(),
 				'title'		 => array(),
@@ -73,6 +74,7 @@ class Utils {
 			'dl'							 => array(),
 			'dt'							 => array(),
 			'em'							 => array(),
+			'strong'						 => array(),
 			'h1'							 => array(
 				'class' => array(),
 			),
@@ -278,5 +280,13 @@ class Utils {
             'src' => $attachment->guid,
             'title' => $attachment->post_title
 		];
+	}
+
+	public static function esc_options($str, $options = [], $default = ''){
+		if(!in_array($str, $options)){
+			return $default;
+		}
+
+		return $str;
 	}
 }

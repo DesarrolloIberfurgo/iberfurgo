@@ -123,7 +123,7 @@ class ElementsKit_Widget_Client_Logo extends Widget_Base {
             [
                 'label' => esc_html__( 'Link', 'elementskit-lite' ),
                 'type' => Controls_Manager::URL,
-                'placeholder' => esc_html__( 'https://your-link.com', 'elementskit-lite' ),
+                'placeholder' => esc_html__( 'https://wpmet.com', 'elementskit-lite' ),
                 'show_external' => true,
                 'condition' => [
                     'ekit_client_logo_enable_link' => 'yes'

@@ -198,7 +198,7 @@ class ElementsKit_Widget_Mail_Chimp extends Widget_Base {
 		$this->add_control(
 			'ekit_mail_last_heading_title',
 			[
-				'label' => esc_html__( 'Last Name : ', 'elementskit-lite' ),
+				'label' => esc_html__( 'Last Name:', 'elementskit-lite' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
 					'ekit_mail_chimp_section_form_name_show' => 'yes',
@@ -282,7 +282,7 @@ class ElementsKit_Widget_Mail_Chimp extends Widget_Base {
 		$this->add_control(
 			'ekit_mail_chimp_section_form_phone_show',
 			[
-				'label' => esc_html__( 'Show Phone :', 'elementskit-lite' ),
+				'label' => esc_html__( 'Show Phone:', 'elementskit-lite' ),
 				'type' => Controls_Manager::SWITCHER,
 				'default' => 'no',
 				'separator' => 'before'
@@ -291,7 +291,7 @@ class ElementsKit_Widget_Mail_Chimp extends Widget_Base {
 		$this->add_control(
 			'ekit_mail_phone_heading_title',
 			[
-				'label' => esc_html__( 'Phone : ', 'elementskit-lite' ),
+				'label' => esc_html__( 'Phone:', 'elementskit-lite' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
 					'ekit_mail_chimp_section_form_phone_show' => 'yes',
@@ -370,11 +370,11 @@ class ElementsKit_Widget_Mail_Chimp extends Widget_Base {
 			]
 		);
 
-		// email address
+		// Email Address
 		$this->add_control(
 			'ekit_mail_email_address_heading_title',
 			[
-				'label' => esc_html__( 'Email Address : ', 'elementskit-lite' ),
+				'label' => esc_html__( 'Email Address:', 'elementskit-lite' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before'
 			]
@@ -462,7 +462,7 @@ class ElementsKit_Widget_Mail_Chimp extends Widget_Base {
 		$this->add_control(
 			'ekit_mail_chimp_submit_button_heading',
 			[
-				'label' => esc_html__( 'Submit Button : ', 'elementskit-lite' ),
+				'label' => esc_html__( 'Submit Button:', 'elementskit-lite' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -549,7 +549,6 @@ class ElementsKit_Widget_Mail_Chimp extends Widget_Base {
 			[
 				'name' => 'ekit_mail_chimp_input_label_typography',
 				'label' => esc_html__( 'Typography', 'elementskit-lite' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .elementskit_input_label',
 			]
 		);
@@ -834,7 +833,6 @@ class ElementsKit_Widget_Mail_Chimp extends Widget_Base {
 			[
 				'name' => 'ekit_mail_chimp_button_typography',
 				'label' => esc_html__( 'Typography', 'elementskit-lite' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .ekit-mail-submit',
 			]
 		);
@@ -1366,10 +1364,9 @@ class ElementsKit_Widget_Mail_Chimp extends Widget_Base {
 				<div <?php echo $this->get_render_attribute_string('content_wrapper'); ?>>
 				<?php if(isset($ekit_mail_chimp_section_form_name_show) && $ekit_mail_chimp_section_form_name_show == 'yes'):?>
 					<div class="ekit-mail-chimp-name elementskit_input_wraper elementskit_input_container">
-						<?php // if( strlen($ekit_mail_chimp_first_name_label) > 1 || strlen($ekit_mail_chimp_first_name_placeholder) > 1): ?>
 						<div class="elementskit_form_group">
 							<?php if($ekit_mail_chimp_first_name_label != ''): ?>
-							<label class="elementskit_input_label"><?php esc_html_e($ekit_mail_chimp_first_name_label, 'elementskit-lite');?> </label>
+							<label class="elementskit_input_label"><?php echo esc_html( $ekit_mail_chimp_first_name_label );?> </label>
 							<?php endif; ?>
 							<div class="elementskit_input_element_container <?php if(($ekit_mail_chimp_first_name_icon_show == 'yes') && ($ekit_mail_chimp_first_name_icons != '')) : ?>elementskit_input_group<?php endif; ?>">
 								<?php if(($ekit_mail_chimp_first_name_icon_show == 'yes') && ($ekit_mail_chimp_first_name_icons != '') && ($ekit_mail_chimp_first_name_icon_before_after == 'before')) : ?>
@@ -1392,7 +1389,7 @@ class ElementsKit_Widget_Mail_Chimp extends Widget_Base {
 									</div>
 								</div>
 								<?php endif; ?>
-								<input type="text" class="ekit_user_first ekit_form_control <?php if(($ekit_mail_chimp_first_name_icon_show == 'yes') && ($ekit_mail_chimp_first_name_icons != '') && ($ekit_mail_chimp_first_name_icon_before_after == 'after')) : ?> ekit_append_input <?php endif; ?>"  name="firstname" placeholder="<?php esc_html_e($ekit_mail_chimp_first_name_placeholder, 'elementskit-lite');?>" required />
+								<input type="text" class="ekit_user_first ekit_form_control <?php if(($ekit_mail_chimp_first_name_icon_show == 'yes') && ($ekit_mail_chimp_first_name_icons != '') && ($ekit_mail_chimp_first_name_icon_before_after == 'after')) : ?> ekit_append_input <?php endif; ?>"  name="firstname" placeholder="<?php echo esc_html( $ekit_mail_chimp_first_name_placeholder );?>" required />
 
 								<?php if(($ekit_mail_chimp_first_name_icon_show == 'yes') && ($ekit_mail_chimp_first_name_icons != '') && ($ekit_mail_chimp_first_name_icon_before_after == 'after')) : ?>
 								<div class="elementskit_input_group_append">
@@ -1421,10 +1418,9 @@ class ElementsKit_Widget_Mail_Chimp extends Widget_Base {
 				<?php endif; ?>
 				<?php if(isset($ekit_mail_chimp_section_form_name_show) && $ekit_mail_chimp_section_form_name_show == 'yes'):?>
 					<div class="ekit-mail-chimp-name elementskit_input_wraper elementskit_input_container">
-						<?php // if( strlen($ekit_mail_chimp_last_name_label) > 1 || strlen($ekit_mail_chimp_last_name_placeholder) > 1): ?>
 						<div class="elementskit_form_group">
 							<?php if($ekit_mail_chimp_last_name_label != ''): ?>
-							<label class="elementskit_input_label"><?php esc_html_e($ekit_mail_chimp_last_name_label, 'elementskit-lite');?> </label>
+							<label class="elementskit_input_label"><?php echo esc_html( $ekit_mail_chimp_last_name_label ); ?> </label>
 							<?php endif; ?>
 							<div class="elementskit_input_element_container <?php if(($ekit_mail_chimp_last_name_icon_show == 'yes') && ($ekit_mail_chimp_last_name_icons != '')) : ?>elementskit_input_group<?php endif; ?>">
 								<?php if(($ekit_mail_chimp_last_name_icon_show == 'yes') && ($ekit_mail_chimp_last_name_icons != '') && ($ekit_mail_chimp_last_name_icon_before_after == 'before')) : ?>
@@ -1447,7 +1443,7 @@ class ElementsKit_Widget_Mail_Chimp extends Widget_Base {
 									</div>
 								</div>
 								<?php endif; ?>
-								<input type="text" class="ekit_user_last ekit_form_control <?php if(($ekit_mail_chimp_last_name_icon_show == 'yes') && ($ekit_mail_chimp_last_name_icons != '') && ($ekit_mail_chimp_last_name_icon_before_after == 'after')) : ?> ekit_append_input <?php endif; ?>" name="lastname" placeholder="<?php esc_html_e($ekit_mail_chimp_last_name_placeholder, 'elementskit-lite');?>" required />
+								<input type="text" class="ekit_user_last ekit_form_control <?php if(($ekit_mail_chimp_last_name_icon_show == 'yes') && ($ekit_mail_chimp_last_name_icons != '') && ($ekit_mail_chimp_last_name_icon_before_after == 'after')) : ?> ekit_append_input <?php endif; ?>" name="lastname" placeholder="<?php echo esc_html( $ekit_mail_chimp_last_name_placeholder );?>" required />
 
 								<?php if(($ekit_mail_chimp_last_name_icon_show == 'yes') && ($ekit_mail_chimp_last_name_icons != '') && ($ekit_mail_chimp_last_name_icon_before_after == 'after')) : ?>
 								<div class="elementskit_input_group_append">
@@ -1478,7 +1474,7 @@ class ElementsKit_Widget_Mail_Chimp extends Widget_Base {
 					<div class="ekit-mail-chimp-phone elementskit_input_wraper elementskit_input_container">
 						<div class="elementskit_form_group">
 							<?php if($ekit_mail_chimp_phone_label != ''): ?>
-							<label class="elementskit_input_label"><?php esc_html_e($ekit_mail_chimp_phone_label, 'elementskit-lite');?> </label>
+							<label class="elementskit_input_label"><?php echo esc_html( $ekit_mail_chimp_phone_label );?> </label>
 							<?php endif; ?>
 							<div class="elementskit_input_element_container <?php if(($ekit_mail_chimp_phone_icon_show == 'yes') && ($ekit_mail_chimp_phone_icons != '')) : ?>elementskit_input_group<?php endif; ?>">
 								<?php if(($ekit_mail_chimp_phone_icon_show == 'yes') && ($ekit_mail_chimp_phone_icons != '') && ($ekit_mail_chimp_phone_icon_before_after == 'before')) : ?>
@@ -1501,7 +1497,7 @@ class ElementsKit_Widget_Mail_Chimp extends Widget_Base {
 									</div>
 								</div>
 								<?php endif; ?>
-								<input type="tel" class="ekit_mail_phone ekit_form_control <?php if(($ekit_mail_chimp_phone_icon_show == 'yes') && ($ekit_mail_chimp_phone_icons != '') && ($ekit_mail_chimp_phone_icon_before_after == 'after')) : ?> ekit_append_input <?php endif; ?>" name="phone" placeholder="<?php esc_html_e($ekit_mail_chimp_phone_placeholder, 'elementskit-lite');?>" required />
+								<input type="tel" class="ekit_mail_phone ekit_form_control <?php if(($ekit_mail_chimp_phone_icon_show == 'yes') && ($ekit_mail_chimp_phone_icons != '') && ($ekit_mail_chimp_phone_icon_before_after == 'after')) : ?> ekit_append_input <?php endif; ?>" name="phone" placeholder="<?php echo esc_html( $ekit_mail_chimp_phone_placeholder ); ?>" required />
 
 								<?php if(($ekit_mail_chimp_phone_icon_show == 'yes') && ($ekit_mail_chimp_phone_icons != '') && ($ekit_mail_chimp_phone_icon_before_after == 'after')) : ?>
 								<div class="elementskit_input_group_append">
@@ -1530,7 +1526,7 @@ class ElementsKit_Widget_Mail_Chimp extends Widget_Base {
 					<div class="ekit-mail-chimp-email elementskit_input_wraper elementskit_input_container">
 						<div class="elementskit_form_group">
 							<?php if($ekit_mail_chimp_email_address_label != ''): ?>
-							<label class="elementskit_input_label"><?php esc_html_e($ekit_mail_chimp_email_address_label, 'elementskit-lite');?> </label>
+							<label class="elementskit_input_label"><?php echo esc_html( $ekit_mail_chimp_email_address_label ); ?> </label>
 							<?php endif; ?>
 							<div class="elementskit_input_element_container <?php if(($ekit_mail_chimp_email_icon_show == 'yes') && ($ekit_mail_chimp_email_icons != '')) : ?>elementskit_input_group<?php endif; ?>">
 								<?php if(($ekit_mail_chimp_email_icon_show == 'yes') && ($ekit_mail_chimp_email_icons != '') && ($ekit_mail_chimp_email_icon_before_after == 'before')) : ?>
@@ -1553,7 +1549,7 @@ class ElementsKit_Widget_Mail_Chimp extends Widget_Base {
 									</div>
 								</div>
 								<?php endif; ?>
-								<input type="email" name="email" class="ekit_mail_email ekit_form_control <?php if(($ekit_mail_chimp_email_icon_show == 'yes') && ($ekit_mail_chimp_email_icons != '') && ($ekit_mail_chimp_email_icon_before_after == 'after')) : ?> ekit_append_input <?php endif; ?>" placeholder="<?php esc_html_e($ekit_mail_chimp_email_address_placeholder, 'elementskit-lite');?>" required />
+								<input type="email" name="email" class="ekit_mail_email ekit_form_control <?php if(($ekit_mail_chimp_email_icon_show == 'yes') && ($ekit_mail_chimp_email_icons != '') && ($ekit_mail_chimp_email_icon_before_after == 'after')) : ?> ekit_append_input <?php endif; ?>" placeholder="<?php echo esc_html( $ekit_mail_chimp_email_address_placeholder ); ?>" required />
 
 								<?php if(($ekit_mail_chimp_email_icon_show == 'yes') && ($ekit_mail_chimp_email_icons != '') && ($ekit_mail_chimp_email_icon_before_after == 'after')) : ?>
 								<div class="elementskit_input_group_append">
@@ -1596,7 +1592,7 @@ class ElementsKit_Widget_Mail_Chimp extends Widget_Base {
 								}
 							?>
 
-							<?php endif; ?><?php esc_html_e($ekit_mail_chimp_submit, 'elementskit-lite');?><?php if(($ekit_mail_chimp_submit_icon_show == 'yes') && ($ekit_mail_chimp_submit_icons != '') && ($ekit_mail_chimp_submit_icon_position == 'after')): ?> 
+							<?php endif; ?><?php echo esc_html( $ekit_mail_chimp_submit );?><?php if(($ekit_mail_chimp_submit_icon_show == 'yes') && ($ekit_mail_chimp_submit_icons != '') && ($ekit_mail_chimp_submit_icon_position == 'after')): ?> 
 
 								<?php
 									// new icon

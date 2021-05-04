@@ -162,8 +162,8 @@ Class MetForm_Input_Simple_Captcha extends Widget_Base{
                 'label' => esc_html__( 'Color', 'metform' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .mf-input-label' => 'color: {{VALUE}}',
@@ -179,7 +179,7 @@ Class MetForm_Input_Simple_Captcha extends Widget_Base{
 			[
 				'name' => 'mf_input_label_typography',
 				'label' => esc_html__( 'Typography', 'metform' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .mf-input-label',
 				'condition'    => [
                     'mf_input_label_status' => 'yes',
@@ -221,8 +221,8 @@ Class MetForm_Input_Simple_Captcha extends Widget_Base{
 				'label' => esc_html__( 'Required Indicator Color:', 'metform' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'default' => '#f00',
 				'selectors' => [
@@ -238,8 +238,8 @@ Class MetForm_Input_Simple_Captcha extends Widget_Base{
 				'label' => esc_html__( 'Warning Text Color:', 'metform' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'default' => '#f00',
 				'selectors' => [
@@ -253,7 +253,7 @@ Class MetForm_Input_Simple_Captcha extends Widget_Base{
 			[
 				'name' => 'mf_input_warning_text_typography',
 				'label' => esc_html__( 'Warning Text Typography', 'metform' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .mf-error-message',
 			]
 		);
@@ -298,8 +298,8 @@ Class MetForm_Input_Simple_Captcha extends Widget_Base{
 				'label' => __( 'Color', 'metform' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'default' => '#000',
 				'selectors' => [

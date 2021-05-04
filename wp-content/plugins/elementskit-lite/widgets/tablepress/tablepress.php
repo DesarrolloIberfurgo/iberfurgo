@@ -681,8 +681,10 @@ class ElementsKit_Widget_TablePress extends Widget_Base {
     private function get_shortcode() {
 		$settings = $this->get_settings();
 
-		if (!$settings['ekit_tablepress_table_id']) {
-			return '<div class="elemenetskit-alert-info">'.__('Please Select A Table From Setting!', 'elementskit-lite').'</div>';
+		$ekit_tablepress_table_id_sanitize = isset($settings['ekit_tablepress_table_id']) ? intval($settings['ekit_tablepress_table_id']) : 0;
+
+		if (!$ekit_tablepress_table_id_sanitize) {
+			return '<div class="elemenetskit-alert-info">'.esc_html__('Please Select A Table From Setting!', 'elementskit-lite').'</div>';
 		}
 		
 		if ( \Elementor\Plugin::instance()->editor->is_edit_mode() ) {
@@ -692,14 +694,14 @@ class ElementsKit_Widget_TablePress extends Widget_Base {
 		}
 
 		$attributes = [
-			'id'         => $settings['ekit_tablepress_table_id'],
+			'id'         => $ekit_tablepress_table_id_sanitize,
             'responsive' => (class_exists('TablePress_Responsive_Tables')) ? $settings['ekit_tablepress_table_responsive'] : '',
             'responsive_breakpoint' => (class_exists('TablePress_Responsive_Tables')) ? $settings['ekit_tablepress_table_responsive_breakpoint'] : '',
 		];
 
 		$this->add_render_attribute( 'shortcode', $attributes );
 
-		$shortcode   = ['<div class="elemenetskit-tablepress ekit-wid-con" id="ekit_tablepress_'.$this->get_id().'">'];
+		$shortcode   = ['<div class="elemenetskit-tablepress ekit-wid-con" id="ekit_tablepress_'.esc_attr($this->get_id()).'">'];
 		$shortcode[] = sprintf( '[table %s]', $this->get_render_attribute_string( 'shortcode' ) );
 		$shortcode[] = '</div>';
 

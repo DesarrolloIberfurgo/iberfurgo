@@ -82,7 +82,6 @@ class ElementsKit_Widget_Caldera_Forms extends Widget_Base {
 			[
 				'name' => 'ekit_contact_form_input_label_typography',
 				'label' => esc_html__( 'Typography', 'elementskit-lite' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .ekit-form form label',
 			]
 		);
@@ -125,7 +124,6 @@ class ElementsKit_Widget_Caldera_Forms extends Widget_Base {
 			[
 				'name' => 'ekit_contact_form_input_label_hint_typography',
 				'label' => esc_html__( 'Typography', 'elementskit-lite' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .ekit-form form label span',
 			]
         );
@@ -480,7 +478,6 @@ class ElementsKit_Widget_Caldera_Forms extends Widget_Base {
             [
                 'name' => 'ekit_contact_form_input_typography',
                 'label' => esc_html__( 'Typography', 'elementskit-lite' ),
-                'scheme' => Scheme_Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .ekit-form form input:not([type="submit"]), .wpcf7-form input:not([type="submit"]), .wpcf7-form textarea, .ekit-wid-con .ekit-form form textarea',
             ]
         );
@@ -602,7 +599,6 @@ class ElementsKit_Widget_Caldera_Forms extends Widget_Base {
 			[
 				'name' => 'ekit_contact_form_button_typography',
 				'label' => esc_html__( 'Typography', 'elementskit-lite' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .ekit-form form input[type="submit"]',
 			]
 		);
@@ -900,6 +896,5 @@ class ElementsKit_Widget_Caldera_Forms extends Widget_Base {
 		?>
 		</div>
 		<?php
-}
-    protected function _content_template() { }
+	}
 }

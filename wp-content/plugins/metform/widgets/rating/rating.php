@@ -148,8 +148,8 @@ Class MetForm_Input_Rating extends Widget_Base{
                 'label' => esc_html__( 'Input Color', 'metform' ),
                 'type' => Controls_Manager::COLOR,
                 'scheme' => [
-                    'type' => Scheme_Color::get_type(),
-                    'value' => Scheme_Color::COLOR_1,
+                    'type' => \Elementor\Core\Schemes\Color::get_type(),
+                    'value' => \Elementor\Core\Schemes\Color::COLOR_1,
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .mf-ratings:not(.is-selected), {{WRAPPER}} .mf-ratings.is-selected:not(:hover) > input:checked + label ~ label, {{WRAPPER}} .mf-ratings.is-selected > label:hover ~ label, {{WRAPPER}} .mf-ratings:not(.is-selected) > label:hover ~ label' => 'color: {{VALUE}}',
@@ -182,8 +182,8 @@ Class MetForm_Input_Rating extends Widget_Base{
                 'label' => esc_html__( 'Input Color', 'metform' ),
                 'type' => Controls_Manager::COLOR,
                 'scheme' => [
-                    'type' => Scheme_Color::get_type(),
-                    'value' => Scheme_Color::COLOR_1,
+                    'type' => \Elementor\Core\Schemes\Color::get_type(),
+                    'value' => \Elementor\Core\Schemes\Color::COLOR_1,
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .mf-ratings.is-selected > label, {{WRAPPER}} .mf-ratings:not(.is-selected):hover > label' => 'color: {{VALUE}}',
@@ -248,7 +248,7 @@ Class MetForm_Input_Rating extends Widget_Base{
             [
                 'name' => 'mf_input_typgraphy',
                 'label' => esc_html__( 'Typography', 'metform' ),
-                'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+                'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .mf-ratings > label:before',
                 'exclude' => [ 'font_family', 'font_weight', 'text_transform', 'text_decoration' ],
             ]

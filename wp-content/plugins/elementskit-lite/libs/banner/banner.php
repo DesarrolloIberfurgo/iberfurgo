@@ -182,7 +182,7 @@ class Banner {
                     'httpversion' => '1.1',
                 ]
             );
-            // print_r($response['body']); exit;
+            
             if(!is_wp_error($response) && isset($response['body']) && $response['body'] != ''){
 
                 $response = json_decode($response['body']);

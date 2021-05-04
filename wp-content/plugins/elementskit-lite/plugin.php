@@ -61,9 +61,10 @@ class Plugin{
         Compatibility\Wpml\Init::instance();
         Compatibility\Conflicts\Init::instance();
 
+        $is_pro_active = in_array('elementskit/elementskit.php', apply_filters('active_plugins', get_option('active_plugins')));
 
         $filter_string = ''; // elementskit,metform-pro
-        $filter_string .= ((!in_array('elementskit/elementskit.php', apply_filters('active_plugins', get_option('active_plugins')))) ? '' : ',elementskit');
+        $filter_string .= ((!$is_pro_active) ? '' : ',elementskit');
         $filter_string .= (!class_exists('\MetForm\Plugin') ? '' : ',metform');
         $filter_string .= (!class_exists('\MetForm_Pro\Plugin') ? '' : ',metform-pro');
 
@@ -90,30 +91,26 @@ class Plugin{
             ->set_plugin_screens('edit-elementskit_template')
             ->set_plugin_screens('toplevel_page_elementskit')
             ->call();
+
+                    
+            /**
+             *  Ask for rating
+             *  A rating notice will appear depends on 
+             *  @set_first_appear_day methods 
+             */
+            \Wpmet\Libs\Rating::instance('elementskit-lite')
+            ->set_plugin('ElementsKit', 'https://wpmet.com/wordpress.org/rating/elementskit')
+            ->set_plugin_logo('https://ps.w.org/elementskit-lite/assets/icon-128x128.png','width:150px !important')
+            ->set_allowed_screens('edit-elementskit_template')
+            ->set_allowed_screens('toplevel_page_elementskit')
+            ->set_allowed_screens('elementskit_page_elementskit-lite_get_help')
+            ->set_priority(10)
+            ->set_first_appear_day(7)
+            ->set_condition(true)
+            ->call();
+
         }
         
-        
-        /**
-         * ----------------------------------------
-         *  Ask for rating ⭐⭐⭐⭐⭐
-         *  A rating notice will appear depends on 
-         *  @set_first_appear_day methods 
-         * ----------------------------------------
-         */
-        
-        \Wpmet\Libs\Rating::instance('elementskit-lite')
-        ->set_plugin('ElementsKit', 'https://wpmet.com/wordpress.org/rating/elementskit')
-        ->set_plugin_logo('https://ps.w.org/elementskit-lite/assets/icon-128x128.png','width:150px !important')
-        ->set_allowed_screens('edit-elementskit_template')
-        ->set_allowed_screens('toplevel_page_elementskit')
-        ->set_allowed_screens('elementskit_page_elementskit-lite_get_help')
-        ->set_priority(10)
-        ->set_first_appear_day(7)
-        ->set_condition(true)
-        ->call();
-
-
-	    $is_pro_active = in_array('elementskit/elementskit.php', apply_filters('active_plugins', get_option('active_plugins')));
 
         /**
          * Show go Premium menu
@@ -234,10 +231,14 @@ class Plugin{
         
         wp_enqueue_script( 'ekit-admin-core', \ElementsKit_Lite::lib_url() . 'framework/assets/js/ekit-admin-core.js', ['jquery'], \ElementsKit_Lite::version(), true );
 
-        $data['rest_url'] = get_rest_url();
-	    $data['nonce']    = wp_create_nonce('wp_rest');
+        $data['rest_url']   = get_rest_url();
+	    $data['nonce']      = wp_create_nonce('wp_rest');
 
 	    wp_localize_script('ekit-admin-core', 'rest_config', $data);
+
+        wp_localize_script('ekit-admin-core', 'ekit_ajax_var', array(
+            'nonce' => wp_create_nonce('ajax-nonce')
+        ));
     }
 
     /**

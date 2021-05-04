@@ -521,7 +521,6 @@ class ElementsKit_Widget_Social extends Widget_Base {
 			[
 				'name' => 'ekit_socialmedai_list_typography',
 				'label' => esc_html__( 'Typography', 'elementskit-lite' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .ekit_social_media > li > a',
 			]
 		);

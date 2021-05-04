@@ -38,7 +38,7 @@ class Action
         $this->response = (object) [
             'status' => 0,
             'error' => [
-                esc_html__('Some thing went wrong.', 'metrom'),
+                esc_html__('Some thing went wrong.', 'metform'),
             ],
             'data' => [
                 'message' => '',
@@ -199,6 +199,14 @@ class Action
             //$this->response->data['signature_input'] = $signature_input;
         }
 
+         // file upload check and action
+         $file_input_names = $this->get_input_name_by_widget_type('mf-file-upload');
+
+         if ((!empty($file_data)) && ($file_input_names != null)) {
+             $this->upload_file($file_data, $file_input_names);
+         }
+ 
+
         // Hubspot CRM integration
 
         if (class_exists('\MetForm_Pro\Core\Integrations\Crm\Hubspot\Hubspot')) {
@@ -244,10 +252,18 @@ class Action
             // Check if settings exists and enabled 
             
             if (isset($this->form_settings['mf_helpscout']) && $this->form_settings['mf_helpscout'] == '1') {
+
+                $file_input_names = $this->get_input_name_by_widget_type('mf-file-upload');
+
+                // error_log( serialize( $this->file_upload_info ));
+
                 (new \Metform_Pro\Core\Integrations\Crm\Helpscout\Helpscout)
                     ->create_ticket(
                         $form_data, 
-                        $this->form_settings
+                        $this->form_settings,
+                        $file_input_names,
+                        $file_data,
+                        $this->file_upload_info
                     );
             }
         }
@@ -424,13 +440,7 @@ class Action
             }
         }
 
-        // file upload check and action
-        $file_input_names = $this->get_input_name_by_widget_type('mf-file-upload');
-
-        if ((!empty($file_data)) && ($file_input_names != null)) {
-            $this->upload_file($file_data, $file_input_names);
-        }
-
+       
         // sanitize form submitted data
         $this->sanitize($form_data);
 

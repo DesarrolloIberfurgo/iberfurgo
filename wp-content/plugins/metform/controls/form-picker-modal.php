@@ -67,7 +67,7 @@
                                             
                                             <div class="metform-template-footer-links">
                                                 <?php if(isset($template['package']) && $template['package'] === 'pro' && isset($template['file']) && $template['file'] == '') : ?>
-                                                    <a target="_blank" href="https://products.wpmet.com/metform/pricing/?utm_source=metform&utm_medium=inplugin_campaign&utm_campaign=go_pro" class="metform-template-footer-links--pro_tag"><i class="metform-template-footer-links--icon fas fa-external-link-square-alt"></i><?php echo esc_html__('Buy Pro'); ?></a>
+                                                    <a target="_blank" href="https://products.wpmet.com/metform/pricing/?utm_source=metform&utm_medium=inplugin_campaign&utm_campaign=go_pro" class="metform-template-footer-links--pro_tag"><i class="metform-template-footer-links--icon fas fa-external-link-square-alt"></i><?php echo esc_html__('Buy Pro', 'metform'); ?></a>
                                                 <?php endif; ?>
 
                                                 <?php if(isset($template['demo-url']) && $template['demo-url'] != '') : ?>
