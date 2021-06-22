@@ -68,11 +68,38 @@ get_header();
 
                         echo '<select class="one ibf_mt_15 ibf_mv_mb_15" id="brand" name="delegacion_id" class="ibf_field_form" required>
                                 <option value="">' . esc_html__('Selecciona oficina*', 'grandcarrental-custom-post') . '</option>';
-
+                                
+                                $arr_delegaciones=null;
+                                $array_correccion_titulo=array('Sevilla','Olías del Rey');
+                                foreach($response->data as $key => $value){
+                                    $clave=$value->provincia." - ".$value->nombre;
+                                    if(in_array($value->nombre,$array_correccion_titulo)){
+                                        $clave=$value->provincia;
+                                    }
+                                                
+                                    $arr_delegaciones[$clave]['key']=$key;
+                                    $arr_delegaciones[$clave]['delegacion']=$value;
+                                }						
+                                ksort($arr_delegaciones);
+                                foreach($arr_delegaciones as $titulo=> $value){
+                                    $delegacion=$value['delegacion'];
+                                    $indice=$value['key'];
+                                    if (isset($atts['delegacionid']) && $atts['delegacionid'] == $delegacion->id) {
+                                        $selected='selected';
+                                    }
+                                    else {
+                                        $selected='';
+                                    }
+                                    
+                                    //$return_html .= '<option value="'.esc_attr($delegacion->id).'" '.$selected.'>'.esc_attr($titulo).'</option>';
+                                    echo '<option value="' . esc_attr($delegacion->id) . '">' . esc_attr($titulo) . '</option>';
+                                }
+                        /*            
                         foreach ($response->data as $delegacion) {
 
                             echo '<option value="' . esc_attr($delegacion->id) . '">' . esc_attr($delegacion->nombre) . '</option>';
                         }
+                        */
 
                         echo '</select>';
                         ?>

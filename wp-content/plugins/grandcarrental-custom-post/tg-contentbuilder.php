@@ -3402,13 +3402,13 @@ function ppb_car_search_func($atts, $content) {
 	foreach($arr_delegaciones as $titulo=> $value){
 		$delegacion=$value['delegacion'];
 		$indice=$value['key'];
-		if (isset($atts['delegacionid']) && $atts['delegacionid'] == $indice) {
+		if (isset($atts['delegacionid']) && $atts['delegacionid'] == $delegacion->id) {
 			$selected='selected';
 		}
 		else {
 			$selected='';
 		}
-		//print_r($delegacion);
+		
 		$return_html .= '<option value="'.esc_attr($delegacion->id).'" '.$selected.'>'.esc_attr($titulo).'</option>';
 	}
 	/*
