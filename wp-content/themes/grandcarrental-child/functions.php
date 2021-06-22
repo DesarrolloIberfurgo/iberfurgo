@@ -7,7 +7,6 @@ Author URI: http://themeforest.net/user/ThemeGoods
 License: GPLv2
 */
 
-
 // function add_state_var($vars){
   
 //     $vars[] = 'state';

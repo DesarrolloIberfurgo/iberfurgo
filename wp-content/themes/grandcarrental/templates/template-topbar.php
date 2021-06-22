@@ -30,7 +30,7 @@
 		    {
 		?>
 	    	<div class="company_address">
-				<div id="top_contact_address"><span class="ti-location-pin"></span>Reservas: <i class="fas fa-phone-alt icon-top-bar"></i></span></i><a href="tel:0034914287466" class="ibf_color_white"> 914 287 466</a></div>
+				<div id="top_contact_address"><span class="ti-location-pin"></span>Reservas: <i class="fas fa-phone-alt icon-top-bar"></i></span></i><a href="tel:0034900533657" class="ibf_color_white"> 900 533 657</a></div>
 			</div>
 
 			<div class="company_address">

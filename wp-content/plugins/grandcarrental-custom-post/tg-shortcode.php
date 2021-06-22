@@ -1138,14 +1138,14 @@ function tg_accordion_oficinas_func($atts, $content) {
 	$telefono = $atts['telefono'];
 	$email = $atts['email'];
 	$como_llegar = $atts['mapa_oficina'];
-	
+	$provincia = $atts['provincia'];
 	
 
 	$hlvm = $atts['hlvm'];
 	$hlvt = $atts['hlvt'];
 	$hs = $atts['hs'];
 
-	$url = URL_WEB.'/oficinas/'.$atts['url'];
+	$url = site_url().'/oficinas/'.$atts['url'];
 	
 	$close_class = '';
 
@@ -1163,8 +1163,13 @@ function tg_accordion_oficinas_func($atts, $content) {
 	wp_enqueue_script("jquery-ui-accordion");
 	wp_enqueue_script('grandcarrental-custom-accordion', get_template_directory_uri()."/js/custom-accordion.js", false, GRANDCARRENTAL_THEMEVERSION, true);
 
+        $arrayPoblaciones = ['Alicante', 'Olías del Rey', 'Sevilla'];
 	$return_html = '<div class="'.esc_attr($close_class).' has_icon ibf_border_gray"><h3><a href="#" class="ibf_color_orange">';
-	$return_html.= $title.'</a></h3>';
+	if(strtolower(in_array($title, $arrayPoblaciones))) {
+		$return_html.= $provincia.'</a></h3>';
+	} else {
+		$return_html.= $provincia.' - '.$title.'</a></h3>';
+	}
 	// $return_html.= '<div><p>';
 	// $return_html.= do_shortcode($content);
 	// $return_html.= '</p></div>';

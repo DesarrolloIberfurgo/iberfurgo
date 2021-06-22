@@ -59,13 +59,13 @@ function validateSearch(event)
     
     if (isNaN(dateInicio.getTime())) {
         jQuery('.alert_box.error').removeClass('hide');
-        jQuery('.alert_box_msg').html('Fecha inicio no es válida.');
+        jQuery('.alert_box_msg').html('La fecha de inicio no es válida.');
         return;
     }
 
     if (isNaN(dateFin.getTime())) {
         jQuery('.alert_box.error').removeClass('hide');
-        jQuery('.alert_box_msg').html('Fecha fin no es válida.');
+        jQuery('.alert_box_msg').html('La fecha de fin no es válida.');
         return;
     }
 
@@ -76,13 +76,13 @@ function validateSearch(event)
     }
     if (dateFin < dateInicio) {
         jQuery('.alert_box.error').removeClass('hide');
-        jQuery('.alert_box_msg').html('Fecha fin no puede ser menor que fecha inicio');
+        jQuery('.alert_box_msg').html('La fecha de fin no puede ser menor que la fecha de inicio');
         return;
     }
     if (fechaInicio == fechaFin) {
         if (horaInicio == horaFin) {
             jQuery('.alert_box.error').removeClass('hide');
-            jQuery('.alert_box_msg').html('Hora inicio no puede ser la misma que hora fin.');
+            jQuery('.alert_box_msg').html('La hora de inicio no puede ser la misma que la hora de fin.');
             return;
         }
         hora1 = horaInicio.split(':');
@@ -90,27 +90,37 @@ function validateSearch(event)
         
         if (parseInt(hora1[0]) > parseInt(hora2[0])) {
             jQuery('.alert_box.error').removeClass('hide');
-            jQuery('.alert_box_msg').html('Hora inicio no puede ser mayor que hora fin.');
+            jQuery('.alert_box_msg').html('La hora de inicio no puede ser mayor que hora de fin.');
             return;
         }
 
         if (parseInt(hora2[0]) - parseInt(hora1[0]) == 1 || parseInt(hora2[0]) - parseInt(hora1[0]) == 0) {
             jQuery('.alert_box.error').removeClass('hide');
-            jQuery('.alert_box_msg').html('Hora fin tiene que ser mínimo 2 horas mayor que hora inicio.');
+            jQuery('.alert_box_msg').html('La hora de fin tiene que ser mínimo 2 horas mayor que la hora de inicio.');
             return;
         }
 
         if ((parseInt(hora2[0]) - parseInt(hora1[0])) == 2) {
             if ((hora1[1] != 0 && hora2[1] == 0)) {
                 jQuery('.alert_box.error').removeClass('hide');
-                jQuery('.alert_box_msg').html('Hora fin tiene que ser 2 horas mayor que hora inicio.');
+                jQuery('.alert_box_msg').html('La hora de fin tiene que ser 2 horas mayor que la hora de inicio.');
                 return;
             }
         }
         
-        if (dt.getHours() > parseInt(hora1[0])) {
+        let day = dt.getDate();
+        let month = dt.getMonth() + 1;
+        let year = dt.getFullYear();
+        let hoy = '';
+        if(month < 10){
+            hoy = day+'/0'+month+'/'+year;
+        } else {
+            hoy = day+'/'+month+'/'+year;
+        }
+
+        if (dt.getHours() > parseInt(hora1[0]) && fechaInicio == hoy) {
             jQuery('.alert_box.error').removeClass('hide');
-            jQuery('.alert_box_msg').html('Hora inicio tiene que ser mayor a hora actual.');
+            jQuery('.alert_box_msg').html('La hora de inicio tiene que ser mayor a la hora actual.');
             return;
         }
     }

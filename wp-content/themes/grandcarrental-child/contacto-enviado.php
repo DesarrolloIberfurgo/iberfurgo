@@ -17,6 +17,8 @@
     "delegacion" => $data['delegacion_id'],
     "asunto" => $data['txtasunto'],
     "comentario" => $data['txtcomentarios'],
+    "politica_privacidad" => $data['politica_privacidad']  ?? 0,
+    "comunicaciones_comerciales" => $data['comunicaciones_comerciales'] ?? 0
     ];
 
     list($httpCode, $response) = postDataApi(URL_API . 'contacto-web', json_encode($dataApi));
@@ -44,7 +46,19 @@
     $headers[] .= 'Bcc: sergio.abril@iberfurgo.com';
     $headers[] .= "Bcc: $correo_oficina->email";
     
-    wp_mail($data['txtemail'], "Contacto::Iberfurgo", $email_cliente_content, $headers);
+
+    $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify'; 
+    $recaptcha_secret = '6LeojdQaAAAAADmLouJ4wZEOB5XiZWio_y9ouxY0'; 
+    $recaptcha_response = $_POST['recaptcha_response']; 
+    $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response); 
+    $recaptcha = json_decode($recaptcha); 
+
+    if($recaptcha->score >= 0.7){
+        // OK. ERES HUMANO, EJECUTA ESTE CÓDIGO
+        wp_mail($data['txtemail'], "Contacto::Iberfurgo", $email_cliente_content, $headers);
+    } 
+
+
 
 ?>
 <div class="inner">

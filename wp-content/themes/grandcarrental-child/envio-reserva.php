@@ -70,9 +70,9 @@
     $headersOficina = array('Content-Type: text/html; charset=UTF-8');
     $headersOficina[] .= 'From: Iberfurgo::Reservas <reservas@iberfurgo.com>';
     $headersOficina[] .= 'Bcc: sergio.abril@iberfurgo.com';
-    // $headersOficina[] .= 'Bcc: csanchez@iberfurgo.com'; 
-    // wp_mail($response_oficina->data[0]->email, "Reserva::Iberfurgo", $email_oficina_content, $headersOficina);
-    wp_mail("sabrilgarcia@gmail.com", "Reserva::Iberfurgo", $email_oficina_content, $headersOficina);
+    $headersOficina[] .= 'Bcc: csanchez@iberfurgo.com'; 
+    wp_mail($response_oficina->data[0]->email, "Reserva::Iberfurgo", $email_oficina_content, $headersOficina);
+    // wp_mail("sabrilgarcia@gmail.com", "Reserva::Iberfurgo", $email_oficina_content, $headersOficina);
 
 ?>
 

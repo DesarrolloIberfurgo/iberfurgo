@@ -3378,7 +3378,8 @@ function ppb_car_search_func($atts, $content) {
 	
 	//Get available car brand
 	$available_brands = grandcarrental_get_carbrand();
-	list($httpCode, $response) = getDataApi(URL_API . 'maestro-delegacion', '{"valuePluck":"nombre", "keyPluck":"id", "order":["nombre asc"], "id":"!3,16,21"}');
+	//list($httpCode, $response) = getDataApi('https://api.iberfurgo.com/public/api/v1/' . 'maestro-delegacion', '{"valuePluck":"nombre", "keyPluck":"id", "order":["nombre asc"], "id":"!3,16,21,32,33,34"}');
+	list($httpCode, $response) = getDataApi(URL_API . 'maestro-delegacion', '{"order":["nombre asc"], "id":"!3,16,21,32,33,34"}');
 	if ($httpCode != 200) {
 		return 'ha petado';
 	}
@@ -3386,9 +3387,34 @@ function ppb_car_search_func($atts, $content) {
 	$return_html.= '<select id="brand" name="delegacion_id" class="ibf_field_form ibf_select_form" required>
 	    				<option value="">'.esc_html__('Selecciona delegación', 'grandcarrental-custom-post' ).'</option>';
 	
+	$arr_delegaciones=null;
+	$array_correccion_titulo=array('Sevilla','Olías del Rey');
+	foreach($response->data as $key => $value){
+		$clave=$value->provincia." - ".$value->nombre;
+		if(in_array($value->nombre,$array_correccion_titulo)){
+			$clave=$value->provincia;
+		}
+					
+		$arr_delegaciones[$clave]['key']=$key;
+		$arr_delegaciones[$clave]['delegacion']=$value;
+	}						
+	ksort($arr_delegaciones);
+	foreach($arr_delegaciones as $titulo=> $value){
+		$delegacion=$value['delegacion'];
+		$indice=$value['key'];
+		if (isset($atts['delegacionid']) && $atts['delegacionid'] == $indice) {
+			$selected='selected';
+		}
+		else {
+			$selected='';
+		}
+		//print_r($delegacion);
+		$return_html .= '<option value="'.esc_attr($delegacion->id).'" '.$selected.'>'.esc_attr($titulo).'</option>';
+	}
+	/*
 	foreach($response->data as $key => $value)	
 	{
-		if ($atts['delegacionid'] == $key) {
+		if (isset($atts['delegacionid']) && $atts['delegacionid'] == $key) {
 			$selected='selected';
 		}
 		else {
@@ -3396,7 +3422,30 @@ function ppb_car_search_func($atts, $content) {
 		}
 		$return_html .= '<option value="'.esc_attr($key).'" '.$selected.'>'.esc_attr($value).'</option>';
 	}
+	*/
+	if(isset($atts['fechainicio']))
+	{
+		$fechaInicio = esc_attr($atts['fechainicio']);
+	} else
+	{
+		$fechaInicio = '';
+	}
+
+	if(isset($atts['fechafin']))
+	{
+		$fechaFin = esc_attr($atts['fechafin']);
+	} else
+	{
+		$fechaFin = '';
+	}
+
+	if(isset($atts['horainicio']))
+	{
 		$horas = get_times($atts['horainicio']);
+	} else
+	{
+		$horas = get_times(null);
+	}
 
     $return_html.= '</select>
     	</div>';
@@ -3404,7 +3453,7 @@ function ppb_car_search_func($atts, $content) {
     $return_html.= 	'<div class="one_fourth ibf_widthm_100 ibf_no_background">
 						<p class="ibf_font_16 ibf_font_bold ibf_color_white ibf_field_form ibf_label_form">Fecha/hora recogida</p>
 						<div class="one_half themeborder ibf_mr_0 ibf_datepicker_parent">';
-	$return_html.= 			'<input id="fecha_inicio_dp" name="fecha_inicio" type="text" class="ibf_datepicker" value="'.esc_attr($atts['fechainicio']).'" required placeholder="'.date('d/m/Y').'">';
+	$return_html.= 			'<input id="fecha_inicio_dp" name="fecha_inicio" type="text" class="ibf_datepicker" value="'.$fechaInicio.'" required placeholder="'.date('d/m/Y').'">';
 	$return_html.=		'</div>';
 
 	$return_html.= 		'<div class="one_third themeborder ibf_mr_0" style="width:30%;">';
@@ -3417,9 +3466,17 @@ function ppb_car_search_func($atts, $content) {
     $return_html.=	'<div class="one_fourth ibf_widthm_100 ibf_no_background">
 						<p class="ibf_font_16 ibf_font_bold ibf_color_white ibf_field_form ibf_label_form">Fecha/hora devolución</p>
 						<div class="one_half themeborder ibf_mr_0 ibf_datepicker_parent">';
-	$return_html.= 			'<input id="fecha_fin_dp" name="fecha_fin" type="text" class="ibf_datepicker" value="'.esc_attr($atts['fechafin']).'" required placeholder="'.date('d/m/Y').'">';
+	$return_html.= 			'<input id="fecha_fin_dp" name="fecha_fin" type="text" class="ibf_datepicker" value="'.$fechaFin.'" required placeholder="'.date('d/m/Y').'">';
     $return_html.= 		'</div>';
-	$horas = get_times($atts['horafin']);
+
+	if(isset($atts['horafin']))
+	{
+		$horas = get_times($atts['horafin']);
+	} else
+	{
+		$horas = get_times(null);
+	}
+	
 	$return_html.= 		'<div class="one_third themeborder ibf_mr_0" style="width:30%;">';
 	$return_html.= 			'<select id="hora_fin_dp" name="hora_fin" class="ibf_field_form ibf_width_100" required><option value="">Hora</option>';
 	$return_html.= 				$horas;

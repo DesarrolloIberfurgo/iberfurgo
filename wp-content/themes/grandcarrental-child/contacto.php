@@ -7,9 +7,26 @@
  * @package WordPress
  */
 
+/* Describe what the code snippet does so you can remember later on */
+add_action('wp_head', 'add_content_header');
+function add_content_header(){
+?>
+    <script src='https://www.google.com/recaptcha/api.js?render=6LeojdQaAAAAAKvQ0danpjlvcANnUg-STMfprg_3'> 
+    </script>
+    <script>
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6LeojdQaAAAAAKvQ0danpjlvcANnUg-STMfprg_3', {action: 'formulario'})
+        .then(function(token) {
+            var recaptchaResponse = document.getElementById('recaptchaResponse');
+            recaptchaResponse.value = token;
+        });
+    });
+    </script>
+<?php
+};
+
 get_header();
-    get_header(); 
-get_header();
+
 ?>
 
 <div class="inner">
@@ -64,7 +81,14 @@ get_header();
                         <br class="clear" />
                         <textarea class="one ibf_mt_15 ibf_mv_mb_15" name="txtcomentarios" id="txtcomentarios" cols="15" rows="5" placeholder="Comentarios*" required></textarea>
                         <br class="clear" />
+                        <input class="ibf_mr_10 ibf_font_16" id="politica_privacidad" name="politica_privacidad" type="checkbox" value="1" required> 
+                            He leído y acepto la <a href="<?php echo site_url(); ?>/politica-de-privacidad" target="_blank">política de privacidad</a> de mis datos y <a href="<?php echo site_url(); ?>/aviso-legal" target="_blank">política legal</a>.
+                        <br>
+                        <input class="ibf_mr_10 ibf_font_16" id="comunicaciones_comerciales" name="comunicaciones_comerciales" type="checkbox" value="1"> 
+                        <span>Autorizo la cesión de mis datos para comunicaciones comerciales, promociones especiales y cupones descuento.</span>
+                        <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
                         <input class="one ibf_mt_15 ibf_button_flota ibf_ml_0 ibf_mb_30 ibf_mv_mb_15" type="submit" value="Enviar">
+                        <br class="clear" />
                         <input type="hidden" name="action" value="contactform">
                     </form>
                 </div>
@@ -78,7 +102,7 @@ get_header();
                                 <h2 style="color: #fff;">Oficinas Centrales</h2>
                                 <p>C/ Gobelas, 13<br />
                                     28023 - Madrid<br />
-                                    <i class="fas fa-phone-alt ibf_pr_10"></i><a class="ibf_font_bold ibf_color_white" href="tel:0034914287466">914 287 466</a><br />
+                                    <i class="fas fa-phone-alt ibf_pr_10"></i><a class="ibf_font_bold ibf_color_white" href="tel:0034900533657">900 533 657</a><br />
                                     <i class="fas fa-at ibf_pr_10"></i><a class=" ibf_color_white" href="mailto:info@iberfurgo.com">info@iberfurgo.com</a></p>
                             </div>
                         </div>

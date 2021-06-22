@@ -109,7 +109,7 @@ if(!empty($response->data))
                                 <div class=" ibf_pl_15">
                                     <p>
                                         <i class="fas fa-phone-alt ibf_font_20 ibf_color_orange ibf_pr_10"></i>
-                                        <a class="ibf_font_18 ibf_font_bold" href="tel:0034'<?php echo $value->telefono ?>'">
+                                        <a class="ibf_font_18 ibf_font_bold ifb_color_black" href="tel:0034'<?php echo $value->telefono ?>'">
                                             <?php
                                                 echo $value->telefono;
                                             ?>
@@ -117,7 +117,7 @@ if(!empty($response->data))
                                     </p>
                                     <p>
                                         <i class="fab fa-whatsapp  ibf_font_24 ibf_color_orange ibf_pr_10"></i>
-                                        <a class="ibf_font_16" href="'<?php echo $value->whatsapp ?>'">
+                                        <a class="ibf_font_16 ifb_color_black" href="'<?php echo $value->whatsapp ?>'">
                                             <?php
                                                 echo substr($value->whatsapp, -9);
                                             ?>
@@ -126,7 +126,7 @@ if(!empty($response->data))
                                         
                                     <p>
                                         <i class="fas fa-at ibf_font_20 ibf_color_orange ibf_pr_10"></i>
-                                        <a class="ibf_font_16" href="tel:0034'<?php echo $value->email ?>'">
+                                        <a class="ibf_font_16 ifb_color_black" href="tel:0034'<?php echo $value->email ?>'">
                                             <?php
                                                 echo $value->email;
                                             ?>

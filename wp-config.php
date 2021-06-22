@@ -41,25 +41,25 @@
 
 /** The name of the database for WordPress */
 
-define( 'DB_NAME', "Iberfurgo-wp" );
-
+define( 'DB_NAME', "iberfurgo" );
+// define( 'DB_NAME', 'iberfurgo' );
 
 /** MySQL database username */
 
 // define( 'DB_USER', "root" );
 define( 'DB_USER', "iberfurgo" );
-
+// define( 'DB_USER', 'iberfurgo' );
 
 /** MySQL database password */
 
 // define( 'DB_PASSWORD', "" );
 define( 'DB_PASSWORD', "iberfurgo" );
-
+// define( 'DB_PASSWORD', 'byUp3UeYsGnirOrJ' );
 
 /** MySQL hostname */
 
 define( 'DB_HOST', "localhost" );
-
+// define( 'DB_HOST', '10.0.111.210' );
 
 /** Database Charset to use in creating database tables. */
 
@@ -108,9 +108,11 @@ define( 'NONCE_SALT',       'put your unique phrase here' );
 
 /** Propios */
 define('API_TOKEN', 'x49H4pR4SIvkWt7AMyHs6ZW5TeeDz9XW5In7UDRFBLyuKqHcGeq8x3fsrs15VCyt');
-define('URL_API', 'http://localhost/api-iberfurgo/public/api/v1/');
+define('URL_API', 'http://localhost/api_iberfurgo/public/api/v1/');
 define('URL_WEB', 'http://localhost/iberfurgo-wp');
 
+//define('URL_API', 'https://api.iberfurgo.com/public/api/v1/');
+//define('URL_WEB', 'https://www.iberfurgo.com');
 
 /**#@-*/
 

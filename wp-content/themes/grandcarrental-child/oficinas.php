@@ -13,7 +13,7 @@ get_header();
 
 global $wp_query;
 
-list($httpCode, $response) = getDataApi(URL_API . 'maestro-delegacion', '{"order":["nombre asc"], "id":"!3,16,21"}');
+list($httpCode, $response) = getDataApi(URL_API . 'maestro-delegacion', '{"order":["nombre asc"], "id":"!3,16,21,32,33,34"}');
 if ($httpCode != 200) {
 	return 'ha petado';
 }
@@ -30,13 +30,56 @@ if ($httpCode != 200) {
                 <div class="standard_wrapper"></div><br class="clear"/><br/>
         <?php
             }
+            //print_r($response->data);
+            
+            $arr_delegaciones=null;
+            $array_correccion_titulo=array('Sevilla','Olías del Rey');
+            foreach($response->data as $key => $value){
+                $clave=$value->provincia." - ".$value->nombre;
+                if(in_array($value->nombre,$array_correccion_titulo)){
+                    $clave=$value->provincia;
+                }
+                //echo $clave;
+                $arr_delegaciones[$clave]['key']=$key;
+                $arr_delegaciones[$clave]['delegacion']=$value;
+                
+                
+            }
+            ksort($arr_delegaciones);
         ?>
         <div id="page_main_content" class="sidebar_content full_width fixed_column">
             <!-- <div class="ibf_head_oficinas"></div> -->
             
             <div class="standard_wrapper ibf_font_16"> 
-                <h1 class="ibf_color_orange">Oficinas Iberfurgo en España</h1>  
-            
+                <h1 class="ibf_color_orange ibf_mb_20">Elige tu oficina más cercana y contáctanos</h1>  
+
+                <div id="portfolio_filter_wrapper" class="gallery classic three_cols portfolio-content section content clearfix" data-columns="3">
+                <?php foreach($arr_delegaciones as $titulo=> $value){
+                    $delegacion=$value['delegacion'];
+                    $indice=$value['key']+1;	
+                    ?>
+                    <div class="element grid classic3_cols animated<?php echo esc_attr($indice); ?>">
+                        <?php echo do_shortcode('[tg_accordion_oficinas 
+                        direccion="'.esc_attr($delegacion->delegacion_datos_web->direccion).'" 
+                        whatsapp="'.esc_attr($delegacion->delegacion_datos_web->whatsapp).'" 
+                        telefono="'.esc_attr($delegacion->delegacion_datos_web->telefono).'" 
+                        email="'.esc_attr($delegacion->delegacion_datos_web->email).'"
+                        hlvm="'.esc_attr($delegacion->delegacion_datos_web->horarios_lunes_viernes_manana).'"
+                        hlvt="'.esc_attr($delegacion->delegacion_datos_web->horarios_lunes_viernes_tarde).'"
+                        hs="'.esc_attr($delegacion->delegacion_datos_web->horarios_sabado).'"
+                        url="'.esc_attr($delegacion->delegacion_datos_web->url_oficina).'"   
+                        title="'.esc_attr($delegacion->nombre).'" 
+                        mapa_oficina="'.esc_attr($delegacion->delegacion_datos_web->mapa_oficina).'"
+                        provincia="'.esc_attr($delegacion->delegacion_datos_web->oficinaProvincia).'"
+                        icon="" close="1"][/tg_accordion_oficinas]'); ?>
+                    </div>
+                    <?php
+                }
+                ?>
+                </div>
+                <br>
+            <div class="one">
+                <h1 class="ibf_color_orange ibf_mb_20">Conoce nuestras oficinas</h1>  
                 <p>
                     Iberfurgo es una empresa especializada en el alquiler de furgonetas, camiones y turismos enfocados tanto a la carga de mercancía 
                     como a la movilidad de los pasajeros. Contamos con años de profesionalidad y experiencia en el sector. 
@@ -181,30 +224,9 @@ if ($httpCode != 200) {
                 Los servicios de alquiler de furgonetas de Iberfurgo están disponibles en las ubicaciones que encontrarás en la parte inferior. 
                 Para conocer los datos de contacto de cada una de ellas, pincha en la oficina que más te interese: 
             </p>
+            </div>
 
-
-                <div id="portfolio_filter_wrapper" class="gallery classic three_cols portfolio-content section content clearfix" data-columns="3">
-                <?php foreach($response->data as $key => $value)	
-                {
-                    ?>
-                    <div class="element grid classic3_cols animated<?php echo esc_attr($key+1); ?>">
-                        <?php echo do_shortcode('[tg_accordion_oficinas 
-                        direccion="'.esc_attr($value->delegacion_datos_web->direccion).'" 
-                        whatsapp="'.esc_attr($value->delegacion_datos_web->whatsapp).'" 
-                        telefono="'.esc_attr($value->delegacion_datos_web->telefono).'" 
-                        email="'.esc_attr($value->delegacion_datos_web->email).'"
-                        hlvm="'.esc_attr($value->delegacion_datos_web->horarios_lunes_viernes_manana).'"
-                        hlvt="'.esc_attr($value->delegacion_datos_web->horarios_lunes_viernes_tarde).'"
-                        hs="'.esc_attr($value->delegacion_datos_web->horarios_sabado).'"
-                        url="'.esc_attr($value->delegacion_datos_web->url_oficina).'"   
-                        title="'.esc_attr($value->nombre).'" 
-                        mapa_oficina="'.esc_attr($value->delegacion_datos_web->mapa_oficina).'"
-                        icon="" close="1"][/tg_accordion_oficinas]'); ?>
-                    </div>
-                    <?php
-                }
-                ?>
-                </div>
+                
             
             </div> <!-- standard_wrapper -->
         
